@@ -1,0 +1,118 @@
+[0.016s] Invoking command in '/home/simi/franka_ros2_ws/build/franka_semantic_components': AMENT_PREFIX_PATH=/home/simi/franka_ros2_ws/install/franka_hardware:/home/simi/franka_ros2_ws/install/franka_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/simi/franka_ros2_ws/install/franka_hardware:/home/simi/franka_ros2_ws/install/franka_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/simi/franka_ros2_ws/install/franka_hardware/lib:/home/simi/franka_ros2_ws/install/franka_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/simi/franka_ros2_ws/install/franka_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/simi/franka_ros2_ws/src/franka_ros2/franka_semantic_components -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/home/simi/franka_ros2_ws/install/franka_semantic_components
+[0.083s] -- The C compiler identification is GNU 11.4.0
+[0.148s] -- The CXX compiler identification is GNU 11.4.0
+[0.161s] -- Detecting C compiler ABI info
+[0.251s] -- Detecting C compiler ABI info - done
+[0.258s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.259s] -- Detecting C compile features
+[0.259s] -- Detecting C compile features - done
+[0.261s] -- Detecting CXX compiler ABI info
+[0.362s] -- Detecting CXX compiler ABI info - done
+[0.368s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.368s] -- Detecting CXX compile features
+[0.369s] -- Detecting CXX compile features - done
+[0.372s] -- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.517s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.613s] -- Looking for pthread.h
+[0.706s] -- Looking for pthread.h - found
+[0.706s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.800s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.801s] -- Found Threads: TRUE  
+[0.802s] -- Found franka_hardware: 0.1.13 (/home/simi/franka_ros2_ws/install/franka_hardware/share/franka_hardware/cmake)
+[0.850s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.855s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.864s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.877s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.896s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.500s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.503s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.539s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[1.667s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.668s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[1.685s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.693s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[1.703s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[1.715s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.943s] -- Found franka_msgs: 0.1.13 (/home/simi/franka_ros2_ws/install/franka_msgs/share/franka_msgs/cmake)
+[2.090s] -- Found urdf: 2.6.0 (/opt/ros/humble/share/urdf/cmake)
+[2.305s] -- Found ament_cmake_clang_format: 0.12.10 (/opt/ros/humble/share/ament_cmake_clang_format/cmake)
+[2.307s] -- Found ament_cmake_copyright: 0.12.10 (/opt/ros/humble/share/ament_cmake_copyright/cmake)
+[2.309s] -- Found ament_cmake_cppcheck: 0.12.10 (/opt/ros/humble/share/ament_cmake_cppcheck/cmake)
+[2.311s] -- Found ament_cmake_flake8: 0.12.10 (/opt/ros/humble/share/ament_cmake_flake8/cmake)
+[2.313s] -- Found ament_cmake_lint_cmake: 0.12.10 (/opt/ros/humble/share/ament_cmake_lint_cmake/cmake)
+[2.315s] -- Found ament_cmake_pep257: 0.12.10 (/opt/ros/humble/share/ament_cmake_pep257/cmake)
+[2.318s] -- Found ament_cmake_xmllint: 0.12.10 (/opt/ros/humble/share/ament_cmake_xmllint/cmake)
+[2.320s] -- Found ament_cmake_gmock: 1.3.8 (/opt/ros/humble/share/ament_cmake_gmock/cmake)
+[2.322s] -- Found controller_interface: 2.40.0 (/opt/ros/humble/share/controller_interface/cmake)
+[2.402s] -- Found gmock sources under '/opt/ros/humble/src/gmock_vendor': C++ tests using 'Google Mock' will be built
+[2.407s] -- Found ament_cmake_gtest: 1.3.8 (/opt/ros/humble/share/ament_cmake_gtest/cmake)
+[2.408s] -- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[2.986s] -- Configuring done
+[3.154s] -- Generating done
+[3.157s] -- Build files have been written to: /home/simi/franka_ros2_ws/build/franka_semantic_components
+[3.173s] Invoked command in '/home/simi/franka_ros2_ws/build/franka_semantic_components' returned '0': AMENT_PREFIX_PATH=/home/simi/franka_ros2_ws/install/franka_hardware:/home/simi/franka_ros2_ws/install/franka_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/simi/franka_ros2_ws/install/franka_hardware:/home/simi/franka_ros2_ws/install/franka_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/simi/franka_ros2_ws/install/franka_hardware/lib:/home/simi/franka_ros2_ws/install/franka_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/simi/franka_ros2_ws/install/franka_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/simi/franka_ros2_ws/src/franka_ros2/franka_semantic_components -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/home/simi/franka_ros2_ws/install/franka_semantic_components
+[3.176s] Invoking command in '/home/simi/franka_ros2_ws/build/franka_semantic_components': AMENT_PREFIX_PATH=/home/simi/franka_ros2_ws/install/franka_hardware:/home/simi/franka_ros2_ws/install/franka_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/simi/franka_ros2_ws/install/franka_hardware:/home/simi/franka_ros2_ws/install/franka_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/simi/franka_ros2_ws/install/franka_hardware/lib:/home/simi/franka_ros2_ws/install/franka_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/simi/franka_ros2_ws/install/franka_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/simi/franka_ros2_ws/build/franka_semantic_components -- -j16 -l16
+[3.244s] [  9%] [32mBuilding CXX object gmock/CMakeFiles/gmock.dir/opt/ros/humble/src/gtest_vendor/src/gtest-all.cc.o[0m
+[3.244s] [  9%] [32mBuilding CXX object gmock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o[0m
+[3.246s] [ 31%] [32mBuilding CXX object CMakeFiles/franka_semantic_components.dir/src/franka_robot_state.cpp.o[0m
+[3.246s] [ 36%] [32mBuilding CXX object CMakeFiles/franka_semantic_components.dir/src/franka_cartesian_velocity_interface.cpp.o[0m
+[3.246s] [ 36%] [32mBuilding CXX object CMakeFiles/franka_semantic_components.dir/src/franka_cartesian_pose_interface.cpp.o[0m
+[3.246s] [ 36%] [32mBuilding CXX object CMakeFiles/franka_semantic_components.dir/src/translation_utils.cpp.o[0m
+[3.246s] [ 36%] [32mBuilding CXX object gmock/CMakeFiles/gmock.dir/src/gmock-all.cc.o[0m
+[3.246s] [ 36%] [32mBuilding CXX object CMakeFiles/franka_semantic_components.dir/src/franka_robot_model.cpp.o[0m
+[3.248s] [ 40%] [32mBuilding CXX object CMakeFiles/franka_semantic_components.dir/src/franka_semantic_component_interface.cpp.o[0m
+[5.114s] [ 45%] [32m[1mLinking CXX static library libgmock_main.a[0m
+[5.171s] [ 45%] Built target gmock_main
+[5.919s] [ 50%] [32m[1mLinking CXX shared library libfranka_semantic_components.so[0m
+[6.130s] [ 50%] Built target franka_semantic_components
+[10.289s] [ 54%] [32m[1mLinking CXX static library libgmock.a[0m
+[10.351s] [ 54%] Built target gmock
+[10.380s] [ 68%] [32mBuilding CXX object CMakeFiles/test_franka_robot_state.dir/test/franka_robot_state_test.cpp.o[0m
+[10.380s] [ 77%] [32mBuilding CXX object CMakeFiles/franka_cartesian_pose_interface_test.dir/test/franka_cartesian_pose_interface_test.cpp.o[0m
+[10.380s] [ 77%] [32mBuilding CXX object CMakeFiles/franka_cartesian_velocity_interface_test.dir/test/franka_cartesian_velocity_interface_test.cpp.o[0m
+[10.380s] [ 77%] [32mBuilding CXX object CMakeFiles/franka_semantic_component_interface_test.dir/test/franka_semantic_interface_test.cpp.o[0m
+[10.380s] [ 77%] [32mBuilding CXX object CMakeFiles/test_franka_robot_model.dir/test/franka_robot_model_test.cpp.o[0m
+[13.347s] [ 81%] [32m[1mLinking CXX executable franka_semantic_component_interface_test[0m
+[13.412s] [ 86%] [32m[1mLinking CXX executable franka_cartesian_velocity_interface_test[0m
+[13.616s] [ 86%] Built target franka_semantic_component_interface_test
+[13.666s] [ 86%] Built target franka_cartesian_velocity_interface_test
+[13.692s] [ 90%] [32m[1mLinking CXX executable test_franka_robot_state[0m
+[13.865s] [ 95%] [32m[1mLinking CXX executable franka_cartesian_pose_interface_test[0m
+[13.935s] [ 95%] Built target test_franka_robot_state
+[14.096s] [ 95%] Built target franka_cartesian_pose_interface_test
+[14.386s] [100%] [32m[1mLinking CXX executable test_franka_robot_model[0m
+[14.624s] [100%] Built target test_franka_robot_model
+[14.643s] Invoked command in '/home/simi/franka_ros2_ws/build/franka_semantic_components' returned '0': AMENT_PREFIX_PATH=/home/simi/franka_ros2_ws/install/franka_hardware:/home/simi/franka_ros2_ws/install/franka_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/simi/franka_ros2_ws/install/franka_hardware:/home/simi/franka_ros2_ws/install/franka_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/simi/franka_ros2_ws/install/franka_hardware/lib:/home/simi/franka_ros2_ws/install/franka_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/simi/franka_ros2_ws/install/franka_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/simi/franka_ros2_ws/build/franka_semantic_components -- -j16 -l16
+[14.722s] Invoking command in '/home/simi/franka_ros2_ws/build/franka_semantic_components': AMENT_PREFIX_PATH=/home/simi/franka_ros2_ws/install/franka_hardware:/home/simi/franka_ros2_ws/install/franka_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/simi/franka_ros2_ws/install/franka_hardware:/home/simi/franka_ros2_ws/install/franka_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/simi/franka_ros2_ws/install/franka_hardware/lib:/home/simi/franka_ros2_ws/install/franka_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/simi/franka_ros2_ws/install/franka_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/simi/franka_ros2_ws/build/franka_semantic_components
+[14.729s] -- Install configuration: "Release"
+[14.729s] -- Installing: /home/simi/franka_ros2_ws/install/franka_semantic_components/lib/libfranka_semantic_components.so
+[14.730s] -- Set runtime path of "/home/simi/franka_ros2_ws/install/franka_semantic_components/lib/libfranka_semantic_components.so" to ""
+[14.730s] -- Installing: /home/simi/franka_ros2_ws/install/franka_semantic_components/include
+[14.730s] -- Installing: /home/simi/franka_ros2_ws/install/franka_semantic_components/include/franka_semantic_components
+[14.731s] -- Installing: /home/simi/franka_ros2_ws/install/franka_semantic_components/include/franka_semantic_components/franka_semantic_component_interface.hpp
+[14.731s] -- Installing: /home/simi/franka_ros2_ws/install/franka_semantic_components/include/franka_semantic_components/franka_robot_state.hpp
+[14.731s] -- Installing: /home/simi/franka_ros2_ws/install/franka_semantic_components/include/franka_semantic_components/franka_robot_model.hpp
+[14.731s] -- Installing: /home/simi/franka_ros2_ws/install/franka_semantic_components/include/franka_semantic_components/franka_cartesian_pose_interface.hpp
+[14.731s] -- Installing: /home/simi/franka_ros2_ws/install/franka_semantic_components/include/franka_semantic_components/franka_cartesian_velocity_interface.hpp
+[14.731s] -- Installing: /home/simi/franka_ros2_ws/install/franka_semantic_components/share/franka_semantic_components/robot_description_test.txt
+[14.731s] -- Installing: /home/simi/franka_ros2_ws/install/franka_semantic_components/share/franka_semantic_components/environment/library_path.sh
+[14.731s] -- Installing: /home/simi/franka_ros2_ws/install/franka_semantic_components/share/franka_semantic_components/environment/library_path.dsv
+[14.731s] -- Installing: /home/simi/franka_ros2_ws/install/franka_semantic_components/share/ament_index/resource_index/package_run_dependencies/franka_semantic_components
+[14.731s] -- Installing: /home/simi/franka_ros2_ws/install/franka_semantic_components/share/ament_index/resource_index/parent_prefix_path/franka_semantic_components
+[14.731s] -- Installing: /home/simi/franka_ros2_ws/install/franka_semantic_components/share/franka_semantic_components/environment/ament_prefix_path.sh
+[14.732s] -- Installing: /home/simi/franka_ros2_ws/install/franka_semantic_components/share/franka_semantic_components/environment/ament_prefix_path.dsv
+[14.732s] -- Installing: /home/simi/franka_ros2_ws/install/franka_semantic_components/share/franka_semantic_components/environment/path.sh
+[14.732s] -- Installing: /home/simi/franka_ros2_ws/install/franka_semantic_components/share/franka_semantic_components/environment/path.dsv
+[14.732s] -- Installing: /home/simi/franka_ros2_ws/install/franka_semantic_components/share/franka_semantic_components/local_setup.bash
+[14.732s] -- Installing: /home/simi/franka_ros2_ws/install/franka_semantic_components/share/franka_semantic_components/local_setup.sh
+[14.732s] -- Installing: /home/simi/franka_ros2_ws/install/franka_semantic_components/share/franka_semantic_components/local_setup.zsh
+[14.732s] -- Installing: /home/simi/franka_ros2_ws/install/franka_semantic_components/share/franka_semantic_components/local_setup.dsv
+[14.733s] -- Installing: /home/simi/franka_ros2_ws/install/franka_semantic_components/share/franka_semantic_components/package.dsv
+[14.733s] -- Installing: /home/simi/franka_ros2_ws/install/franka_semantic_components/share/ament_index/resource_index/packages/franka_semantic_components
+[14.733s] -- Installing: /home/simi/franka_ros2_ws/install/franka_semantic_components/share/franka_semantic_components/cmake/ament_cmake_export_include_directories-extras.cmake
+[14.733s] -- Installing: /home/simi/franka_ros2_ws/install/franka_semantic_components/share/franka_semantic_components/cmake/ament_cmake_export_libraries-extras.cmake
+[14.733s] -- Installing: /home/simi/franka_ros2_ws/install/franka_semantic_components/share/franka_semantic_components/cmake/ament_cmake_export_dependencies-extras.cmake
+[14.733s] -- Installing: /home/simi/franka_ros2_ws/install/franka_semantic_components/share/franka_semantic_components/cmake/franka_semantic_componentsConfig.cmake
+[14.734s] -- Installing: /home/simi/franka_ros2_ws/install/franka_semantic_components/share/franka_semantic_components/cmake/franka_semantic_componentsConfig-version.cmake
+[14.734s] -- Installing: /home/simi/franka_ros2_ws/install/franka_semantic_components/share/franka_semantic_components/package.xml
+[14.738s] Invoked command in '/home/simi/franka_ros2_ws/build/franka_semantic_components' returned '0': AMENT_PREFIX_PATH=/home/simi/franka_ros2_ws/install/franka_hardware:/home/simi/franka_ros2_ws/install/franka_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/simi/franka_ros2_ws/install/franka_hardware:/home/simi/franka_ros2_ws/install/franka_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/simi/franka_ros2_ws/install/franka_hardware/lib:/home/simi/franka_ros2_ws/install/franka_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/simi/franka_ros2_ws/install/franka_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/simi/franka_ros2_ws/build/franka_semantic_components

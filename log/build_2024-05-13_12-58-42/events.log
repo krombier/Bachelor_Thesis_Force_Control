@@ -1,0 +1,389 @@
+[0.000000] (-) TimerEvent: {}
+[0.000149] (-) JobUnselected: {'identifier': 'cartesian_impedance_control'}
+[0.000242] (-) JobUnselected: {'identifier': 'franka_bringup'}
+[0.000298] (-) JobUnselected: {'identifier': 'franka_description'}
+[0.000319] (-) JobUnselected: {'identifier': 'franka_example_controllers'}
+[0.000339] (-) JobUnselected: {'identifier': 'franka_gripper'}
+[0.000360] (-) JobUnselected: {'identifier': 'franka_hardware'}
+[0.000379] (-) JobUnselected: {'identifier': 'franka_moveit_config'}
+[0.000399] (-) JobUnselected: {'identifier': 'franka_msgs'}
+[0.000417] (-) JobUnselected: {'identifier': 'franka_robot_state_broadcaster'}
+[0.000436] (-) JobUnselected: {'identifier': 'franka_semantic_components'}
+[0.000455] (-) JobUnselected: {'identifier': 'integration_launch_testing'}
+[0.000473] (-) JobUnselected: {'identifier': 'joint_trajectory_controller'}
+[0.000495] (messages_fr3) JobQueued: {'identifier': 'messages_fr3', 'dependencies': OrderedDict()}
+[0.000518] (messages_fr3) JobStarted: {'identifier': 'messages_fr3'}
+[0.012788] (messages_fr3) JobProgress: {'identifier': 'messages_fr3', 'progress': 'cmake'}
+[0.014038] (messages_fr3) JobProgress: {'identifier': 'messages_fr3', 'progress': 'build'}
+[0.014656] (messages_fr3) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/simi/franka_ros2_ws/build/messages_fr3', '--', '-j16', '-l16'], 'cwd': '/home/simi/franka_ros2_ws/build/messages_fr3', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'simi'), ('LC_TIME', 'de_CH.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/simi/franka_ros2_ws/install/cartesian_impedance_control/lib:/home/simi/franka_ros2_ws/install/messages_fr3/lib:/home/simi/franka_ros2_ws/install/joint_trajectory_controller/lib:/home/simi/franka_ros2_ws/install/integration_launch_testing/lib:/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster/lib:/home/simi/franka_ros2_ws/install/franka_example_controllers/lib:/home/simi/franka_ros2_ws/install/franka_semantic_components/lib:/home/simi/franka_ros2_ws/install/franka_hardware/lib:/home/simi/franka_ros2_ws/install/franka_gripper/lib:/home/simi/franka_ros2_ws/install/franka_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/simi'), ('OLDPWD', '/home/simi'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'de_CH.UTF-8'), ('SYSTEMD_EXEC_PID', '1776'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/simi/franka_ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'simi'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'simi'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/simi-IdeaPad-Flex-5-14ALC05:@/tmp/.ICE-unix/1756,unix/simi-IdeaPad-Flex-5-14ALC05:/tmp/.ICE-unix/1756'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'de_CH.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/36333ff2_8878_42c2_a9c5_50854a9f5657'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'de_CH.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.C9NUN2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.166'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/simi/franka_ros2_ws/install/cartesian_impedance_control:/home/simi/franka_ros2_ws/install/messages_fr3:/home/simi/franka_ros2_ws/install/joint_trajectory_controller:/home/simi/franka_ros2_ws/install/integration_launch_testing:/home/simi/franka_ros2_ws/install/franka_bringup:/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster:/home/simi/franka_ros2_ws/install/franka_example_controllers:/home/simi/franka_ros2_ws/install/franka_semantic_components:/home/simi/franka_ros2_ws/install/franka_moveit_config:/home/simi/franka_ros2_ws/install/franka_hardware:/home/simi/franka_ros2_ws/install/franka_gripper:/home/simi/franka_ros2_ws/install/franka_msgs:/home/simi/franka_ros2_ws/install/franka_description:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'de_CH.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'de_CH.UTF-8'), ('LC_IDENTIFICATION', 'de_CH.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/simi/franka_ros2_ws/build/messages_fr3'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages:/home/simi/franka_ros2_ws/install/franka_gripper/local/lib/python3.10/dist-packages:/home/simi/franka_ros2_ws/install/franka_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'de_CH.UTF-8'), ('LC_PAPER', 'de_CH.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/simi/franka_ros2_ws/install/cartesian_impedance_control:/home/simi/franka_ros2_ws/install/messages_fr3:/home/simi/franka_ros2_ws/install/joint_trajectory_controller:/home/simi/franka_ros2_ws/install/integration_launch_testing:/home/simi/franka_ros2_ws/install/franka_bringup:/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster:/home/simi/franka_ros2_ws/install/franka_example_controllers:/home/simi/franka_ros2_ws/install/franka_semantic_components:/home/simi/franka_ros2_ws/install/franka_moveit_config:/home/simi/franka_ros2_ws/install/franka_hardware:/home/simi/franka_ros2_ws/install/franka_gripper:/home/simi/franka_ros2_ws/install/franka_msgs:/home/simi/franka_ros2_ws/install/franka_description:/opt/ros/humble')]), 'shell': False}
+[0.067149] (messages_fr3) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.099151] (-) TimerEvent: {}
+[0.194662] (messages_fr3) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[0.198432] (messages_fr3) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.199310] (-) TimerEvent: {}
+[0.203241] (messages_fr3) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.241567] (messages_fr3) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.270523] (messages_fr3) StdoutLine: {'line': b'-- Found std_msgs: 4.2.3 (/opt/ros/humble/share/std_msgs/cmake)\n'}
+[0.299512] (-) TimerEvent: {}
+[0.399855] (-) TimerEvent: {}
+[0.500262] (-) TimerEvent: {}
+[0.600200] (messages_fr3) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[0.600392] (-) TimerEvent: {}
+[0.700724] (-) TimerEvent: {}
+[0.801100] (-) TimerEvent: {}
+[0.805579] (messages_fr3) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.901324] (-) TimerEvent: {}
+[1.001770] (-) TimerEvent: {}
+[1.073980] (messages_fr3) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.095993] (messages_fr3) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[1.101960] (-) TimerEvent: {}
+[1.118709] (messages_fr3) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[1.119027] (messages_fr3) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[1.119162] (messages_fr3) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[1.146882] (messages_fr3) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[1.162401] (messages_fr3) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[1.172058] (messages_fr3) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.177253] (messages_fr3) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.180299] (messages_fr3) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.202152] (-) TimerEvent: {}
+[1.228656] (messages_fr3) StdoutLine: {'line': b'-- Generating done\n'}
+[1.232684] (messages_fr3) StdoutLine: {'line': b'-- Build files have been written to: /home/simi/franka_ros2_ws/build/messages_fr3\n'}
+[1.266542] (messages_fr3) StdoutLine: {'line': b'[  1%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[1.282516] (messages_fr3) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[1.298332] (messages_fr3) StdoutLine: {'line': b'[  3%] Built target ament_cmake_python_copy_messages_fr3\n'}
+[1.302324] (-) TimerEvent: {}
+[1.402728] (-) TimerEvent: {}
+[1.503186] (-) TimerEvent: {}
+[1.526963] (messages_fr3) StdoutLine: {'line': b'running egg_info\n'}
+[1.527632] (messages_fr3) StdoutLine: {'line': b'writing messages_fr3.egg-info/PKG-INFO\n'}
+[1.527888] (messages_fr3) StdoutLine: {'line': b'writing dependency_links to messages_fr3.egg-info/dependency_links.txt\n'}
+[1.528120] (messages_fr3) StdoutLine: {'line': b'writing top-level names to messages_fr3.egg-info/top_level.txt\n'}
+[1.530852] (messages_fr3) StdoutLine: {'line': b"reading manifest file 'messages_fr3.egg-info/SOURCES.txt'\n"}
+[1.531586] (messages_fr3) StdoutLine: {'line': b"writing manifest file 'messages_fr3.egg-info/SOURCES.txt'\n"}
+[1.568060] (messages_fr3) StdoutLine: {'line': b'[  3%] Built target ament_cmake_python_build_messages_fr3_egg\n'}
+[1.603353] (-) TimerEvent: {}
+[1.703712] (-) TimerEvent: {}
+[1.708017] (messages_fr3) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target messages_fr3__rosidl_generator_c\x1b[0m\n'}
+[1.731346] (messages_fr3) StdoutLine: {'line': b'[  5%] \x1b[32mBuilding C object CMakeFiles/messages_fr3__rosidl_generator_c.dir/rosidl_generator_c/messages_fr3/srv/detail/set_pose__functions.c.o\x1b[0m\n'}
+[1.741925] (messages_fr3) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding C object CMakeFiles/messages_fr3__rosidl_generator_c.dir/rosidl_generator_c/messages_fr3/srv/detail/set_force__functions.c.o\x1b[0m\n'}
+[1.742496] (messages_fr3) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/messages_fr3__rosidl_generator_c.dir/rosidl_generator_c/messages_fr3/srv/detail/set_mode__functions.c.o\x1b[0m\n'}
+[1.742641] (messages_fr3) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/messages_fr3__rosidl_generator_c.dir/rosidl_generator_c/messages_fr3/srv/detail/set_param__functions.c.o\x1b[0m\n'}
+[1.752173] (messages_fr3) StdoutLine: {'line': b'[ 10%] Built target messages_fr3__cpp\n'}
+[1.770375] (messages_fr3) StdoutLine: {'line': b'[ 12%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[1.771640] (messages_fr3) StdoutLine: {'line': b'[ 14%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[1.773195] (messages_fr3) StdoutLine: {'line': b'[ 16%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[1.803861] (-) TimerEvent: {}
+[1.904308] (-) TimerEvent: {}
+[1.921340] (messages_fr3) StdoutLine: {'line': b'[ 18%] \x1b[32m\x1b[1mLinking C shared library libmessages_fr3__rosidl_generator_c.so\x1b[0m\n'}
+[1.991638] (messages_fr3) StdoutLine: {'line': b'[ 18%] Built target messages_fr3__rosidl_generator_c\n'}
+[2.004475] (-) TimerEvent: {}
+[2.007406] (messages_fr3) StdoutLine: {'line': b'[ 21%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[2.007648] (messages_fr3) StdoutLine: {'line': b'[ 21%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[2.011218] (messages_fr3) StdoutLine: {'line': b'[ 23%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[2.104606] (-) TimerEvent: {}
+[2.197386] (messages_fr3) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target messages_fr3__rosidl_typesupport_cpp\x1b[0m\n'}
+[2.204778] (-) TimerEvent: {}
+[2.221049] (messages_fr3) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target messages_fr3__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[2.222940] (messages_fr3) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/messages_fr3__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/messages_fr3/srv/set_param__type_support.cpp.o\x1b[0m\n'}
+[2.224391] (messages_fr3) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding CXX object CMakeFiles/messages_fr3__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/messages_fr3/srv/set_pose__type_support.cpp.o\x1b[0m\n'}
+[2.225209] (messages_fr3) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/messages_fr3__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/messages_fr3/srv/set_mode__type_support.cpp.o\x1b[0m\n'}
+[2.225386] (messages_fr3) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/messages_fr3__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/messages_fr3/srv/set_force__type_support.cpp.o\x1b[0m\n'}
+[2.259789] (messages_fr3) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object CMakeFiles/messages_fr3__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/messages_fr3/srv/detail/set_param__type_support.cpp.o\x1b[0m\n'}
+[2.260951] (messages_fr3) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding CXX object CMakeFiles/messages_fr3__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/messages_fr3/srv/detail/set_pose__type_support.cpp.o\x1b[0m\n'}
+[2.274402] (messages_fr3) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding CXX object CMakeFiles/messages_fr3__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/messages_fr3/srv/detail/set_mode__type_support.cpp.o\x1b[0m\n'}
+[2.275960] (messages_fr3) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/messages_fr3__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/messages_fr3/srv/detail/set_force__type_support.cpp.o\x1b[0m\n'}
+[2.290988] (messages_fr3) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target messages_fr3__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[2.304961] (-) TimerEvent: {}
+[2.328439] (messages_fr3) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/messages_fr3__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/messages_fr3/srv/detail/dds_fastrtps/set_pose__type_support.cpp.o\x1b[0m\n'}
+[2.333517] (messages_fr3) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding CXX object CMakeFiles/messages_fr3__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/messages_fr3/srv/detail/dds_fastrtps/set_param__type_support.cpp.o\x1b[0m\n'}
+[2.333791] (messages_fr3) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding CXX object CMakeFiles/messages_fr3__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/messages_fr3/srv/detail/dds_fastrtps/set_force__type_support.cpp.o\x1b[0m\n'}
+[2.337907] (messages_fr3) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding CXX object CMakeFiles/messages_fr3__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/messages_fr3/srv/detail/dds_fastrtps/set_mode__type_support.cpp.o\x1b[0m\n'}
+[2.405134] (-) TimerEvent: {}
+[2.505660] (-) TimerEvent: {}
+[2.558990] (messages_fr3) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target messages_fr3__rosidl_typesupport_c\x1b[0m\n'}
+[2.605893] (-) TimerEvent: {}
+[2.619051] (messages_fr3) StdoutLine: {'line': b'[ 47%] \x1b[32mBuilding CXX object CMakeFiles/messages_fr3__rosidl_typesupport_c.dir/rosidl_typesupport_c/messages_fr3/srv/set_pose__type_support.cpp.o\x1b[0m\n'}
+[2.706181] (-) TimerEvent: {}
+[2.745318] (messages_fr3) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target messages_fr3__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[2.806363] (messages_fr3) StdoutLine: {'line': b'[ 49%] \x1b[32mBuilding CXX object CMakeFiles/messages_fr3__rosidl_typesupport_c.dir/rosidl_typesupport_c/messages_fr3/srv/set_param__type_support.cpp.o\x1b[0m\n'}
+[2.806813] (-) TimerEvent: {}
+[2.807073] (messages_fr3) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding C object CMakeFiles/messages_fr3__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/messages_fr3/srv/detail/set_pose__type_support.c.o\x1b[0m\n'}
+[2.814940] (messages_fr3) StdoutLine: {'line': b'[ 52%] \x1b[32mBuilding C object CMakeFiles/messages_fr3__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/messages_fr3/srv/detail/set_param__type_support.c.o\x1b[0m\n'}
+[2.816214] (messages_fr3) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding CXX object CMakeFiles/messages_fr3__rosidl_typesupport_c.dir/rosidl_typesupport_c/messages_fr3/srv/set_force__type_support.cpp.o\x1b[0m\n'}
+[2.823745] (messages_fr3) StdoutLine: {'line': b'[ 56%] \x1b[32mBuilding CXX object CMakeFiles/messages_fr3__rosidl_typesupport_c.dir/rosidl_typesupport_c/messages_fr3/srv/set_mode__type_support.cpp.o\x1b[0m\n'}
+[2.824141] (messages_fr3) StdoutLine: {'line': b'[ 58%] \x1b[32m\x1b[1mLinking CXX shared library libmessages_fr3__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[2.824299] (messages_fr3) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding C object CMakeFiles/messages_fr3__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/messages_fr3/srv/detail/set_force__type_support.c.o\x1b[0m\n'}
+[2.847528] (messages_fr3) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target messages_fr3__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[2.890939] (messages_fr3) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding C object CMakeFiles/messages_fr3__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/messages_fr3/srv/detail/set_mode__type_support.c.o\x1b[0m\n'}
+[2.907274] (-) TimerEvent: {}
+[2.925532] (messages_fr3) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding CXX object CMakeFiles/messages_fr3__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_fr3/srv/detail/set_pose__type_support_c.cpp.o\x1b[0m\n'}
+[2.931269] (messages_fr3) StdoutLine: {'line': b'[ 65%] \x1b[32m\x1b[1mLinking CXX shared library libmessages_fr3__rosidl_typesupport_c.so\x1b[0m\n'}
+[2.931447] (messages_fr3) StdoutLine: {'line': b'[ 67%] \x1b[32mBuilding CXX object CMakeFiles/messages_fr3__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_fr3/srv/detail/set_param__type_support_c.cpp.o\x1b[0m\n'}
+[2.935324] (messages_fr3) StdoutLine: {'line': b'[ 69%] \x1b[32mBuilding CXX object CMakeFiles/messages_fr3__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_fr3/srv/detail/set_force__type_support_c.cpp.o\x1b[0m\n'}
+[2.943239] (messages_fr3) StdoutLine: {'line': b'[ 70%] \x1b[32mBuilding CXX object CMakeFiles/messages_fr3__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_fr3/srv/detail/set_mode__type_support_c.cpp.o\x1b[0m\n'}
+[2.997877] (messages_fr3) StdoutLine: {'line': b'[ 70%] Built target messages_fr3__rosidl_typesupport_cpp\n'}
+[3.000342] (messages_fr3) StdoutLine: {'line': b'[ 72%] \x1b[32m\x1b[1mLinking C shared library libmessages_fr3__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[3.007571] (-) TimerEvent: {}
+[3.035006] (messages_fr3) StdoutLine: {'line': b'[ 72%] Built target messages_fr3__rosidl_typesupport_c\n'}
+[3.036060] (messages_fr3) StdoutLine: {'line': b'[ 74%] \x1b[32m\x1b[1mLinking CXX shared library libmessages_fr3__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[3.065931] (messages_fr3) StdoutLine: {'line': b'[ 74%] Built target messages_fr3__rosidl_typesupport_introspection_c\n'}
+[3.107752] (-) TimerEvent: {}
+[3.118001] (messages_fr3) StdoutLine: {'line': b'[ 74%] Built target messages_fr3__rosidl_typesupport_introspection_cpp\n'}
+[3.150611] (messages_fr3) StdoutLine: {'line': b'[ 76%] \x1b[32m\x1b[1mLinking CXX shared library libmessages_fr3__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[3.207942] (-) TimerEvent: {}
+[3.308444] (-) TimerEvent: {}
+[3.345885] (messages_fr3) StdoutLine: {'line': b'[ 76%] Built target messages_fr3__rosidl_typesupport_fastrtps_cpp\n'}
+[3.408642] (-) TimerEvent: {}
+[3.440374] (messages_fr3) StdoutLine: {'line': b'[ 78%] \x1b[32m\x1b[1mLinking CXX shared library libmessages_fr3__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[3.508888] (-) TimerEvent: {}
+[3.565061] (messages_fr3) StdoutLine: {'line': b'[ 78%] Built target messages_fr3__rosidl_typesupport_fastrtps_c\n'}
+[3.596319] (messages_fr3) StdoutLine: {'line': b'[ 78%] Built target messages_fr3\n'}
+[3.609073] (-) TimerEvent: {}
+[3.630387] (messages_fr3) StdoutLine: {'line': b'[ 80%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[3.709624] (-) TimerEvent: {}
+[3.810492] (-) TimerEvent: {}
+[3.910862] (-) TimerEvent: {}
+[4.011190] (-) TimerEvent: {}
+[4.111608] (-) TimerEvent: {}
+[4.212019] (-) TimerEvent: {}
+[4.283120] (messages_fr3) StdoutLine: {'line': b'[ 80%] Built target messages_fr3__py\n'}
+[4.299703] (messages_fr3) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target messages_fr3__rosidl_generator_py\x1b[0m\n'}
+[4.312159] (-) TimerEvent: {}
+[4.323111] (messages_fr3) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding C object CMakeFiles/messages_fr3__rosidl_generator_py.dir/rosidl_generator_py/messages_fr3/srv/_set_mode_s.c.o\x1b[0m\n'}
+[4.323313] (messages_fr3) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding C object CMakeFiles/messages_fr3__rosidl_generator_py.dir/rosidl_generator_py/messages_fr3/srv/_set_pose_s.c.o\x1b[0m\n'}
+[4.324166] (messages_fr3) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/messages_fr3__rosidl_generator_py.dir/rosidl_generator_py/messages_fr3/srv/_set_param_s.c.o\x1b[0m\n'}
+[4.324273] (messages_fr3) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/messages_fr3__rosidl_generator_py.dir/rosidl_generator_py/messages_fr3/srv/_set_force_s.c.o\x1b[0m\n'}
+[4.412300] (-) TimerEvent: {}
+[4.479768] (messages_fr3) StdoutLine: {'line': b'[ 89%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/messages_fr3/libmessages_fr3__rosidl_generator_py.so\x1b[0m\n'}
+[4.512480] (-) TimerEvent: {}
+[4.532293] (messages_fr3) StdoutLine: {'line': b'[ 89%] Built target messages_fr3__rosidl_generator_py\n'}
+[4.547950] (messages_fr3) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target messages_fr3__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[4.548154] (messages_fr3) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target messages_fr3__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[4.549471] (messages_fr3) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target messages_fr3__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[4.568851] (messages_fr3) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/messages_fr3__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/messages_fr3/_messages_fr3_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[4.569882] (messages_fr3) StdoutLine: {'line': b'[ 94%] \x1b[32mBuilding C object CMakeFiles/messages_fr3__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/messages_fr3/_messages_fr3_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[4.570075] (messages_fr3) StdoutLine: {'line': b'[ 94%] \x1b[32mBuilding C object CMakeFiles/messages_fr3__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/messages_fr3/_messages_fr3_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[4.612615] (-) TimerEvent: {}
+[4.712984] (-) TimerEvent: {}
+[4.763670] (messages_fr3) StdoutLine: {'line': b'[ 96%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/messages_fr3/messages_fr3_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[4.763947] (messages_fr3) StdoutLine: {'line': b'[ 98%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/messages_fr3/messages_fr3_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[4.798729] (messages_fr3) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/messages_fr3/messages_fr3_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[4.812946] (messages_fr3) StdoutLine: {'line': b'[100%] Built target messages_fr3__rosidl_typesupport_introspection_c__pyext\n'}
+[4.813191] (-) TimerEvent: {}
+[4.813289] (messages_fr3) StdoutLine: {'line': b'[100%] Built target messages_fr3__rosidl_typesupport_fastrtps_c__pyext\n'}
+[4.850533] (messages_fr3) StdoutLine: {'line': b'[100%] Built target messages_fr3__rosidl_typesupport_c__pyext\n'}
+[4.868273] (messages_fr3) CommandEnded: {'returncode': 0}
+[4.913337] (-) TimerEvent: {}
+[5.013732] (-) TimerEvent: {}
+[5.114057] (-) TimerEvent: {}
+[5.142971] (messages_fr3) JobProgress: {'identifier': 'messages_fr3', 'progress': 'install'}
+[5.155399] (messages_fr3) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/simi/franka_ros2_ws/build/messages_fr3'], 'cwd': '/home/simi/franka_ros2_ws/build/messages_fr3', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'simi'), ('LC_TIME', 'de_CH.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/simi/franka_ros2_ws/install/cartesian_impedance_control/lib:/home/simi/franka_ros2_ws/install/messages_fr3/lib:/home/simi/franka_ros2_ws/install/joint_trajectory_controller/lib:/home/simi/franka_ros2_ws/install/integration_launch_testing/lib:/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster/lib:/home/simi/franka_ros2_ws/install/franka_example_controllers/lib:/home/simi/franka_ros2_ws/install/franka_semantic_components/lib:/home/simi/franka_ros2_ws/install/franka_hardware/lib:/home/simi/franka_ros2_ws/install/franka_gripper/lib:/home/simi/franka_ros2_ws/install/franka_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/simi'), ('OLDPWD', '/home/simi'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'de_CH.UTF-8'), ('SYSTEMD_EXEC_PID', '1776'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/simi/franka_ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'simi'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'simi'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/simi-IdeaPad-Flex-5-14ALC05:@/tmp/.ICE-unix/1756,unix/simi-IdeaPad-Flex-5-14ALC05:/tmp/.ICE-unix/1756'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'de_CH.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/36333ff2_8878_42c2_a9c5_50854a9f5657'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'de_CH.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.C9NUN2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.166'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/simi/franka_ros2_ws/install/cartesian_impedance_control:/home/simi/franka_ros2_ws/install/messages_fr3:/home/simi/franka_ros2_ws/install/joint_trajectory_controller:/home/simi/franka_ros2_ws/install/integration_launch_testing:/home/simi/franka_ros2_ws/install/franka_bringup:/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster:/home/simi/franka_ros2_ws/install/franka_example_controllers:/home/simi/franka_ros2_ws/install/franka_semantic_components:/home/simi/franka_ros2_ws/install/franka_moveit_config:/home/simi/franka_ros2_ws/install/franka_hardware:/home/simi/franka_ros2_ws/install/franka_gripper:/home/simi/franka_ros2_ws/install/franka_msgs:/home/simi/franka_ros2_ws/install/franka_description:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'de_CH.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'de_CH.UTF-8'), ('LC_IDENTIFICATION', 'de_CH.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/simi/franka_ros2_ws/build/messages_fr3'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages:/home/simi/franka_ros2_ws/install/franka_gripper/local/lib/python3.10/dist-packages:/home/simi/franka_ros2_ws/install/franka_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'de_CH.UTF-8'), ('LC_PAPER', 'de_CH.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/simi/franka_ros2_ws/install/cartesian_impedance_control:/home/simi/franka_ros2_ws/install/messages_fr3:/home/simi/franka_ros2_ws/install/joint_trajectory_controller:/home/simi/franka_ros2_ws/install/integration_launch_testing:/home/simi/franka_ros2_ws/install/franka_bringup:/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster:/home/simi/franka_ros2_ws/install/franka_example_controllers:/home/simi/franka_ros2_ws/install/franka_semantic_components:/home/simi/franka_ros2_ws/install/franka_moveit_config:/home/simi/franka_ros2_ws/install/franka_hardware:/home/simi/franka_ros2_ws/install/franka_gripper:/home/simi/franka_ros2_ws/install/franka_msgs:/home/simi/franka_ros2_ws/install/franka_description:/opt/ros/humble')]), 'shell': False}
+[5.167647] (messages_fr3) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[5.168006] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/share/ament_index/resource_index/rosidl_interfaces/messages_fr3\n'}
+[5.168201] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3\n'}
+[5.168336] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv\n'}
+[5.168531] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail\n'}
+[5.168591] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_param__type_support.h\n'}
+[5.168669] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_force__functions.h\n'}
+[5.168727] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_param__functions.c\n'}
+[5.168783] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_mode__type_support.h\n'}
+[5.168884] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_force__struct.h\n'}
+[5.168983] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_param__struct.h\n'}
+[5.169139] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_mode__functions.h\n'}
+[5.169318] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_param__functions.h\n'}
+[5.169518] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_pose__functions.c\n'}
+[5.169746] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_mode__functions.c\n'}
+[5.169930] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_pose__struct.h\n'}
+[5.170106] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_force__type_support.h\n'}
+[5.170282] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_pose__functions.h\n'}
+[5.170491] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_force__functions.c\n'}
+[5.170878] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_pose__type_support.h\n'}
+[5.171059] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_mode__struct.h\n'}
+[5.171219] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/set_mode.h\n'}
+[5.171377] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/set_force.h\n'}
+[5.171547] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/set_param.h\n'}
+[5.171714] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/set_pose.h\n'}
+[5.171863] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/msg\n'}
+[5.171985] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/msg/rosidl_generator_c__visibility_control.h\n'}
+[5.172096] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/environment/library_path.sh\n'}
+[5.172158] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/environment/library_path.dsv\n'}
+[5.173138] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/lib/libmessages_fr3__rosidl_generator_c.so\n'}
+[5.173679] (messages_fr3) StdoutLine: {'line': b'-- Set runtime path of "/home/simi/franka_ros2_ws/install/messages_fr3/lib/libmessages_fr3__rosidl_generator_c.so" to ""\n'}
+[5.173793] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3\n'}
+[5.173880] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv\n'}
+[5.173981] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail\n'}
+[5.174046] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_param__rosidl_typesupport_fastrtps_c.h\n'}
+[5.174131] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_mode__rosidl_typesupport_fastrtps_c.h\n'}
+[5.174229] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_force__rosidl_typesupport_fastrtps_c.h\n'}
+[5.174413] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_pose__rosidl_typesupport_fastrtps_c.h\n'}
+[5.174579] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/msg\n'}
+[5.174683] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[5.175276] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/lib/libmessages_fr3__rosidl_typesupport_fastrtps_c.so\n'}
+[5.175800] (messages_fr3) StdoutLine: {'line': b'-- Set runtime path of "/home/simi/franka_ros2_ws/install/messages_fr3/lib/libmessages_fr3__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[5.175943] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3\n'}
+[5.176032] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv\n'}
+[5.176115] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail\n'}
+[5.176242] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_mode__rosidl_typesupport_introspection_c.h\n'}
+[5.176332] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_param__rosidl_typesupport_introspection_c.h\n'}
+[5.176443] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_force__type_support.c\n'}
+[5.176540] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_pose__rosidl_typesupport_introspection_c.h\n'}
+[5.176675] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_force__rosidl_typesupport_introspection_c.h\n'}
+[5.176846] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_pose__type_support.c\n'}
+[5.177050] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_mode__type_support.c\n'}
+[5.177223] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_param__type_support.c\n'}
+[5.177419] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/msg\n'}
+[5.177512] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[5.178084] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/lib/libmessages_fr3__rosidl_typesupport_introspection_c.so\n'}
+[5.178637] (messages_fr3) StdoutLine: {'line': b'-- Set runtime path of "/home/simi/franka_ros2_ws/install/messages_fr3/lib/libmessages_fr3__rosidl_typesupport_introspection_c.so" to ""\n'}
+[5.179195] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/lib/libmessages_fr3__rosidl_typesupport_c.so\n'}
+[5.179722] (messages_fr3) StdoutLine: {'line': b'-- Set runtime path of "/home/simi/franka_ros2_ws/install/messages_fr3/lib/libmessages_fr3__rosidl_typesupport_c.so" to ""\n'}
+[5.179822] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3\n'}
+[5.179919] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv\n'}
+[5.180015] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail\n'}
+[5.180144] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_mode__struct.hpp\n'}
+[5.180539] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_mode__builder.hpp\n'}
+[5.180800] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_force__builder.hpp\n'}
+[5.180992] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_param__struct.hpp\n'}
+[5.181193] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_pose__builder.hpp\n'}
+[5.181374] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_pose__traits.hpp\n'}
+[5.181572] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_pose__struct.hpp\n'}
+[5.181769] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_force__struct.hpp\n'}
+[5.181973] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_param__traits.hpp\n'}
+[5.182168] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_param__builder.hpp\n'}
+[5.182353] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_mode__traits.hpp\n'}
+[5.182524] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_force__traits.hpp\n'}
+[5.182724] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/set_mode.hpp\n'}
+[5.182933] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/set_param.hpp\n'}
+[5.183106] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/set_pose.hpp\n'}
+[5.183278] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/set_force.hpp\n'}
+[5.183496] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3\n'}
+[5.183596] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv\n'}
+[5.183674] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail\n'}
+[5.183762] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_pose__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[5.183858] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_param__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[5.184026] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_mode__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[5.184201] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_force__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[5.184384] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/dds_fastrtps\n'}
+[5.184527] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/msg\n'}
+[5.184591] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[5.185026] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/lib/libmessages_fr3__rosidl_typesupport_fastrtps_cpp.so\n'}
+[5.185576] (messages_fr3) StdoutLine: {'line': b'-- Set runtime path of "/home/simi/franka_ros2_ws/install/messages_fr3/lib/libmessages_fr3__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[5.185682] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3\n'}
+[5.185778] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv\n'}
+[5.185841] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail\n'}
+[5.185902] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_param__rosidl_typesupport_introspection_cpp.hpp\n'}
+[5.186000] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_pose__rosidl_typesupport_introspection_cpp.hpp\n'}
+[5.186140] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_mode__type_support.cpp\n'}
+[5.186327] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_mode__rosidl_typesupport_introspection_cpp.hpp\n'}
+[5.186487] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_force__type_support.cpp\n'}
+[5.186702] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_param__type_support.cpp\n'}
+[5.187201] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_pose__type_support.cpp\n'}
+[5.187430] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_force__rosidl_typesupport_introspection_cpp.hpp\n'}
+[5.188084] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/lib/libmessages_fr3__rosidl_typesupport_introspection_cpp.so\n'}
+[5.188588] (messages_fr3) StdoutLine: {'line': b'-- Set runtime path of "/home/simi/franka_ros2_ws/install/messages_fr3/lib/libmessages_fr3__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[5.189098] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/lib/libmessages_fr3__rosidl_typesupport_cpp.so\n'}
+[5.189589] (messages_fr3) StdoutLine: {'line': b'-- Set runtime path of "/home/simi/franka_ros2_ws/install/messages_fr3/lib/libmessages_fr3__rosidl_typesupport_cpp.so" to ""\n'}
+[5.189694] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/environment/pythonpath.sh\n'}
+[5.189803] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/environment/pythonpath.dsv\n'}
+[5.189893] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3-0.0.0-py3.10.egg-info\n'}
+[5.189990] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[5.190133] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[5.190306] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[5.190484] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[5.190685] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3\n'}
+[5.190842] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/__init__.py\n'}
+[5.190975] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/messages_fr3_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[5.191215] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/messages_fr3_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[5.191484] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/libmessages_fr3__rosidl_generator_py.so\n'}
+[5.191701] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/srv\n'}
+[5.191795] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/srv/_set_param_s.c\n'}
+[5.191967] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/srv/_set_mode_s.c\n'}
+[5.192129] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/srv/__init__.py\n'}
+[5.192311] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/srv/_set_mode.py\n'}
+[5.192485] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/srv/_set_pose.py\n'}
+[5.192695] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/srv/_set_force_s.c\n'}
+[5.192893] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/srv/_set_pose_s.c\n'}
+[5.193088] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/srv/_set_force.py\n'}
+[5.193300] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/srv/_set_param.py\n'}
+[5.193520] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/_messages_fr3_s.ep.rosidl_typesupport_c.c\n'}
+[5.193804] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/_messages_fr3_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[5.194076] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/messages_fr3_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[5.194339] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/_messages_fr3_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[5.214232] (-) TimerEvent: {}
+[5.232504] (messages_fr3) StdoutLine: {'line': b"Listing '/home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3'...\n"}
+[5.232714] (messages_fr3) StdoutLine: {'line': b"Compiling '/home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/__init__.py'...\n"}
+[5.232810] (messages_fr3) StdoutLine: {'line': b"Listing '/home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/srv'...\n"}
+[5.232975] (messages_fr3) StdoutLine: {'line': b"Compiling '/home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/srv/__init__.py'...\n"}
+[5.233098] (messages_fr3) StdoutLine: {'line': b"Compiling '/home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/srv/_set_force.py'...\n"}
+[5.233217] (messages_fr3) StdoutLine: {'line': b"Compiling '/home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/srv/_set_mode.py'...\n"}
+[5.233335] (messages_fr3) StdoutLine: {'line': b"Compiling '/home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/srv/_set_param.py'...\n"}
+[5.233454] (messages_fr3) StdoutLine: {'line': b"Compiling '/home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/srv/_set_pose.py'...\n"}
+[5.238006] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/messages_fr3_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[5.238936] (messages_fr3) StdoutLine: {'line': b'-- Set runtime path of "/home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/messages_fr3_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[5.239170] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/messages_fr3_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[5.239669] (messages_fr3) StdoutLine: {'line': b'-- Set runtime path of "/home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/messages_fr3_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[5.239919] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/messages_fr3_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[5.240425] (messages_fr3) StdoutLine: {'line': b'-- Set runtime path of "/home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/messages_fr3_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[5.241150] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/lib/libmessages_fr3__rosidl_generator_py.so\n'}
+[5.241728] (messages_fr3) StdoutLine: {'line': b'-- Set runtime path of "/home/simi/franka_ros2_ws/install/messages_fr3/lib/libmessages_fr3__rosidl_generator_py.so" to ""\n'}
+[5.241926] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/srv/SetPose.idl\n'}
+[5.242013] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/srv/SetParam.idl\n'}
+[5.242097] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/srv/SetForce.idl\n'}
+[5.242203] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/srv/SetMode.idl\n'}
+[5.242322] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/srv/SetPose.srv\n'}
+[5.242405] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/srv/SetPose_Request.msg\n'}
+[5.242487] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/srv/SetPose_Response.msg\n'}
+[5.242569] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/srv/SetParam.srv\n'}
+[5.242677] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/srv/SetParam_Request.msg\n'}
+[5.242855] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/srv/SetParam_Response.msg\n'}
+[5.242951] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/srv/SetForce.srv\n'}
+[5.243027] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/srv/SetForce_Request.msg\n'}
+[5.243102] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/srv/SetForce_Response.msg\n'}
+[5.243174] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/srv/SetMode.srv\n'}
+[5.243309] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/srv/SetMode_Request.msg\n'}
+[5.243367] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/srv/SetMode_Response.msg\n'}
+[5.243423] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/ament_index/resource_index/package_run_dependencies/messages_fr3\n'}
+[5.243482] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/ament_index/resource_index/parent_prefix_path/messages_fr3\n'}
+[5.243590] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/environment/ament_prefix_path.sh\n'}
+[5.243669] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/environment/ament_prefix_path.dsv\n'}
+[5.243730] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/environment/path.sh\n'}
+[5.243807] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/environment/path.dsv\n'}
+[5.243933] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/local_setup.bash\n'}
+[5.244001] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/local_setup.sh\n'}
+[5.244085] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/local_setup.zsh\n'}
+[5.244146] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/local_setup.dsv\n'}
+[5.244202] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/package.dsv\n'}
+[5.244290] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/ament_index/resource_index/packages/messages_fr3\n'}
+[5.244637] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/export_messages_fr3__rosidl_generator_cExport.cmake\n'}
+[5.244768] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/export_messages_fr3__rosidl_generator_cExport-release.cmake\n'}
+[5.244948] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/export_messages_fr3__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[5.245057] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/export_messages_fr3__rosidl_typesupport_fastrtps_cExport-release.cmake\n'}
+[5.245205] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/messages_fr3__rosidl_typesupport_introspection_cExport.cmake\n'}
+[5.245287] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/messages_fr3__rosidl_typesupport_introspection_cExport-release.cmake\n'}
+[5.245445] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/messages_fr3__rosidl_typesupport_cExport.cmake\n'}
+[5.245527] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/messages_fr3__rosidl_typesupport_cExport-release.cmake\n'}
+[5.245689] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/export_messages_fr3__rosidl_generator_cppExport.cmake\n'}
+[5.245816] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/export_messages_fr3__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[5.245932] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/export_messages_fr3__rosidl_typesupport_fastrtps_cppExport-release.cmake\n'}
+[5.246066] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/messages_fr3__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[5.246147] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/messages_fr3__rosidl_typesupport_introspection_cppExport-release.cmake\n'}
+[5.246331] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/messages_fr3__rosidl_typesupport_cppExport.cmake\n'}
+[5.246405] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/messages_fr3__rosidl_typesupport_cppExport-release.cmake\n'}
+[5.246605] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/export_messages_fr3__rosidl_generator_pyExport.cmake\n'}
+[5.246702] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/export_messages_fr3__rosidl_generator_pyExport-release.cmake\n'}
+[5.246834] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/rosidl_cmake-extras.cmake\n'}
+[5.246976] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[5.247084] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[5.247210] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[5.247333] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[5.247433] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[5.247508] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[5.247624] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/messages_fr3Config.cmake\n'}
+[5.247682] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/messages_fr3Config-version.cmake\n'}
+[5.247738] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/package.xml\n'}
+[5.250434] (messages_fr3) CommandEnded: {'returncode': 0}
+[5.314340] (-) TimerEvent: {}
+[5.414674] (-) TimerEvent: {}
+[5.515078] (-) TimerEvent: {}
+[5.541728] (messages_fr3) JobEnded: {'identifier': 'messages_fr3', 'rc': 0}
+[5.542885] (-) EventReactorShutdown: {}

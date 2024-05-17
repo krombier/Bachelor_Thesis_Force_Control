@@ -1,0 +1,16 @@
+[0.000000] (-) TimerEvent: {}
+[0.000324] (-) JobUnselected: {'identifier': 'franka_bringup'}
+[0.000416] (-) JobUnselected: {'identifier': 'franka_description'}
+[0.000464] (-) JobUnselected: {'identifier': 'franka_example_controllers'}
+[0.000504] (-) JobUnselected: {'identifier': 'franka_gripper'}
+[0.000544] (-) JobUnselected: {'identifier': 'franka_hardware'}
+[0.000581] (-) JobUnselected: {'identifier': 'franka_moveit_config'}
+[0.000619] (-) JobUnselected: {'identifier': 'franka_msgs'}
+[0.000656] (-) JobUnselected: {'identifier': 'franka_robot_state_broadcaster'}
+[0.000692] (-) JobUnselected: {'identifier': 'franka_semantic_components'}
+[0.000728] (-) JobUnselected: {'identifier': 'integration_launch_testing'}
+[0.000764] (-) JobUnselected: {'identifier': 'joint_trajectory_controller'}
+[0.000807] (cartesian_impedance_control) JobQueued: {'identifier': 'cartesian_impedance_control', 'dependencies': OrderedDict([('franka_description', '/home/simi/franka_ros2_ws/src/install/franka_description'), ('franka_msgs', '/home/simi/franka_ros2_ws/src/install/franka_msgs'), ('franka_hardware', '/home/simi/franka_ros2_ws/src/install/franka_hardware'), ('franka_semantic_components', '/home/simi/franka_ros2_ws/src/install/franka_semantic_components'), ('franka_robot_state_broadcaster', '/home/simi/franka_ros2_ws/src/install/franka_robot_state_broadcaster')])}
+[0.000870] (cartesian_impedance_control) JobStarted: {'identifier': 'cartesian_impedance_control'}
+[0.010431] (cartesian_impedance_control) JobEnded: {'identifier': 'cartesian_impedance_control', 'rc': 1}
+[0.021379] (-) EventReactorShutdown: {}

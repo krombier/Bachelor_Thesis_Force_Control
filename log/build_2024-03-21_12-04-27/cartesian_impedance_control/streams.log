@@ -1,0 +1,134 @@
+[0.032s] Invoking command in '/home/simi/franka_ros2_ws/build/cartesian_impedance_control': AMENT_PREFIX_PATH=/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster:/home/simi/franka_ros2_ws/install/franka_semantic_components:/home/simi/franka_ros2_ws/install/franka_hardware:/home/simi/franka_ros2_ws/install/messages_fr3:/home/simi/franka_ros2_ws/install/franka_msgs:/home/simi/franka_ros2_ws/install/franka_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster:/home/simi/franka_ros2_ws/install/franka_semantic_components:/home/simi/franka_ros2_ws/install/franka_hardware:/home/simi/franka_ros2_ws/install/messages_fr3:/home/simi/franka_ros2_ws/install/franka_msgs:/home/simi/franka_ros2_ws/install/franka_description:/opt/ros/humble LD_LIBRARY_PATH=/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster/lib:/home/simi/franka_ros2_ws/install/franka_semantic_components/lib:/home/simi/franka_ros2_ws/install/franka_hardware/lib:/home/simi/franka_ros2_ws/install/messages_fr3/lib:/home/simi/franka_ros2_ws/install/franka_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages:/home/simi/franka_ros2_ws/install/franka_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/simi/franka_ros2_ws/src/cartesian_impedance_control -DCMAKE_INSTALL_PREFIX=/home/simi/franka_ros2_ws/install/cartesian_impedance_control
+[0.044s] -- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.160s] -- Found rclcpp: 16.0.8 (/opt/ros/humble/share/rclcpp/cmake)
+[0.186s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.188s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.193s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.202s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.215s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.264s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.265s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.402s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.538s] -- Found controller_interface: 2.40.0 (/opt/ros/humble/share/controller_interface/cmake)
+[1.098s] -- Found franka_msgs: 0.1.13 (/home/simi/franka_ros2_ws/install/franka_msgs/share/franka_msgs/cmake)
+[1.232s] -- Found franka_semantic_components: 0.1.0 (/home/simi/franka_ros2_ws/install/franka_semantic_components/share/franka_semantic_components/cmake)
+[1.607s] -- Found generate_parameter_library: 0.3.7 (/opt/ros/humble/share/generate_parameter_library/cmake)
+[1.607s] -- Found parameter_traits: 0.3.7 (/opt/ros/humble/share/parameter_traits/cmake)
+[1.620s] -- Found messages_fr3: 0.0.0 (/home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake)
+[2.534s] -- Found ament_cmake_clang_format: 0.12.10 (/opt/ros/humble/share/ament_cmake_clang_format/cmake)
+[2.536s] -- Found ament_cmake_copyright: 0.12.10 (/opt/ros/humble/share/ament_cmake_copyright/cmake)
+[2.539s] -- Found ament_cmake_cppcheck: 0.12.10 (/opt/ros/humble/share/ament_cmake_cppcheck/cmake)
+[2.542s] -- Found ament_cmake_flake8: 0.12.10 (/opt/ros/humble/share/ament_cmake_flake8/cmake)
+[2.545s] -- Found ament_cmake_lint_cmake: 0.12.10 (/opt/ros/humble/share/ament_cmake_lint_cmake/cmake)
+[2.547s] -- Found ament_cmake_pep257: 0.12.10 (/opt/ros/humble/share/ament_cmake_pep257/cmake)
+[2.550s] -- Found ament_cmake_xmllint: 0.12.10 (/opt/ros/humble/share/ament_cmake_xmllint/cmake)
+[2.553s] -- Found ament_cmake_gmock: 1.3.8 (/opt/ros/humble/share/ament_cmake_gmock/cmake)
+[2.556s] -- Found controller_manager: 2.40.0 (/opt/ros/humble/share/controller_manager/cmake)
+[2.818s] -- Found ros2_control_test_assets: 2.40.0 (/opt/ros/humble/share/ros2_control_test_assets/cmake)
+[2.884s] -- Configuring done
+[2.943s] -- Generating done
+[2.945s] -- Build files have been written to: /home/simi/franka_ros2_ws/build/cartesian_impedance_control
+[2.955s] Invoked command in '/home/simi/franka_ros2_ws/build/cartesian_impedance_control' returned '0': AMENT_PREFIX_PATH=/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster:/home/simi/franka_ros2_ws/install/franka_semantic_components:/home/simi/franka_ros2_ws/install/franka_hardware:/home/simi/franka_ros2_ws/install/messages_fr3:/home/simi/franka_ros2_ws/install/franka_msgs:/home/simi/franka_ros2_ws/install/franka_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster:/home/simi/franka_ros2_ws/install/franka_semantic_components:/home/simi/franka_ros2_ws/install/franka_hardware:/home/simi/franka_ros2_ws/install/messages_fr3:/home/simi/franka_ros2_ws/install/franka_msgs:/home/simi/franka_ros2_ws/install/franka_description:/opt/ros/humble LD_LIBRARY_PATH=/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster/lib:/home/simi/franka_ros2_ws/install/franka_semantic_components/lib:/home/simi/franka_ros2_ws/install/franka_hardware/lib:/home/simi/franka_ros2_ws/install/messages_fr3/lib:/home/simi/franka_ros2_ws/install/franka_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages:/home/simi/franka_ros2_ws/install/franka_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/simi/franka_ros2_ws/src/cartesian_impedance_control -DCMAKE_INSTALL_PREFIX=/home/simi/franka_ros2_ws/install/cartesian_impedance_control
+[2.958s] Invoking command in '/home/simi/franka_ros2_ws/build/cartesian_impedance_control': AMENT_PREFIX_PATH=/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster:/home/simi/franka_ros2_ws/install/franka_semantic_components:/home/simi/franka_ros2_ws/install/franka_hardware:/home/simi/franka_ros2_ws/install/messages_fr3:/home/simi/franka_ros2_ws/install/franka_msgs:/home/simi/franka_ros2_ws/install/franka_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster:/home/simi/franka_ros2_ws/install/franka_semantic_components:/home/simi/franka_ros2_ws/install/franka_hardware:/home/simi/franka_ros2_ws/install/messages_fr3:/home/simi/franka_ros2_ws/install/franka_msgs:/home/simi/franka_ros2_ws/install/franka_description:/opt/ros/humble LD_LIBRARY_PATH=/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster/lib:/home/simi/franka_ros2_ws/install/franka_semantic_components/lib:/home/simi/franka_ros2_ws/install/franka_hardware/lib:/home/simi/franka_ros2_ws/install/messages_fr3/lib:/home/simi/franka_ros2_ws/install/franka_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages:/home/simi/franka_ros2_ws/install/franka_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/simi/franka_ros2_ws/build/cartesian_impedance_control -- -j16 -l16
+[3.027s] [ 20%] [32mBuilding CXX object CMakeFiles/cartesian_impedance_control.dir/src/cartesian_impedance_controller.cpp.o[0m
+[3.028s] [ 40%] [32mBuilding CXX object CMakeFiles/cartesian_impedance_control.dir/src/user_input_server.cpp.o[0m
+[6.308s] In file included from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_server.cpp:10[m[K:
+[6.308s] [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/include/cartesian_impedance_control/cartesian_impedance_controller.hpp:104:73:[m[K [01;35m[Kwarning: [m[Kextra ‘[01m[K;[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[6.308s]   104 |     Eigen::Matrix<double, 7, 1> tau_J_d_M = Eigen::MatrixXd::Zero(7, 1);[01;35m[K;[m[K
+[6.308s]       |                                                                         [01;35m[K^[m[K
+[6.308s]       |                                                                         [31m[K-[m[K
+[6.369s] [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_server.cpp:[m[K In member function ‘[01m[Kvoid cartesian_impedance_control::UserInputServer::setPose(std::shared_ptr<messages_fr3::srv::SetPose_Request_<std::allocator<void> > >, std::shared_ptr<messages_fr3::srv::SetPose_Response_<std::allocator<void> > >)[m[K’:
+[6.369s] [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_server.cpp:15:59:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kresponse[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[6.369s]    15 |     [01;35m[Kstd::shared_ptr<messages_fr3::srv::SetPose::Response> response[m[K)
+[6.369s]       |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[6.384s] [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_server.cpp:[m[K In member function ‘[01m[Kvoid cartesian_impedance_control::UserInputServer::setParam(std::shared_ptr<messages_fr3::srv::SetParam_Request_<std::allocator<void> > >, std::shared_ptr<messages_fr3::srv::SetParam_Response_<std::allocator<void> > >)[m[K’:
+[6.384s] [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_server.cpp:27:60:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kresponse[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[6.384s]    27 |     [01;35m[Kstd::shared_ptr<messages_fr3::srv::SetParam::Response> response[m[K)
+[6.384s]       |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[6.406s] [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_server.cpp:[m[K In member function ‘[01m[Kint cartesian_impedance_control::UserInputServer::main(int, char**)[m[K’:
+[6.407s] [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_server.cpp:40:31:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kargc[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[6.407s]    40 | int UserInputServer::main([01;35m[Kint argc[m[K, char **argv)
+[6.407s]       |                           [01;35m[K~~~~^~~~[m[K
+[6.407s] [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_server.cpp:40:44:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kargv[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[6.407s]    40 | int UserInputServer::main(int argc, [01;35m[Kchar **argv[m[K)
+[6.407s]       |                                     [01;35m[K~~~~~~~^~~~[m[K
+[6.484s] In file included from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/cartesian_impedance_controller.cpp:15[m[K:
+[6.484s] [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/include/cartesian_impedance_control/cartesian_impedance_controller.hpp:104:73:[m[K [01;35m[Kwarning: [m[Kextra ‘[01m[K;[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[6.484s]   104 |   Eigen::Matrix<double, 7, 1> tau_J_d_M = Eigen::MatrixXd::Zero(7, 1);[01;35m[K;[m[K
+[6.484s]       |                                                                       [01;35m[K^[m[K
+[6.484s]       |                                                                       [31m[K-[m[K
+[24.452s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:341[m[K,
+[24.452s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[24.452s]                  from [01m[K/usr/include/eigen3/Eigen/Eigen:1[m[K,
+[24.453s]                  from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/include/cartesian_impedance_control/user_input_server.hpp:3[m[K,
+[24.453s]                  from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/include/cartesian_impedance_control/cartesian_impedance_controller.hpp:29[m[K,
+[24.453s]                  from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/cartesian_impedance_controller.cpp:15[m[K:
+[24.453s] [01m[K/usr/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h:[m[K In function ‘[01m[Kstatic void Eigen::internal::trmv_selector<Mode, 1>::run(const Lhs&, const Rhs&, Dest&, const typename Dest::Scalar&) [with Lhs = Eigen::Transpose<const Eigen::Block<const Eigen::Block<Eigen::Matrix<double, -1, -1>, -1, -1, false>, -1, -1, false> >; Rhs = Eigen::Transpose<const Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<double, double>, const Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, const Eigen::Matrix<double, 1, -1> >, const Eigen::Transpose<const Eigen::Block<const Eigen::Block<const Eigen::Block<Eigen::Matrix<double, -1, -1>, -1, -1, false>, -1, 1, true>, -1, 1, false> > > >; Dest = Eigen::Transpose<Eigen::Block<Eigen::Block<Eigen::Matrix<double, -1, -1, 1, -1, -1>, 1, -1, true>, 1, -1, false> >; int Mode = 6][m[K’:
+[24.453s] [01m[K/usr/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h:332:12:[m[K [01;35m[Kwarning: [m[K‘[01m[Kresult[m[K’ may be used uninitialized [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wmaybe-uninitialized-Wmaybe-uninitialized]8;;[m[K]
+[24.453s]   327 |     [01;35m[Kinternal::triangular_matrix_vector_product[m[K
+[24.453s]       |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[24.453s]   328 | [01;35m[K      <Index,Mode,[m[K
+[24.453s]       |       [01;35m[K~~~~~~~~~~~~[m[K
+[24.454s]   329 | [01;35m[K       LhsScalar, LhsBlasTraits::NeedToConjugate,[m[K
+[24.454s]       |        [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[24.454s]   330 | [01;35m[K       RhsScalar, RhsBlasTraits::NeedToConjugate,[m[K
+[24.454s]       |        [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[24.454s]   331 | [01;35m[K       RowMajor>[m[K
+[24.454s]       |        [01;35m[K~~~~~~~~~[m[K
+[24.454s]   332 | [01;35m[K      ::run(actualLhs.rows(),actualLhs.cols(),[m[K
+[24.454s]       |       [01;35m[K~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[24.454s]   333 | [01;35m[K            actualLhs.data(),actualLhs.outerStride(),[m[K
+[24.454s]       |             [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[24.454s]   334 | [01;35m[K            actualRhsPtr,1,[m[K
+[24.454s]       |             [01;35m[K~~~~~~~~~~~~~~~[m[K
+[24.454s]   335 | [01;35m[K            dest.data(),dest.innerStride(),[m[K
+[24.454s]       |             [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[24.454s]   336 | [01;35m[K            actualAlpha)[m[K;
+[24.454s]       |             [01;35m[K~~~~~~~~~~~~[m[K
+[24.454s] [01m[K/usr/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h:105:24:[m[K [01;36m[Knote: [m[Kby argument 5 of type ‘[01m[Kconst double*[m[K’ to ‘[01m[Kstatic void Eigen::internal::triangular_matrix_vector_product<Index, Mode, LhsScalar, ConjLhs, RhsScalar, ConjRhs, 1, Version>::run(Index, Index, const LhsScalar*, Index, const RhsScalar*, Index, Eigen::internal::triangular_matrix_vector_product<Index, Mode, LhsScalar, ConjLhs, RhsScalar, ConjRhs, 1, Version>::ResScalar*, Index, const ResScalar&) [with Index = long int; int Mode = 6; LhsScalar = double; bool ConjLhs = false; RhsScalar = double; bool ConjRhs = false; int Version = 0][m[K’ declared here
+[24.455s]   105 | EIGEN_DONT_INLINE void [01;36m[Ktriangular_matrix_vector_product<Index,Mode,LhsScalar,ConjLhs,RhsScalar,ConjRhs,RowMajor,Version>[m[K
+[24.455s]       |                        [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[30.135s] [ 60%] [32m[1mLinking CXX shared library libcartesian_impedance_control.so[0m
+[30.428s] [ 60%] Built target cartesian_impedance_control
+[30.457s] [ 80%] [32mBuilding CXX object CMakeFiles/user_input_client.dir/src/user_input_client.cpp.o[0m
+[34.373s] [100%] [32m[1mLinking CXX executable user_input_client[0m
+[34.571s] [100%] Built target user_input_client
+[34.588s] Invoked command in '/home/simi/franka_ros2_ws/build/cartesian_impedance_control' returned '0': AMENT_PREFIX_PATH=/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster:/home/simi/franka_ros2_ws/install/franka_semantic_components:/home/simi/franka_ros2_ws/install/franka_hardware:/home/simi/franka_ros2_ws/install/messages_fr3:/home/simi/franka_ros2_ws/install/franka_msgs:/home/simi/franka_ros2_ws/install/franka_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster:/home/simi/franka_ros2_ws/install/franka_semantic_components:/home/simi/franka_ros2_ws/install/franka_hardware:/home/simi/franka_ros2_ws/install/messages_fr3:/home/simi/franka_ros2_ws/install/franka_msgs:/home/simi/franka_ros2_ws/install/franka_description:/opt/ros/humble LD_LIBRARY_PATH=/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster/lib:/home/simi/franka_ros2_ws/install/franka_semantic_components/lib:/home/simi/franka_ros2_ws/install/franka_hardware/lib:/home/simi/franka_ros2_ws/install/messages_fr3/lib:/home/simi/franka_ros2_ws/install/franka_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages:/home/simi/franka_ros2_ws/install/franka_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/simi/franka_ros2_ws/build/cartesian_impedance_control -- -j16 -l16
+[34.632s] Invoking command in '/home/simi/franka_ros2_ws/build/cartesian_impedance_control': AMENT_PREFIX_PATH=/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster:/home/simi/franka_ros2_ws/install/franka_semantic_components:/home/simi/franka_ros2_ws/install/franka_hardware:/home/simi/franka_ros2_ws/install/messages_fr3:/home/simi/franka_ros2_ws/install/franka_msgs:/home/simi/franka_ros2_ws/install/franka_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster:/home/simi/franka_ros2_ws/install/franka_semantic_components:/home/simi/franka_ros2_ws/install/franka_hardware:/home/simi/franka_ros2_ws/install/messages_fr3:/home/simi/franka_ros2_ws/install/franka_msgs:/home/simi/franka_ros2_ws/install/franka_description:/opt/ros/humble LD_LIBRARY_PATH=/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster/lib:/home/simi/franka_ros2_ws/install/franka_semantic_components/lib:/home/simi/franka_ros2_ws/install/franka_hardware/lib:/home/simi/franka_ros2_ws/install/messages_fr3/lib:/home/simi/franka_ros2_ws/install/franka_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages:/home/simi/franka_ros2_ws/install/franka_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/simi/franka_ros2_ws/build/cartesian_impedance_control
+[34.641s] -- Install configuration: "Release"
+[34.641s] -- Installing: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/cartesian_impedance_control.xml
+[34.641s] -- Installing: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/lib/cartesian_impedance_control/user_input_client
+[34.641s] -- Set runtime path of "/home/simi/franka_ros2_ws/install/cartesian_impedance_control/lib/cartesian_impedance_control/user_input_client" to ""
+[34.641s] -- Installing: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/lib/libcartesian_impedance_control.so
+[34.644s] -- Set runtime path of "/home/simi/franka_ros2_ws/install/cartesian_impedance_control/lib/libcartesian_impedance_control.so" to ""
+[34.644s] -- Installing: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/include
+[34.644s] -- Installing: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/include/cartesian_impedance_control
+[34.644s] -- Installing: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/include/cartesian_impedance_control/user_input_server.hpp
+[34.644s] -- Installing: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/include/cartesian_impedance_control/cartesian_impedance_controller.hpp
+[34.645s] -- Installing: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/launch
+[34.645s] -- Installing: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/launch/controllers.yaml
+[34.645s] -- Installing: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/launch/__pycache__
+[34.645s] -- Installing: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/launch/__pycache__/cartesian_impedance_controller.launch.cpython-310.pyc
+[34.645s] -- Installing: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/launch/cartesian_impedance_controller.launch.py
+[34.645s] -- Installing: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/environment/library_path.sh
+[34.645s] -- Installing: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/environment/library_path.dsv
+[34.646s] -- Installing: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/ament_index/resource_index/package_run_dependencies/cartesian_impedance_control
+[34.646s] -- Installing: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/ament_index/resource_index/parent_prefix_path/cartesian_impedance_control
+[34.646s] -- Installing: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/environment/ament_prefix_path.sh
+[34.646s] -- Installing: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/environment/ament_prefix_path.dsv
+[34.646s] -- Installing: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/environment/path.sh
+[34.647s] -- Installing: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/environment/path.dsv
+[34.647s] -- Installing: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/local_setup.bash
+[34.647s] -- Installing: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/local_setup.sh
+[34.647s] -- Installing: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/local_setup.zsh
+[34.647s] -- Installing: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/local_setup.dsv
+[34.647s] -- Installing: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/package.dsv
+[34.647s] -- Installing: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/ament_index/resource_index/packages/cartesian_impedance_control
+[34.648s] -- Installing: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/ament_index/resource_index/controller_interface__pluginlib__plugin/cartesian_impedance_control
+[34.648s] -- Installing: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/cmake/ament_cmake_export_include_directories-extras.cmake
+[34.648s] -- Installing: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/cmake/ament_cmake_export_libraries-extras.cmake
+[34.648s] -- Installing: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/cmake/ament_cmake_export_dependencies-extras.cmake
+[34.648s] -- Installing: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/cmake/cartesian_impedance_controlConfig.cmake
+[34.648s] -- Installing: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/cmake/cartesian_impedance_controlConfig-version.cmake
+[34.649s] -- Installing: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/package.xml
+[34.652s] Invoked command in '/home/simi/franka_ros2_ws/build/cartesian_impedance_control' returned '0': AMENT_PREFIX_PATH=/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster:/home/simi/franka_ros2_ws/install/franka_semantic_components:/home/simi/franka_ros2_ws/install/franka_hardware:/home/simi/franka_ros2_ws/install/messages_fr3:/home/simi/franka_ros2_ws/install/franka_msgs:/home/simi/franka_ros2_ws/install/franka_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster:/home/simi/franka_ros2_ws/install/franka_semantic_components:/home/simi/franka_ros2_ws/install/franka_hardware:/home/simi/franka_ros2_ws/install/messages_fr3:/home/simi/franka_ros2_ws/install/franka_msgs:/home/simi/franka_ros2_ws/install/franka_description:/opt/ros/humble LD_LIBRARY_PATH=/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster/lib:/home/simi/franka_ros2_ws/install/franka_semantic_components/lib:/home/simi/franka_ros2_ws/install/franka_hardware/lib:/home/simi/franka_ros2_ws/install/messages_fr3/lib:/home/simi/franka_ros2_ws/install/franka_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages:/home/simi/franka_ros2_ws/install/franka_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/simi/franka_ros2_ws/build/cartesian_impedance_control

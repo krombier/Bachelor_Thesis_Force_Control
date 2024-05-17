@@ -1,0 +1,87 @@
+[0.049s] Invoking command in '/home/simi/franka_ros2_ws/build/joint_trajectory_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/simi/franka_ros2_ws/src/franka_ros2/joint_trajectory_controller -DCMAKE_INSTALL_PREFIX=/home/simi/franka_ros2_ws/install/joint_trajectory_controller
+[0.066s] -- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.224s] -- Found backward_ros: 1.0.2 (/opt/ros/humble/share/backward_ros/cmake)
+[0.240s] -- Could NOT find libbfd (missing: LIBBFD_LIBRARY LIBBFD_INCLUDE_DIR) 
+[0.240s] -- BACKWARD_HAS_UNWIND=1
+[0.240s] -- BACKWARD_HAS_BACKTRACE=0
+[0.240s] -- BACKWARD_HAS_BACKTRACE_SYMBOL=0
+[0.240s] -- BACKWARD_HAS_DW=1
+[0.240s] -- BACKWARD_HAS_BFD=0
+[0.241s] -- Found Backward: /opt/ros/humble/share/backward_ros/cmake  
+[0.241s] -- Found angles: 1.15.0 (/opt/ros/humble/share/angles/cmake)
+[0.242s] -- Found control_msgs: 4.4.0 (/opt/ros/humble/share/control_msgs/cmake)
+[0.261s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.263s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.269s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.281s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.296s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.770s] -- Found control_toolbox: 3.2.0 (/opt/ros/humble/share/control_toolbox/cmake)
+[0.821s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.822s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.968s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.136s] -- Found parameter_traits: 0.3.7 (/opt/ros/humble/share/parameter_traits/cmake)
+[1.148s] -- Found rclcpp_lifecycle: 16.0.8 (/opt/ros/humble/share/rclcpp_lifecycle/cmake)
+[1.210s] -- Found controller_interface: 2.40.0 (/opt/ros/humble/share/controller_interface/cmake)
+[1.673s] -- Found ament_cmake_gmock: 1.3.8 (/opt/ros/humble/share/ament_cmake_gmock/cmake)
+[1.673s] -- Found controller_manager: 2.40.0 (/opt/ros/humble/share/controller_manager/cmake)
+[1.940s] -- Found ros2_control_test_assets: 2.40.0 (/opt/ros/humble/share/ros2_control_test_assets/cmake)
+[1.941s] -- Found gmock sources under '/opt/ros/humble/src/gmock_vendor': C++ tests using 'Google Mock' will be built
+[1.944s] -- Found ament_cmake_gtest: 1.3.8 (/opt/ros/humble/share/ament_cmake_gtest/cmake)
+[1.944s] -- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[2.451s] -- Configuring done
+[2.525s] -- Generating done
+[2.528s] -- Build files have been written to: /home/simi/franka_ros2_ws/build/joint_trajectory_controller
+[2.540s] Invoked command in '/home/simi/franka_ros2_ws/build/joint_trajectory_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/simi/franka_ros2_ws/src/franka_ros2/joint_trajectory_controller -DCMAKE_INSTALL_PREFIX=/home/simi/franka_ros2_ws/install/joint_trajectory_controller
+[2.542s] Invoking command in '/home/simi/franka_ros2_ws/build/joint_trajectory_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/simi/franka_ros2_ws/build/joint_trajectory_controller -- -j16 -l16
+[2.600s] [35m[1mConsolidate compiler generated dependencies of target gmock_main[0m
+[2.601s] [35m[1mConsolidate compiler generated dependencies of target gmock[0m
+[2.614s] [ 12%] Built target joint_trajectory_controller_parameters
+[2.620s] [ 25%] Built target gmock_main
+[2.621s] [ 43%] Built target gmock
+[2.632s] [35m[1mConsolidate compiler generated dependencies of target joint_trajectory_controller[0m
+[2.638s] [35m[1mConsolidate compiler generated dependencies of target test_load_joint_trajectory_controller[0m
+[2.662s] [ 62%] Built target joint_trajectory_controller
+[2.666s] [ 75%] Built target test_load_joint_trajectory_controller
+[2.679s] [35m[1mConsolidate compiler generated dependencies of target test_trajectory_controller[0m
+[2.679s] [35m[1mConsolidate compiler generated dependencies of target test_trajectory[0m
+[2.705s] [ 87%] Built target test_trajectory_controller
+[2.706s] [100%] Built target test_trajectory
+[2.722s] Invoked command in '/home/simi/franka_ros2_ws/build/joint_trajectory_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/simi/franka_ros2_ws/build/joint_trajectory_controller -- -j16 -l16
+[2.806s] Invoking command in '/home/simi/franka_ros2_ws/build/joint_trajectory_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/simi/franka_ros2_ws/build/joint_trajectory_controller
+[2.816s] -- Install configuration: "Release"
+[2.816s] -- Up-to-date: /home/simi/franka_ros2_ws/install/joint_trajectory_controller/include/joint_trajectory_controller_parameters
+[2.827s] -- Up-to-date: /home/simi/franka_ros2_ws/install/joint_trajectory_controller/include/joint_trajectory_controller_parameters/validate_jtc_parameters.hpp
+[2.828s] -- Up-to-date: /home/simi/franka_ros2_ws/install/joint_trajectory_controller/include/joint_trajectory_controller_parameters/joint_trajectory_controller_parameters.hpp
+[2.828s] -- Up-to-date: /home/simi/franka_ros2_ws/install/joint_trajectory_controller/share/joint_trajectory_controller/joint_trajectory_plugin.xml
+[2.828s] -- Up-to-date: /home/simi/franka_ros2_ws/install/joint_trajectory_controller/include/joint_trajectory_controller
+[2.828s] -- Up-to-date: /home/simi/franka_ros2_ws/install/joint_trajectory_controller/include/joint_trajectory_controller/joint_trajectory_controller
+[2.828s] -- Up-to-date: /home/simi/franka_ros2_ws/install/joint_trajectory_controller/include/joint_trajectory_controller/joint_trajectory_controller/tolerances.hpp
+[2.828s] -- Up-to-date: /home/simi/franka_ros2_ws/install/joint_trajectory_controller/include/joint_trajectory_controller/joint_trajectory_controller/validate_jtc_parameters.hpp
+[2.828s] -- Up-to-date: /home/simi/franka_ros2_ws/install/joint_trajectory_controller/include/joint_trajectory_controller/joint_trajectory_controller/trajectory.hpp
+[2.828s] -- Up-to-date: /home/simi/franka_ros2_ws/install/joint_trajectory_controller/include/joint_trajectory_controller/joint_trajectory_controller/interpolation_methods.hpp
+[2.828s] -- Up-to-date: /home/simi/franka_ros2_ws/install/joint_trajectory_controller/include/joint_trajectory_controller/joint_trajectory_controller/joint_trajectory_controller.hpp
+[2.828s] -- Up-to-date: /home/simi/franka_ros2_ws/install/joint_trajectory_controller/include/joint_trajectory_controller/joint_trajectory_controller/visibility_control.h
+[2.829s] -- Up-to-date: /home/simi/franka_ros2_ws/install/joint_trajectory_controller/lib/libjoint_trajectory_controller.so
+[2.830s] -- Up-to-date: /home/simi/franka_ros2_ws/install/joint_trajectory_controller/share/joint_trajectory_controller/environment/library_path.sh
+[2.830s] -- Installing: /home/simi/franka_ros2_ws/install/joint_trajectory_controller/share/joint_trajectory_controller/environment/library_path.dsv
+[2.830s] -- Up-to-date: /home/simi/franka_ros2_ws/install/joint_trajectory_controller/share/ament_index/resource_index/package_run_dependencies/joint_trajectory_controller
+[2.830s] -- Installing: /home/simi/franka_ros2_ws/install/joint_trajectory_controller/share/ament_index/resource_index/parent_prefix_path/joint_trajectory_controller
+[2.831s] -- Up-to-date: /home/simi/franka_ros2_ws/install/joint_trajectory_controller/share/joint_trajectory_controller/environment/ament_prefix_path.sh
+[2.831s] -- Installing: /home/simi/franka_ros2_ws/install/joint_trajectory_controller/share/joint_trajectory_controller/environment/ament_prefix_path.dsv
+[2.831s] -- Up-to-date: /home/simi/franka_ros2_ws/install/joint_trajectory_controller/share/joint_trajectory_controller/environment/path.sh
+[2.831s] -- Installing: /home/simi/franka_ros2_ws/install/joint_trajectory_controller/share/joint_trajectory_controller/environment/path.dsv
+[2.831s] -- Up-to-date: /home/simi/franka_ros2_ws/install/joint_trajectory_controller/share/joint_trajectory_controller/local_setup.bash
+[2.831s] -- Up-to-date: /home/simi/franka_ros2_ws/install/joint_trajectory_controller/share/joint_trajectory_controller/local_setup.sh
+[2.831s] -- Up-to-date: /home/simi/franka_ros2_ws/install/joint_trajectory_controller/share/joint_trajectory_controller/local_setup.zsh
+[2.831s] -- Installing: /home/simi/franka_ros2_ws/install/joint_trajectory_controller/share/joint_trajectory_controller/local_setup.dsv
+[2.831s] -- Installing: /home/simi/franka_ros2_ws/install/joint_trajectory_controller/share/joint_trajectory_controller/package.dsv
+[2.832s] -- Up-to-date: /home/simi/franka_ros2_ws/install/joint_trajectory_controller/share/ament_index/resource_index/packages/joint_trajectory_controller
+[2.832s] -- Up-to-date: /home/simi/franka_ros2_ws/install/joint_trajectory_controller/share/ament_index/resource_index/controller_interface__pluginlib__plugin/joint_trajectory_controller
+[2.832s] -- Up-to-date: /home/simi/franka_ros2_ws/install/joint_trajectory_controller/share/joint_trajectory_controller/cmake/export_joint_trajectory_controllerExport.cmake
+[2.833s] -- Up-to-date: /home/simi/franka_ros2_ws/install/joint_trajectory_controller/share/joint_trajectory_controller/cmake/export_joint_trajectory_controllerExport-release.cmake
+[2.833s] -- Up-to-date: /home/simi/franka_ros2_ws/install/joint_trajectory_controller/share/joint_trajectory_controller/cmake/ament_cmake_export_targets-extras.cmake
+[2.833s] -- Up-to-date: /home/simi/franka_ros2_ws/install/joint_trajectory_controller/share/joint_trajectory_controller/cmake/ament_cmake_export_dependencies-extras.cmake
+[2.833s] -- Up-to-date: /home/simi/franka_ros2_ws/install/joint_trajectory_controller/share/joint_trajectory_controller/cmake/joint_trajectory_controllerConfig.cmake
+[2.833s] -- Up-to-date: /home/simi/franka_ros2_ws/install/joint_trajectory_controller/share/joint_trajectory_controller/cmake/joint_trajectory_controllerConfig-version.cmake
+[2.833s] -- Up-to-date: /home/simi/franka_ros2_ws/install/joint_trajectory_controller/share/joint_trajectory_controller/package.xml
+[2.836s] Invoked command in '/home/simi/franka_ros2_ws/build/joint_trajectory_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/simi/franka_ros2_ws/build/joint_trajectory_controller

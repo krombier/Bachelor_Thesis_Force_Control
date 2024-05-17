@@ -1,0 +1,6 @@
+Invoking command in '/home/simi/franka_ros2_ws/build/franka_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/simi/franka_ros2_ws/src/franka_ros2/franka_description -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/home/simi/franka_ros2_ws/install/franka_description
+Invoked command in '/home/simi/franka_ros2_ws/build/franka_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/simi/franka_ros2_ws/src/franka_ros2/franka_description -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/home/simi/franka_ros2_ws/install/franka_description
+Invoking command in '/home/simi/franka_ros2_ws/build/franka_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/simi/franka_ros2_ws/build/franka_description -- -j16 -l16
+Invoked command in '/home/simi/franka_ros2_ws/build/franka_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/simi/franka_ros2_ws/build/franka_description -- -j16 -l16
+Invoking command in '/home/simi/franka_ros2_ws/build/franka_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/simi/franka_ros2_ws/build/franka_description
+Invoked command in '/home/simi/franka_ros2_ws/build/franka_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/simi/franka_ros2_ws/build/franka_description

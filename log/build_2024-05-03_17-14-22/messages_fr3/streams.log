@@ -1,0 +1,169 @@
+[0.021s] Invoking command in '/home/simi/franka_ros2_ws/build/messages_fr3': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/simi/franka_ros2_ws/build/messages_fr3 -- -j16 -l16
+[0.116s] [  2%] Built target messages_fr3__cpp
+[0.120s] [ 12%] Built target messages_fr3__rosidl_generator_c
+[0.137s] [ 12%] Built target ament_cmake_python_copy_messages_fr3
+[0.157s] [ 23%] Built target messages_fr3__rosidl_typesupport_cpp
+[0.160s] [ 43%] Built target messages_fr3__rosidl_typesupport_fastrtps_cpp
+[0.160s] [ 43%] Built target messages_fr3__rosidl_typesupport_introspection_cpp
+[0.162s] [ 64%] Built target messages_fr3__rosidl_typesupport_c
+[0.162s] [ 64%] Built target messages_fr3__rosidl_typesupport_introspection_c
+[0.164s] [ 74%] Built target messages_fr3__rosidl_typesupport_fastrtps_c
+[0.202s] [ 74%] Built target messages_fr3
+[0.243s] [ 76%] Built target messages_fr3__py
+[0.283s] [ 84%] Built target messages_fr3__rosidl_generator_py
+[0.321s] [ 94%] Built target messages_fr3__rosidl_typesupport_fastrtps_c__pyext
+[0.322s] [ 94%] Built target messages_fr3__rosidl_typesupport_c__pyext
+[0.328s] [100%] Built target messages_fr3__rosidl_typesupport_introspection_c__pyext
+[0.400s] running egg_info
+[0.400s] writing messages_fr3.egg-info/PKG-INFO
+[0.401s] writing dependency_links to messages_fr3.egg-info/dependency_links.txt
+[0.401s] writing top-level names to messages_fr3.egg-info/top_level.txt
+[0.405s] reading manifest file 'messages_fr3.egg-info/SOURCES.txt'
+[0.405s] writing manifest file 'messages_fr3.egg-info/SOURCES.txt'
+[0.458s] [100%] Built target ament_cmake_python_build_messages_fr3_egg
+[0.478s] Invoked command in '/home/simi/franka_ros2_ws/build/messages_fr3' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/simi/franka_ros2_ws/build/messages_fr3 -- -j16 -l16
+[0.666s] Invoking command in '/home/simi/franka_ros2_ws/build/messages_fr3': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/simi/franka_ros2_ws/build/messages_fr3
+[0.688s] -- Install configuration: "Release"
+[0.688s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/ament_index/resource_index/rosidl_interfaces/messages_fr3
+[0.688s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3
+[0.689s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv
+[0.689s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail
+[0.689s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_param__type_support.h
+[0.689s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_param__functions.c
+[0.689s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_param__struct.h
+[0.689s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_param__functions.h
+[0.689s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_pose__functions.c
+[0.689s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_pose__struct.h
+[0.690s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_pose__functions.h
+[0.690s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_pose__type_support.h
+[0.690s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/set_param.h
+[0.690s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/set_pose.h
+[0.690s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/msg
+[0.690s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/msg/rosidl_generator_c__visibility_control.h
+[0.690s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/environment/library_path.sh
+[0.690s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/environment/library_path.dsv
+[0.691s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/lib/libmessages_fr3__rosidl_generator_c.so
+[0.691s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3
+[0.691s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv
+[0.691s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail
+[0.692s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_param__rosidl_typesupport_fastrtps_c.h
+[0.692s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_pose__rosidl_typesupport_fastrtps_c.h
+[0.692s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/msg
+[0.692s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[0.692s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/lib/libmessages_fr3__rosidl_typesupport_fastrtps_c.so
+[0.693s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3
+[0.693s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv
+[0.693s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail
+[0.693s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_param__rosidl_typesupport_introspection_c.h
+[0.693s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_pose__rosidl_typesupport_introspection_c.h
+[0.693s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_pose__type_support.c
+[0.693s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_param__type_support.c
+[0.693s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/msg
+[0.693s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[0.694s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/lib/libmessages_fr3__rosidl_typesupport_introspection_c.so
+[0.695s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/lib/libmessages_fr3__rosidl_typesupport_c.so
+[0.695s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3
+[0.695s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv
+[0.695s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail
+[0.695s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_param__struct.hpp
+[0.695s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_pose__builder.hpp
+[0.696s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_pose__traits.hpp
+[0.696s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_pose__struct.hpp
+[0.696s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_param__traits.hpp
+[0.696s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_param__builder.hpp
+[0.696s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/set_param.hpp
+[0.696s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/set_pose.hpp
+[0.696s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3
+[0.696s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv
+[0.697s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail
+[0.697s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_pose__rosidl_typesupport_fastrtps_cpp.hpp
+[0.697s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_param__rosidl_typesupport_fastrtps_cpp.hpp
+[0.697s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/dds_fastrtps
+[0.697s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/msg
+[0.697s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[0.697s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/lib/libmessages_fr3__rosidl_typesupport_fastrtps_cpp.so
+[0.697s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3
+[0.697s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv
+[0.697s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail
+[0.697s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_param__rosidl_typesupport_introspection_cpp.hpp
+[0.698s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_pose__rosidl_typesupport_introspection_cpp.hpp
+[0.698s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_param__type_support.cpp
+[0.698s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_pose__type_support.cpp
+[0.698s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/lib/libmessages_fr3__rosidl_typesupport_introspection_cpp.so
+[0.699s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/lib/libmessages_fr3__rosidl_typesupport_cpp.so
+[0.699s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/environment/pythonpath.sh
+[0.699s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/environment/pythonpath.dsv
+[0.699s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3-0.0.0-py3.10.egg-info
+[0.699s] -- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3-0.0.0-py3.10.egg-info/dependency_links.txt
+[0.699s] -- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3-0.0.0-py3.10.egg-info/top_level.txt
+[0.700s] -- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3-0.0.0-py3.10.egg-info/PKG-INFO
+[0.700s] -- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3-0.0.0-py3.10.egg-info/SOURCES.txt
+[0.700s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3
+[0.700s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/__init__.py
+[0.700s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/messages_fr3_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[0.700s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/messages_fr3_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[0.700s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/libmessages_fr3__rosidl_generator_py.so
+[0.701s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/srv
+[0.701s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/srv/_set_param_s.c
+[0.701s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/srv/__init__.py
+[0.701s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/srv/_set_pose.py
+[0.701s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/srv/_set_pose_s.c
+[0.701s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/srv/_set_param.py
+[0.701s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/_messages_fr3_s.ep.rosidl_typesupport_c.c
+[0.701s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/_messages_fr3_s.ep.rosidl_typesupport_fastrtps_c.c
+[0.701s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/messages_fr3_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[0.702s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/_messages_fr3_s.ep.rosidl_typesupport_introspection_c.c
+[0.735s] Listing '/home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3'...
+[0.735s] Listing '/home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/srv'...
+[0.741s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/messages_fr3_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[0.742s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/messages_fr3_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[0.743s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/messages_fr3_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[0.743s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/lib/libmessages_fr3__rosidl_generator_py.so
+[0.744s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/srv/SetPose.idl
+[0.744s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/srv/SetParam.idl
+[0.744s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/srv/SetPose.srv
+[0.744s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/srv/SetPose_Request.msg
+[0.744s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/srv/SetPose_Response.msg
+[0.744s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/srv/SetParam.srv
+[0.744s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/srv/SetParam_Request.msg
+[0.745s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/srv/SetParam_Response.msg
+[0.745s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/ament_index/resource_index/package_run_dependencies/messages_fr3
+[0.745s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/ament_index/resource_index/parent_prefix_path/messages_fr3
+[0.745s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/environment/ament_prefix_path.sh
+[0.745s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/environment/ament_prefix_path.dsv
+[0.745s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/environment/path.sh
+[0.746s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/environment/path.dsv
+[0.746s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/local_setup.bash
+[0.746s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/local_setup.sh
+[0.746s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/local_setup.zsh
+[0.746s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/local_setup.dsv
+[0.746s] -- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/package.dsv
+[0.746s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/ament_index/resource_index/packages/messages_fr3
+[0.746s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/export_messages_fr3__rosidl_generator_cExport.cmake
+[0.746s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/export_messages_fr3__rosidl_generator_cExport-release.cmake
+[0.746s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/export_messages_fr3__rosidl_typesupport_fastrtps_cExport.cmake
+[0.746s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/export_messages_fr3__rosidl_typesupport_fastrtps_cExport-release.cmake
+[0.747s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/messages_fr3__rosidl_typesupport_introspection_cExport.cmake
+[0.747s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/messages_fr3__rosidl_typesupport_introspection_cExport-release.cmake
+[0.747s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/messages_fr3__rosidl_typesupport_cExport.cmake
+[0.747s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/messages_fr3__rosidl_typesupport_cExport-release.cmake
+[0.747s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/export_messages_fr3__rosidl_generator_cppExport.cmake
+[0.748s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/export_messages_fr3__rosidl_typesupport_fastrtps_cppExport.cmake
+[0.748s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/export_messages_fr3__rosidl_typesupport_fastrtps_cppExport-release.cmake
+[0.748s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/messages_fr3__rosidl_typesupport_introspection_cppExport.cmake
+[0.748s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/messages_fr3__rosidl_typesupport_introspection_cppExport-release.cmake
+[0.748s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/messages_fr3__rosidl_typesupport_cppExport.cmake
+[0.748s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/messages_fr3__rosidl_typesupport_cppExport-release.cmake
+[0.749s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/export_messages_fr3__rosidl_generator_pyExport.cmake
+[0.749s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/export_messages_fr3__rosidl_generator_pyExport-release.cmake
+[0.749s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/rosidl_cmake-extras.cmake
+[0.749s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.749s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.749s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/ament_cmake_export_libraries-extras.cmake
+[0.750s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/ament_cmake_export_targets-extras.cmake
+[0.750s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[0.750s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[0.750s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/messages_fr3Config.cmake
+[0.750s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/messages_fr3Config-version.cmake
+[0.750s] -- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/package.xml
+[0.754s] Invoked command in '/home/simi/franka_ros2_ws/build/messages_fr3' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/simi/franka_ros2_ws/build/messages_fr3

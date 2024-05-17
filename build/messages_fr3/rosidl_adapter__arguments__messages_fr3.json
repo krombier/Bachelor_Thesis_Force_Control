@@ -1,0 +1,9 @@
+{
+  "package_name": "messages_fr3",
+  "non_idl_tuples": [
+    "/home/simi/franka_ros2_ws/src/messages_fr3:srv/SetPose.srv",
+    "/home/simi/franka_ros2_ws/src/messages_fr3:srv/SetParam.srv",
+    "/home/simi/franka_ros2_ws/src/messages_fr3:srv/SetForce.srv",
+    "/home/simi/franka_ros2_ws/src/messages_fr3:srv/SetMode.srv"
+  ]
+}

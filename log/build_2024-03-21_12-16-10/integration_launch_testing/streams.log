@@ -1,0 +1,26 @@
+[0.027s] Invoking command in '/home/simi/franka_ros2_ws/build/integration_launch_testing': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/simi/franka_ros2_ws/build/integration_launch_testing -- -j16 -l16
+[0.094s] Invoked command in '/home/simi/franka_ros2_ws/build/integration_launch_testing' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/simi/franka_ros2_ws/build/integration_launch_testing -- -j16 -l16
+[0.209s] Invoking command in '/home/simi/franka_ros2_ws/build/integration_launch_testing': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/simi/franka_ros2_ws/build/integration_launch_testing
+[0.223s] -- Install configuration: "Release"
+[0.224s] -- Up-to-date: /home/simi/franka_ros2_ws/install/integration_launch_testing/share/integration_launch_testing/test
+[0.225s] -- Up-to-date: /home/simi/franka_ros2_ws/install/integration_launch_testing/share/integration_launch_testing/test/test_move_to_start_example_controller.py
+[0.226s] -- Up-to-date: /home/simi/franka_ros2_ws/install/integration_launch_testing/share/integration_launch_testing/test/test_franka_gripper_position.py
+[0.226s] -- Up-to-date: /home/simi/franka_ros2_ws/install/integration_launch_testing/share/integration_launch_testing/environment/library_path.sh
+[0.227s] -- Up-to-date: /home/simi/franka_ros2_ws/install/integration_launch_testing/share/integration_launch_testing/environment/library_path.dsv
+[0.228s] -- Up-to-date: /home/simi/franka_ros2_ws/install/integration_launch_testing/share/ament_index/resource_index/package_run_dependencies/integration_launch_testing
+[0.228s] -- Up-to-date: /home/simi/franka_ros2_ws/install/integration_launch_testing/share/ament_index/resource_index/parent_prefix_path/integration_launch_testing
+[0.228s] -- Up-to-date: /home/simi/franka_ros2_ws/install/integration_launch_testing/share/integration_launch_testing/environment/ament_prefix_path.sh
+[0.228s] -- Up-to-date: /home/simi/franka_ros2_ws/install/integration_launch_testing/share/integration_launch_testing/environment/ament_prefix_path.dsv
+[0.228s] -- Up-to-date: /home/simi/franka_ros2_ws/install/integration_launch_testing/share/integration_launch_testing/environment/path.sh
+[0.228s] -- Up-to-date: /home/simi/franka_ros2_ws/install/integration_launch_testing/share/integration_launch_testing/environment/path.dsv
+[0.229s] -- Up-to-date: /home/simi/franka_ros2_ws/install/integration_launch_testing/share/integration_launch_testing/local_setup.bash
+[0.230s] -- Up-to-date: /home/simi/franka_ros2_ws/install/integration_launch_testing/share/integration_launch_testing/local_setup.sh
+[0.230s] -- Up-to-date: /home/simi/franka_ros2_ws/install/integration_launch_testing/share/integration_launch_testing/local_setup.zsh
+[0.231s] -- Up-to-date: /home/simi/franka_ros2_ws/install/integration_launch_testing/share/integration_launch_testing/local_setup.dsv
+[0.231s] -- Installing: /home/simi/franka_ros2_ws/install/integration_launch_testing/share/integration_launch_testing/package.dsv
+[0.231s] -- Up-to-date: /home/simi/franka_ros2_ws/install/integration_launch_testing/share/ament_index/resource_index/packages/integration_launch_testing
+[0.231s] -- Up-to-date: /home/simi/franka_ros2_ws/install/integration_launch_testing/share/integration_launch_testing/cmake/ament_cmake_export_libraries-extras.cmake
+[0.231s] -- Up-to-date: /home/simi/franka_ros2_ws/install/integration_launch_testing/share/integration_launch_testing/cmake/integration_launch_testingConfig.cmake
+[0.231s] -- Up-to-date: /home/simi/franka_ros2_ws/install/integration_launch_testing/share/integration_launch_testing/cmake/integration_launch_testingConfig-version.cmake
+[0.231s] -- Up-to-date: /home/simi/franka_ros2_ws/install/integration_launch_testing/share/integration_launch_testing/package.xml
+[0.250s] Invoked command in '/home/simi/franka_ros2_ws/build/integration_launch_testing' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/simi/franka_ros2_ws/build/integration_launch_testing

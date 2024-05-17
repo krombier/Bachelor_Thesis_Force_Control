@@ -1,0 +1,16 @@
+srv/SetForce.idl
+srv/SetForce.srv
+srv/SetForce_Request.msg
+srv/SetForce_Response.msg
+srv/SetMode.idl
+srv/SetMode.srv
+srv/SetMode_Request.msg
+srv/SetMode_Response.msg
+srv/SetParam.idl
+srv/SetParam.srv
+srv/SetParam_Request.msg
+srv/SetParam_Response.msg
+srv/SetPose.idl
+srv/SetPose.srv
+srv/SetPose_Request.msg
+srv/SetPose_Response.msg

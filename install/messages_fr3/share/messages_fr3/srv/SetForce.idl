@@ -1,0 +1,25 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from messages_fr3/srv/SetForce.srv
+// generated code does not contain a copyright notice
+
+
+module messages_fr3 {
+  module srv {
+    struct SetForce_Request {
+      double x_force;
+
+      double y_force;
+
+      double z_force;
+
+      double x_torque;
+
+      double y_torque;
+
+      double z_torque;
+    };
+    struct SetForce_Response {
+      boolean success;
+    };
+  };
+};
