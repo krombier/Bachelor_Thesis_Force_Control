@@ -1,0 +1,23 @@
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/cartesian_impedance_controller.cpp:348:10:[m[K [01;31m[Kfatal error: [m[Kcartesian_impedance_controller.hpp: No such file or directory
+  348 | #include [01;31m[K"cartesian_impedance_controller.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/cartesian_impedance_control.dir/build.make:76: CMakeFiles/cartesian_impedance_control.dir/src/cartesian_impedance_controller.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+In file included from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_server.cpp:10[m[K:
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/include/cartesian_impedance_control/cartesian_impedance_controller.hpp:89:40:[m[K [01;31m[Kerror: [m[K‘[01m[KSetForce[m[K’ is not a member of ‘[01m[Kmessages_fr3::srv[m[K’
+   89 |     rclcpp::Service<messages_fr3::srv::[01;31m[KSetForce[m[K>::SharedPtr force_srv_;
+      |                                        [01;31m[K^~~~~~~~[m[K
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/include/cartesian_impedance_control/cartesian_impedance_controller.hpp:89:48:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   89 |     rclcpp::Service<messages_fr3::srv::SetForce[01;31m[K>[m[K::SharedPtr force_srv_;
+      |                                                [01;31m[K^[m[K
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/include/cartesian_impedance_control/cartesian_impedance_controller.hpp:89:51:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   89 |     rclcpp::Service<messages_fr3::srv::SetForce>::[01;31m[KSharedPtr[m[K force_srv_;
+      |                                                   [01;31m[K^~~~~~~~~[m[K
+      |                                                            [32m[K;[m[K
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/include/cartesian_impedance_control/cartesian_impedance_controller.hpp:89:61:[m[K [01;31m[Kerror: [m[K‘[01m[Kforce_srv_[m[K’ does not name a type
+   89 |     rclcpp::Service<messages_fr3::srv::SetForce>::SharedPtr [01;31m[Kforce_srv_[m[K;
+      |                                                             [01;31m[K^~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/cartesian_impedance_control.dir/build.make:90: CMakeFiles/cartesian_impedance_control.dir/src/user_input_server.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:141: CMakeFiles/cartesian_impedance_control.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

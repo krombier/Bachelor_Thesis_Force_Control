@@ -42,7 +42,7 @@ std::ostream& operator<<(std::ostream& ostream, const std::array<T, N>& array) {
 }
 
 namespace cartesian_impedance_control {
-
+/* // currently commented out to help debugging
 void CartesianImpedanceController::adapt_Sm_and_Sf(const Eigen::Matrix<double,6,1>& F_request, const Eigen::Matrix<double,3,3>& Rot_M){    //update the Sm and Sf matrix
   Sm = Eigen::MatrixXd::Zero(6, 6);
   for (int i =0; i<6; ++i){
@@ -53,27 +53,30 @@ void CartesianImpedanceController::adapt_Sm_and_Sf(const Eigen::Matrix<double,6,
     }
   }
   Sf = IDENTITY - Sm;
-}
+}*/
 
-//Calculates the friction forces acting on the robot's joints depending on joint rotational speed. ///////////////////////////////////////////////////WIP
-//Exerts torque up to a certain empirically detected static friction threshold. 
-//TODO: Afterwards, goes into the viscous domain and follows a linear raise depending on empiric parameters
-void CartesianImpedanceController::calculate_tau_friction(){
-    double alpha = 0.01;//constant for exponential filter in relation to static friction moment        
-    dq_filtered = alpha* dq_ + (1 - alpha) * dq_filtered; //Filtering dq_ of every joint
-    tau_impedance_filtered = alpha*tau_impedance + (1 - alpha) * tau_impedance_filtered; //Filtering tau_impedance
-    //Creating and filtering a "fake" tau_impedance with own weights, optimized for friction compensation (else friction compensation would get stronger with higher stiffnesses)
-    tau_friction_impedance = jacobian.transpose() * Sm * (-alpha * (D_friction*(jacobian*dq_) + K_friction * error)) + (1 - alpha) * tau_friction_impedance;
-    //Creating "fake" dq_, that acts only in the impedance-space, else dq_ in the nullspace also gets compensated, which we do not want due to null-space movement
-    dq_imp = dq_filtered - N * dq_filtered;
 
-    //Calculation of friction force according to Bachelor Thesis: https://polybox.ethz.ch/index.php/s/iYj8ALPijKTAC2z?path=%2FFriction%20compensation
-    f = beta.cwiseProduct(dq_imp) + offset_friction;
-    dz = dq_imp.array() - dq_imp.array().abs() / g.array() * sigma_0.array() * z.array() + 0.025* tau_friction_impedance.array()/*(jacobian.transpose() * K * error).array()*/;
-    dz(6) -= 0.02*tau_friction_impedance(6);                                             // k is everywhere 0.025 excet for the last one that's why we do this wired move (last one is only 0.005 thats why we have wired differnce here)
-    z = 0.001 * dz + z;
-    tau_friction = sigma_0.array() * z.array() + 100 * sigma_1.array() * dz.array() + f.array();  //*100 because values in vector are only 1% of real values
-}
+
+// //Calculates the friction forces acting on the robot's joints depending on joint rotational speed. ///////////////////////////////////////////////////WIP
+// //Exerts torque up to a certain empirically detected static friction threshold. 
+// //TODO: Afterwards, goes into the viscous domain and follows a linear raise depending on empiric parameters
+// void CartesianImpedanceController::calculate_tau_friction(){
+//     double alpha = 0.01;//constant for exponential filter in relation to static friction moment        
+//     dq_filtered = alpha* dq_ + (1 - alpha) * dq_filtered; //Filtering dq_ of every joint
+//     tau_impedance_filtered = alpha*tau_impedance + (1 - alpha) * tau_impedance_filtered; //Filtering tau_impedance
+//     //Creating and filtering a "fake" tau_impedance with own weights, optimized for friction compensation (else friction compensation would get stronger with higher stiffnesses)
+//     tau_friction_impedance = jacobian.transpose() * Sm * (-alpha * (D_friction*(jacobian*dq_) + K_friction * error)) + (1 - alpha) * tau_friction_impedance;
+//     //Creating "fake" dq_, that acts only in the impedance-space, else dq_ in the nullspace also gets compensated, which we do not want due to null-space movement
+//     N = (Eigen::MatrixXd::Identity(7, 7) - jacobian_pinv * jacobian); //Nullspace matrix 
+//     dq_imp = dq_filtered - N * dq_filtered;
+
+//     //Calculation of friction force according to Bachelor Thesis of Viktor Luba: https://polybox.ethz.ch/index.php/s/iYj8ALPijKTAC2z?path=%2FFriction%20compensation
+//     f = beta.cwiseProduct(dq_imp) + offset_friction;
+//     dz = dq_imp.array() - dq_imp.array().abs() / g.array() * sigma_0.array() * z.array() + 0.025* tau_friction_impedance.array()/*(jacobian.transpose() * K * error).array()*/;
+//     dz(6) -= 0.02*tau_friction_impedance(6);                                             // k is everywhere 0.025 excet for the last one that's why we do this wired move (last one is only 0.005 thats why we have wired differnce here)
+//     z = 0.001 * dz + z;
+//     tau_friction = sigma_0.array() * z.array() + 100 * sigma_1.array() * dz.array() + f.array();  //*100 because values in vector are only 1% of real values
+// }
 
 void CartesianImpedanceController::update_stiffness_and_references(){                                   // filtering to make step response not over agressive
   //target by filtering
@@ -258,7 +261,7 @@ controller_interface::return_type CartesianImpedanceController::update(const rcl
                         * Eigen::AngleAxisd(rotation_d_target_[1], Eigen::Vector3d::UnitY())
                         * Eigen::AngleAxisd(rotation_d_target_[2], Eigen::Vector3d::UnitZ());                     // mimics a quaternion according to documentation in Eigen
   
-  Eigen::Matrix<double,3,3> rotation_matrix = transform.rotation();
+  // Eigen::Matrix<double,3,3> rotation_matrix = transform.rotation();                                        //currently not needed
   
   updateJointStates(); 
 
@@ -295,12 +298,17 @@ controller_interface::return_type CartesianImpedanceController::update(const rcl
   default:
     break;
   }
-
-  F_ext = 0.9 * F_ext + 0.1 * O_F_ext_hat_K_M; //Filtering                                                      // exponential filtering with smoothing factor = 0.1
+  F_ext = 0.9 * F_ext + 0.1 * O_F_ext_hat_K_M; //Filtering       //the second part is the measured external force                                               // exponential filtering with smoothing factor = 0.1
+  I_F_error += dt * Sf* (F_contact_des - F_ext);
   F_cmd = Sf*(0.4 * (F_contact_des - F_ext) + 0.9 * I_F_error + 0.9 * F_contact_des);                           // P + I + feedforward term for faster convergence
 
-  Eigen::VectorXd tau_task(7), tau_nullspace(7), tau_d(7), tau_impedance(7);
+  
+
+  // Definiton added in .hpp file
+  //Eigen::VectorXd tau_task(7), tau_nullspace(7), tau_d(7), tau_impedance(7);
   pseudoInverse(jacobian.transpose(), jacobian_transpose_pinv);                                                 // computes the pseudo inverse and stores it in second variable
+  pseudoInverse(jacobian, jacobian_pinv);                                                           //needed for friction compensation
+  //calculate_tau_friction(); 
 
   tau_nullspace << (Eigen::MatrixXd::Identity(7, 7) -
                     jacobian.transpose() * jacobian_transpose_pinv) *                                           /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////here nullspace matrix gets calculated
@@ -308,7 +316,7 @@ controller_interface::return_type CartesianImpedanceController::update(const rcl
                     (2.0 * sqrt(nullspace_stiffness_)) * dq_);  // if config control ) false we don't care about the joint position
 
   tau_impedance = jacobian.transpose() * Sm * (F_impedance /*+ F_repulsion + F_potential*/) + jacobian.transpose() * Sf * F_cmd;    // combine force control and impedance control (this is where the magic happens)
-  auto tau_d_placeholder = tau_impedance + tau_nullspace + coriolis; //add nullspace and coriolis components to desired torque
+  auto tau_d_placeholder = tau_impedance + tau_nullspace + coriolis + tau_friction; //add nullspace and coriolis components to desired torque gets rid of part of tau_impedance that is only there because of friction
   tau_d << tau_d_placeholder;
   tau_d << saturateTorqueRate(tau_d, tau_J_d_M);  // Saturate torque rate to avoid discontinuities
   tau_J_d_M = tau_d;                                                                                            // store this value for saturateTorqueRate function in 
@@ -342,7 +350,6 @@ controller_interface::return_type CartesianImpedanceController::update(const rcl
 
 // namespace cartesian_impedance_control
 #include "pluginlib/class_list_macros.hpp"
-#include "cartesian_impedance_controller.hpp"
 // NOLINTNEXTLINE
 PLUGINLIB_EXPORT_CLASS(cartesian_impedance_control::CartesianImpedanceController,
                        controller_interface::ControllerInterface)

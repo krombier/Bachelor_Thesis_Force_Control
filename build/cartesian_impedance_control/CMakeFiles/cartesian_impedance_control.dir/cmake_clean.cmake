@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/cartesian_impedance_control.dir/src/cartesian_impedance_controller.cpp.o"
   "CMakeFiles/cartesian_impedance_control.dir/src/cartesian_impedance_controller.cpp.o.d"
+  "CMakeFiles/cartesian_impedance_control.dir/src/force_control_server.cpp.o"
+  "CMakeFiles/cartesian_impedance_control.dir/src/force_control_server.cpp.o.d"
   "CMakeFiles/cartesian_impedance_control.dir/src/user_input_server.cpp.o"
   "CMakeFiles/cartesian_impedance_control.dir/src/user_input_server.cpp.o.d"
   "libcartesian_impedance_control.pdb"

@@ -1,0 +1,15 @@
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/cartesian_impedance_controller.cpp:[m[K In member function ‘[01m[Kvoid cartesian_impedance_control::CartesianImpedanceController::adapt_Sm_and_Sf(const Eigen::Matrix<double, 6, 1>&, const Eigen::Matrix<double, 3, 3>&)[m[K’:
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/cartesian_impedance_controller.cpp:46:129:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KRot_M[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   46 | ix<double,6,1>& F_request, [01;35m[Kconst Eigen::Matrix<double,3,3>& Rot_M[m[K){    //update the Sm and Sf matrix
+      |                            [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~[m[K
+
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/cartesian_impedance_controller.cpp:[m[K In member function ‘[01m[Kvoid cartesian_impedance_control::CartesianImpedanceController::calculate_tau_friction()[m[K’:
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/cartesian_impedance_controller.cpp:66:30:[m[K [01;31m[Kerror: [m[K‘[01m[Kjacobian[m[K’ was not declared in this scope
+   66 |     tau_friction_impedance = [01;31m[Kjacobian[m[K.transpose() * Sm * (-alpha * (D_friction*(jacobian*dq_) + K_friction * error)) + (1 - alpha) * tau_friction_impedance;
+      |                              [01;31m[K^~~~~~~~[m[K
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/cartesian_impedance_controller.cpp:68:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kjacobian_pinv[m[K’ was not declared in this scope
+   68 |     N = (Eigen::MatrixXd::Identity(7, 7) - [01;31m[Kjacobian_pinv[m[K * jacobian); //Nullspace matrix
+      |                                            [01;31m[K^~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/cartesian_impedance_control.dir/build.make:76: CMakeFiles/cartesian_impedance_control.dir/src/cartesian_impedance_controller.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:141: CMakeFiles/cartesian_impedance_control.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

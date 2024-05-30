@@ -46,6 +46,7 @@
 #include "franka_msgs/msg/franka_robot_state.hpp"
 #include "franka_msgs/msg/errors.hpp"
 #include "messages_fr3/srv/set_pose.hpp"
+#include "messages_fr3/srv/set_force.hpp"
 
 #include "franka_semantic_components/franka_robot_model.hpp"
 #include "franka_semantic_components/franka_robot_state.hpp"
@@ -86,7 +87,8 @@ public:
     //Nodes
     rclcpp::Subscription<franka_msgs::msg::FrankaRobotState>::SharedPtr franka_state_subscriber = nullptr;
     rclcpp::Service<messages_fr3::srv::SetPose>::SharedPtr pose_srv_;
-    rclcpp::Service<messages_fr3::srv::SetForce>::SharedPtr force_srv_; //error hier löst sich hoffentlich nach dem messages_fr3 gebuilded wurde                                               // added by me because it seems sinnvoll to do that
+    rclcpp::Service<messages_fr3::srv::SetForce>::SharedPtr force_srv_; 
+    //error hier löst sich hoffentlich nach dem messages_fr3 gebuilded wurde                                               // added by me because it seems sinnvoll to do that
 
     //Functions
     void topic_callback(const std::shared_ptr<franka_msgs::msg::FrankaRobotState> msg);
@@ -108,7 +110,8 @@ public:
     Eigen::Matrix<double, 6, 1> O_F_ext_hat_K_M = Eigen::MatrixXd::Zero(6,1);
     Eigen::Matrix<double, 7, 1> q_;
     Eigen::Matrix<double, 7, 1> dq_;
-    Eigen::MatrixXd jacobian_transpose_pinv;  
+    Eigen::MatrixXd jacobian_transpose_pinv; 
+    Eigen::MatrixXd jacobian_pinv;          
 
     //Robot parameters
     const int num_joints = 7;
@@ -121,7 +124,8 @@ public:
     const double delta_tau_max_{1.0};
     const double dt = 0.001;
                 
-    //Impedance control variables              
+    //Impedance control variables    
+    Eigen::Matrix<double, 6, 7> jacobian = IDENTITY;                                         // Jacobian between Endeffector and base frame       
     Eigen::Matrix<double, 6, 6> Lambda = IDENTITY;                                           // operational space mass matrix
     Eigen::Matrix<double, 6, 6> Sm = IDENTITY;                                               // task space selection matrix for positions and rotation
     Eigen::Matrix<double, 6, 6> Sf = Eigen::MatrixXd::Zero(6, 6);                            // task space selection matrix for forces
@@ -203,19 +207,31 @@ public:
 
     //Filter-parameters
     double filter_params_{0.001};
-    int mode_ = 1;                                                                         // default value of mode, can be changed by user_input_client (launch via ROS 2)
+    int mode_ = 1;                                                                         // mode = 1 --> cartesian impedance control (with a position) / mode = 2 --> free-float with variable inertia
 
     // Friction things
-    Eigen::Matrix<double, 7, 1> dz = Eigen::MatrixXd::Zero(7,1);
-    Eigen::Matrix<double, 7, 1> z = Eigen::MatrixXd::Zero(7,1);
-    Eigen::Matrix<double, 7, 1> g = (Eigen::VectorXd(7) << 1.025412896, 1.259913793, 0.8380147058, 1.005214968, 1.2928, 0.41525, 0.5341655).finished();
-    Eigen::Matrix<double, 7, 1> f = Eigen::MatrixXd::Zero(7,1);
+    const double alpha = 0.01;//constant for exponential filter in relation to static friction moment
     const Eigen::Matrix<double, 7, 1> sigma_0 = (Eigen::VectorXd(7) << 76.95, 37.94, 71.07, 44.02, 21.32, 21.83, 53).finished();
     const Eigen::Matrix<double, 7, 1> sigma_1 = (Eigen::VectorXd(7) << 0.056, 0.06, 0.064, 0.073, 0.1, 0.0755, 0.000678).finished();
+    Eigen::Matrix<double, 7, 1> dz = Eigen::MatrixXd::Zero(7,1);
+    Eigen::Matrix<double, 7, 1> dq_imp = Eigen::MatrixXd::Zero(7,1); //"impedance dq", dq without the nullspace-part of it
+    Eigen::Matrix<double, 7, 1> z = Eigen::MatrixXd::Zero(7,1);
+    Eigen::Matrix<double, 7, 1> g = (Eigen::VectorXd(7) << 1.025412896, 1.259913793, 0.8380147058, 1.005214968, 1.2928, 0.41525, 0.5341655).finished();         // those values are wrong and shouldn't be constant for joint 4,5,7 based on Viktors BA
+    Eigen::Matrix<double, 7, 1> f = Eigen::MatrixXd::Zero(7,1);
     Eigen::Matrix<double, 7, 7> N = Eigen::MatrixXd::Identity(7, 7);                      // Null-space matrix, definition added by Simon on 16.05.2024
-    const double alpha = 0.01;//constant for exponential filter in relation to static friction moment
     Eigen::Matrix<double, 7, 1> dq_filtered = Eigen::MatrixXd::Zero(7,1); //rotational speed filtered for friction compensation
     Eigen::Matrix<double, 7, 1> tau_impedance_filtered = Eigen::MatrixXd::Zero(7,1); //filtered impedance torque for friction compensation
     Eigen::Matrix<double, 7, 1> tau_friction_impedance = Eigen::MatrixXd::Zero(7,1); //impedance torque needed for tau_friction
-};
+    Eigen::Matrix<double, 7, 1> tau_friction = Eigen::MatrixXd::Zero(7,1); //torque compensating friction
+    Eigen::Matrix<double, 6, 6> D_friction = Eigen::DiagonalMatrix<double, 6>(40, 40, 40, 18, 18, 7); //impedance damping term for friction compensation
+    Eigen::Matrix<double, 6, 6> K_friction = Eigen::DiagonalMatrix<double, 6>(300, 300, 300, 50, 50, 10); //impedance stiffness term for friction compensation
+    Eigen::Matrix<double, 7, 1> offset_friction = (Eigen::VectorXd(7) << -0.05, -0.70, -0.07, -0.13, -0.1025, 0.103, -0.02).finished();
+    Eigen::Matrix<double, 7, 1> beta = (Eigen::VectorXd(7) << 1.18, 0, 0.55, 0.87, 0.935, 0.54, 0.45).finished();//component b of linear friction model (a + b*dq)
+
+    //torque variables
+    Eigen::Matrix<double, 7, 1> tau_task = Eigen::MatrixXd::Zero(7,1);
+    Eigen::Matrix<double, 7, 1> tau_nullspace = Eigen::MatrixXd::Zero(7,1);
+    Eigen::Matrix<double, 7, 1> tau_d = Eigen::MatrixXd::Zero(7,1);
+    Eigen::Matrix<double, 7, 1> tau_impedance = Eigen::MatrixXd::Zero(7,1);
+  };
 }  // namespace cartesian_impedance_control

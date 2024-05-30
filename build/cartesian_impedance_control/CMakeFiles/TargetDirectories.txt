@@ -2,6 +2,7 @@
 /home/simi/franka_ros2_ws/build/cartesian_impedance_control/CMakeFiles/cartesian_impedance_control_uninstall.dir
 /home/simi/franka_ros2_ws/build/cartesian_impedance_control/CMakeFiles/cartesian_impedance_control.dir
 /home/simi/franka_ros2_ws/build/cartesian_impedance_control/CMakeFiles/user_input_client.dir
+/home/simi/franka_ros2_ws/build/cartesian_impedance_control/CMakeFiles/force_control_client.dir
 /home/simi/franka_ros2_ws/build/cartesian_impedance_control/CMakeFiles/test.dir
 /home/simi/franka_ros2_ws/build/cartesian_impedance_control/CMakeFiles/edit_cache.dir
 /home/simi/franka_ros2_ws/build/cartesian_impedance_control/CMakeFiles/rebuild_cache.dir

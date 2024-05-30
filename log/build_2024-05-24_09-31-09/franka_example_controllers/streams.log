@@ -1,0 +1,121 @@
+[0.026s] Invoking command in '/home/simi/franka_ros2_ws/build/franka_example_controllers': CMAKE_PREFIX_PATH=/home/simi/franka_ros2_ws/install/franka_semantic_components:/home/simi/franka_ros2_ws/install/franka_hardware:/home/simi/franka_ros2_ws/install/franka_msgs:/home/simi/franka_ros2_ws/install/cartesian_impedance_control:/home/simi/franka_ros2_ws/install/messages_fr3:/home/simi/franka_ros2_ws/install/joint_trajectory_controller:/home/simi/franka_ros2_ws/install/integration_launch_testing:/home/simi/franka_ros2_ws/install/franka_bringup:/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster:/home/simi/franka_ros2_ws/install/franka_example_controllers:/home/simi/franka_ros2_ws/install/franka_moveit_config:/home/simi/franka_ros2_ws/install/franka_gripper:/home/simi/franka_ros2_ws/install/franka_description:/opt/ros/humble LD_LIBRARY_PATH=/home/simi/franka_ros2_ws/install/franka_semantic_components/lib:/home/simi/franka_ros2_ws/install/franka_hardware/lib:/home/simi/franka_ros2_ws/install/franka_msgs/lib:/home/simi/franka_ros2_ws/install/cartesian_impedance_control/lib:/home/simi/franka_ros2_ws/install/messages_fr3/lib:/home/simi/franka_ros2_ws/install/joint_trajectory_controller/lib:/home/simi/franka_ros2_ws/install/integration_launch_testing/lib:/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster/lib:/home/simi/franka_ros2_ws/install/franka_example_controllers/lib:/home/simi/franka_ros2_ws/install/franka_gripper/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/simi/franka_ros2_ws/build/franka_example_controllers -- -j16 -l16
+[0.063s] -- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.201s] -- Found rclcpp: 16.0.9 (/opt/ros/humble/share/rclcpp/cmake)
+[0.230s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.233s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.238s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.249s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.265s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.319s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.321s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.477s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.618s] -- Found controller_interface: 2.41.0 (/opt/ros/humble/share/controller_interface/cmake)
+[1.185s] -- Found franka_msgs: 0.1.13 (/home/simi/franka_ros2_ws/install/franka_msgs/share/franka_msgs/cmake)
+[1.320s] -- Found franka_semantic_components: 0.1.0 (/home/simi/franka_ros2_ws/install/franka_semantic_components/share/franka_semantic_components/cmake)
+[1.714s] -- Found generate_parameter_library: 0.3.8 (/opt/ros/humble/share/generate_parameter_library/cmake)
+[1.716s] -- Found parameter_traits: 0.3.8 (/opt/ros/humble/share/parameter_traits/cmake)
+[1.730s] -- Found moveit_core: 2.5.5 (/opt/ros/humble/share/moveit_core/cmake)
+[1.750s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread 
+[1.761s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: filesystem 
+[1.817s] -- library: /usr/lib/x86_64-linux-gnu/libcurl.so
+[2.010s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[3.795s] -- Found ament_cmake_clang_format: 0.12.11 (/opt/ros/humble/share/ament_cmake_clang_format/cmake)
+[3.795s] -- Found ament_cmake_copyright: 0.12.11 (/opt/ros/humble/share/ament_cmake_copyright/cmake)
+[3.796s] -- Found ament_cmake_cppcheck: 0.12.11 (/opt/ros/humble/share/ament_cmake_cppcheck/cmake)
+[3.796s] -- Found ament_cmake_flake8: 0.12.11 (/opt/ros/humble/share/ament_cmake_flake8/cmake)
+[3.797s] -- Found ament_cmake_lint_cmake: 0.12.11 (/opt/ros/humble/share/ament_cmake_lint_cmake/cmake)
+[3.797s] -- Found ament_cmake_pep257: 0.12.11 (/opt/ros/humble/share/ament_cmake_pep257/cmake)
+[3.798s] -- Found ament_cmake_xmllint: 0.12.11 (/opt/ros/humble/share/ament_cmake_xmllint/cmake)
+[3.798s] -- Found ament_cmake_gmock: 1.3.9 (/opt/ros/humble/share/ament_cmake_gmock/cmake)
+[3.798s] -- Found controller_manager: 2.41.0 (/opt/ros/humble/share/controller_manager/cmake)
+[4.066s] -- Found ros2_control_test_assets: 2.41.0 (/opt/ros/humble/share/ros2_control_test_assets/cmake)
+[4.068s] -- Found gmock sources under '/opt/ros/humble/src/gmock_vendor': C++ tests using 'Google Mock' will be built
+[4.072s] -- Found ament_cmake_gtest: 1.3.9 (/opt/ros/humble/share/ament_cmake_gtest/cmake)
+[4.072s] -- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[4.562s] -- Configuring done
+[4.787s] -- Generating done
+[4.794s] -- Build files have been written to: /home/simi/franka_ros2_ws/build/franka_example_controllers
+[4.849s] [35m[1mConsolidate compiler generated dependencies of target gmock_main[0m
+[4.850s] [35m[1mConsolidate compiler generated dependencies of target gmock[0m
+[4.865s] [  3%] Built target franka_example_controllers_parameters
+[4.871s] [ 10%] Built target gmock_main
+[4.874s] [ 21%] Built target gmock
+[4.892s] [35m[1mConsolidate compiler generated dependencies of target franka_example_controllers_test[0m
+[4.892s] [35m[1mConsolidate compiler generated dependencies of target franka_example_controllers_test_load_move_to_start[0m
+[4.896s] [35m[1mConsolidate compiler generated dependencies of target franka_example_controllers[0m
+[4.926s] [ 25%] [32mBuilding CXX object CMakeFiles/franka_example_controllers_test_load_move_to_start.dir/test/test_load_move_to_start_example_controller.cpp.o[0m
+[4.928s] [ 28%] [32mBuilding CXX object CMakeFiles/franka_example_controllers_test.dir/test/test_load_gravity_compensation_controller.cpp.o[0m
+[4.997s] [ 32%] [32mBuilding CXX object CMakeFiles/franka_example_controllers.dir/src/gravity_compensation_example_controller.cpp.o[0m
+[4.999s] [ 39%] [32mBuilding CXX object CMakeFiles/franka_example_controllers.dir/src/joint_velocity_example_controller.cpp.o[0m
+[5.000s] [ 39%] [32mBuilding CXX object CMakeFiles/franka_example_controllers.dir/src/joint_impedance_example_controller.cpp.o[0m
+[5.004s] [ 46%] [32mBuilding CXX object CMakeFiles/franka_example_controllers.dir/src/joint_position_example_controller.cpp.o[0m
+[5.005s] [ 46%] [32mBuilding CXX object CMakeFiles/franka_example_controllers.dir/src/cartesian_pose_example_controller.cpp.o[0m
+[5.005s] [ 50%] [32mBuilding CXX object CMakeFiles/franka_example_controllers.dir/src/cartesian_velocity_example_controller.cpp.o[0m
+[5.006s] [ 53%] [32mBuilding CXX object CMakeFiles/franka_example_controllers.dir/src/joint_impedance_with_ik_example_controller.cpp.o[0m
+[5.008s] [ 57%] [32mBuilding CXX object CMakeFiles/franka_example_controllers.dir/src/cartesian_orientation_example_controller.cpp.o[0m
+[5.010s] [ 60%] [32mBuilding CXX object CMakeFiles/franka_example_controllers.dir/src/cartesian_elbow_example_controller.cpp.o[0m
+[5.014s] [ 64%] [32mBuilding CXX object CMakeFiles/franka_example_controllers.dir/src/model_example_controller.cpp.o[0m
+[5.021s] [ 67%] [32mBuilding CXX object CMakeFiles/franka_example_controllers.dir/src/move_to_start_example_controller.cpp.o[0m
+[5.022s] [ 71%] [32mBuilding CXX object CMakeFiles/franka_example_controllers.dir/src/motion_generator.cpp.o[0m
+[5.027s] [ 75%] [32mBuilding CXX object CMakeFiles/franka_example_controllers.dir/src/elbow_example_controller.cpp.o[0m
+[21.986s] [ 78%] [32m[1mLinking CXX executable franka_example_controllers_test[0m
+[21.993s] [ 82%] [32m[1mLinking CXX executable franka_example_controllers_test_load_move_to_start[0m
+[22.275s] [ 82%] Built target franka_example_controllers_test
+[22.341s] [ 82%] Built target franka_example_controllers_test_load_move_to_start
+[23.012s] [ 85%] [32m[1mLinking CXX shared library libfranka_example_controllers.so[0m
+[23.426s] [ 85%] Built target franka_example_controllers
+[23.445s] [35m[1mConsolidate compiler generated dependencies of target franka_example_controllers_gravity_test[0m
+[23.446s] [35m[1mConsolidate compiler generated dependencies of target franka_example_controllers_move_to_start_test[0m
+[23.475s] [ 89%] [32mBuilding CXX object CMakeFiles/franka_example_controllers_gravity_test.dir/test/test_gravity_compensation_example.cpp.o[0m
+[23.482s] [ 92%] [32mBuilding CXX object CMakeFiles/franka_example_controllers_move_to_start_test.dir/test/test_move_to_start_example_controller.cpp.o[0m
+[29.381s] [ 96%] [32m[1mLinking CXX executable franka_example_controllers_gravity_test[0m
+[29.716s] [ 96%] Built target franka_example_controllers_gravity_test
+[30.313s] [100%] [32m[1mLinking CXX executable franka_example_controllers_move_to_start_test[0m
+[30.626s] [100%] Built target franka_example_controllers_move_to_start_test
+[30.645s] Invoked command in '/home/simi/franka_ros2_ws/build/franka_example_controllers' returned '0': CMAKE_PREFIX_PATH=/home/simi/franka_ros2_ws/install/franka_semantic_components:/home/simi/franka_ros2_ws/install/franka_hardware:/home/simi/franka_ros2_ws/install/franka_msgs:/home/simi/franka_ros2_ws/install/cartesian_impedance_control:/home/simi/franka_ros2_ws/install/messages_fr3:/home/simi/franka_ros2_ws/install/joint_trajectory_controller:/home/simi/franka_ros2_ws/install/integration_launch_testing:/home/simi/franka_ros2_ws/install/franka_bringup:/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster:/home/simi/franka_ros2_ws/install/franka_example_controllers:/home/simi/franka_ros2_ws/install/franka_moveit_config:/home/simi/franka_ros2_ws/install/franka_gripper:/home/simi/franka_ros2_ws/install/franka_description:/opt/ros/humble LD_LIBRARY_PATH=/home/simi/franka_ros2_ws/install/franka_semantic_components/lib:/home/simi/franka_ros2_ws/install/franka_hardware/lib:/home/simi/franka_ros2_ws/install/franka_msgs/lib:/home/simi/franka_ros2_ws/install/cartesian_impedance_control/lib:/home/simi/franka_ros2_ws/install/messages_fr3/lib:/home/simi/franka_ros2_ws/install/joint_trajectory_controller/lib:/home/simi/franka_ros2_ws/install/integration_launch_testing/lib:/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster/lib:/home/simi/franka_ros2_ws/install/franka_example_controllers/lib:/home/simi/franka_ros2_ws/install/franka_gripper/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/simi/franka_ros2_ws/build/franka_example_controllers -- -j16 -l16
+[30.803s] Invoking command in '/home/simi/franka_ros2_ws/build/franka_example_controllers': CMAKE_PREFIX_PATH=/home/simi/franka_ros2_ws/install/franka_semantic_components:/home/simi/franka_ros2_ws/install/franka_hardware:/home/simi/franka_ros2_ws/install/franka_msgs:/home/simi/franka_ros2_ws/install/cartesian_impedance_control:/home/simi/franka_ros2_ws/install/messages_fr3:/home/simi/franka_ros2_ws/install/joint_trajectory_controller:/home/simi/franka_ros2_ws/install/integration_launch_testing:/home/simi/franka_ros2_ws/install/franka_bringup:/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster:/home/simi/franka_ros2_ws/install/franka_example_controllers:/home/simi/franka_ros2_ws/install/franka_moveit_config:/home/simi/franka_ros2_ws/install/franka_gripper:/home/simi/franka_ros2_ws/install/franka_description:/opt/ros/humble LD_LIBRARY_PATH=/home/simi/franka_ros2_ws/install/franka_semantic_components/lib:/home/simi/franka_ros2_ws/install/franka_hardware/lib:/home/simi/franka_ros2_ws/install/franka_msgs/lib:/home/simi/franka_ros2_ws/install/cartesian_impedance_control/lib:/home/simi/franka_ros2_ws/install/messages_fr3/lib:/home/simi/franka_ros2_ws/install/joint_trajectory_controller/lib:/home/simi/franka_ros2_ws/install/integration_launch_testing/lib:/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster/lib:/home/simi/franka_ros2_ws/install/franka_example_controllers/lib:/home/simi/franka_ros2_ws/install/franka_gripper/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/simi/franka_ros2_ws/build/franka_example_controllers
+[30.813s] -- Install configuration: "Release"
+[30.814s] -- Up-to-date: /home/simi/franka_ros2_ws/install/franka_example_controllers/include/franka_example_controllers_parameters
+[30.814s] -- Up-to-date: /home/simi/franka_ros2_ws/install/franka_example_controllers/include/franka_example_controllers_parameters/franka_example_controllers_parameters.hpp
+[30.814s] -- Up-to-date: /home/simi/franka_ros2_ws/install/franka_example_controllers/share/franka_example_controllers/franka_example_controllers.xml
+[30.815s] -- Installing: /home/simi/franka_ros2_ws/install/franka_example_controllers/lib/libfranka_example_controllers.so
+[30.817s] -- Set runtime path of "/home/simi/franka_ros2_ws/install/franka_example_controllers/lib/libfranka_example_controllers.so" to ""
+[30.818s] -- Up-to-date: /home/simi/franka_ros2_ws/install/franka_example_controllers/include
+[30.818s] -- Up-to-date: /home/simi/franka_ros2_ws/install/franka_example_controllers/include/franka_example_controllers
+[30.818s] -- Up-to-date: /home/simi/franka_ros2_ws/install/franka_example_controllers/include/franka_example_controllers/joint_impedance_with_ik_example_controller.hpp
+[30.818s] -- Up-to-date: /home/simi/franka_ros2_ws/install/franka_example_controllers/include/franka_example_controllers/motion_generator.hpp
+[30.818s] -- Up-to-date: /home/simi/franka_ros2_ws/install/franka_example_controllers/include/franka_example_controllers/cartesian_orientation_example_controller.hpp
+[30.818s] -- Up-to-date: /home/simi/franka_ros2_ws/install/franka_example_controllers/include/franka_example_controllers/model_example_controller.hpp
+[30.818s] -- Up-to-date: /home/simi/franka_ros2_ws/install/franka_example_controllers/include/franka_example_controllers/joint_position_example_controller.hpp
+[30.818s] -- Up-to-date: /home/simi/franka_ros2_ws/install/franka_example_controllers/include/franka_example_controllers/cartesian_velocity_example_controller.hpp
+[30.818s] -- Up-to-date: /home/simi/franka_ros2_ws/install/franka_example_controllers/include/franka_example_controllers/elbow_example_controller.hpp
+[30.818s] -- Up-to-date: /home/simi/franka_ros2_ws/install/franka_example_controllers/include/franka_example_controllers/joint_velocity_example_controller.hpp
+[30.819s] -- Up-to-date: /home/simi/franka_ros2_ws/install/franka_example_controllers/include/franka_example_controllers/joint_impedance_example_controller.hpp
+[30.819s] -- Up-to-date: /home/simi/franka_ros2_ws/install/franka_example_controllers/include/franka_example_controllers/gravity_compensation_example_controller.hpp
+[30.819s] -- Up-to-date: /home/simi/franka_ros2_ws/install/franka_example_controllers/include/franka_example_controllers/cartesian_pose_example_controller.hpp
+[30.819s] -- Up-to-date: /home/simi/franka_ros2_ws/install/franka_example_controllers/include/franka_example_controllers/default_robot_behavior_utils.hpp
+[30.819s] -- Up-to-date: /home/simi/franka_ros2_ws/install/franka_example_controllers/include/franka_example_controllers/visibility_control.h
+[30.819s] -- Up-to-date: /home/simi/franka_ros2_ws/install/franka_example_controllers/include/franka_example_controllers/move_to_start_example_controller.hpp
+[30.819s] -- Up-to-date: /home/simi/franka_ros2_ws/install/franka_example_controllers/include/franka_example_controllers/cartesian_elbow_example_controller.hpp
+[30.819s] -- Up-to-date: /home/simi/franka_ros2_ws/install/franka_example_controllers/share/franka_example_controllers/environment/library_path.sh
+[30.819s] -- Installing: /home/simi/franka_ros2_ws/install/franka_example_controllers/share/franka_example_controllers/environment/library_path.dsv
+[30.820s] -- Up-to-date: /home/simi/franka_ros2_ws/install/franka_example_controllers/share/ament_index/resource_index/package_run_dependencies/franka_example_controllers
+[30.820s] -- Up-to-date: /home/simi/franka_ros2_ws/install/franka_example_controllers/share/ament_index/resource_index/parent_prefix_path/franka_example_controllers
+[30.820s] -- Installing: /home/simi/franka_ros2_ws/install/franka_example_controllers/share/franka_example_controllers/environment/ament_prefix_path.sh
+[30.820s] -- Installing: /home/simi/franka_ros2_ws/install/franka_example_controllers/share/franka_example_controllers/environment/ament_prefix_path.dsv
+[30.821s] -- Installing: /home/simi/franka_ros2_ws/install/franka_example_controllers/share/franka_example_controllers/environment/path.sh
+[30.821s] -- Installing: /home/simi/franka_ros2_ws/install/franka_example_controllers/share/franka_example_controllers/environment/path.dsv
+[30.821s] -- Up-to-date: /home/simi/franka_ros2_ws/install/franka_example_controllers/share/franka_example_controllers/local_setup.bash
+[30.822s] -- Up-to-date: /home/simi/franka_ros2_ws/install/franka_example_controllers/share/franka_example_controllers/local_setup.sh
+[30.822s] -- Up-to-date: /home/simi/franka_ros2_ws/install/franka_example_controllers/share/franka_example_controllers/local_setup.zsh
+[30.822s] -- Installing: /home/simi/franka_ros2_ws/install/franka_example_controllers/share/franka_example_controllers/local_setup.dsv
+[30.822s] -- Installing: /home/simi/franka_ros2_ws/install/franka_example_controllers/share/franka_example_controllers/package.dsv
+[30.823s] -- Up-to-date: /home/simi/franka_ros2_ws/install/franka_example_controllers/share/ament_index/resource_index/packages/franka_example_controllers
+[30.823s] -- Up-to-date: /home/simi/franka_ros2_ws/install/franka_example_controllers/share/ament_index/resource_index/controller_interface__pluginlib__plugin/franka_example_controllers
+[30.823s] -- Up-to-date: /home/simi/franka_ros2_ws/install/franka_example_controllers/share/franka_example_controllers/cmake/ament_cmake_export_include_directories-extras.cmake
+[30.823s] -- Up-to-date: /home/simi/franka_ros2_ws/install/franka_example_controllers/share/franka_example_controllers/cmake/ament_cmake_export_libraries-extras.cmake
+[30.823s] -- Up-to-date: /home/simi/franka_ros2_ws/install/franka_example_controllers/share/franka_example_controllers/cmake/ament_cmake_export_dependencies-extras.cmake
+[30.823s] -- Up-to-date: /home/simi/franka_ros2_ws/install/franka_example_controllers/share/franka_example_controllers/cmake/franka_example_controllersConfig.cmake
+[30.823s] -- Up-to-date: /home/simi/franka_ros2_ws/install/franka_example_controllers/share/franka_example_controllers/cmake/franka_example_controllersConfig-version.cmake
+[30.823s] -- Up-to-date: /home/simi/franka_ros2_ws/install/franka_example_controllers/share/franka_example_controllers/package.xml
+[30.827s] Invoked command in '/home/simi/franka_ros2_ws/build/franka_example_controllers' returned '0': CMAKE_PREFIX_PATH=/home/simi/franka_ros2_ws/install/franka_semantic_components:/home/simi/franka_ros2_ws/install/franka_hardware:/home/simi/franka_ros2_ws/install/franka_msgs:/home/simi/franka_ros2_ws/install/cartesian_impedance_control:/home/simi/franka_ros2_ws/install/messages_fr3:/home/simi/franka_ros2_ws/install/joint_trajectory_controller:/home/simi/franka_ros2_ws/install/integration_launch_testing:/home/simi/franka_ros2_ws/install/franka_bringup:/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster:/home/simi/franka_ros2_ws/install/franka_example_controllers:/home/simi/franka_ros2_ws/install/franka_moveit_config:/home/simi/franka_ros2_ws/install/franka_gripper:/home/simi/franka_ros2_ws/install/franka_description:/opt/ros/humble LD_LIBRARY_PATH=/home/simi/franka_ros2_ws/install/franka_semantic_components/lib:/home/simi/franka_ros2_ws/install/franka_hardware/lib:/home/simi/franka_ros2_ws/install/franka_msgs/lib:/home/simi/franka_ros2_ws/install/cartesian_impedance_control/lib:/home/simi/franka_ros2_ws/install/messages_fr3/lib:/home/simi/franka_ros2_ws/install/joint_trajectory_controller/lib:/home/simi/franka_ros2_ws/install/integration_launch_testing/lib:/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster/lib:/home/simi/franka_ros2_ws/install/franka_example_controllers/lib:/home/simi/franka_ros2_ws/install/franka_gripper/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/simi/franka_ros2_ws/build/franka_example_controllers

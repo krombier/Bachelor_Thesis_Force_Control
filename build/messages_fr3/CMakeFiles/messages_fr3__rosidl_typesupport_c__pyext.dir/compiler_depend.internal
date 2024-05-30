@@ -262,4 +262,7 @@ CMakeFiles/messages_fr3__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/mes
  /home/simi/franka_ros2_ws/build/messages_fr3/rosidl_generator_c/messages_fr3/srv/detail/set_force__type_support.h
  /home/simi/franka_ros2_ws/build/messages_fr3/rosidl_generator_c/messages_fr3/srv/detail/set_force__struct.h
  /home/simi/franka_ros2_ws/build/messages_fr3/rosidl_generator_c/messages_fr3/srv/detail/set_force__functions.h
+ /home/simi/franka_ros2_ws/build/messages_fr3/rosidl_generator_c/messages_fr3/srv/detail/set_mode__type_support.h
+ /home/simi/franka_ros2_ws/build/messages_fr3/rosidl_generator_c/messages_fr3/srv/detail/set_mode__struct.h
+ /home/simi/franka_ros2_ws/build/messages_fr3/rosidl_generator_c/messages_fr3/srv/detail/set_mode__functions.h
 
