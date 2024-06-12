@@ -1,0 +1,6 @@
+[ 12%] [32mBuilding CXX object CMakeFiles/cartesian_impedance_control.dir/src/cartesian_impedance_controller.cpp.o[0m
+[ 25%] [32m[1mLinking CXX shared library libcartesian_impedance_control.so[0m
+[ 50%] Built target cartesian_impedance_control
+[ 62%] [32mBuilding CXX object CMakeFiles/user_input_client.dir/src/user_input_client.cpp.o[0m
+[ 75%] [32m[1mLinking CXX executable force_control_client[0m
+[ 87%] Built target force_control_client

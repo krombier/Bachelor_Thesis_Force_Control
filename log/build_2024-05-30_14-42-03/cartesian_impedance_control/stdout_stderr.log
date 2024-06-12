@@ -1,0 +1,33 @@
+[35m[1mConsolidate compiler generated dependencies of target cartesian_impedance_control[0m
+[ 50%] Built target cartesian_impedance_control
+[35m[1mConsolidate compiler generated dependencies of target user_input_client[0m
+[ 75%] Built target force_control_client
+[ 87%] [32mBuilding CXX object CMakeFiles/user_input_client.dir/src/user_input_client.cpp.o[0m
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:91:13:[m[K [01;31m[Kerror: [m[Kduplicate case value
+   91 |             [01;31m[Kcase[m[K 2:{
+      |             [01;31m[K^~~~[m[K
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:42:21:[m[K [01;36m[Knote: [m[Kpreviously used here
+   42 |                     [01;36m[Kcase[m[K 2:{
+      |                     [01;36m[K^~~~[m[K
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:122:13:[m[K [01;31m[Kerror: [m[Kmultiple default labels in one switch
+  122 |             [01;31m[Kdefault[m[K:{
+      |             [01;31m[K^~~~~~~[m[K
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:72:21:[m[K [01;36m[Knote: [m[Kthis is the first default label
+   72 |                     [01;36m[Kdefault[m[K:{
+      |                     [01;36m[K^~~~~~~[m[K
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:130:2:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+  130 | }
+      |  [01;31m[K^[m[K
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:25:25:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+   25 |     while (rclcpp::ok())[01;36m[K{[m[K
+      |                         [01;36m[K^[m[K
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:130:2:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+  130 | }
+      |  [01;31m[K^[m[K
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:11:33:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+   11 | int main(int argc, char **argv) [01;36m[K{[m[K
+      |                                 [01;36m[K^[m[K
+gmake[2]: *** [CMakeFiles/user_input_client.dir/build.make:76: CMakeFiles/user_input_client.dir/src/user_input_client.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:167: CMakeFiles/user_input_client.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

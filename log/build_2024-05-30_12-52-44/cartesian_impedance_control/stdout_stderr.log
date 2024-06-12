@@ -1,0 +1,18 @@
+[35m[1mConsolidate compiler generated dependencies of target cartesian_impedance_control[0m
+[ 12%] [32mBuilding CXX object CMakeFiles/cartesian_impedance_control.dir/src/cartesian_impedance_controller.cpp.o[0m
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/cartesian_impedance_controller.cpp:[m[K In member function ‘[01m[Kvoid cartesian_impedance_control::CartesianImpedanceController::calculate_tau_friction()[m[K’:
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/cartesian_impedance_controller.cpp:75:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kcoulomb_friction[m[K’ was not declared in this scope; did you mean ‘[01m[Ktau_friction[m[K’?
+   75 |     g(4) = ([01;31m[Kcoulomb_friction[m[K(4) + (static_friction(4) - coulomb_friction(4)) * exp(-1 * std::abs(dq_imp(4)/dq_s(4))));                    // this lines was never tested before
+      |             [01;31m[K^~~~~~~~~~~~~~~~[m[K
+      |             [32m[Ktau_friction[m[K
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/cartesian_impedance_controller.cpp:75:36:[m[K [01;31m[Kerror: [m[K‘[01m[Kstatic_friction[m[K’ was not declared in this scope; did you mean ‘[01m[Ktau_friction[m[K’?
+   75 |     g(4) = (coulomb_friction(4) + ([01;31m[Kstatic_friction[m[K(4) - coulomb_friction(4)) * exp(-1 * std::abs(dq_imp(4)/dq_s(4))));                    // this lines was never tested before
+      |                                    [01;31m[K^~~~~~~~~~~~~~~[m[K
+      |                                    [32m[Ktau_friction[m[K
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/cartesian_impedance_controller.cpp:75:108:[m[K [01;31m[Kerror: [m[K‘[01m[Kdq_s[m[K’ was not declared in this scope; did you mean ‘[01m[Kdq_[m[K’?
+   75 | ion(4) - coulomb_friction(4)) * exp(-1 * std::abs(dq_imp(4)/[01;31m[Kdq_s[m[K(4))));                    // this lines was never tested before
+      |                                                             [01;31m[K^~~~[m[K
+      |                                                             [32m[Kdq_[m[K
+gmake[2]: *** [CMakeFiles/cartesian_impedance_control.dir/build.make:76: CMakeFiles/cartesian_impedance_control.dir/src/cartesian_impedance_controller.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:141: CMakeFiles/cartesian_impedance_control.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

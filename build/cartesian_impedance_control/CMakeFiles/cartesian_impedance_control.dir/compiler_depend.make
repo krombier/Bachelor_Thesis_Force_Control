@@ -965,6 +965,11 @@ CMakeFiles/cartesian_impedance_control.dir/src/cartesian_impedance_controller.cp
   /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_param__struct.hpp \
   /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_param__builder.hpp \
   /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_param__traits.hpp \
+  /home/simi/franka_ros2_ws/src/cartesian_impedance_control/include/cartesian_impedance_control/force_control_server.hpp \
+  /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/set_force.hpp \
+  /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_force__struct.hpp \
+  /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_force__builder.hpp \
+  /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_force__traits.hpp \
   /opt/ros/humble/include/controller_interface/controller_interface.hpp \
   /opt/ros/humble/include/controller_interface/controller_interface_base.hpp \
   /opt/ros/humble/include/controller_interface/visibility_control.h \
@@ -1098,10 +1103,6 @@ CMakeFiles/cartesian_impedance_control.dir/src/cartesian_impedance_controller.cp
   /home/simi/franka_ros2_ws/install/franka_msgs/include/franka_msgs/franka_msgs/msg/detail/errors__traits.hpp \
   /home/simi/franka_ros2_ws/install/franka_msgs/include/franka_msgs/franka_msgs/msg/errors.hpp \
   /home/simi/franka_ros2_ws/install/franka_msgs/include/franka_msgs/franka_msgs/msg/detail/errors__builder.hpp \
-  /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/set_force.hpp \
-  /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_force__struct.hpp \
-  /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_force__builder.hpp \
-  /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_force__traits.hpp \
   /home/simi/franka_ros2_ws/install/franka_semantic_components/include/franka_semantic_components/franka_robot_model.hpp \
   /opt/ros/humble/include/semantic_components/semantic_component_interface.hpp \
   /opt/ros/humble/include/controller_interface/helpers.hpp \
@@ -1346,6 +1347,46 @@ CMakeFiles/cartesian_impedance_control.dir/src/force_control_server.cpp.o: /home
   /usr/include/c++/11/backward/auto_ptr.h \
   /usr/include/c++/11/pstl/glue_memory_defs.h \
   /usr/include/c++/11/pstl/execution_defs.h \
+  /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/set_force.hpp \
+  /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_force__struct.hpp \
+  /usr/include/c++/11/algorithm \
+  /usr/include/c++/11/bits/stl_algo.h \
+  /usr/include/c++/11/bits/algorithmfwd.h \
+  /usr/include/c++/11/bits/stl_heap.h \
+  /usr/include/c++/11/bits/uniform_int_dist.h \
+  /usr/include/c++/11/pstl/glue_algorithm_defs.h \
+  /usr/include/c++/11/functional \
+  /usr/include/c++/11/bits/std_function.h \
+  /usr/include/c++/11/unordered_map \
+  /usr/include/c++/11/bits/hashtable.h \
+  /usr/include/c++/11/bits/hashtable_policy.h \
+  /usr/include/c++/11/bits/enable_special_members.h \
+  /usr/include/c++/11/bits/node_handle.h \
+  /usr/include/c++/11/bits/unordered_map.h \
+  /usr/include/c++/11/bits/erase_if.h \
+  /usr/include/c++/11/vector \
+  /usr/include/c++/11/bits/stl_vector.h \
+  /usr/include/c++/11/bits/stl_bvector.h \
+  /usr/include/c++/11/bits/vector.tcc \
+  /opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/bounded_vector.hpp \
+  /opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/message_initialization.hpp \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/message_initialization.h \
+  /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_force__builder.hpp \
+  /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_force__traits.hpp \
+  /usr/include/c++/11/sstream \
+  /usr/include/c++/11/bits/sstream.tcc \
+  /opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/traits.hpp \
+  /usr/include/c++/11/codecvt \
+  /usr/include/c++/11/bits/codecvt.h \
+  /usr/include/c++/11/iomanip \
+  /usr/include/c++/11/locale \
+  /usr/include/c++/11/bits/locale_facets_nonio.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h \
+  /usr/include/libintl.h \
+  /usr/include/c++/11/bits/locale_facets_nonio.tcc \
+  /usr/include/c++/11/bits/locale_conv.h \
+  /usr/include/c++/11/bits/quoted_string.h \
   /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp \
   /usr/include/c++/11/csignal \
   /usr/include/signal.h \
@@ -1387,34 +1428,15 @@ CMakeFiles/cartesian_impedance_control.dir/src/force_control_server.cpp.o: /home
   /usr/include/c++/11/condition_variable \
   /usr/include/c++/11/atomic \
   /usr/include/c++/11/bits/atomic_futex.h \
-  /usr/include/c++/11/bits/std_function.h \
   /usr/include/c++/11/bits/std_thread.h \
   /opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp \
   /usr/include/c++/11/set \
   /usr/include/c++/11/bits/stl_tree.h \
-  /usr/include/c++/11/bits/node_handle.h \
   /usr/include/c++/11/bits/stl_set.h \
   /usr/include/c++/11/bits/stl_multiset.h \
-  /usr/include/c++/11/bits/erase_if.h \
   /usr/include/c++/11/thread \
   /usr/include/c++/11/bits/this_thread_sleep.h \
-  /usr/include/c++/11/unordered_map \
-  /usr/include/c++/11/bits/hashtable.h \
-  /usr/include/c++/11/bits/hashtable_policy.h \
-  /usr/include/c++/11/bits/enable_special_members.h \
-  /usr/include/c++/11/bits/unordered_map.h \
   /opt/ros/humble/include/rclcpp/rclcpp/executor.hpp \
-  /usr/include/c++/11/algorithm \
-  /usr/include/c++/11/bits/stl_algo.h \
-  /usr/include/c++/11/bits/algorithmfwd.h \
-  /usr/include/c++/11/bits/stl_heap.h \
-  /usr/include/c++/11/bits/uniform_int_dist.h \
-  /usr/include/c++/11/pstl/glue_algorithm_defs.h \
-  /usr/include/c++/11/functional \
-  /usr/include/c++/11/vector \
-  /usr/include/c++/11/bits/stl_vector.h \
-  /usr/include/c++/11/bits/stl_bvector.h \
-  /usr/include/c++/11/bits/vector.tcc \
   /usr/include/c++/11/cassert \
   /usr/include/assert.h \
   /usr/include/c++/11/list \
@@ -1519,8 +1541,6 @@ CMakeFiles/cartesian_impedance_control.dir/src/force_control_server.cpp.o: /home
   /opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp \
   /opt/ros/humble/include/rclcpp/rclcpp/client.hpp \
   /usr/include/c++/11/optional \
-  /usr/include/c++/11/sstream \
-  /usr/include/c++/11/bits/sstream.tcc \
   /usr/include/c++/11/variant \
   /opt/ros/humble/include/rcl/rcl/error_handling.h \
   /opt/ros/humble/include/rclcpp/rclcpp/detail/cpp_callback_trampoline.hpp \
@@ -1548,23 +1568,8 @@ CMakeFiles/cartesian_impedance_control.dir/src/force_control_server.cpp.o: /home
   /opt/ros/humble/include/rclcpp/rclcpp/duration.hpp \
   /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/duration.hpp \
   /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__struct.hpp \
-  /opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/bounded_vector.hpp \
-  /opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/message_initialization.hpp \
-  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/message_initialization.h \
   /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__builder.hpp \
   /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__traits.hpp \
-  /opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/traits.hpp \
-  /usr/include/c++/11/codecvt \
-  /usr/include/c++/11/bits/codecvt.h \
-  /usr/include/c++/11/iomanip \
-  /usr/include/c++/11/locale \
-  /usr/include/c++/11/bits/locale_facets_nonio.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h \
-  /usr/include/libintl.h \
-  /usr/include/c++/11/bits/locale_facets_nonio.tcc \
-  /usr/include/c++/11/bits/locale_conv.h \
-  /usr/include/c++/11/bits/quoted_string.h \
   /opt/ros/humble/include/rcl/rcl/logging_rosout.h \
   /opt/ros/humble/include/rmw/rmw/incompatible_qos_events_statuses.h \
   /opt/ros/humble/include/rclcpp/rclcpp/type_support_decl.hpp \
@@ -2084,10 +2089,168 @@ CMakeFiles/cartesian_impedance_control.dir/src/force_control_server.cpp.o: /home
   /usr/include/eigen3/Eigen/src/IterativeLinearSolvers/BiCGSTAB.h \
   /usr/include/eigen3/Eigen/src/IterativeLinearSolvers/IncompleteLUT.h \
   /usr/include/eigen3/Eigen/src/IterativeLinearSolvers/IncompleteCholesky.h \
-  /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/set_force.hpp \
-  /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_force__struct.hpp \
-  /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_force__builder.hpp \
-  /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_force__traits.hpp
+  /home/simi/franka_ros2_ws/src/cartesian_impedance_control/include/cartesian_impedance_control/cartesian_impedance_controller.hpp \
+  /home/simi/franka_ros2_ws/src/cartesian_impedance_control/include/cartesian_impedance_control/user_input_server.hpp \
+  /usr/include/eigen3/Eigen/Dense \
+  /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/set_pose.hpp \
+  /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_pose__struct.hpp \
+  /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_pose__builder.hpp \
+  /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_pose__traits.hpp \
+  /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/set_param.hpp \
+  /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_param__struct.hpp \
+  /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_param__builder.hpp \
+  /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_param__traits.hpp \
+  /opt/ros/humble/include/controller_interface/controller_interface.hpp \
+  /opt/ros/humble/include/controller_interface/controller_interface_base.hpp \
+  /opt/ros/humble/include/controller_interface/visibility_control.h \
+  /opt/ros/humble/include/hardware_interface/handle.hpp \
+  /opt/ros/humble/include/hardware_interface/macros.hpp \
+  /opt/ros/humble/include/hardware_interface/visibility_control.h \
+  /opt/ros/humble/include/hardware_interface/loaned_command_interface.hpp \
+  /opt/ros/humble/include/hardware_interface/loaned_state_interface.hpp \
+  /opt/ros/humble/include/rclcpp_lifecycle/rclcpp_lifecycle/lifecycle_node.hpp \
+  /opt/ros/humble/include/rclcpp_lifecycle/rclcpp_lifecycle/node_interfaces/lifecycle_node_interface.hpp \
+  /opt/ros/humble/include/lifecycle_msgs/lifecycle_msgs/msg/transition.hpp \
+  /opt/ros/humble/include/lifecycle_msgs/lifecycle_msgs/msg/detail/transition__struct.hpp \
+  /opt/ros/humble/include/lifecycle_msgs/lifecycle_msgs/msg/detail/transition__builder.hpp \
+  /opt/ros/humble/include/lifecycle_msgs/lifecycle_msgs/msg/detail/transition__traits.hpp \
+  /opt/ros/humble/include/rcl_lifecycle/rcl_lifecycle/rcl_lifecycle.h \
+  /opt/ros/humble/include/rcl_lifecycle/rcl_lifecycle/data_types.h \
+  /opt/ros/humble/include/rcl/rcl/rcl.h \
+  /opt/ros/humble/include/rcl/rcl/init.h \
+  /opt/ros/humble/include/rcl_lifecycle/rcl_lifecycle/visibility_control.h \
+  /opt/ros/humble/include/lifecycle_msgs/lifecycle_msgs/msg/transition_event.h \
+  /opt/ros/humble/include/lifecycle_msgs/lifecycle_msgs/msg/detail/transition_event__struct.h \
+  /opt/ros/humble/include/lifecycle_msgs/lifecycle_msgs/msg/detail/transition__struct.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
+  /opt/ros/humble/include/lifecycle_msgs/lifecycle_msgs/msg/detail/state__struct.h \
+  /opt/ros/humble/include/lifecycle_msgs/lifecycle_msgs/msg/detail/transition_event__functions.h \
+  /opt/ros/humble/include/lifecycle_msgs/lifecycle_msgs/msg/rosidl_generator_c__visibility_control.h \
+  /opt/ros/humble/include/lifecycle_msgs/lifecycle_msgs/msg/detail/transition_event__type_support.h \
+  /opt/ros/humble/include/rcl_lifecycle/rcl_lifecycle/default_state_machine.h \
+  /opt/ros/humble/include/rclcpp_lifecycle/rclcpp_lifecycle/state.hpp \
+  /opt/ros/humble/include/rclcpp_lifecycle/rclcpp_lifecycle/visibility_control.h \
+  /opt/ros/humble/include/rclcpp_lifecycle/rclcpp_lifecycle/lifecycle_publisher.hpp \
+  /opt/ros/humble/include/rclcpp_lifecycle/rclcpp_lifecycle/managed_entity.hpp \
+  /opt/ros/humble/include/rclcpp_lifecycle/rclcpp_lifecycle/transition.hpp \
+  /opt/ros/humble/include/rclcpp_lifecycle/rclcpp_lifecycle/lifecycle_node_impl.hpp \
+  /opt/ros/humble/include/rclcpp_lifecycle/rclcpp_lifecycle/lifecycle_publisher.hpp \
+  /usr/include/franka/model.h \
+  /usr/include/franka/robot.h \
+  /usr/include/franka/control_types.h \
+  /usr/include/franka/duration.h \
+  /usr/include/franka/lowpass_filter.h \
+  /usr/include/franka/robot_state.h \
+  /usr/include/franka/errors.h \
+  /usr/include/research_interface/robot/service_types.h \
+  /home/simi/franka_ros2_ws/install/franka_hardware/include/franka_hardware/franka_hardware_interface.hpp \
+  /opt/ros/humble/include/hardware_interface/hardware_info.hpp \
+  /opt/ros/humble/include/hardware_interface/system_interface.hpp \
+  /opt/ros/humble/include/hardware_interface/types/hardware_interface_return_values.hpp \
+  /opt/ros/humble/include/hardware_interface/types/lifecycle_state_names.hpp \
+  /opt/ros/humble/include/lifecycle_msgs/lifecycle_msgs/msg/state.hpp \
+  /opt/ros/humble/include/lifecycle_msgs/lifecycle_msgs/msg/detail/state__struct.hpp \
+  /opt/ros/humble/include/lifecycle_msgs/lifecycle_msgs/msg/detail/state__builder.hpp \
+  /opt/ros/humble/include/lifecycle_msgs/lifecycle_msgs/msg/detail/state__traits.hpp \
+  /home/simi/franka_ros2_ws/install/franka_hardware/include/franka_hardware/franka_executor.hpp \
+  /home/simi/franka_ros2_ws/install/franka_hardware/include/franka_hardware/franka_param_service_server.hpp \
+  /usr/include/franka/exception.h \
+  /usr/include/franka/log.h \
+  /home/simi/franka_ros2_ws/install/franka_hardware/include/franka_hardware/robot.hpp \
+  /usr/include/franka/active_control.h \
+  /usr/include/franka/active_control_base.h \
+  /usr/include/franka/active_motion_generator.h \
+  /usr/include/franka/active_torque_control.h \
+  /home/simi/franka_ros2_ws/install/franka_hardware/include/franka_hardware/model.hpp \
+  /home/simi/franka_ros2_ws/install/franka_msgs/include/franka_msgs/franka_msgs/srv/set_cartesian_stiffness.hpp \
+  /home/simi/franka_ros2_ws/install/franka_msgs/include/franka_msgs/franka_msgs/srv/detail/set_cartesian_stiffness__struct.hpp \
+  /home/simi/franka_ros2_ws/install/franka_msgs/include/franka_msgs/franka_msgs/srv/detail/set_cartesian_stiffness__builder.hpp \
+  /home/simi/franka_ros2_ws/install/franka_msgs/include/franka_msgs/franka_msgs/srv/detail/set_cartesian_stiffness__traits.hpp \
+  /home/simi/franka_ros2_ws/install/franka_msgs/include/franka_msgs/franka_msgs/srv/set_force_torque_collision_behavior.hpp \
+  /home/simi/franka_ros2_ws/install/franka_msgs/include/franka_msgs/franka_msgs/srv/detail/set_force_torque_collision_behavior__struct.hpp \
+  /home/simi/franka_ros2_ws/install/franka_msgs/include/franka_msgs/franka_msgs/srv/detail/set_force_torque_collision_behavior__builder.hpp \
+  /home/simi/franka_ros2_ws/install/franka_msgs/include/franka_msgs/franka_msgs/srv/detail/set_force_torque_collision_behavior__traits.hpp \
+  /home/simi/franka_ros2_ws/install/franka_msgs/include/franka_msgs/franka_msgs/srv/set_full_collision_behavior.hpp \
+  /home/simi/franka_ros2_ws/install/franka_msgs/include/franka_msgs/franka_msgs/srv/detail/set_full_collision_behavior__struct.hpp \
+  /home/simi/franka_ros2_ws/install/franka_msgs/include/franka_msgs/franka_msgs/srv/detail/set_full_collision_behavior__builder.hpp \
+  /home/simi/franka_ros2_ws/install/franka_msgs/include/franka_msgs/franka_msgs/srv/detail/set_full_collision_behavior__traits.hpp \
+  /home/simi/franka_ros2_ws/install/franka_msgs/include/franka_msgs/franka_msgs/srv/set_joint_stiffness.hpp \
+  /home/simi/franka_ros2_ws/install/franka_msgs/include/franka_msgs/franka_msgs/srv/detail/set_joint_stiffness__struct.hpp \
+  /home/simi/franka_ros2_ws/install/franka_msgs/include/franka_msgs/franka_msgs/srv/detail/set_joint_stiffness__builder.hpp \
+  /home/simi/franka_ros2_ws/install/franka_msgs/include/franka_msgs/franka_msgs/srv/detail/set_joint_stiffness__traits.hpp \
+  /home/simi/franka_ros2_ws/install/franka_msgs/include/franka_msgs/franka_msgs/srv/set_load.hpp \
+  /home/simi/franka_ros2_ws/install/franka_msgs/include/franka_msgs/franka_msgs/srv/detail/set_load__struct.hpp \
+  /home/simi/franka_ros2_ws/install/franka_msgs/include/franka_msgs/franka_msgs/srv/detail/set_load__builder.hpp \
+  /home/simi/franka_ros2_ws/install/franka_msgs/include/franka_msgs/franka_msgs/srv/detail/set_load__traits.hpp \
+  /home/simi/franka_ros2_ws/install/franka_msgs/include/franka_msgs/franka_msgs/srv/set_stiffness_frame.hpp \
+  /home/simi/franka_ros2_ws/install/franka_msgs/include/franka_msgs/franka_msgs/srv/detail/set_stiffness_frame__struct.hpp \
+  /home/simi/franka_ros2_ws/install/franka_msgs/include/franka_msgs/franka_msgs/srv/detail/set_stiffness_frame__builder.hpp \
+  /home/simi/franka_ros2_ws/install/franka_msgs/include/franka_msgs/franka_msgs/srv/detail/set_stiffness_frame__traits.hpp \
+  /home/simi/franka_ros2_ws/install/franka_msgs/include/franka_msgs/franka_msgs/srv/set_tcp_frame.hpp \
+  /home/simi/franka_ros2_ws/install/franka_msgs/include/franka_msgs/franka_msgs/srv/detail/set_tcp_frame__struct.hpp \
+  /home/simi/franka_ros2_ws/install/franka_msgs/include/franka_msgs/franka_msgs/srv/detail/set_tcp_frame__builder.hpp \
+  /home/simi/franka_ros2_ws/install/franka_msgs/include/franka_msgs/franka_msgs/srv/detail/set_tcp_frame__traits.hpp \
+  /home/simi/franka_ros2_ws/install/franka_msgs/include/franka_msgs/franka_msgs/msg/franka_robot_state.hpp \
+  /home/simi/franka_ros2_ws/install/franka_msgs/include/franka_msgs/franka_msgs/msg/detail/franka_robot_state__struct.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.hpp \
+  /home/simi/franka_ros2_ws/install/franka_msgs/include/franka_msgs/franka_msgs/msg/detail/collision_indicators__struct.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.hpp \
+  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__struct.hpp \
+  /home/simi/franka_ros2_ws/install/franka_msgs/include/franka_msgs/franka_msgs/msg/detail/elbow__struct.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/wrench_stamped__struct.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/wrench__struct.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/inertia_stamped__struct.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/inertia__struct.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__struct.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose__struct.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__struct.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist_stamped__struct.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__struct.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/accel_stamped__struct.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/accel__struct.hpp \
+  /home/simi/franka_ros2_ws/install/franka_msgs/include/franka_msgs/franka_msgs/msg/detail/errors__struct.hpp \
+  /home/simi/franka_ros2_ws/install/franka_msgs/include/franka_msgs/franka_msgs/msg/detail/franka_robot_state__builder.hpp \
+  /home/simi/franka_ros2_ws/install/franka_msgs/include/franka_msgs/franka_msgs/msg/detail/franka_robot_state__traits.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__traits.hpp \
+  /home/simi/franka_ros2_ws/install/franka_msgs/include/franka_msgs/franka_msgs/msg/detail/collision_indicators__traits.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__traits.hpp \
+  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__traits.hpp \
+  /home/simi/franka_ros2_ws/install/franka_msgs/include/franka_msgs/franka_msgs/msg/detail/elbow__traits.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/wrench_stamped__traits.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/wrench__traits.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/inertia_stamped__traits.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/inertia__traits.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__traits.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose__traits.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__traits.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__traits.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist_stamped__traits.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__traits.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/accel_stamped__traits.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/accel__traits.hpp \
+  /home/simi/franka_ros2_ws/install/franka_msgs/include/franka_msgs/franka_msgs/msg/detail/errors__traits.hpp \
+  /home/simi/franka_ros2_ws/install/franka_msgs/include/franka_msgs/franka_msgs/msg/errors.hpp \
+  /home/simi/franka_ros2_ws/install/franka_msgs/include/franka_msgs/franka_msgs/msg/detail/errors__builder.hpp \
+  /home/simi/franka_ros2_ws/install/franka_semantic_components/include/franka_semantic_components/franka_robot_model.hpp \
+  /opt/ros/humble/include/semantic_components/semantic_component_interface.hpp \
+  /opt/ros/humble/include/controller_interface/helpers.hpp \
+  /home/simi/franka_ros2_ws/install/franka_semantic_components/include/franka_semantic_components/franka_robot_state.hpp \
+  /opt/ros/humble/include/urdf/urdf/model.h \
+  /opt/ros/humble/include/urdfdom_headers/urdf_model/model.h \
+  /opt/ros/humble/include/urdfdom_headers/urdf_model/link.h \
+  /opt/ros/humble/include/urdfdom_headers/urdf_model/joint.h \
+  /opt/ros/humble/include/urdfdom_headers/urdf_model/pose.h \
+  /opt/ros/humble/include/urdfdom_headers/urdf_exception/exception.h \
+  /opt/ros/humble/include/urdfdom_headers/urdf_model/utils.h \
+  /opt/ros/humble/include/urdfdom_headers/urdf_model/types.h \
+  /opt/ros/humble/include/urdfdom_headers/urdf_model/color.h \
+  /usr/include/c++/11/math.h \
+  /opt/ros/humble/include/urdfdom_headers/urdf_model/types.h \
+  /opt/ros/humble/include/urdf/urdf/urdfdom_compatibility.h \
+  /opt/ros/humble/include/urdfdom_headers/urdf_world/types.h \
+  /opt/ros/humble/include/urdf/urdf/visibility_control.hpp
 
 CMakeFiles/cartesian_impedance_control.dir/src/user_input_server.cpp.o: /home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_server.cpp \
   /usr/include/stdc-predef.h \
@@ -3053,6 +3216,11 @@ CMakeFiles/cartesian_impedance_control.dir/src/user_input_server.cpp.o: /home/si
   /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_param__builder.hpp \
   /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_param__traits.hpp \
   /home/simi/franka_ros2_ws/src/cartesian_impedance_control/include/cartesian_impedance_control/cartesian_impedance_controller.hpp \
+  /home/simi/franka_ros2_ws/src/cartesian_impedance_control/include/cartesian_impedance_control/force_control_server.hpp \
+  /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/set_force.hpp \
+  /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_force__struct.hpp \
+  /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_force__builder.hpp \
+  /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_force__traits.hpp \
   /opt/ros/humble/include/controller_interface/controller_interface.hpp \
   /opt/ros/humble/include/controller_interface/controller_interface_base.hpp \
   /opt/ros/humble/include/controller_interface/visibility_control.h \
@@ -3186,10 +3354,6 @@ CMakeFiles/cartesian_impedance_control.dir/src/user_input_server.cpp.o: /home/si
   /home/simi/franka_ros2_ws/install/franka_msgs/include/franka_msgs/franka_msgs/msg/detail/errors__traits.hpp \
   /home/simi/franka_ros2_ws/install/franka_msgs/include/franka_msgs/franka_msgs/msg/errors.hpp \
   /home/simi/franka_ros2_ws/install/franka_msgs/include/franka_msgs/franka_msgs/msg/detail/errors__builder.hpp \
-  /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/set_force.hpp \
-  /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_force__struct.hpp \
-  /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_force__builder.hpp \
-  /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_force__traits.hpp \
   /home/simi/franka_ros2_ws/install/franka_semantic_components/include/franka_semantic_components/franka_robot_model.hpp \
   /opt/ros/humble/include/semantic_components/semantic_component_interface.hpp \
   /opt/ros/humble/include/controller_interface/helpers.hpp \
@@ -3655,6 +3819,10 @@ CMakeFiles/cartesian_impedance_control.dir/src/user_input_server.cpp.o: /home/si
 /opt/ros/humble/include/lifecycle_msgs/lifecycle_msgs/msg/detail/state__traits.hpp:
 
 /usr/include/c++/11/bits/basic_ios.tcc:
+
+/opt/ros/humble/include/class_loader/class_loader/visibility_control.hpp:
+
+/usr/include/c++/11/bits/streambuf_iterator.h:
 
 /usr/include/eigen3/Eigen/src/Geometry/AlignedBox.h:
 
@@ -4159,10 +4327,6 @@ CMakeFiles/cartesian_impedance_control.dir/src/user_input_server.cpp.o: /home/si
 /usr/include/c++/11/bits/stl_tempbuf.h:
 
 /usr/include/c++/11/bits/stl_raw_storage_iter.h:
-
-/usr/include/c++/11/bits/streambuf_iterator.h:
-
-/opt/ros/humble/include/class_loader/class_loader/visibility_control.hpp:
 
 /usr/include/c++/11/bits/align.h:
 
@@ -4810,14 +4974,6 @@ CMakeFiles/cartesian_impedance_control.dir/src/user_input_server.cpp.o: /home/si
 
 /opt/ros/humble/include/hardware_interface/types/lifecycle_state_names.hpp:
 
-/home/simi/franka_ros2_ws/src/cartesian_impedance_control/include/cartesian_impedance_control/force_control_server.hpp:
-
-/home/simi/franka_ros2_ws/install/franka_msgs/include/franka_msgs/franka_msgs/srv/detail/set_force_torque_collision_behavior__struct.hpp:
-
-/opt/ros/humble/include/rcl/rcl/macros.h:
-
-/opt/ros/humble/include/rclcpp/rclcpp/expand_topic_or_service_name.hpp:
-
 /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h:
 
 /home/simi/franka_ros2_ws/install/franka_msgs/include/franka_msgs/franka_msgs/srv/set_load.hpp:
@@ -5262,13 +5418,21 @@ CMakeFiles/cartesian_impedance_control.dir/src/user_input_server.cpp.o: /home/si
 
 /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_pose__builder.hpp:
 
-/opt/ros/humble/include/hardware_interface/handle.hpp:
+/home/simi/franka_ros2_ws/install/franka_msgs/include/franka_msgs/franka_msgs/srv/detail/set_force_torque_collision_behavior__struct.hpp:
 
-/opt/ros/humble/include/hardware_interface/macros.hpp:
+/opt/ros/humble/include/rcl/rcl/macros.h:
+
+/opt/ros/humble/include/rclcpp/rclcpp/expand_topic_or_service_name.hpp:
+
+/home/simi/franka_ros2_ws/src/cartesian_impedance_control/include/cartesian_impedance_control/force_control_server.hpp:
+
+/home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_force__traits.hpp:
 
 /opt/ros/humble/include/rclcpp_lifecycle/rclcpp_lifecycle/lifecycle_node.hpp:
 
-/home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_force__traits.hpp:
+/opt/ros/humble/include/hardware_interface/handle.hpp:
+
+/opt/ros/humble/include/hardware_interface/macros.hpp:
 
 /opt/ros/humble/include/lifecycle_msgs/lifecycle_msgs/msg/detail/transition__struct.hpp:
 

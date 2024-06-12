@@ -1,0 +1,19 @@
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/cartesian_impedance_controller.cpp:[m[K In member function ‘[01m[Kvirtual CallbackReturn cartesian_impedance_control::CartesianImpedanceController::on_init()[m[K’:
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/cartesian_impedance_controller.cpp:205:55:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kcartesian_impedance_control::UserInputServer::UserInputServer(Eigen::Matrix<double, 6, 1>*)[m[K’
+  205 |    UserInputServer input_server_obj2(&F_contact_target[01;31m[K)[m[K;
+      |                                                       [01;31m[K^[m[K
+In file included from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/include/cartesian_impedance_control/cartesian_impedance_controller.hpp:29[m[K,
+                 from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/cartesian_impedance_controller.cpp:15[m[K:
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/include/cartesian_impedance_control/user_input_server.hpp:16:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kcartesian_impedance_control::UserInputServer::UserInputServer(Eigen::Vector3d*, Eigen::Vector3d*, Eigen::Matrix<double, 6, 6>*, Eigen::Matrix<double, 6, 6>*, Eigen::Matrix<double, 6, 6>*)[m[K’
+   16 |   [01;36m[KUserInputServer[m[K (Eigen::Vector3d* position,
+      |   [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/include/cartesian_impedance_control/user_input_server.hpp:16:3:[m[K [01;36m[Knote: [m[K  candidate expects 5 arguments, 1 provided
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/include/cartesian_impedance_control/user_input_server.hpp:14:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr cartesian_impedance_control::UserInputServer::UserInputServer(const cartesian_impedance_control::UserInputServer&)[m[K’
+   14 | class [01;36m[KUserInputServer[m[K {
+      |       [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/include/cartesian_impedance_control/user_input_server.hpp:14:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KEigen::Matrix<double, 6, 1>*[m[K’ to ‘[01m[Kconst cartesian_impedance_control::UserInputServer&[m[K’
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/include/cartesian_impedance_control/user_input_server.hpp:14:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr cartesian_impedance_control::UserInputServer::UserInputServer(cartesian_impedance_control::UserInputServer&&)[m[K’
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/include/cartesian_impedance_control/user_input_server.hpp:14:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KEigen::Matrix<double, 6, 1>*[m[K’ to ‘[01m[Kcartesian_impedance_control::UserInputServer&&[m[K’
+gmake[2]: *** [CMakeFiles/cartesian_impedance_control.dir/build.make:76: CMakeFiles/cartesian_impedance_control.dir/src/cartesian_impedance_controller.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:141: CMakeFiles/cartesian_impedance_control.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -27,7 +27,8 @@ int main(int argc, char **argv) {
         std:: cin >> task_selection;
         switch (task_selection){
             case 1:{ 
-                std::cout << "Enter new goal position: \n [1] --> 0.5, -0.4, 0.5 \n [2] --> DO NOT USE \n [3] --> 0.5, 0.4, 0.5\n";
+                std::cout << "Enter new goal position: \n [1] --> 0.5, -0.4, 0.5 \n [2] --> DO NOT USE \n [3] --> 0.5, 0.4, 0.5\n [4] --> 0.5, 0.52, 0.5 \n [5] --> 0.5, -0.6, 0.5 \n [6] --> 0.5, 0.0, 0.08 \n, [79] --> Reduce current z-Position by 1 cm \n";
+                std::cout << "[4] and [5] currently reach the boundaries, so the arm will get stuck if you command this\n";
                 std::cin >> pose_selection;
                 switch (pose_selection){
                     case 1:{
@@ -57,6 +58,43 @@ int main(int argc, char **argv) {
                         pose_request->x = 0.5;
                         pose_request->y = 0.4;
                         pose_request->z = 0.5;
+                        pose_request->roll = M_PI;
+                        pose_request->pitch = 0.0;
+                        pose_request->yaw = M_PI_2;
+                        break;
+                    }
+                    case 4:{
+                        pose_request->x = 0.5;
+                        pose_request->y = 0.52;
+                        pose_request->z = 0.5;
+                        pose_request->roll = M_PI;
+                        pose_request->pitch = 0.0;
+                        pose_request->yaw = M_PI_2;
+                        break;
+                    }
+                    case 5:{
+                        pose_request->x = 0.5;
+                        pose_request->y = -0.6;
+                        pose_request->z = 0.5;
+                        pose_request->roll = M_PI;
+                        pose_request->pitch = 0.0;
+                        pose_request->yaw = M_PI_2;
+                        break;
+                    }
+                    case 6:{
+                        pose_request->x = 0.5;
+                        pose_request->y = 0.0;
+                        pose_request->z = 0.08;
+                        pose_request->roll = M_PI;
+                        pose_request->pitch = 0.0;
+                        pose_request->yaw = M_PI_2;
+                        break;
+                    }
+                    case 79:{
+                        double store = pose_request->z; 
+                        pose_request->x = 0.5;
+                        pose_request->y = 0.0;
+                        pose_request->z = store - 0.01;
                         pose_request->roll = M_PI;
                         pose_request->pitch = 0.0;
                         pose_request->yaw = M_PI_2;

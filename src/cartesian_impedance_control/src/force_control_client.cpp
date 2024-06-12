@@ -18,24 +18,24 @@ int main(int argc, char **argv) {
     int force_direction_selection, y_axis_check, code_saftey_feature;
 
     while (rclcpp::ok()){          //right now we still input a desired force
-        std::cout << "Do we have the robots endeffector in position where by moving into y-direction we can't destroy much? [1] --> no, stop the program! [2] --> yes"<< std::endl;
-        std::cin >> force_direction_selection;
-        std::cout << "Is there a safety feature in the code that ensures that the robot doesn't exceed its limits? [1] --> no, stop the program! [2] --> yes"<< std::endl;
+        std::cout << "Do we have the robots endeffector in a position where by moving it can't destroy much? [1] --> no, stop the program! [2] --> yes"<< std::endl;
+        std::cin >> y_axis_check;
+        std::cout << "Is checklimits not commented out in the update function and in the definition? [1] --> no, stop the program! [2] --> yes"<< std::endl;
         std::cin >> code_saftey_feature;
 
-        if (force_direction_selection==1 | code_saftey_feature==1){             // (| = or)
+        if (y_axis_check==1 or code_saftey_feature==1){
             break;
         }        
         
                                                                      // right now we only move in y direction to ensure we don't damage anything
-        std::cout << "Choose an option \n [1] --> 0.1 N in positive y-direction \n [2] --> 0.1 N in negative y-direction \n [everything else] --> no force"<< std::endl;
-        std::cout << "Be aware that 1 and 2 may be swaped in the program, aka I'm not sure wheter they are or not" << std::endl;
+        std::cout << "Choose an option \n [1] -->  -1 N in z-direction \n [2] -->  -0.1 N in y-direction \n [492] increase force in negative z-direction by 1 N \n [everything else] --> no force \n"<< std::endl;
+        std::cout << "Be aware that the signs may be swaped in the program, aka I'm not sure wheter they are or not" << std::endl;
         std::cin >> force_direction_selection;
         switch (force_direction_selection){
             case 1:{
                 force_request->x_force = 0.0;
-                force_request->y_force = 0.1;
-                force_request->z_force = 0.0;
+                force_request->y_force = 0.0;
+                force_request->z_force = -1.0;
                 force_request->x_torque = 0.0;
                 force_request->y_torque = 0.0;
                 force_request->z_torque = 0.0;
@@ -43,6 +43,20 @@ int main(int argc, char **argv) {
             }
             
             case 2:{
+                force_request->x_force = 0.0;
+                force_request->y_force = -0.1;
+                force_request->z_force = 0.0;
+                force_request->x_torque = 0.0;
+                force_request->y_torque = 0.0;
+                force_request->z_torque = 0.0;
+                break;
+            }
+            case 492:{
+                double store = force_request->z_force;
+                force_request->z_force = store -1;
+                break;
+            }
+            case 306:{
                 force_request->x_force = 0.0;
                 force_request->y_force = -0.1;
                 force_request->z_force = 0.0;
@@ -63,7 +77,7 @@ int main(int argc, char **argv) {
         }
         auto force_result = force_client->async_send_request(force_request);
         if(rclcpp::spin_until_future_complete(node, force_result) ==  rclcpp::FutureReturnCode::SUCCESS){
-            std::cout << "Hat geklappt ;)";
+            std::cout << "Hat geklappt ;)"<< std::endl;
             RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Worked: %d", force_result.get()->success);
         } else {
             RCLCPP_ERROR(rclcpp::get_logger("rclcpp"), "Failed to call service setForce :(");

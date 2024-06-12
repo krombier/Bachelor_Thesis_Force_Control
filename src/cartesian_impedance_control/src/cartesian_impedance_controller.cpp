@@ -41,9 +41,10 @@ std::ostream& operator<<(std::ostream& ostream, const std::array<T, N>& array) {
 }
 }
 
+// add Sm and Sf by pass by reference
 namespace cartesian_impedance_control {
-/* // currently commented out to help debugging
-void CartesianImpedanceController::adapt_Sm_and_Sf(const Eigen::Matrix<double,6,1>& F_request, const Eigen::Matrix<double,3,3>& Rot_M){    //update the Sm and Sf matrix
+// currently commented out to help debugging
+void CartesianImpedanceController::adapt_Sm_and_Sf(const Eigen::Matrix<double,6,1>& F_request, Eigen::Matrix<double, 6, 6>& Sm, Eigen::Matrix<double, 6, 6>& Sf){    //update the Sm and Sf matrix
   Sm = Eigen::MatrixXd::Zero(6, 6);
   for (int i =0; i<6; ++i){
     if (F_request(i)==0){
@@ -53,32 +54,64 @@ void CartesianImpedanceController::adapt_Sm_and_Sf(const Eigen::Matrix<double,6,
     }
   }
   Sf = IDENTITY - Sm;
-}*/
+}
+
+
+//not sure wheter it is worth to write an extra funciton for this, apparently this is needed because ROS2 makes mimimi
+void CartesianImpedanceController::get_rid_of_friction_force(const Eigen::MatrixXd& jacobian_transpose_pinv, 
+                                                            const Eigen::Matrix<double, 7, 1>& tau_friction, 
+                                                            const Eigen::Matrix<double, 6, 1>& O_F_ext_hat_K_M,
+                                                            Eigen::Matrix<double, 6, 1>& O_F_ext_hat_K_M_no_friction){
+  O_F_ext_hat_K_M_no_friction = O_F_ext_hat_K_M - jacobian_transpose_pinv * tau_friction;           // friction compensation of measurement
+ 
+}
+
+
+// should stop the robot from moving when his EE y-position is >0.45 or <-0.45 or he goes higher in z direction than expected and stops robot from crashing into wall with EE
+// Currently it does the crash the controller since the change in requested velocity is often to high and exceeds the limits set to the robot
+void CartesianImpedanceController::checklimits(const Eigen::Vector3d& pos, Eigen::Matrix<double, 7, 1>& tau_d){
+  if(std::abs(pos(1))>0.45 or pos(0)<0 or pos(2)>0.6){
+    //std::cout << " std::abs(pos(1))> 0.45 yippie " << std::endl;
+    tau_d.setZero();
+    //D = lkjllka                                                         //////////add this to make controller more safe
+    //std::cout << tau_d << std::endl;
+    std::cout << "Controller reached predefined limits" << std::endl;
+  }
+  else{
+    //std::cout << " std::abs(pos(1))< 0.45 " << std::endl;
+  }
+}
 
 
 
-// //Calculates the friction forces acting on the robot's joints depending on joint rotational speed. ///////////////////////////////////////////////////WIP
-// //Exerts torque up to a certain empirically detected static friction threshold. 
-// //TODO: Afterwards, goes into the viscous domain and follows a linear raise depending on empiric parameters
-// void CartesianImpedanceController::calculate_tau_friction(){
-//     double alpha = 0.01;//constant for exponential filter in relation to static friction moment        
-//     dq_filtered = alpha* dq_ + (1 - alpha) * dq_filtered; //Filtering dq_ of every joint
-//     tau_impedance_filtered = alpha*tau_impedance + (1 - alpha) * tau_impedance_filtered; //Filtering tau_impedance
-//     //Creating and filtering a "fake" tau_impedance with own weights, optimized for friction compensation (else friction compensation would get stronger with higher stiffnesses)
-//     tau_friction_impedance = jacobian.transpose() * Sm * (-alpha * (D_friction*(jacobian*dq_) + K_friction * error)) + (1 - alpha) * tau_friction_impedance;
-//     //Creating "fake" dq_, that acts only in the impedance-space, else dq_ in the nullspace also gets compensated, which we do not want due to null-space movement
-//     N = (Eigen::MatrixXd::Identity(7, 7) - jacobian_pinv * jacobian); //Nullspace matrix 
-//     dq_imp = dq_filtered - N * dq_filtered;
+//Calculates the friction forces acting on the robot's joints depending on joint rotational speed.
+//Exerts torque up to a certain empirically detected static friction threshold. 
+//TODO: Afterwards, goes into the viscous domain and follows a linear raise depending on empiric parameters
+void CartesianImpedanceController::calculate_tau_friction(const Eigen::Matrix<double, 7, 1>& dq_, const Eigen::Matrix<double, 7, 1>& tau_impedance,
+                                                          const Eigen::Matrix<double, 6, 7>& jacobian, const Eigen::Matrix<double, 6, 6>& Sm,
+                                                          const Eigen::Matrix<double, 6, 1>& error, const Eigen::MatrixXd& jacobian_pinv){
+    double alpha = 0.01;//constant for exponential filter in relation to static friction moment        
+    dq_filtered = alpha* dq_ + (1 - alpha) * dq_filtered; //Filtering dq_ of every joint
+    tau_impedance_filtered = alpha*tau_impedance + (1 - alpha) * tau_impedance_filtered; //Filtering tau_impedance
+    //Creating and filtering a "fake" tau_impedance with own weights, optimized for friction compensation (else friction compensation would get stronger with higher stiffnesses)
+    tau_friction_impedance = jacobian.transpose() * Sm * (-alpha * (D_friction*(jacobian*dq_) + K_friction * error)) + (1 - alpha) * tau_friction_impedance;
+    //Creating "fake" dq_, that acts only in the impedance-space, else dq_ in the nullspace also gets compensated, which we do not want due to null-space movement
+    N = (Eigen::MatrixXd::Identity(7, 7) - jacobian_pinv * jacobian); //Nullspace matrix 
+    dq_imp = dq_filtered - N * dq_filtered;
 
-//     //Calculation of friction force according to Bachelor Thesis of Viktor Luba: https://polybox.ethz.ch/index.php/s/iYj8ALPijKTAC2z?path=%2FFriction%20compensation
-//     f = beta.cwiseProduct(dq_imp) + offset_friction;
-//     dz = dq_imp.array() - dq_imp.array().abs() / g.array() * sigma_0.array() * z.array() + 0.025* tau_friction_impedance.array()/*(jacobian.transpose() * K * error).array()*/;
-//     dz(6) -= 0.02*tau_friction_impedance(6);                                             // k is everywhere 0.025 excet for the last one that's why we do this wired move (last one is only 0.005 thats why we have wired differnce here)
-//     z = 0.001 * dz + z;
-//     tau_friction = sigma_0.array() * z.array() + 100 * sigma_1.array() * dz.array() + f.array();  //*100 because values in vector are only 1% of real values
-// }
+    //Calculation of friction force according to Bachelor Thesis of Viktor Luba: https://polybox.ethz.ch/index.php/s/iYj8ALPijKTAC2z?path=%2FFriction%20compensation
+    f = beta.cwiseProduct(dq_imp) + offset_friction;
+    g(4) = (coulomb_friction(4) + (static_friction(4) - coulomb_friction(4)) * exp(-1 * std::abs(dq_imp(4)/dq_s(4))));                    // this lines was never tested before
+    g(6) = (coulomb_friction(6) + (static_friction(6) - coulomb_friction(6)) * exp(-1 * std::abs(dq_imp(6)/dq_s(6))));                    // this lines was never tested before
+    dz = dq_imp.array() - dq_imp.array().abs() / g.array() * sigma_0.array() * z.array() + 0.025* tau_friction_impedance.array()/*(jacobian.transpose() * K * error).array()*/;
+    dz(6) -= 0.02*tau_friction_impedance(6);                                             // k is everywhere 0.025 excet for the last one that's why we do this wired move (last one is only 0.005 thats why we have wired differnce here)
+    z = 0.001 * dz + z;
+    tau_friction = sigma_0.array() * z.array() + 100 * sigma_1.array() * dz.array() + f.array();  //*100 because values in vector are only 1% of real values
+}
 
-void CartesianImpedanceController::update_stiffness_and_references(){                                   // filtering to make step response not over agressive
+
+/////////////////////////////////////////////////////////////////////////wieso hier kein pass-by-reference??????  Ist das der Grund wieso Curdins Controller im Mode 2 nicht geht?
+void CartesianImpedanceController::update_stiffness_and_references(Eigen::Matrix<double, 6, 1>& F_contact_des){                                   // filtering to make step response not over agressive
   //target by filtering
   /** at the moment we do not use dynamic reconfigure and control the robot via D, K and T **/            // selber entscheiden ob es rein soll// nicht so wichtig
   //K = filter_params_ * cartesian_stiffness_target_ + (1.0 - filter_params_) * K;
@@ -93,7 +126,7 @@ void CartesianImpedanceController::update_stiffness_and_references(){           
 
 
 void CartesianImpedanceController::arrayToMatrix(const std::array<double,7>& inputArray, Eigen::Matrix<double,7,1>& resultMatrix)
-{          // das & am Ende der Matrix ist für pass-by-reference anstatt pass-by-value
+{          // das&  am Ende der Matrix ist für pass-by-reference anstatt pass-by-value
  for(long unsigned int i = 0; i < 7; ++i){
      resultMatrix(i,0) = inputArray[i];
    }
@@ -167,9 +200,15 @@ controller_interface::InterfaceConfiguration CartesianImpedanceController::state
 
 
 CallbackReturn CartesianImpedanceController::on_init() {
-   UserInputServer input_server_obj(&position_d_target_, &rotation_d_target_, &K, &D, &T);                // creates or starts the server aka calls constructor of Input server
+   UserInputServer input_server_obj(&position_d_target_,& rotation_d_target_,& K,& D,& T);                // creates or starts the server aka calls constructor of Input server
    std::thread input_thread(&UserInputServer::main, input_server_obj, 0, nullptr);
    input_thread.detach();                                                                                 // disconnect thread so other thread mustn't wait for 
+   ////////////////////////////////////////////////////////////////////////////////
+   // the 3 lines below should start my force_control_server.cpp
+   UserInputForceServer input_server_obj2(&F_contact_target);                
+   std::thread input_thread2(&UserInputForceServer::main, input_server_obj2, 0, nullptr);
+   input_thread2.detach();
+   ////////////////////////////////////////////////////////////////////////////////////
    return CallbackReturn::SUCCESS;                                                                        // this to be finished (it will be in spin so this is important)
 }
 
@@ -229,7 +268,7 @@ std::array<double, 6> CartesianImpedanceController::convertToStdArray(const geom
     return result;
 }
 
-void CartesianImpedanceController::topic_callback(const std::shared_ptr<franka_msgs::msg::FrankaRobotState> msg) {      // changes the msg to an Matrix
+void CartesianImpedanceController::topic_callback(const std::shared_ptr<franka_msgs::msg::FrankaRobotState> msg) {      // measures the external force and corrects directly for friction
   O_F_ext_hat_K = convertToStdArray(msg->o_f_ext_hat_k);
   arrayToMatrix(O_F_ext_hat_K, O_F_ext_hat_K_M);
 }
@@ -263,7 +302,19 @@ controller_interface::return_type CartesianImpedanceController::update(const rcl
   
   // Eigen::Matrix<double,3,3> rotation_matrix = transform.rotation();                                        //currently not needed
   
-  updateJointStates(); 
+  updateJointStates();
+  adapt_Sm_and_Sf(F_contact_target, Sm, Sf);
+  if (outcounter % (1000/update_frequency) == 0){
+    std::cout << "Sm calculated"<< std::endl;
+    std::cout << Sm << std::endl;
+    std::cout << "--------" << std::endl;
+    std::cout << "Sf calculated"<< std::endl;
+    std::cout << Sf << std::endl;
+    std::cout << "--------" << std::endl;
+  }
+
+  //Sm = IDENTITY;                         // currently here to make sure the robot doesn't destroy himself
+  //Sf = Eigen::MatrixXd::Zero(6, 6); 
 
   
   error.head(3) << position - position_d_;
@@ -283,7 +334,7 @@ controller_interface::return_type CartesianImpedanceController::update(const rcl
   // Theta = T*Lambda;                                                                                            // virtual scalling of the impedance (Trägheit)
   // F_impedance = -1*(Lambda * Theta.inverse() - IDENTITY) * F_ext;
   //Inertia of the robot
-  switch (mode_)
+  switch (mode_)                                                                                                  // mode is set to 1 so position control
   {
   case 1:
     Theta = Lambda;
@@ -298,17 +349,17 @@ controller_interface::return_type CartesianImpedanceController::update(const rcl
   default:
     break;
   }
-  F_ext = 0.9 * F_ext + 0.1 * O_F_ext_hat_K_M; //Filtering       //the second part is the measured external force                                               // exponential filtering with smoothing factor = 0.1
-  I_F_error += dt * Sf* (F_contact_des - F_ext);
-  F_cmd = Sf*(0.4 * (F_contact_des - F_ext) + 0.9 * I_F_error + 0.9 * F_contact_des);                           // P + I + feedforward term for faster convergence
-
-  
 
   // Definiton added in .hpp file
   //Eigen::VectorXd tau_task(7), tau_nullspace(7), tau_d(7), tau_impedance(7);
   pseudoInverse(jacobian.transpose(), jacobian_transpose_pinv);                                                 // computes the pseudo inverse and stores it in second variable
   pseudoInverse(jacobian, jacobian_pinv);                                                           //needed for friction compensation
-  //calculate_tau_friction(); 
+  calculate_tau_friction(dq_, tau_impedance, jacobian, Sm, error, jacobian_pinv); 
+
+  get_rid_of_friction_force(jacobian_transpose_pinv, tau_friction, O_F_ext_hat_K_M, O_F_ext_hat_K_M_no_friction);
+  F_ext = 0.99 * F_ext + 0.01 * /*O_F_ext_hat_K_M*/  O_F_ext_hat_K_M_no_friction; //Filtering       //the second part is the measured external force                                               // exponential filtering with smoothing factor = 0.1
+  I_F_error += dt * Sf *(F_contact_des - F_ext);
+  F_cmd = Sf *0.4 *(F_contact_des - F_ext) + 0.9 * I_F_error + 0.9 * F_contact_des;     //////////////////////////////                      // P + I + feedforward term for faster convergence
 
   tau_nullspace << (Eigen::MatrixXd::Identity(7, 7) -
                     jacobian.transpose() * jacobian_transpose_pinv) *                                           /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////here nullspace matrix gets calculated
@@ -321,29 +372,80 @@ controller_interface::return_type CartesianImpedanceController::update(const rcl
   tau_d << saturateTorqueRate(tau_d, tau_J_d_M);  // Saturate torque rate to avoid discontinuities
   tau_J_d_M = tau_d;                                                                                            // store this value for saturateTorqueRate function in 
                                                                                                                 // next iteration
+  
+  if (outcounter % (1000/update_frequency) == 0){
+    std::cout << "F_contact_des [N]" << std::endl;
+    std::cout << F_contact_des << std::endl;
+    std::cout << "--------" << std::endl;
+    std::cout << "F_ext [N]" << std::endl;
+    std::cout << F_ext << std::endl;
+    std::cout << "--------" << std::endl;
+    std::cout << "I_F_error [N]" << std::endl;
+    std::cout << I_F_error << std::endl;
+    std::cout << "--------" << std::endl;
+    std::cout << "F_cmd [N]" << std::endl;
+    std::cout << F_cmd << std::endl;
+    std::cout << "--------" << std::endl;
+    // std::cout << "O_F_ext_hat_K [N]" << std::endl;
+    // std::cout << O_F_ext_hat_K << std::endl;
+    // std::cout << "O_F_ext_hat_K_M [N]" << std::endl;
+    // std::cout << O_F_ext_hat_K_M << std::endl;
+    // std::cout << "norm = ";
+    // std::cout << O_F_ext_hat_K_M.norm() << std::endl;
+    // std::cout << "jacobian_transpose_pinv" << std::endl;
+    // std::cout << jacobian_transpose_pinv << std::endl;
+    // std::cout << "--------" << std::endl;
+    // std::cout << "O_F_ext_hat_K_M_no_friction [N]" << std::endl;
+    // std::cout << O_F_ext_hat_K_M_no_friction << std::endl;
+    // std::cout << "Lambda  Thetha.inv(): " << std::endl;
+    // std::cout << Lambda*Theta.inverse() << std::endl;
+    // std::cout << "tau_d" << std::endl;
+    // std::cout << tau_d << std::endl;
+    // std::cout << "--------" << std::endl;
+    // std::cout << "F_ext [N]" << std::endl;
+    // std::cout << F_ext << std::endl;
+    // std::cout << "--------" << std::endl;
+    // std::cout << "norm = ";
+    // std::cout << F_ext.norm() << std::endl;
+    // std::cout << tau_nullspace << std::endl;
+    // std::cout << "--------" << std::endl;
+    // std::cout << "F_cmd"<< std::endl;
+    // std::cout << F_cmd << std::endl;
+    // std::cout << "--------" << std::endl;
+    // std::cout << "Sm should be diagonal with Values 1"<< std::endl;
+    // std::cout << Sm << std::endl;
+    // std::cout << "--------" << std::endl;
+    // std::cout << "Sf should be zero"<< std::endl;
+    // std::cout << Sf << std::endl;
+    // std::cout << "--------" << std::endl;
+    // std::cout << "F_contact_target [N]"<< std::endl;
+    // std::cout << F_contact_target << std::endl;
+    // std::cout << "--------" << std::endl;
+    // std::cout << "F_contact_des [N]"<< std::endl;
+    // std::cout << F_contact_des << std::endl;
+    // std::cout << "--------" << std::endl;
+    std::cout << "--------" << std::endl;
+    // std::cout << tau_impedance << std::endl;
+    // std::cout << "--------" << std::endl;
+    // std::cout << coriolis << std::endl;
+    // std::cout << "Inertia scaling [m]: " << std::endl;
+    // std::cout << T << std::endl;
+    // std::cout << "Position [m]: " << std::endl;
+    // std::cout << position << std::endl;
+    // std::cout << "Tau_d [m]: " << std::endl;
+    // std::cout << tau_d << std::endl;
+  }
+  
+  //never comment the line bellow, instead comment parts of the funtion definition
+  checklimits(position, tau_d);
+    
   for (size_t i = 0; i < 7; ++i) {
     command_interfaces_[i].set_value(tau_d(i));                                                                 // give computed values to the robot or the controller  
   }
   
-  if (outcounter % 1000/update_frequency == 0){
-    std::cout << "F_ext_robot [N]" << std::endl;
-    std::cout << O_F_ext_hat_K << std::endl;
-    std::cout << O_F_ext_hat_K_M << std::endl;
-    std::cout << "Lambda  Thetha.inv(): " << std::endl;
-    std::cout << Lambda*Theta.inverse() << std::endl;
-    std::cout << "tau_d" << std::endl;
-    std::cout << tau_d << std::endl;
-    std::cout << "--------" << std::endl;
-    std::cout << tau_nullspace << std::endl;
-    std::cout << "--------" << std::endl;
-    std::cout << tau_impedance << std::endl;
-    std::cout << "--------" << std::endl;
-    std::cout << coriolis << std::endl;
-    std::cout << "Inertia scaling [m]: " << std::endl;
-    std::cout << T << std::endl;
-  }
+
   outcounter++;
-  update_stiffness_and_references();                                                                            // update target position and resistances against movement
+  update_stiffness_and_references(F_contact_des);                                                                            // update target position and resistances against movement
   return controller_interface::return_type::OK;
 }
 }

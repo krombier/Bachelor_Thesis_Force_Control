@@ -1,0 +1,16 @@
+[0.000000] (-) TimerEvent: {}
+[0.000365] (-) JobUnselected: {'identifier': 'cartesian_impedance_control'}
+[0.000627] (-) JobUnselected: {'identifier': 'franka_bringup'}
+[0.000860] (-) JobUnselected: {'identifier': 'franka_description'}
+[0.000951] (-) JobUnselected: {'identifier': 'franka_example_controllers'}
+[0.000995] (-) JobUnselected: {'identifier': 'franka_gripper'}
+[0.001037] (-) JobUnselected: {'identifier': 'franka_hardware'}
+[0.001147] (-) JobUnselected: {'identifier': 'franka_moveit_config'}
+[0.001312] (-) JobUnselected: {'identifier': 'franka_msgs'}
+[0.001347] (-) JobUnselected: {'identifier': 'franka_robot_state_broadcaster'}
+[0.001418] (-) JobUnselected: {'identifier': 'franka_semantic_components'}
+[0.001460] (-) JobUnselected: {'identifier': 'integration_launch_testing'}
+[0.001493] (-) JobUnselected: {'identifier': 'joint_trajectory_controller'}
+[0.001524] (-) JobUnselected: {'identifier': 'messages_fr3'}
+[0.001556] (-) JobUnselected: {'identifier': 'realtime_plot_of_data'}
+[0.001588] (-) EventReactorShutdown: {}

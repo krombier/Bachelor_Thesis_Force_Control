@@ -1,0 +1,13 @@
+In file included from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/cartesian_impedance_controller.cpp:15[m[K:
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/include/cartesian_impedance_control/cartesian_impedance_controller.hpp:104:10:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[Kcartesian_impedance_control::CartesianImpedanceController::[m[K’ on member ‘[01m[Kget_rid_of_friction_force[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  104 |     void [01;31m[KCartesianImpedanceController[m[K::get_rid_of_friction_force(const Eigen::MatrixXd &jacobian_transpose_pinv,
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_server.cpp:10[m[K:
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/include/cartesian_impedance_control/cartesian_impedance_controller.hpp:104:10:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[Kcartesian_impedance_control::CartesianImpedanceController::[m[K’ on member ‘[01m[Kget_rid_of_friction_force[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  104 |     void [01;31m[KCartesianImpedanceController[m[K::get_rid_of_friction_force(const Eigen::MatrixXd &jacobian_transpose_pinv,
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/cartesian_impedance_control.dir/build.make:90: CMakeFiles/cartesian_impedance_control.dir/src/user_input_server.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[2]: *** [CMakeFiles/cartesian_impedance_control.dir/build.make:76: CMakeFiles/cartesian_impedance_control.dir/src/cartesian_impedance_controller.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:141: CMakeFiles/cartesian_impedance_control.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

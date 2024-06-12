@@ -1,0 +1,6 @@
+source;share/realtime_plot_of_data/hook/pythonpath.ps1
+source;share/realtime_plot_of_data/hook/pythonpath.dsv
+source;share/realtime_plot_of_data/hook/pythonpath.sh
+source;share/realtime_plot_of_data/hook/ament_prefix_path.ps1
+source;share/realtime_plot_of_data/hook/ament_prefix_path.dsv
+source;share/realtime_plot_of_data/hook/ament_prefix_path.sh

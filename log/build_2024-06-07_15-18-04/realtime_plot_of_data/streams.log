@@ -1,0 +1,24 @@
+[0.596s] Invoking command in '/home/simi/franka_ros2_ws/src/realtime_plot_of_data': PYTHONPATH=/home/simi/franka_ros2_ws/build/realtime_plot_of_data/prefix_override:/home/simi/franka_ros2_ws/install/realtime_plot_of_data/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/realtime_plot_of_data build --build-base /home/simi/franka_ros2_ws/build/realtime_plot_of_data/build install --record /home/simi/franka_ros2_ws/build/realtime_plot_of_data/install.log --single-version-externally-managed install_data
+[0.797s] running egg_info
+[0.798s] writing ../../build/realtime_plot_of_data/realtime_plot_of_data.egg-info/PKG-INFO
+[0.798s] writing dependency_links to ../../build/realtime_plot_of_data/realtime_plot_of_data.egg-info/dependency_links.txt
+[0.798s] writing entry points to ../../build/realtime_plot_of_data/realtime_plot_of_data.egg-info/entry_points.txt
+[0.798s] writing requirements to ../../build/realtime_plot_of_data/realtime_plot_of_data.egg-info/requires.txt
+[0.798s] writing top-level names to ../../build/realtime_plot_of_data/realtime_plot_of_data.egg-info/top_level.txt
+[0.800s] reading manifest file '../../build/realtime_plot_of_data/realtime_plot_of_data.egg-info/SOURCES.txt'
+[0.800s] writing manifest file '../../build/realtime_plot_of_data/realtime_plot_of_data.egg-info/SOURCES.txt'
+[0.800s] running build
+[0.800s] running build_py
+[0.801s] copying realtime_plot_of_data/force_torque_plotter.py -> /home/simi/franka_ros2_ws/build/realtime_plot_of_data/build/lib/realtime_plot_of_data
+[0.801s] running install
+[0.801s] running install_lib
+[0.801s] copying /home/simi/franka_ros2_ws/build/realtime_plot_of_data/build/lib/realtime_plot_of_data/force_torque_plotter.py -> /home/simi/franka_ros2_ws/install/realtime_plot_of_data/lib/python3.10/site-packages/realtime_plot_of_data
+[0.802s] byte-compiling /home/simi/franka_ros2_ws/install/realtime_plot_of_data/lib/python3.10/site-packages/realtime_plot_of_data/force_torque_plotter.py to force_torque_plotter.cpython-310.pyc
+[0.803s] running install_data
+[0.803s] running install_egg_info
+[0.804s] removing '/home/simi/franka_ros2_ws/install/realtime_plot_of_data/lib/python3.10/site-packages/realtime_plot_of_data-0.0.0-py3.10.egg-info' (and everything under it)
+[0.804s] Copying ../../build/realtime_plot_of_data/realtime_plot_of_data.egg-info to /home/simi/franka_ros2_ws/install/realtime_plot_of_data/lib/python3.10/site-packages/realtime_plot_of_data-0.0.0-py3.10.egg-info
+[0.805s] running install_scripts
+[0.822s] Installing force_torque_plotter script to /home/simi/franka_ros2_ws/install/realtime_plot_of_data/lib/realtime_plot_of_data
+[0.822s] writing list of installed files to '/home/simi/franka_ros2_ws/build/realtime_plot_of_data/install.log'
+[0.855s] Invoked command in '/home/simi/franka_ros2_ws/src/realtime_plot_of_data' returned '0': PYTHONPATH=/home/simi/franka_ros2_ws/build/realtime_plot_of_data/prefix_override:/home/simi/franka_ros2_ws/install/realtime_plot_of_data/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/realtime_plot_of_data build --build-base /home/simi/franka_ros2_ws/build/realtime_plot_of_data/build install --record /home/simi/franka_ros2_ws/build/realtime_plot_of_data/install.log --single-version-externally-managed install_data

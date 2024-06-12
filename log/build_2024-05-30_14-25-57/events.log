@@ -1,0 +1,650 @@
+[0.000000] (-) TimerEvent: {}
+[0.000533] (-) JobUnselected: {'identifier': 'franka_bringup'}
+[0.000643] (-) JobUnselected: {'identifier': 'franka_description'}
+[0.000686] (-) JobUnselected: {'identifier': 'franka_example_controllers'}
+[0.000725] (-) JobUnselected: {'identifier': 'franka_gripper'}
+[0.000962] (-) JobUnselected: {'identifier': 'franka_hardware'}
+[0.001012] (-) JobUnselected: {'identifier': 'franka_moveit_config'}
+[0.001126] (-) JobUnselected: {'identifier': 'franka_msgs'}
+[0.001146] (-) JobUnselected: {'identifier': 'franka_robot_state_broadcaster'}
+[0.001163] (-) JobUnselected: {'identifier': 'franka_semantic_components'}
+[0.001181] (-) JobUnselected: {'identifier': 'integration_launch_testing'}
+[0.001198] (-) JobUnselected: {'identifier': 'joint_trajectory_controller'}
+[0.001220] (messages_fr3) JobQueued: {'identifier': 'messages_fr3', 'dependencies': OrderedDict()}
+[0.001242] (cartesian_impedance_control) JobQueued: {'identifier': 'cartesian_impedance_control', 'dependencies': OrderedDict([('franka_description', '/home/simi/franka_ros2_ws/install/franka_description'), ('franka_msgs', '/home/simi/franka_ros2_ws/install/franka_msgs'), ('messages_fr3', '/home/simi/franka_ros2_ws/install/messages_fr3'), ('franka_hardware', '/home/simi/franka_ros2_ws/install/franka_hardware'), ('franka_semantic_components', '/home/simi/franka_ros2_ws/install/franka_semantic_components'), ('franka_robot_state_broadcaster', '/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster')])}
+[0.001274] (messages_fr3) JobStarted: {'identifier': 'messages_fr3'}
+[0.014475] (messages_fr3) JobProgress: {'identifier': 'messages_fr3', 'progress': 'cmake'}
+[0.015728] (messages_fr3) JobProgress: {'identifier': 'messages_fr3', 'progress': 'build'}
+[0.016463] (messages_fr3) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/simi/franka_ros2_ws/build/messages_fr3', '--', '-j16', '-l16'], 'cwd': '/home/simi/franka_ros2_ws/build/messages_fr3', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'simi'), ('LC_TIME', 'de_CH.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/simi/franka_ros2_ws/install/cartesian_impedance_control/lib:/home/simi/franka_ros2_ws/install/messages_fr3/lib:/home/simi/franka_ros2_ws/install/joint_trajectory_controller/lib:/home/simi/franka_ros2_ws/install/integration_launch_testing/lib:/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster/lib:/home/simi/franka_ros2_ws/install/franka_example_controllers/lib:/home/simi/franka_ros2_ws/install/franka_semantic_components/lib:/home/simi/franka_ros2_ws/install/franka_hardware/lib:/home/simi/franka_ros2_ws/install/franka_gripper/lib:/home/simi/franka_ros2_ws/install/franka_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/simi'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'de_CH.UTF-8'), ('SYSTEMD_EXEC_PID', '12825'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/simi/franka_ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'simi'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'simi'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/simi-IdeaPad-Flex-5-14ALC05:@/tmp/.ICE-unix/1735,unix/simi-IdeaPad-Flex-5-14ALC05:/tmp/.ICE-unix/1735'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'de_CH.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/0ed41195_a4fd_4ddb_bc41_3a8afd1e7eef'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'de_CH.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.M0UNO2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.147'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/simi/franka_ros2_ws/install/cartesian_impedance_control:/home/simi/franka_ros2_ws/install/messages_fr3:/home/simi/franka_ros2_ws/install/joint_trajectory_controller:/home/simi/franka_ros2_ws/install/integration_launch_testing:/home/simi/franka_ros2_ws/install/franka_bringup:/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster:/home/simi/franka_ros2_ws/install/franka_example_controllers:/home/simi/franka_ros2_ws/install/franka_semantic_components:/home/simi/franka_ros2_ws/install/franka_moveit_config:/home/simi/franka_ros2_ws/install/franka_hardware:/home/simi/franka_ros2_ws/install/franka_gripper:/home/simi/franka_ros2_ws/install/franka_msgs:/home/simi/franka_ros2_ws/install/franka_description:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'de_CH.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'de_CH.UTF-8'), ('LC_IDENTIFICATION', 'de_CH.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/simi/franka_ros2_ws/build/messages_fr3'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages:/home/simi/franka_ros2_ws/install/franka_gripper/local/lib/python3.10/dist-packages:/home/simi/franka_ros2_ws/install/franka_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'de_CH.UTF-8'), ('LC_PAPER', 'de_CH.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/simi/franka_ros2_ws/install/cartesian_impedance_control:/home/simi/franka_ros2_ws/install/messages_fr3:/home/simi/franka_ros2_ws/install/joint_trajectory_controller:/home/simi/franka_ros2_ws/install/integration_launch_testing:/home/simi/franka_ros2_ws/install/franka_bringup:/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster:/home/simi/franka_ros2_ws/install/franka_example_controllers:/home/simi/franka_ros2_ws/install/franka_semantic_components:/home/simi/franka_ros2_ws/install/franka_moveit_config:/home/simi/franka_ros2_ws/install/franka_hardware:/home/simi/franka_ros2_ws/install/franka_gripper:/home/simi/franka_ros2_ws/install/franka_msgs:/home/simi/franka_ros2_ws/install/franka_description:/opt/ros/humble')]), 'shell': False}
+[0.099311] (-) TimerEvent: {}
+[0.104053] (messages_fr3) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target messages_fr3__rosidl_generator_c\x1b[0m\n'}
+[0.114511] (messages_fr3) StdoutLine: {'line': b'[  1%] Built target messages_fr3__cpp\n'}
+[0.129550] (messages_fr3) StdoutLine: {'line': b'[ 12%] Built target messages_fr3__rosidl_generator_c\n'}
+[0.137285] (messages_fr3) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target messages_fr3__rosidl_typesupport_cpp\x1b[0m\n'}
+[0.137656] (messages_fr3) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target messages_fr3__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[0.138891] (messages_fr3) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target messages_fr3__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[0.139676] (messages_fr3) StdoutLine: {'line': b'[ 12%] Built target ament_cmake_python_copy_messages_fr3\n'}
+[0.152875] (messages_fr3) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target messages_fr3__rosidl_typesupport_c\x1b[0m\n'}
+[0.153217] (messages_fr3) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target messages_fr3__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[0.153495] (messages_fr3) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target messages_fr3__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[0.167826] (messages_fr3) StdoutLine: {'line': b'[ 45%] Built target messages_fr3__rosidl_typesupport_fastrtps_cpp\n'}
+[0.168178] (messages_fr3) StdoutLine: {'line': b'[ 45%] Built target messages_fr3__rosidl_typesupport_cpp\n'}
+[0.168258] (messages_fr3) StdoutLine: {'line': b'[ 45%] Built target messages_fr3__rosidl_typesupport_introspection_cpp\n'}
+[0.176360] (messages_fr3) StdoutLine: {'line': b'[ 60%] Built target messages_fr3__rosidl_typesupport_c\n'}
+[0.176723] (messages_fr3) StdoutLine: {'line': b'[ 67%] Built target messages_fr3__rosidl_typesupport_introspection_c\n'}
+[0.184123] (messages_fr3) StdoutLine: {'line': b'[ 78%] Built target messages_fr3__rosidl_typesupport_fastrtps_c\n'}
+[0.199506] (-) TimerEvent: {}
+[0.222582] (messages_fr3) StdoutLine: {'line': b'[ 78%] Built target messages_fr3\n'}
+[0.264316] (messages_fr3) StdoutLine: {'line': b'[ 80%] Built target messages_fr3__py\n'}
+[0.287712] (messages_fr3) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target messages_fr3__rosidl_generator_py\x1b[0m\n'}
+[0.299665] (-) TimerEvent: {}
+[0.316490] (messages_fr3) StdoutLine: {'line': b'[ 89%] Built target messages_fr3__rosidl_generator_py\n'}
+[0.337712] (messages_fr3) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target messages_fr3__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[0.340561] (messages_fr3) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target messages_fr3__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[0.340925] (messages_fr3) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target messages_fr3__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[0.366154] (messages_fr3) StdoutLine: {'line': b'[ 92%] Built target messages_fr3__rosidl_typesupport_introspection_c__pyext\n'}
+[0.369340] (messages_fr3) StdoutLine: {'line': b'[100%] Built target messages_fr3__rosidl_typesupport_c__pyext\n'}
+[0.369709] (messages_fr3) StdoutLine: {'line': b'[100%] Built target messages_fr3__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.399942] (-) TimerEvent: {}
+[0.405098] (messages_fr3) StdoutLine: {'line': b'running egg_info\n'}
+[0.405647] (messages_fr3) StdoutLine: {'line': b'writing messages_fr3.egg-info/PKG-INFO\n'}
+[0.405892] (messages_fr3) StdoutLine: {'line': b'writing dependency_links to messages_fr3.egg-info/dependency_links.txt\n'}
+[0.406081] (messages_fr3) StdoutLine: {'line': b'writing top-level names to messages_fr3.egg-info/top_level.txt\n'}
+[0.408999] (messages_fr3) StdoutLine: {'line': b"reading manifest file 'messages_fr3.egg-info/SOURCES.txt'\n"}
+[0.409580] (messages_fr3) StdoutLine: {'line': b"writing manifest file 'messages_fr3.egg-info/SOURCES.txt'\n"}
+[0.456126] (messages_fr3) StdoutLine: {'line': b'[100%] Built target ament_cmake_python_build_messages_fr3_egg\n'}
+[0.477932] (messages_fr3) CommandEnded: {'returncode': 0}
+[0.500141] (-) TimerEvent: {}
+[0.600852] (-) TimerEvent: {}
+[0.701231] (-) TimerEvent: {}
+[0.755365] (messages_fr3) JobProgress: {'identifier': 'messages_fr3', 'progress': 'install'}
+[0.770189] (messages_fr3) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/simi/franka_ros2_ws/build/messages_fr3'], 'cwd': '/home/simi/franka_ros2_ws/build/messages_fr3', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'simi'), ('LC_TIME', 'de_CH.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/simi/franka_ros2_ws/install/cartesian_impedance_control/lib:/home/simi/franka_ros2_ws/install/messages_fr3/lib:/home/simi/franka_ros2_ws/install/joint_trajectory_controller/lib:/home/simi/franka_ros2_ws/install/integration_launch_testing/lib:/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster/lib:/home/simi/franka_ros2_ws/install/franka_example_controllers/lib:/home/simi/franka_ros2_ws/install/franka_semantic_components/lib:/home/simi/franka_ros2_ws/install/franka_hardware/lib:/home/simi/franka_ros2_ws/install/franka_gripper/lib:/home/simi/franka_ros2_ws/install/franka_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/simi'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'de_CH.UTF-8'), ('SYSTEMD_EXEC_PID', '12825'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/simi/franka_ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'simi'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'simi'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/simi-IdeaPad-Flex-5-14ALC05:@/tmp/.ICE-unix/1735,unix/simi-IdeaPad-Flex-5-14ALC05:/tmp/.ICE-unix/1735'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'de_CH.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/0ed41195_a4fd_4ddb_bc41_3a8afd1e7eef'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'de_CH.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.M0UNO2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.147'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/simi/franka_ros2_ws/install/cartesian_impedance_control:/home/simi/franka_ros2_ws/install/messages_fr3:/home/simi/franka_ros2_ws/install/joint_trajectory_controller:/home/simi/franka_ros2_ws/install/integration_launch_testing:/home/simi/franka_ros2_ws/install/franka_bringup:/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster:/home/simi/franka_ros2_ws/install/franka_example_controllers:/home/simi/franka_ros2_ws/install/franka_semantic_components:/home/simi/franka_ros2_ws/install/franka_moveit_config:/home/simi/franka_ros2_ws/install/franka_hardware:/home/simi/franka_ros2_ws/install/franka_gripper:/home/simi/franka_ros2_ws/install/franka_msgs:/home/simi/franka_ros2_ws/install/franka_description:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'de_CH.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'de_CH.UTF-8'), ('LC_IDENTIFICATION', 'de_CH.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/simi/franka_ros2_ws/build/messages_fr3'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages:/home/simi/franka_ros2_ws/install/franka_gripper/local/lib/python3.10/dist-packages:/home/simi/franka_ros2_ws/install/franka_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'de_CH.UTF-8'), ('LC_PAPER', 'de_CH.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/simi/franka_ros2_ws/install/cartesian_impedance_control:/home/simi/franka_ros2_ws/install/messages_fr3:/home/simi/franka_ros2_ws/install/joint_trajectory_controller:/home/simi/franka_ros2_ws/install/integration_launch_testing:/home/simi/franka_ros2_ws/install/franka_bringup:/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster:/home/simi/franka_ros2_ws/install/franka_example_controllers:/home/simi/franka_ros2_ws/install/franka_semantic_components:/home/simi/franka_ros2_ws/install/franka_moveit_config:/home/simi/franka_ros2_ws/install/franka_hardware:/home/simi/franka_ros2_ws/install/franka_gripper:/home/simi/franka_ros2_ws/install/franka_msgs:/home/simi/franka_ros2_ws/install/franka_description:/opt/ros/humble')]), 'shell': False}
+[0.796160] (messages_fr3) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[0.796616] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/ament_index/resource_index/rosidl_interfaces/messages_fr3\n'}
+[0.796799] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3\n'}
+[0.796940] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv\n'}
+[0.797066] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail\n'}
+[0.797182] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_param__type_support.h\n'}
+[0.797326] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_force__functions.h\n'}
+[0.797460] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_param__functions.c\n'}
+[0.797577] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_mode__type_support.h\n'}
+[0.797637] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_force__struct.h\n'}
+[0.797695] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_param__struct.h\n'}
+[0.797770] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_mode__functions.h\n'}
+[0.797832] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_param__functions.h\n'}
+[0.797883] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_pose__functions.c\n'}
+[0.797934] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_mode__functions.c\n'}
+[0.798004] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_pose__struct.h\n'}
+[0.798054] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_force__type_support.h\n'}
+[0.798140] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_pose__functions.h\n'}
+[0.798193] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_force__functions.c\n'}
+[0.798244] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_pose__type_support.h\n'}
+[0.798317] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_mode__struct.h\n'}
+[0.798409] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/set_mode.h\n'}
+[0.798478] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/set_force.h\n'}
+[0.798544] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/set_param.h\n'}
+[0.798616] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/set_pose.h\n'}
+[0.798682] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/msg\n'}
+[0.798743] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/msg/rosidl_generator_c__visibility_control.h\n'}
+[0.798794] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/environment/library_path.sh\n'}
+[0.798845] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/environment/library_path.dsv\n'}
+[0.798918] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/lib/libmessages_fr3__rosidl_generator_c.so\n'}
+[0.798971] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3\n'}
+[0.799021] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv\n'}
+[0.799071] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail\n'}
+[0.799121] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_param__rosidl_typesupport_fastrtps_c.h\n'}
+[0.799172] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_mode__rosidl_typesupport_fastrtps_c.h\n'}
+[0.799232] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_force__rosidl_typesupport_fastrtps_c.h\n'}
+[0.799283] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_pose__rosidl_typesupport_fastrtps_c.h\n'}
+[0.799333] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/msg\n'}
+[0.799395] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[0.799448] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/lib/libmessages_fr3__rosidl_typesupport_fastrtps_c.so\n'}
+[0.799509] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3\n'}
+[0.799579] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv\n'}
+[0.799658] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail\n'}
+[0.799732] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_mode__rosidl_typesupport_introspection_c.h\n'}
+[0.799796] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_param__rosidl_typesupport_introspection_c.h\n'}
+[0.799858] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_force__type_support.c\n'}
+[0.799927] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_pose__rosidl_typesupport_introspection_c.h\n'}
+[0.799988] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_force__rosidl_typesupport_introspection_c.h\n'}
+[0.800070] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_pose__type_support.c\n'}
+[0.800131] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_mode__type_support.c\n'}
+[0.800199] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_param__type_support.c\n'}
+[0.800274] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/msg\n'}
+[0.800345] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[0.800406] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/lib/libmessages_fr3__rosidl_typesupport_introspection_c.so\n'}
+[0.800457] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/lib/libmessages_fr3__rosidl_typesupport_c.so\n'}
+[0.800509] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3\n'}
+[0.800570] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv\n'}
+[0.800624] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail\n'}
+[0.800677] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_mode__struct.hpp\n'}
+[0.800729] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_mode__builder.hpp\n'}
+[0.800798] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_force__builder.hpp\n'}
+[0.800859] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_param__struct.hpp\n'}
+[0.800927] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_pose__builder.hpp\n'}
+[0.800987] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_pose__traits.hpp\n'}
+[0.801061] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_pose__struct.hpp\n'}
+[0.801122] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_force__struct.hpp\n'}
+[0.801173] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_param__traits.hpp\n'}
+[0.801222] (-) TimerEvent: {}
+[0.801324] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_param__builder.hpp\n'}
+[0.801394] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_mode__traits.hpp\n'}
+[0.801447] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_force__traits.hpp\n'}
+[0.801497] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/set_mode.hpp\n'}
+[0.801550] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/set_param.hpp\n'}
+[0.801617] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/set_pose.hpp\n'}
+[0.801667] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/set_force.hpp\n'}
+[0.801719] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3\n'}
+[0.801789] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv\n'}
+[0.801853] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail\n'}
+[0.801911] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_pose__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.801964] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_param__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.802017] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_mode__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.802111] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_force__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.802197] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/dds_fastrtps\n'}
+[0.802261] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/msg\n'}
+[0.802315] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[0.802366] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/lib/libmessages_fr3__rosidl_typesupport_fastrtps_cpp.so\n'}
+[0.802426] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3\n'}
+[0.802476] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv\n'}
+[0.802528] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail\n'}
+[0.802592] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_param__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.802645] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_pose__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.802695] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_mode__type_support.cpp\n'}
+[0.802745] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_mode__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.802796] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_force__type_support.cpp\n'}
+[0.802885] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_param__type_support.cpp\n'}
+[0.802970] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_pose__type_support.cpp\n'}
+[0.803030] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_force__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.803105] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/lib/libmessages_fr3__rosidl_typesupport_introspection_cpp.so\n'}
+[0.803175] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/lib/libmessages_fr3__rosidl_typesupport_cpp.so\n'}
+[0.803255] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/environment/pythonpath.sh\n'}
+[0.803333] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/environment/pythonpath.dsv\n'}
+[0.803402] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3-0.0.0-py3.10.egg-info\n'}
+[0.803454] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[0.803506] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[0.803557] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[0.803609] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[0.803660] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3\n'}
+[0.803711] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/__init__.py\n'}
+[0.803762] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/messages_fr3_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.803814] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/messages_fr3_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.803866] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/libmessages_fr3__rosidl_generator_py.so\n'}
+[0.803917] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/srv\n'}
+[0.803987] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/srv/_set_param_s.c\n'}
+[0.804041] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/srv/_set_mode_s.c\n'}
+[0.804092] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/srv/__init__.py\n'}
+[0.804143] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/srv/_set_mode.py\n'}
+[0.804193] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/srv/_set_pose.py\n'}
+[0.804244] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/srv/_set_force_s.c\n'}
+[0.804296] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/srv/_set_pose_s.c\n'}
+[0.804347] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/srv/_set_force.py\n'}
+[0.804407] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/srv/_set_param.py\n'}
+[0.804458] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/_messages_fr3_s.ep.rosidl_typesupport_c.c\n'}
+[0.804508] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/_messages_fr3_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[0.804559] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/messages_fr3_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.804613] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/_messages_fr3_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[0.837211] (messages_fr3) StdoutLine: {'line': b"Listing '/home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3'...\n"}
+[0.837621] (messages_fr3) StdoutLine: {'line': b"Listing '/home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/srv'...\n"}
+[0.848249] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/messages_fr3_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.848949] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/messages_fr3_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.849792] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages/messages_fr3/messages_fr3_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.850217] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/lib/libmessages_fr3__rosidl_generator_py.so\n'}
+[0.850451] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/srv/SetPose.idl\n'}
+[0.850577] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/srv/SetParam.idl\n'}
+[0.850694] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/srv/SetForce.idl\n'}
+[0.850786] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/srv/SetMode.idl\n'}
+[0.850868] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/srv/SetPose.srv\n'}
+[0.850945] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/srv/SetPose_Request.msg\n'}
+[0.851017] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/srv/SetPose_Response.msg\n'}
+[0.851099] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/srv/SetParam.srv\n'}
+[0.851176] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/srv/SetParam_Request.msg\n'}
+[0.851258] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/srv/SetParam_Response.msg\n'}
+[0.851340] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/srv/SetForce.srv\n'}
+[0.851428] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/srv/SetForce_Request.msg\n'}
+[0.851531] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/srv/SetForce_Response.msg\n'}
+[0.851602] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/srv/SetMode.srv\n'}
+[0.851700] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/srv/SetMode_Request.msg\n'}
+[0.851778] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/srv/SetMode_Response.msg\n'}
+[0.851848] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/ament_index/resource_index/package_run_dependencies/messages_fr3\n'}
+[0.851917] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/ament_index/resource_index/parent_prefix_path/messages_fr3\n'}
+[0.851988] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/environment/ament_prefix_path.sh\n'}
+[0.852058] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/environment/ament_prefix_path.dsv\n'}
+[0.852132] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/environment/path.sh\n'}
+[0.852205] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/environment/path.dsv\n'}
+[0.852277] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/local_setup.bash\n'}
+[0.852346] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/local_setup.sh\n'}
+[0.852418] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/local_setup.zsh\n'}
+[0.852491] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/local_setup.dsv\n'}
+[0.852576] (messages_fr3) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/package.dsv\n'}
+[0.852648] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/ament_index/resource_index/packages/messages_fr3\n'}
+[0.853185] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/export_messages_fr3__rosidl_generator_cExport.cmake\n'}
+[0.853291] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/export_messages_fr3__rosidl_generator_cExport-release.cmake\n'}
+[0.853817] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/export_messages_fr3__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[0.853944] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/export_messages_fr3__rosidl_typesupport_fastrtps_cExport-release.cmake\n'}
+[0.854448] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/messages_fr3__rosidl_typesupport_introspection_cExport.cmake\n'}
+[0.854675] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/messages_fr3__rosidl_typesupport_introspection_cExport-release.cmake\n'}
+[0.854843] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/messages_fr3__rosidl_typesupport_cExport.cmake\n'}
+[0.854936] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/messages_fr3__rosidl_typesupport_cExport-release.cmake\n'}
+[0.855227] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/export_messages_fr3__rosidl_generator_cppExport.cmake\n'}
+[0.855559] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/export_messages_fr3__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[0.855637] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/export_messages_fr3__rosidl_typesupport_fastrtps_cppExport-release.cmake\n'}
+[0.855939] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/messages_fr3__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[0.856011] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/messages_fr3__rosidl_typesupport_introspection_cppExport-release.cmake\n'}
+[0.856375] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/messages_fr3__rosidl_typesupport_cppExport.cmake\n'}
+[0.856449] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/messages_fr3__rosidl_typesupport_cppExport-release.cmake\n'}
+[0.856794] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/export_messages_fr3__rosidl_generator_pyExport.cmake\n'}
+[0.856856] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/export_messages_fr3__rosidl_generator_pyExport-release.cmake\n'}
+[0.856923] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/rosidl_cmake-extras.cmake\n'}
+[0.857004] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[0.857077] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[0.857140] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[0.857208] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[0.857262] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[0.857324] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[0.857377] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/messages_fr3Config.cmake\n'}
+[0.857434] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/cmake/messages_fr3Config-version.cmake\n'}
+[0.857487] (messages_fr3) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/messages_fr3/share/messages_fr3/package.xml\n'}
+[0.860949] (messages_fr3) CommandEnded: {'returncode': 0}
+[0.901387] (-) TimerEvent: {}
+[1.001775] (-) TimerEvent: {}
+[1.102222] (-) TimerEvent: {}
+[1.202425] (messages_fr3) JobEnded: {'identifier': 'messages_fr3', 'rc': 0}
+[1.203484] (-) TimerEvent: {}
+[1.203613] (cartesian_impedance_control) JobStarted: {'identifier': 'cartesian_impedance_control'}
+[1.238519] (cartesian_impedance_control) JobProgress: {'identifier': 'cartesian_impedance_control', 'progress': 'cmake'}
+[1.239868] (cartesian_impedance_control) JobProgress: {'identifier': 'cartesian_impedance_control', 'progress': 'build'}
+[1.241292] (cartesian_impedance_control) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/simi/franka_ros2_ws/build/cartesian_impedance_control', '--', '-j16', '-l16'], 'cwd': '/home/simi/franka_ros2_ws/build/cartesian_impedance_control', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'simi'), ('LC_TIME', 'de_CH.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster/lib:/home/simi/franka_ros2_ws/install/franka_semantic_components/lib:/home/simi/franka_ros2_ws/install/franka_hardware/lib:/home/simi/franka_ros2_ws/install/messages_fr3/lib:/home/simi/franka_ros2_ws/install/franka_msgs/lib:/home/simi/franka_ros2_ws/install/cartesian_impedance_control/lib:/home/simi/franka_ros2_ws/install/joint_trajectory_controller/lib:/home/simi/franka_ros2_ws/install/integration_launch_testing/lib:/home/simi/franka_ros2_ws/install/franka_example_controllers/lib:/home/simi/franka_ros2_ws/install/franka_gripper/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/simi'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'de_CH.UTF-8'), ('SYSTEMD_EXEC_PID', '12825'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/simi/franka_ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'simi'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'simi'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/simi-IdeaPad-Flex-5-14ALC05:@/tmp/.ICE-unix/1735,unix/simi-IdeaPad-Flex-5-14ALC05:/tmp/.ICE-unix/1735'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'de_CH.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/0ed41195_a4fd_4ddb_bc41_3a8afd1e7eef'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'de_CH.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.M0UNO2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.147'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/simi/franka_ros2_ws/install/cartesian_impedance_control:/home/simi/franka_ros2_ws/install/messages_fr3:/home/simi/franka_ros2_ws/install/joint_trajectory_controller:/home/simi/franka_ros2_ws/install/integration_launch_testing:/home/simi/franka_ros2_ws/install/franka_bringup:/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster:/home/simi/franka_ros2_ws/install/franka_example_controllers:/home/simi/franka_ros2_ws/install/franka_semantic_components:/home/simi/franka_ros2_ws/install/franka_moveit_config:/home/simi/franka_ros2_ws/install/franka_hardware:/home/simi/franka_ros2_ws/install/franka_gripper:/home/simi/franka_ros2_ws/install/franka_msgs:/home/simi/franka_ros2_ws/install/franka_description:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'de_CH.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'de_CH.UTF-8'), ('LC_IDENTIFICATION', 'de_CH.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/simi/franka_ros2_ws/build/cartesian_impedance_control'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages:/home/simi/franka_ros2_ws/install/franka_gripper/local/lib/python3.10/dist-packages:/home/simi/franka_ros2_ws/install/franka_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'de_CH.UTF-8'), ('LC_PAPER', 'de_CH.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster:/home/simi/franka_ros2_ws/install/franka_semantic_components:/home/simi/franka_ros2_ws/install/franka_hardware:/home/simi/franka_ros2_ws/install/messages_fr3:/home/simi/franka_ros2_ws/install/franka_msgs:/home/simi/franka_ros2_ws/install/franka_description:/home/simi/franka_ros2_ws/install/cartesian_impedance_control:/home/simi/franka_ros2_ws/install/joint_trajectory_controller:/home/simi/franka_ros2_ws/install/integration_launch_testing:/home/simi/franka_ros2_ws/install/franka_bringup:/home/simi/franka_ros2_ws/install/franka_example_controllers:/home/simi/franka_ros2_ws/install/franka_moveit_config:/home/simi/franka_ros2_ws/install/franka_gripper:/opt/ros/humble')]), 'shell': False}
+[1.303683] (-) TimerEvent: {}
+[1.316859] (cartesian_impedance_control) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target cartesian_impedance_control\x1b[0m\n'}
+[1.369282] (cartesian_impedance_control) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/cartesian_impedance_control.dir/src/cartesian_impedance_controller.cpp.o\x1b[0m\n'}
+[1.369610] (cartesian_impedance_control) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/cartesian_impedance_control.dir/src/force_control_server.cpp.o\x1b[0m\n'}
+[1.403866] (-) TimerEvent: {}
+[1.504438] (-) TimerEvent: {}
+[1.604976] (-) TimerEvent: {}
+[1.705550] (-) TimerEvent: {}
+[1.806302] (-) TimerEvent: {}
+[1.906968] (-) TimerEvent: {}
+[2.007484] (-) TimerEvent: {}
+[2.107971] (-) TimerEvent: {}
+[2.208439] (-) TimerEvent: {}
+[2.308919] (-) TimerEvent: {}
+[2.409393] (-) TimerEvent: {}
+[2.509880] (-) TimerEvent: {}
+[2.610358] (-) TimerEvent: {}
+[2.710764] (-) TimerEvent: {}
+[2.811193] (-) TimerEvent: {}
+[2.911675] (-) TimerEvent: {}
+[3.012125] (-) TimerEvent: {}
+[3.112622] (-) TimerEvent: {}
+[3.213091] (-) TimerEvent: {}
+[3.313610] (-) TimerEvent: {}
+[3.414135] (-) TimerEvent: {}
+[3.514659] (-) TimerEvent: {}
+[3.615091] (-) TimerEvent: {}
+[3.715551] (-) TimerEvent: {}
+[3.815967] (-) TimerEvent: {}
+[3.916427] (-) TimerEvent: {}
+[4.016886] (-) TimerEvent: {}
+[4.117340] (-) TimerEvent: {}
+[4.217760] (-) TimerEvent: {}
+[4.318190] (-) TimerEvent: {}
+[4.418533] (-) TimerEvent: {}
+[4.518944] (-) TimerEvent: {}
+[4.619380] (-) TimerEvent: {}
+[4.719772] (-) TimerEvent: {}
+[4.820197] (-) TimerEvent: {}
+[4.920560] (-) TimerEvent: {}
+[5.020990] (-) TimerEvent: {}
+[5.121411] (-) TimerEvent: {}
+[5.221848] (-) TimerEvent: {}
+[5.322234] (-) TimerEvent: {}
+[5.422663] (-) TimerEvent: {}
+[5.523080] (-) TimerEvent: {}
+[5.623503] (-) TimerEvent: {}
+[5.723946] (-) TimerEvent: {}
+[5.824374] (-) TimerEvent: {}
+[5.924824] (-) TimerEvent: {}
+[6.025290] (-) TimerEvent: {}
+[6.125678] (-) TimerEvent: {}
+[6.226518] (-) TimerEvent: {}
+[6.326905] (-) TimerEvent: {}
+[6.427299] (-) TimerEvent: {}
+[6.527657] (-) TimerEvent: {}
+[6.628062] (-) TimerEvent: {}
+[6.728467] (-) TimerEvent: {}
+[6.829016] (-) TimerEvent: {}
+[6.929424] (-) TimerEvent: {}
+[7.029828] (-) TimerEvent: {}
+[7.130271] (-) TimerEvent: {}
+[7.230669] (-) TimerEvent: {}
+[7.331066] (-) TimerEvent: {}
+[7.431477] (-) TimerEvent: {}
+[7.531882] (-) TimerEvent: {}
+[7.632284] (-) TimerEvent: {}
+[7.732685] (-) TimerEvent: {}
+[7.833086] (-) TimerEvent: {}
+[7.933491] (-) TimerEvent: {}
+[8.033895] (-) TimerEvent: {}
+[8.134337] (-) TimerEvent: {}
+[8.234736] (-) TimerEvent: {}
+[8.335146] (-) TimerEvent: {}
+[8.435555] (-) TimerEvent: {}
+[8.535970] (-) TimerEvent: {}
+[8.636376] (-) TimerEvent: {}
+[8.736780] (-) TimerEvent: {}
+[8.837182] (-) TimerEvent: {}
+[8.937585] (-) TimerEvent: {}
+[9.037988] (-) TimerEvent: {}
+[9.138432] (-) TimerEvent: {}
+[9.238839] (-) TimerEvent: {}
+[9.339238] (-) TimerEvent: {}
+[9.439649] (-) TimerEvent: {}
+[9.540054] (-) TimerEvent: {}
+[9.640457] (-) TimerEvent: {}
+[9.740857] (-) TimerEvent: {}
+[9.841262] (-) TimerEvent: {}
+[9.941666] (-) TimerEvent: {}
+[10.042098] (-) TimerEvent: {}
+[10.142496] (-) TimerEvent: {}
+[10.242900] (-) TimerEvent: {}
+[10.343310] (-) TimerEvent: {}
+[10.443716] (-) TimerEvent: {}
+[10.544118] (-) TimerEvent: {}
+[10.644518] (-) TimerEvent: {}
+[10.744923] (-) TimerEvent: {}
+[10.845329] (-) TimerEvent: {}
+[10.945736] (-) TimerEvent: {}
+[11.046145] (-) TimerEvent: {}
+[11.146546] (-) TimerEvent: {}
+[11.246947] (-) TimerEvent: {}
+[11.347349] (-) TimerEvent: {}
+[11.447756] (-) TimerEvent: {}
+[11.548157] (-) TimerEvent: {}
+[11.648562] (-) TimerEvent: {}
+[11.748967] (-) TimerEvent: {}
+[11.849354] (-) TimerEvent: {}
+[11.949733] (-) TimerEvent: {}
+[12.050142] (-) TimerEvent: {}
+[12.150543] (-) TimerEvent: {}
+[12.250941] (-) TimerEvent: {}
+[12.351346] (-) TimerEvent: {}
+[12.451748] (-) TimerEvent: {}
+[12.552151] (-) TimerEvent: {}
+[12.652555] (-) TimerEvent: {}
+[12.752960] (-) TimerEvent: {}
+[12.853363] (-) TimerEvent: {}
+[12.953765] (-) TimerEvent: {}
+[13.054173] (-) TimerEvent: {}
+[13.154554] (-) TimerEvent: {}
+[13.254974] (-) TimerEvent: {}
+[13.355377] (-) TimerEvent: {}
+[13.455788] (-) TimerEvent: {}
+[13.556192] (-) TimerEvent: {}
+[13.656593] (-) TimerEvent: {}
+[13.756959] (-) TimerEvent: {}
+[13.857282] (-) TimerEvent: {}
+[13.957690] (-) TimerEvent: {}
+[14.058308] (-) TimerEvent: {}
+[14.158719] (-) TimerEvent: {}
+[14.259126] (-) TimerEvent: {}
+[14.359533] (-) TimerEvent: {}
+[14.460324] (-) TimerEvent: {}
+[14.560739] (-) TimerEvent: {}
+[14.661145] (-) TimerEvent: {}
+[14.761506] (-) TimerEvent: {}
+[14.861871] (-) TimerEvent: {}
+[14.962428] (-) TimerEvent: {}
+[15.062833] (-) TimerEvent: {}
+[15.163234] (-) TimerEvent: {}
+[15.263951] (-) TimerEvent: {}
+[15.364365] (-) TimerEvent: {}
+[15.464770] (-) TimerEvent: {}
+[15.565170] (-) TimerEvent: {}
+[15.665573] (-) TimerEvent: {}
+[15.765977] (-) TimerEvent: {}
+[15.866419] (-) TimerEvent: {}
+[15.966824] (-) TimerEvent: {}
+[16.067228] (-) TimerEvent: {}
+[16.167631] (-) TimerEvent: {}
+[16.268036] (-) TimerEvent: {}
+[16.368442] (-) TimerEvent: {}
+[16.468850] (-) TimerEvent: {}
+[16.569252] (-) TimerEvent: {}
+[16.669655] (-) TimerEvent: {}
+[16.770095] (-) TimerEvent: {}
+[16.870493] (-) TimerEvent: {}
+[16.970894] (-) TimerEvent: {}
+[17.071293] (-) TimerEvent: {}
+[17.171693] (-) TimerEvent: {}
+[17.272095] (-) TimerEvent: {}
+[17.372506] (-) TimerEvent: {}
+[17.472937] (-) TimerEvent: {}
+[17.573340] (-) TimerEvent: {}
+[17.673742] (-) TimerEvent: {}
+[17.774146] (-) TimerEvent: {}
+[17.874558] (-) TimerEvent: {}
+[17.974960] (-) TimerEvent: {}
+[18.075360] (-) TimerEvent: {}
+[18.175759] (-) TimerEvent: {}
+[18.276164] (-) TimerEvent: {}
+[18.376569] (-) TimerEvent: {}
+[18.476920] (-) TimerEvent: {}
+[18.577326] (-) TimerEvent: {}
+[18.677727] (-) TimerEvent: {}
+[18.778102] (-) TimerEvent: {}
+[18.878432] (-) TimerEvent: {}
+[18.978833] (-) TimerEvent: {}
+[19.079235] (-) TimerEvent: {}
+[19.179635] (-) TimerEvent: {}
+[19.280038] (-) TimerEvent: {}
+[19.380452] (-) TimerEvent: {}
+[19.480873] (-) TimerEvent: {}
+[19.581283] (-) TimerEvent: {}
+[19.681691] (-) TimerEvent: {}
+[19.782149] (-) TimerEvent: {}
+[19.882536] (-) TimerEvent: {}
+[19.982934] (-) TimerEvent: {}
+[20.083341] (-) TimerEvent: {}
+[20.183750] (-) TimerEvent: {}
+[20.284616] (-) TimerEvent: {}
+[20.385028] (-) TimerEvent: {}
+[20.485413] (-) TimerEvent: {}
+[20.585701] (-) TimerEvent: {}
+[20.686021] (-) TimerEvent: {}
+[20.786412] (-) TimerEvent: {}
+[20.886742] (-) TimerEvent: {}
+[20.987153] (-) TimerEvent: {}
+[21.087603] (-) TimerEvent: {}
+[21.188017] (-) TimerEvent: {}
+[21.288436] (-) TimerEvent: {}
+[21.389037] (-) TimerEvent: {}
+[21.489490] (-) TimerEvent: {}
+[21.589874] (-) TimerEvent: {}
+[21.690366] (-) TimerEvent: {}
+[21.790789] (-) TimerEvent: {}
+[21.891269] (-) TimerEvent: {}
+[21.991736] (-) TimerEvent: {}
+[22.092199] (-) TimerEvent: {}
+[22.192665] (-) TimerEvent: {}
+[22.293129] (-) TimerEvent: {}
+[22.393595] (-) TimerEvent: {}
+[22.494104] (-) TimerEvent: {}
+[22.594523] (-) TimerEvent: {}
+[22.694947] (-) TimerEvent: {}
+[22.795418] (-) TimerEvent: {}
+[22.895842] (-) TimerEvent: {}
+[22.996318] (-) TimerEvent: {}
+[23.096785] (-) TimerEvent: {}
+[23.197171] (-) TimerEvent: {}
+[23.297623] (-) TimerEvent: {}
+[23.398126] (-) TimerEvent: {}
+[23.498590] (-) TimerEvent: {}
+[23.599003] (-) TimerEvent: {}
+[23.699452] (-) TimerEvent: {}
+[23.799927] (-) TimerEvent: {}
+[23.900399] (-) TimerEvent: {}
+[24.000859] (-) TimerEvent: {}
+[24.101284] (-) TimerEvent: {}
+[24.201622] (-) TimerEvent: {}
+[24.302112] (-) TimerEvent: {}
+[24.402503] (-) TimerEvent: {}
+[24.502953] (-) TimerEvent: {}
+[24.603431] (-) TimerEvent: {}
+[24.703907] (-) TimerEvent: {}
+[24.804383] (-) TimerEvent: {}
+[24.904812] (-) TimerEvent: {}
+[25.014636] (-) TimerEvent: {}
+[25.115100] (-) TimerEvent: {}
+[25.215567] (-) TimerEvent: {}
+[25.315991] (-) TimerEvent: {}
+[25.416477] (-) TimerEvent: {}
+[25.516897] (-) TimerEvent: {}
+[25.617369] (-) TimerEvent: {}
+[25.717852] (-) TimerEvent: {}
+[25.754335] (cartesian_impedance_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Core:341\x1b[m\x1b[K,\n'}
+[25.754667] (cartesian_impedance_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Dense:1\x1b[m\x1b[K,\n'}
+[25.754806] (cartesian_impedance_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Eigen:1\x1b[m\x1b[K,\n'}
+[25.754931] (cartesian_impedance_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/include/cartesian_impedance_control/user_input_server.hpp:3\x1b[m\x1b[K,\n'}
+[25.755055] (cartesian_impedance_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/include/cartesian_impedance_control/cartesian_impedance_controller.hpp:29\x1b[m\x1b[K,\n'}
+[25.755177] (cartesian_impedance_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/cartesian_impedance_controller.cpp:15\x1b[m\x1b[K:\n'}
+[25.755299] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kstatic void Eigen::internal::trmv_selector<Mode, 1>::run(const Lhs&, const Rhs&, Dest&, const typename Dest::Scalar&) [with Lhs = Eigen::Transpose<const Eigen::Block<const Eigen::Block<Eigen::Matrix<double, -1, -1>, -1, -1, false>, -1, -1, false> >; Rhs = Eigen::Transpose<const Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<double, double>, const Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, const Eigen::Matrix<double, 1, -1> >, const Eigen::Transpose<const Eigen::Block<const Eigen::Block<const Eigen::Block<Eigen::Matrix<double, -1, -1>, -1, -1, false>, -1, 1, true>, -1, 1, false> > > >; Dest = Eigen::Transpose<Eigen::Block<Eigen::Block<Eigen::Matrix<double, -1, -1, 1, -1, -1>, 1, -1, true>, 1, -1, false> >; int Mode = 6]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[25.755456] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h:332:12:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kresult\x1b[m\x1b[K\xe2\x80\x99 may be used uninitialized [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wmaybe-uninitialized\x07-Wmaybe-uninitialized\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[25.755581] (cartesian_impedance_control) StderrLine: {'line': b'  327 |     \x1b[01;35m\x1b[Kinternal::triangular_matrix_vector_product\x1b[m\x1b[K\n'}
+[25.755702] (cartesian_impedance_control) StderrLine: {'line': b'      |     \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[25.755845] (cartesian_impedance_control) StderrLine: {'line': b'  328 | \x1b[01;35m\x1b[K      <Index,Mode,\x1b[m\x1b[K\n'}
+[25.755967] (cartesian_impedance_control) StderrLine: {'line': b'      |       \x1b[01;35m\x1b[K~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[25.756085] (cartesian_impedance_control) StderrLine: {'line': b'  329 | \x1b[01;35m\x1b[K       LhsScalar, LhsBlasTraits::NeedToConjugate,\x1b[m\x1b[K\n'}
+[25.756205] (cartesian_impedance_control) StderrLine: {'line': b'      |        \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[25.756324] (cartesian_impedance_control) StderrLine: {'line': b'  330 | \x1b[01;35m\x1b[K       RhsScalar, RhsBlasTraits::NeedToConjugate,\x1b[m\x1b[K\n'}
+[25.756442] (cartesian_impedance_control) StderrLine: {'line': b'      |        \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[25.756561] (cartesian_impedance_control) StderrLine: {'line': b'  331 | \x1b[01;35m\x1b[K       RowMajor>\x1b[m\x1b[K\n'}
+[25.756680] (cartesian_impedance_control) StderrLine: {'line': b'      |        \x1b[01;35m\x1b[K~~~~~~~~~\x1b[m\x1b[K\n'}
+[25.756799] (cartesian_impedance_control) StderrLine: {'line': b'  332 | \x1b[01;35m\x1b[K      ::run(actualLhs.rows(),actualLhs.cols(),\x1b[m\x1b[K\n'}
+[25.756918] (cartesian_impedance_control) StderrLine: {'line': b'      |       \x1b[01;35m\x1b[K~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[25.757037] (cartesian_impedance_control) StderrLine: {'line': b'  333 | \x1b[01;35m\x1b[K            actualLhs.data(),actualLhs.outerStride(),\x1b[m\x1b[K\n'}
+[25.757156] (cartesian_impedance_control) StderrLine: {'line': b'      |             \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[25.757277] (cartesian_impedance_control) StderrLine: {'line': b'  334 | \x1b[01;35m\x1b[K            actualRhsPtr,1,\x1b[m\x1b[K\n'}
+[25.757396] (cartesian_impedance_control) StderrLine: {'line': b'      |             \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[25.757515] (cartesian_impedance_control) StderrLine: {'line': b'  335 | \x1b[01;35m\x1b[K            dest.data(),dest.innerStride(),\x1b[m\x1b[K\n'}
+[25.757635] (cartesian_impedance_control) StderrLine: {'line': b'      |             \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[25.757754] (cartesian_impedance_control) StderrLine: {'line': b'  336 | \x1b[01;35m\x1b[K            actualAlpha)\x1b[m\x1b[K;\n'}
+[25.757824] (cartesian_impedance_control) StderrLine: {'line': b'      |             \x1b[01;35m\x1b[K~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[25.757873] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h:105:24:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kby argument 5 of type \xe2\x80\x98\x1b[01m\x1b[Kconst double*\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kstatic void Eigen::internal::triangular_matrix_vector_product<Index, Mode, LhsScalar, ConjLhs, RhsScalar, ConjRhs, 1, Version>::run(Index, Index, const LhsScalar*, Index, const RhsScalar*, Index, Eigen::internal::triangular_matrix_vector_product<Index, Mode, LhsScalar, ConjLhs, RhsScalar, ConjRhs, 1, Version>::ResScalar*, Index, const ResScalar&) [with Index = long int; int Mode = 6; LhsScalar = double; bool ConjLhs = false; RhsScalar = double; bool ConjRhs = false; int Version = 0]\x1b[m\x1b[K\xe2\x80\x99 declared here\n'}
+[25.757948] (cartesian_impedance_control) StderrLine: {'line': b'  105 | EIGEN_DONT_INLINE void \x1b[01;36m\x1b[Ktriangular_matrix_vector_product<Index,Mode,LhsScalar,ConjLhs,RhsScalar,ConjRhs,RowMajor,Version>\x1b[m\x1b[K\n'}
+[25.757998] (cartesian_impedance_control) StderrLine: {'line': b'      |                        \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[25.818024] (-) TimerEvent: {}
+[25.918475] (-) TimerEvent: {}
+[26.018787] (-) TimerEvent: {}
+[26.119161] (-) TimerEvent: {}
+[26.219628] (-) TimerEvent: {}
+[26.320032] (-) TimerEvent: {}
+[26.420501] (-) TimerEvent: {}
+[26.520983] (-) TimerEvent: {}
+[26.621457] (-) TimerEvent: {}
+[26.721936] (-) TimerEvent: {}
+[26.822404] (-) TimerEvent: {}
+[26.922798] (-) TimerEvent: {}
+[27.023312] (-) TimerEvent: {}
+[27.123787] (-) TimerEvent: {}
+[27.224495] (-) TimerEvent: {}
+[27.324980] (-) TimerEvent: {}
+[27.425445] (-) TimerEvent: {}
+[27.525910] (-) TimerEvent: {}
+[27.626457] (-) TimerEvent: {}
+[27.726934] (-) TimerEvent: {}
+[27.827357] (-) TimerEvent: {}
+[27.927772] (-) TimerEvent: {}
+[28.028234] (-) TimerEvent: {}
+[28.128700] (-) TimerEvent: {}
+[28.229161] (-) TimerEvent: {}
+[28.329618] (-) TimerEvent: {}
+[28.430123] (-) TimerEvent: {}
+[28.530592] (-) TimerEvent: {}
+[28.631063] (-) TimerEvent: {}
+[28.731527] (-) TimerEvent: {}
+[28.831986] (-) TimerEvent: {}
+[28.932456] (-) TimerEvent: {}
+[29.032917] (-) TimerEvent: {}
+[29.133380] (-) TimerEvent: {}
+[29.233839] (-) TimerEvent: {}
+[29.334376] (-) TimerEvent: {}
+[29.434798] (-) TimerEvent: {}
+[29.535260] (-) TimerEvent: {}
+[29.635733] (-) TimerEvent: {}
+[29.736208] (-) TimerEvent: {}
+[29.836628] (-) TimerEvent: {}
+[29.937094] (-) TimerEvent: {}
+[30.037561] (-) TimerEvent: {}
+[30.138029] (-) TimerEvent: {}
+[30.238488] (-) TimerEvent: {}
+[30.338904] (-) TimerEvent: {}
+[30.439309] (-) TimerEvent: {}
+[30.539727] (-) TimerEvent: {}
+[30.640204] (-) TimerEvent: {}
+[30.740684] (-) TimerEvent: {}
+[30.841080] (-) TimerEvent: {}
+[30.941537] (-) TimerEvent: {}
+[31.042017] (-) TimerEvent: {}
+[31.142525] (-) TimerEvent: {}
+[31.242972] (-) TimerEvent: {}
+[31.343395] (-) TimerEvent: {}
+[31.443897] (-) TimerEvent: {}
+[31.505950] (cartesian_impedance_control) StdoutLine: {'line': b'[ 37%] \x1b[32m\x1b[1mLinking CXX shared library libcartesian_impedance_control.so\x1b[0m\n'}
+[31.544030] (-) TimerEvent: {}
+[31.644522] (-) TimerEvent: {}
+[31.745025] (-) TimerEvent: {}
+[31.807917] (cartesian_impedance_control) StdoutLine: {'line': b'[ 50%] Built target cartesian_impedance_control\n'}
+[31.845510] (-) TimerEvent: {}
+[31.846719] (cartesian_impedance_control) StdoutLine: {'line': b'[ 62%] \x1b[32m\x1b[1mLinking CXX executable user_input_client\x1b[0m\n'}
+[31.847609] (cartesian_impedance_control) StdoutLine: {'line': b'[ 75%] \x1b[32m\x1b[1mLinking CXX executable force_control_client\x1b[0m\n'}
+[31.946206] (-) TimerEvent: {}
+[32.046658] (-) TimerEvent: {}
+[32.052962] (cartesian_impedance_control) StdoutLine: {'line': b'[ 87%] Built target force_control_client\n'}
+[32.059729] (cartesian_impedance_control) StdoutLine: {'line': b'[100%] Built target user_input_client\n'}
+[32.076476] (cartesian_impedance_control) CommandEnded: {'returncode': 0}
+[32.141040] (cartesian_impedance_control) JobProgress: {'identifier': 'cartesian_impedance_control', 'progress': 'install'}
+[32.142045] (cartesian_impedance_control) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/simi/franka_ros2_ws/build/cartesian_impedance_control'], 'cwd': '/home/simi/franka_ros2_ws/build/cartesian_impedance_control', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'simi'), ('LC_TIME', 'de_CH.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster/lib:/home/simi/franka_ros2_ws/install/franka_semantic_components/lib:/home/simi/franka_ros2_ws/install/franka_hardware/lib:/home/simi/franka_ros2_ws/install/messages_fr3/lib:/home/simi/franka_ros2_ws/install/franka_msgs/lib:/home/simi/franka_ros2_ws/install/cartesian_impedance_control/lib:/home/simi/franka_ros2_ws/install/joint_trajectory_controller/lib:/home/simi/franka_ros2_ws/install/integration_launch_testing/lib:/home/simi/franka_ros2_ws/install/franka_example_controllers/lib:/home/simi/franka_ros2_ws/install/franka_gripper/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/simi'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'de_CH.UTF-8'), ('SYSTEMD_EXEC_PID', '12825'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/simi/franka_ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'simi'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'simi'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/simi-IdeaPad-Flex-5-14ALC05:@/tmp/.ICE-unix/1735,unix/simi-IdeaPad-Flex-5-14ALC05:/tmp/.ICE-unix/1735'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'de_CH.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/0ed41195_a4fd_4ddb_bc41_3a8afd1e7eef'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'de_CH.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.M0UNO2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.147'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/simi/franka_ros2_ws/install/cartesian_impedance_control:/home/simi/franka_ros2_ws/install/messages_fr3:/home/simi/franka_ros2_ws/install/joint_trajectory_controller:/home/simi/franka_ros2_ws/install/integration_launch_testing:/home/simi/franka_ros2_ws/install/franka_bringup:/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster:/home/simi/franka_ros2_ws/install/franka_example_controllers:/home/simi/franka_ros2_ws/install/franka_semantic_components:/home/simi/franka_ros2_ws/install/franka_moveit_config:/home/simi/franka_ros2_ws/install/franka_hardware:/home/simi/franka_ros2_ws/install/franka_gripper:/home/simi/franka_ros2_ws/install/franka_msgs:/home/simi/franka_ros2_ws/install/franka_description:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'de_CH.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'de_CH.UTF-8'), ('LC_IDENTIFICATION', 'de_CH.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/simi/franka_ros2_ws/build/cartesian_impedance_control'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages:/home/simi/franka_ros2_ws/install/franka_gripper/local/lib/python3.10/dist-packages:/home/simi/franka_ros2_ws/install/franka_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'de_CH.UTF-8'), ('LC_PAPER', 'de_CH.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster:/home/simi/franka_ros2_ws/install/franka_semantic_components:/home/simi/franka_ros2_ws/install/franka_hardware:/home/simi/franka_ros2_ws/install/messages_fr3:/home/simi/franka_ros2_ws/install/franka_msgs:/home/simi/franka_ros2_ws/install/franka_description:/home/simi/franka_ros2_ws/install/cartesian_impedance_control:/home/simi/franka_ros2_ws/install/joint_trajectory_controller:/home/simi/franka_ros2_ws/install/integration_launch_testing:/home/simi/franka_ros2_ws/install/franka_bringup:/home/simi/franka_ros2_ws/install/franka_example_controllers:/home/simi/franka_ros2_ws/install/franka_moveit_config:/home/simi/franka_ros2_ws/install/franka_gripper:/opt/ros/humble')]), 'shell': False}
+[32.146768] (-) TimerEvent: {}
+[32.152340] (cartesian_impedance_control) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[32.152570] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/cartesian_impedance_control.xml\n'}
+[32.152710] (cartesian_impedance_control) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/lib/cartesian_impedance_control/user_input_client\n'}
+[32.153288] (cartesian_impedance_control) StdoutLine: {'line': b'-- Set runtime path of "/home/simi/franka_ros2_ws/install/cartesian_impedance_control/lib/cartesian_impedance_control/user_input_client" to ""\n'}
+[32.153499] (cartesian_impedance_control) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/lib/cartesian_impedance_control/force_control_client\n'}
+[32.154186] (cartesian_impedance_control) StdoutLine: {'line': b'-- Set runtime path of "/home/simi/franka_ros2_ws/install/cartesian_impedance_control/lib/cartesian_impedance_control/force_control_client" to ""\n'}
+[32.154397] (cartesian_impedance_control) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/lib/libcartesian_impedance_control.so\n'}
+[32.159102] (cartesian_impedance_control) StdoutLine: {'line': b'-- Set runtime path of "/home/simi/franka_ros2_ws/install/cartesian_impedance_control/lib/libcartesian_impedance_control.so" to ""\n'}
+[32.159425] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/include\n'}
+[32.159656] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/include/cartesian_impedance_control\n'}
+[32.159855] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/include/cartesian_impedance_control/user_input_server.hpp\n'}
+[32.160012] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/include/cartesian_impedance_control/force_control_server.hpp\n'}
+[32.160128] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/include/cartesian_impedance_control/cartesian_impedance_controller.hpp\n'}
+[32.160314] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/launch\n'}
+[32.160494] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/launch/controllers.yaml\n'}
+[32.160606] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/launch/__pycache__\n'}
+[32.160720] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/launch/__pycache__/cartesian_impedance_controller.launch.cpython-310.pyc\n'}
+[32.160851] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/launch/cartesian_impedance_controller.launch.py\n'}
+[32.160964] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/environment/library_path.sh\n'}
+[32.161041] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/environment/library_path.dsv\n'}
+[32.161093] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/ament_index/resource_index/package_run_dependencies/cartesian_impedance_control\n'}
+[32.161144] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/ament_index/resource_index/parent_prefix_path/cartesian_impedance_control\n'}
+[32.161195] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/environment/ament_prefix_path.sh\n'}
+[32.161246] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/environment/ament_prefix_path.dsv\n'}
+[32.161298] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/environment/path.sh\n'}
+[32.161350] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/environment/path.dsv\n'}
+[32.161420] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/local_setup.bash\n'}
+[32.161471] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/local_setup.sh\n'}
+[32.161531] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/local_setup.zsh\n'}
+[32.161581] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/local_setup.dsv\n'}
+[32.161632] (cartesian_impedance_control) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/package.dsv\n'}
+[32.161683] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/ament_index/resource_index/packages/cartesian_impedance_control\n'}
+[32.161734] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/ament_index/resource_index/controller_interface__pluginlib__plugin/cartesian_impedance_control\n'}
+[32.161786] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[32.161836] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[32.161887] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[32.161938] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/cmake/cartesian_impedance_controlConfig.cmake\n'}
+[32.161989] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/cmake/cartesian_impedance_controlConfig-version.cmake\n'}
+[32.162040] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/package.xml\n'}
+[32.163115] (cartesian_impedance_control) CommandEnded: {'returncode': 0}
+[32.241356] (cartesian_impedance_control) JobEnded: {'identifier': 'cartesian_impedance_control', 'rc': 0}
+[32.242327] (-) EventReactorShutdown: {}

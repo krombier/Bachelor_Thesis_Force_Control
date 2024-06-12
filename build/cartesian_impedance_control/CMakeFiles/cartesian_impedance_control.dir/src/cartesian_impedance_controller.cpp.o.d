@@ -891,6 +891,11 @@ CMakeFiles/cartesian_impedance_control.dir/src/cartesian_impedance_controller.cp
  /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_param__struct.hpp \
  /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_param__builder.hpp \
  /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_param__traits.hpp \
+ /home/simi/franka_ros2_ws/src/cartesian_impedance_control/include/cartesian_impedance_control/force_control_server.hpp \
+ /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/set_force.hpp \
+ /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_force__struct.hpp \
+ /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_force__builder.hpp \
+ /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_force__traits.hpp \
  /opt/ros/humble/include/controller_interface/controller_interface.hpp \
  /opt/ros/humble/include/controller_interface/controller_interface_base.hpp \
  /opt/ros/humble/include/controller_interface/visibility_control.h \
@@ -1020,10 +1025,6 @@ CMakeFiles/cartesian_impedance_control.dir/src/cartesian_impedance_controller.cp
  /home/simi/franka_ros2_ws/install/franka_msgs/include/franka_msgs/franka_msgs/msg/detail/errors__traits.hpp \
  /home/simi/franka_ros2_ws/install/franka_msgs/include/franka_msgs/franka_msgs/msg/errors.hpp \
  /home/simi/franka_ros2_ws/install/franka_msgs/include/franka_msgs/franka_msgs/msg/detail/errors__builder.hpp \
- /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/set_force.hpp \
- /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_force__struct.hpp \
- /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_force__builder.hpp \
- /home/simi/franka_ros2_ws/install/messages_fr3/include/messages_fr3/messages_fr3/srv/detail/set_force__traits.hpp \
  /home/simi/franka_ros2_ws/install/franka_semantic_components/include/franka_semantic_components/franka_robot_model.hpp \
  /opt/ros/humble/include/semantic_components/semantic_component_interface.hpp \
  /opt/ros/humble/include/controller_interface/helpers.hpp \

@@ -3,18 +3,18 @@
 
 #include <Eigen/Eigen>
 #include <rclcpp/rclcpp.hpp>
-#include <messages_fr3/srv/set_force.hpp>                     // I wrote this part of the code, just because I'm following along what others did. But this file doesn't exist. Maybe it is a reference to the messages_fr3::srv::SetForce.srv
+#include <messages_fr3/srv/set_force.hpp>            // Points to an automatic generated file in the include folder
 
 namespace cartesian_impedance_control {
 
 class UserInputForceServer {
 public:
   UserInputForceServer (Eigen::Matrix<double, 6, 1>* force_and_moment) :    //constructor??
-  force_and_moment_target(force_and_moment){}
+  F_contact_target(force_and_moment){}
   int main(int argc, char **argv);
 
 private:
-  Eigen::Matrix<double, 6, 1>* force_and_moment_target;
+  Eigen::Matrix<double, 6, 1>* F_contact_target;
   void setForce(const std::shared_ptr<messages_fr3::srv::SetForce::Request> request, 
     std::shared_ptr<messages_fr3::srv::SetForce::Response> response);
 };

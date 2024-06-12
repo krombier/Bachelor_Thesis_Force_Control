@@ -1,0 +1,3 @@
+[console_scripts]
+force_torque_plotter = realtime_plot_of_data.force_torque_plotter:main
+

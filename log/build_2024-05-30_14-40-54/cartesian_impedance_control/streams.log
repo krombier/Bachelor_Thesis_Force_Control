@@ -1,0 +1,49 @@
+[0.050s] Invoking command in '/home/simi/franka_ros2_ws/build/cartesian_impedance_control': CMAKE_PREFIX_PATH=/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster:/home/simi/franka_ros2_ws/install/franka_semantic_components:/home/simi/franka_ros2_ws/install/franka_hardware:/home/simi/franka_ros2_ws/install/messages_fr3:/home/simi/franka_ros2_ws/install/franka_msgs:/home/simi/franka_ros2_ws/install/franka_description:/home/simi/franka_ros2_ws/install/cartesian_impedance_control:/home/simi/franka_ros2_ws/install/joint_trajectory_controller:/home/simi/franka_ros2_ws/install/integration_launch_testing:/home/simi/franka_ros2_ws/install/franka_bringup:/home/simi/franka_ros2_ws/install/franka_example_controllers:/home/simi/franka_ros2_ws/install/franka_moveit_config:/home/simi/franka_ros2_ws/install/franka_gripper:/opt/ros/humble LD_LIBRARY_PATH=/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster/lib:/home/simi/franka_ros2_ws/install/franka_semantic_components/lib:/home/simi/franka_ros2_ws/install/franka_hardware/lib:/home/simi/franka_ros2_ws/install/messages_fr3/lib:/home/simi/franka_ros2_ws/install/franka_msgs/lib:/home/simi/franka_ros2_ws/install/cartesian_impedance_control/lib:/home/simi/franka_ros2_ws/install/joint_trajectory_controller/lib:/home/simi/franka_ros2_ws/install/integration_launch_testing/lib:/home/simi/franka_ros2_ws/install/franka_example_controllers/lib:/home/simi/franka_ros2_ws/install/franka_gripper/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/simi/franka_ros2_ws/build/cartesian_impedance_control -- -j16 -l16
+[0.150s] [ 12%] [32mBuilding CXX object CMakeFiles/cartesian_impedance_control.dir/src/cartesian_impedance_controller.cpp.o[0m
+[25.382s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:341[m[K,
+[25.382s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[25.383s]                  from [01m[K/usr/include/eigen3/Eigen/Eigen:1[m[K,
+[25.383s]                  from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/include/cartesian_impedance_control/user_input_server.hpp:3[m[K,
+[25.383s]                  from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/include/cartesian_impedance_control/cartesian_impedance_controller.hpp:29[m[K,
+[25.383s]                  from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/cartesian_impedance_controller.cpp:15[m[K:
+[25.383s] [01m[K/usr/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h:[m[K In function ‘[01m[Kstatic void Eigen::internal::trmv_selector<Mode, 1>::run(const Lhs&, const Rhs&, Dest&, const typename Dest::Scalar&) [with Lhs = Eigen::Transpose<const Eigen::Block<const Eigen::Block<Eigen::Matrix<double, -1, -1>, -1, -1, false>, -1, -1, false> >; Rhs = Eigen::Transpose<const Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<double, double>, const Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, const Eigen::Matrix<double, 1, -1> >, const Eigen::Transpose<const Eigen::Block<const Eigen::Block<const Eigen::Block<Eigen::Matrix<double, -1, -1>, -1, -1, false>, -1, 1, true>, -1, 1, false> > > >; Dest = Eigen::Transpose<Eigen::Block<Eigen::Block<Eigen::Matrix<double, -1, -1, 1, -1, -1>, 1, -1, true>, 1, -1, false> >; int Mode = 6][m[K’:
+[25.383s] [01m[K/usr/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h:332:12:[m[K [01;35m[Kwarning: [m[K‘[01m[Kresult[m[K’ may be used uninitialized [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wmaybe-uninitialized-Wmaybe-uninitialized]8;;[m[K]
+[25.383s]   327 |     [01;35m[Kinternal::triangular_matrix_vector_product[m[K
+[25.383s]       |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[25.384s]   328 | [01;35m[K      <Index,Mode,[m[K
+[25.384s]       |       [01;35m[K~~~~~~~~~~~~[m[K
+[25.384s]   329 | [01;35m[K       LhsScalar, LhsBlasTraits::NeedToConjugate,[m[K
+[25.384s]       |        [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[25.384s]   330 | [01;35m[K       RhsScalar, RhsBlasTraits::NeedToConjugate,[m[K
+[25.384s]       |        [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[25.384s]   331 | [01;35m[K       RowMajor>[m[K
+[25.384s]       |        [01;35m[K~~~~~~~~~[m[K
+[25.384s]   332 | [01;35m[K      ::run(actualLhs.rows(),actualLhs.cols(),[m[K
+[25.384s]       |       [01;35m[K~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[25.384s]   333 | [01;35m[K            actualLhs.data(),actualLhs.outerStride(),[m[K
+[25.384s]       |             [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[25.384s]   334 | [01;35m[K            actualRhsPtr,1,[m[K
+[25.384s]       |             [01;35m[K~~~~~~~~~~~~~~~[m[K
+[25.384s]   335 | [01;35m[K            dest.data(),dest.innerStride(),[m[K
+[25.384s]       |             [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[25.384s]   336 | [01;35m[K            actualAlpha)[m[K;
+[25.384s]       |             [01;35m[K~~~~~~~~~~~~[m[K
+[25.384s] [01m[K/usr/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h:105:24:[m[K [01;36m[Knote: [m[Kby argument 5 of type ‘[01m[Kconst double*[m[K’ to ‘[01m[Kstatic void Eigen::internal::triangular_matrix_vector_product<Index, Mode, LhsScalar, ConjLhs, RhsScalar, ConjRhs, 1, Version>::run(Index, Index, const LhsScalar*, Index, const RhsScalar*, Index, Eigen::internal::triangular_matrix_vector_product<Index, Mode, LhsScalar, ConjLhs, RhsScalar, ConjRhs, 1, Version>::ResScalar*, Index, const ResScalar&) [with Index = long int; int Mode = 6; LhsScalar = double; bool ConjLhs = false; RhsScalar = double; bool ConjRhs = false; int Version = 0][m[K’ declared here
+[25.385s]   105 | EIGEN_DONT_INLINE void [01;36m[Ktriangular_matrix_vector_product<Index,Mode,LhsScalar,ConjLhs,RhsScalar,ConjRhs,RowMajor,Version>[m[K
+[25.385s]       |                        [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[31.188s] [ 25%] [32m[1mLinking CXX shared library libcartesian_impedance_control.so[0m
+[31.550s] [ 50%] Built target cartesian_impedance_control
+[31.597s] [ 62%] [32mBuilding CXX object CMakeFiles/user_input_client.dir/src/user_input_client.cpp.o[0m
+[31.597s] [ 75%] [32m[1mLinking CXX executable force_control_client[0m
+[31.815s] [ 87%] Built target force_control_client
+[33.870s] [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[33.870s] [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:131:2:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+[33.870s]   131 | }
+[33.870s]       |  [01;31m[K^[m[K
+[33.870s] [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:11:33:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+[33.870s]    11 | int main(int argc, char **argv) [01;36m[K{[m[K
+[33.870s]       |                                 [01;36m[K^[m[K
+[34.491s] gmake[2]: *** [CMakeFiles/user_input_client.dir/build.make:76: CMakeFiles/user_input_client.dir/src/user_input_client.cpp.o] Error 1
+[34.491s] gmake[1]: *** [CMakeFiles/Makefile2:167: CMakeFiles/user_input_client.dir/all] Error 2
+[34.492s] gmake: *** [Makefile:146: all] Error 2
+[34.496s] Invoked command in '/home/simi/franka_ros2_ws/build/cartesian_impedance_control' returned '2': CMAKE_PREFIX_PATH=/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster:/home/simi/franka_ros2_ws/install/franka_semantic_components:/home/simi/franka_ros2_ws/install/franka_hardware:/home/simi/franka_ros2_ws/install/messages_fr3:/home/simi/franka_ros2_ws/install/franka_msgs:/home/simi/franka_ros2_ws/install/franka_description:/home/simi/franka_ros2_ws/install/cartesian_impedance_control:/home/simi/franka_ros2_ws/install/joint_trajectory_controller:/home/simi/franka_ros2_ws/install/integration_launch_testing:/home/simi/franka_ros2_ws/install/franka_bringup:/home/simi/franka_ros2_ws/install/franka_example_controllers:/home/simi/franka_ros2_ws/install/franka_moveit_config:/home/simi/franka_ros2_ws/install/franka_gripper:/opt/ros/humble LD_LIBRARY_PATH=/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster/lib:/home/simi/franka_ros2_ws/install/franka_semantic_components/lib:/home/simi/franka_ros2_ws/install/franka_hardware/lib:/home/simi/franka_ros2_ws/install/messages_fr3/lib:/home/simi/franka_ros2_ws/install/franka_msgs/lib:/home/simi/franka_ros2_ws/install/cartesian_impedance_control/lib:/home/simi/franka_ros2_ws/install/joint_trajectory_controller/lib:/home/simi/franka_ros2_ws/install/integration_launch_testing/lib:/home/simi/franka_ros2_ws/install/franka_example_controllers/lib:/home/simi/franka_ros2_ws/install/franka_gripper/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/simi/franka_ros2_ws/build/cartesian_impedance_control -- -j16 -l16

@@ -1,0 +1,35 @@
+running egg_info
+creating ../../build/realtime_plot_of_data/realtime_plot_of_data.egg-info
+writing ../../build/realtime_plot_of_data/realtime_plot_of_data.egg-info/PKG-INFO
+writing dependency_links to ../../build/realtime_plot_of_data/realtime_plot_of_data.egg-info/dependency_links.txt
+writing entry points to ../../build/realtime_plot_of_data/realtime_plot_of_data.egg-info/entry_points.txt
+writing requirements to ../../build/realtime_plot_of_data/realtime_plot_of_data.egg-info/requires.txt
+writing top-level names to ../../build/realtime_plot_of_data/realtime_plot_of_data.egg-info/top_level.txt
+writing manifest file '../../build/realtime_plot_of_data/realtime_plot_of_data.egg-info/SOURCES.txt'
+reading manifest file '../../build/realtime_plot_of_data/realtime_plot_of_data.egg-info/SOURCES.txt'
+writing manifest file '../../build/realtime_plot_of_data/realtime_plot_of_data.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/simi/franka_ros2_ws/build/realtime_plot_of_data/build
+creating /home/simi/franka_ros2_ws/build/realtime_plot_of_data/build/lib
+creating /home/simi/franka_ros2_ws/build/realtime_plot_of_data/build/lib/realtime_plot_of_data
+copying realtime_plot_of_data/force_torque_plotter.py -> /home/simi/franka_ros2_ws/build/realtime_plot_of_data/build/lib/realtime_plot_of_data
+copying realtime_plot_of_data/__init__.py -> /home/simi/franka_ros2_ws/build/realtime_plot_of_data/build/lib/realtime_plot_of_data
+running install
+running install_lib
+creating /home/simi/franka_ros2_ws/install/realtime_plot_of_data/lib/python3.10/site-packages/realtime_plot_of_data
+copying /home/simi/franka_ros2_ws/build/realtime_plot_of_data/build/lib/realtime_plot_of_data/force_torque_plotter.py -> /home/simi/franka_ros2_ws/install/realtime_plot_of_data/lib/python3.10/site-packages/realtime_plot_of_data
+copying /home/simi/franka_ros2_ws/build/realtime_plot_of_data/build/lib/realtime_plot_of_data/__init__.py -> /home/simi/franka_ros2_ws/install/realtime_plot_of_data/lib/python3.10/site-packages/realtime_plot_of_data
+byte-compiling /home/simi/franka_ros2_ws/install/realtime_plot_of_data/lib/python3.10/site-packages/realtime_plot_of_data/force_torque_plotter.py to force_torque_plotter.cpython-310.pyc
+byte-compiling /home/simi/franka_ros2_ws/install/realtime_plot_of_data/lib/python3.10/site-packages/realtime_plot_of_data/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/simi/franka_ros2_ws/install/realtime_plot_of_data/share/ament_index
+creating /home/simi/franka_ros2_ws/install/realtime_plot_of_data/share/ament_index/resource_index
+creating /home/simi/franka_ros2_ws/install/realtime_plot_of_data/share/ament_index/resource_index/packages
+copying resource/realtime_plot_of_data -> /home/simi/franka_ros2_ws/install/realtime_plot_of_data/share/ament_index/resource_index/packages
+copying package.xml -> /home/simi/franka_ros2_ws/install/realtime_plot_of_data/share/realtime_plot_of_data
+running install_egg_info
+Copying ../../build/realtime_plot_of_data/realtime_plot_of_data.egg-info to /home/simi/franka_ros2_ws/install/realtime_plot_of_data/lib/python3.10/site-packages/realtime_plot_of_data-0.0.0-py3.10.egg-info
+running install_scripts
+Installing force_torque_plotter script to /home/simi/franka_ros2_ws/install/realtime_plot_of_data/lib/realtime_plot_of_data
+writing list of installed files to '/home/simi/franka_ros2_ws/build/realtime_plot_of_data/install.log'
