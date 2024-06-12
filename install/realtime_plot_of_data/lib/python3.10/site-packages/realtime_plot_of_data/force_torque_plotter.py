@@ -27,14 +27,18 @@ class ForceTorquePlotter(Node):
 
         # Setting up the plot
         self.fig, (self.ax1, self.ax2) = plt.subplots(2, 1)
-        self.force_lines = [self.ax1.plot([], [])[0] for _ in range(3)]
-        self.torque_lines = [self.ax2.plot([], [])[0] for _ in range(3)]
+        force_labels = ['Force x', 'Force y', 'Force z']
+        torque_labels = ['Torque x', 'Torque y', 'Torque z']
+        self.force_lines = [self.ax1.plot([], [], label=force_labels[i])[0] for i in range(3)]
+        self.torque_lines = [self.ax2.plot([], [], label=torque_labels[i])[0] for i in range(3)]
         self.ax1.set_title('Force vs Time')
         self.ax2.set_title('Torque vs Time')
         self.ax1.set_xlabel('Time (s)')
         self.ax2.set_xlabel('Time (s)')
         self.ax1.set_ylabel('Force (N)')
         self.ax2.set_ylabel('Torque (Nm)')
+        self.ax1.legend()
+        self.ax2.legend()
         plt.ion()
         plt.show()
 
