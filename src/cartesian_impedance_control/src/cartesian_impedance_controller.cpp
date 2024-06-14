@@ -41,9 +41,11 @@ std::ostream& operator<<(std::ostream& ostream, const std::array<T, N>& array) {
 }
 }
 
-// add Sm and Sf by pass by reference
 namespace cartesian_impedance_control {
-// currently commented out to help debugging
+
+CartesianImpedanceController::CartesianImpedanceController() {}
+
+// add Sm and Sf by pass by reference
 void CartesianImpedanceController::adapt_Sm_and_Sf(const Eigen::Matrix<double,6,1>& F_request, Eigen::Matrix<double, 6, 6>& Sm, Eigen::Matrix<double, 6, 6>& Sf){    //update the Sm and Sf matrix
   Sm = Eigen::MatrixXd::Zero(6, 6);
   for (int i =0; i<6; ++i){
@@ -67,10 +69,10 @@ void CartesianImpedanceController::get_rid_of_friction_force(const Eigen::Matrix
 }
 
 
-// should stop the robot from moving when his EE y-position is >0.45 or <-0.45 or he goes higher in z direction than expected and stops robot from crashing into wall with EE
+// should stop the robot from moving when his EE y-position is >0.6 or <-0.6 or he goes higher in z direction than expected and stops robot from crashing into wall with EE
 // Currently it does the crash the controller since the change in requested velocity is often to high and exceeds the limits set to the robot
 void CartesianImpedanceController::checklimits(const Eigen::Vector3d& pos, Eigen::Matrix<double, 7, 1>& tau_d){
-  if(std::abs(pos(1))>0.45 or pos(0)<0 or pos(2)>0.6){
+  if(std::abs(pos(1))>0.6 or pos(0)<0 or pos(2)>0.8){
     //std::cout << " std::abs(pos(1))> 0.45 yippie " << std::endl;
     tau_d.setZero();
     //D = lkjllka                                                         //////////add this to make controller more safe
@@ -203,12 +205,11 @@ CallbackReturn CartesianImpedanceController::on_init() {
    UserInputServer input_server_obj(&position_d_target_,& rotation_d_target_,& K,& D,& T);                // creates or starts the server aka calls constructor of Input server
    std::thread input_thread(&UserInputServer::main, input_server_obj, 0, nullptr);
    input_thread.detach();                                                                                 // disconnect thread so other thread mustn't wait for 
-   ////////////////////////////////////////////////////////////////////////////////
    // the 3 lines below should start my force_control_server.cpp
    UserInputForceServer input_server_obj2(&F_contact_target);                
    std::thread input_thread2(&UserInputForceServer::main, input_server_obj2, 0, nullptr);
    input_thread2.detach();
-   ////////////////////////////////////////////////////////////////////////////////////
+
    return CallbackReturn::SUCCESS;                                                                        // this to be finished (it will be in spin so this is important)
 }
 
@@ -219,9 +220,9 @@ CallbackReturn CartesianImpedanceController::on_configure(const rclcpp_lifecycle
                                                robot_name_ + "/" + k_robot_state_interface_name));
                                                
   try {                                                           //if try has an error it does catch instead
-    rclcpp::QoS qos_profile(1); // Depth of the message queue
+    rclcpp::QoS qos_profile(1); // Depth of the message queue aka does only keep one message all older ones get deleted
     qos_profile.reliability(RMW_QOS_POLICY_RELIABILITY_RELIABLE);
-    franka_state_subscriber = get_node()->create_subscription<franka_msgs::msg::FrankaRobotState>(        // subscribes to robot state topic
+    franka_state_subscriber = get_node()->create_subscription<franka_msgs::msg::FrankaRobotState>(        // creates publisher node
     "franka_robot_state_broadcaster/robot_state", qos_profile, 
     std::bind(&CartesianImpedanceController::topic_callback, this, std::placeholders::_1));
     std::cout << "Succesfully subscribed to robot_state_broadcaster" << std::endl;
@@ -231,7 +232,19 @@ CallbackReturn CartesianImpedanceController::on_configure(const rclcpp_lifecycle
     fprintf(stderr,  "Exception thrown during publisher creation at configure stage with message : %s \n",e.what());
     return CallbackReturn::ERROR;
     }
+  
+  try {                                                           //if try has an error it does catch instead
+    rclcpp::QoS qos_profile2(1); // Depth of the message queue aka does only keep one message all older ones get deleted
+    qos_profile2.reliability(RMW_QOS_POLICY_RELIABILITY_RELIABLE);
+    wrench_publisher_ = get_node()->create_publisher<geometry_msgs::msg::Wrench>("wrench_topic", qos_profile2);
+    std::cout << "Succesfully publishing F_ext" << std::endl;
+  }
 
+  catch (const std::exception& e) {
+    fprintf(stderr,  "Exception thrown during publisher for F_ext creation at configure stage with message : %s \n",e.what());
+    return CallbackReturn::ERROR;
+    }
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////here listens to a topic (initialized publisher)
 
   RCLCPP_DEBUG(get_node()->get_logger(), "configured successfully");
   return CallbackReturn::SUCCESS;
@@ -299,7 +312,8 @@ controller_interface::return_type CartesianImpedanceController::update(const rcl
   orientation_d_target_ = Eigen::AngleAxisd(rotation_d_target_[0], Eigen::Vector3d::UnitX())
                         * Eigen::AngleAxisd(rotation_d_target_[1], Eigen::Vector3d::UnitY())
                         * Eigen::AngleAxisd(rotation_d_target_[2], Eigen::Vector3d::UnitZ());                     // mimics a quaternion according to documentation in Eigen
-  
+  geometry_msgs::msg::Wrench wrench_msg;
+   
   // Eigen::Matrix<double,3,3> rotation_matrix = transform.rotation();                                        //currently not needed
   
   updateJointStates();
@@ -313,8 +327,7 @@ controller_interface::return_type CartesianImpedanceController::update(const rcl
     std::cout << "--------" << std::endl;
   }
 
-  //Sm = IDENTITY;                         // currently here to make sure the robot doesn't destroy himself
-  //Sf = Eigen::MatrixXd::Zero(6, 6); 
+  
 
   
   error.head(3) << position - position_d_;
@@ -442,6 +455,15 @@ controller_interface::return_type CartesianImpedanceController::update(const rcl
   for (size_t i = 0; i < 7; ++i) {
     command_interfaces_[i].set_value(tau_d(i));                                                                 // give computed values to the robot or the controller  
   }
+
+  // publish measured external force to topic
+  wrench_msg.force.x = F_ext[0];
+  wrench_msg.force.y = F_ext[1];
+  wrench_msg.force.z = F_ext[2];
+  wrench_msg.torque.x = F_ext[3];
+  wrench_msg.torque.y = F_ext[4];
+  wrench_msg.torque.z = F_ext[5];
+  wrench_publisher_->publish(wrench_msg);
   
 
   outcounter++;

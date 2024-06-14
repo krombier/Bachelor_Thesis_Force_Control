@@ -28,7 +28,7 @@ int main(int argc, char **argv) {
         }        
         
                                                                      // right now we only move in y direction to ensure we don't damage anything
-        std::cout << "Choose an option \n [1] -->  -1 N in z-direction \n [2] -->  -1.0 N in y-direction ONLY IF EMERGENCY STOP IS READY \n [182] -->  -6.0 N in z-direction\n [492] increase force in negative z-direction by 1 N \n [everything else] --> no force \n"<< std::endl;
+        std::cout << "Choose an option \n [1] -->  -1 N in z-direction \n [2] -->  -1.0 N in y-direction ONLY IF EMERGENCY STOP IS READY \n [182] -->  -6.0 N in z-direction\n [302] -->  -10.0 N in z-direction \n [492] increase force in negative z-direction by 1 N \n [everything else] --> no force \n"<< std::endl;
         // [2] -->  -0.1 N in y-direction \n
         std::cin >> force_direction_selection;
         switch (force_direction_selection){
@@ -70,6 +70,15 @@ int main(int argc, char **argv) {
                 force_request->x_force = 0.0;
                 force_request->y_force = 0.0;
                 force_request->z_force = -6.0;
+                force_request->x_torque = 0.0;
+                force_request->y_torque = 0.0;
+                force_request->z_torque = 0.0;
+                break;
+            }
+            case 302:{
+                force_request->x_force = 0.0;
+                force_request->y_force = 0.0;
+                force_request->z_force = -10.0;
                 force_request->x_torque = 0.0;
                 force_request->y_torque = 0.0;
                 force_request->z_torque = 0.0;

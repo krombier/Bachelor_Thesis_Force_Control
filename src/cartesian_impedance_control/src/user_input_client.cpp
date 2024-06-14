@@ -24,6 +24,14 @@ int main(int argc, char **argv) {
     std::string pose_selection_str;
     char pose_selection_char;
     double store;
+    
+    //initialize variables 
+    pose_request->x = 0.5;
+    pose_request->y = 0.0;
+    pose_request->z = 0.4;
+    pose_request->roll = M_PI;
+    pose_request->pitch = 0.0;
+    pose_request->yaw = M_PI_2;
 
     while (rclcpp::ok()){
         /*                 // uncommented because I don't need the free float mode

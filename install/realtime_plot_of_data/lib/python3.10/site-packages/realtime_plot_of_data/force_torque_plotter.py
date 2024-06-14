@@ -1,6 +1,6 @@
 import rclpy
 from rclpy.node import Node
-from geometry_msgs.msg import WrenchStamped
+from geometry_msgs.msg import Wrench
 import matplotlib.pyplot as plt
 from collections import deque
 import time
@@ -13,8 +13,8 @@ class ForceTorquePlotter(Node):
     def __init__(self):
         super().__init__('force_torque_plotter')
         self.subscription = self.create_subscription(
-            WrenchStamped,
-            '/franka_robot_state_broadcaster/external_wrench_in_base_frame',
+            Wrench,                                                          # here we subscribe to the corresponding node
+            'wrench_topic',        # here as well
             self.listener_callback,
             10)
         self.subscription  # prevent unused variable warning
@@ -47,8 +47,8 @@ class ForceTorquePlotter(Node):
         current_time = time.time() - self.start_time
         self.time_data.append(current_time)
         print("hello")
-        force = msg.wrench.force
-        torque = msg.wrench.torque
+        force = msg.force
+        torque = msg.torque
         self.force_data.append([force.x, force.y, force.z])
         self.torque_data.append([torque.x, torque.y, torque.z])
         self.get_logger().info(f'Force data appended: {force.x}, {force.y}, {force.z}')

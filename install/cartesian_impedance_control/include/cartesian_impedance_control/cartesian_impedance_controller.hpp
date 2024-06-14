@@ -29,6 +29,8 @@
 #include "cartesian_impedance_control/user_input_server.hpp"
 #include "cartesian_impedance_control/force_control_server.hpp"
 
+#include "geometry_msgs/msg/wrench.hpp"           // added by SImon 13.06.24 to get Force publisher running if it doesn't work out remove it
+
 #include <rclcpp/rclcpp.hpp>
 #include "rclcpp/subscription.hpp"
 
@@ -56,6 +58,7 @@
 
 using CallbackReturn = rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn;
 using Vector7d = Eigen::Matrix<double, 7, 1>;
+using namespace std::chrono_literals;
 
 namespace cartesian_impedance_control {
 
@@ -80,16 +83,19 @@ public:
   controller_interface::CallbackReturn on_deactivate(
       const rclcpp_lifecycle::State& previous_state) override;
 
-    void setPose(const std::shared_ptr<messages_fr3::srv::SetPose::Request> request,                            // maybe this must be added as well for force?
-    std::shared_ptr<messages_fr3::srv::SetPose::Response> response);
-      
+  void setPose(const std::shared_ptr<messages_fr3::srv::SetPose::Request> request,                            // maybe this must be added as well for force?
+      std::shared_ptr<messages_fr3::srv::SetPose::Response> response);
+    
+
+  CartesianImpedanceController();
 
  private:
     //Nodes
     rclcpp::Subscription<franka_msgs::msg::FrankaRobotState>::SharedPtr franka_state_subscriber = nullptr;
     rclcpp::Service<messages_fr3::srv::SetPose>::SharedPtr pose_srv_;
-    rclcpp::Service<messages_fr3::srv::SetForce>::SharedPtr force_srv_; 
-    //error hier löst sich hoffentlich nach dem messages_fr3 gebuilded wurde                                               // added by me because it seems sinnvoll to do that
+    rclcpp::Service<messages_fr3::srv::SetForce>::SharedPtr force_srv_;
+    rclcpp::Publisher<geometry_msgs::msg::Wrench>::SharedPtr wrench_publisher_; 
+  
 
     //Functions
     void topic_callback(const std::shared_ptr<franka_msgs::msg::FrankaRobotState> msg);
@@ -247,4 +253,5 @@ public:
     // Friction compensated force
     Eigen::Matrix<double, 6, 1> O_F_ext_hat_K_M_no_friction = Eigen::MatrixXd::Zero(6,1);
   };
+
 }  // namespace cartesian_impedance_control
