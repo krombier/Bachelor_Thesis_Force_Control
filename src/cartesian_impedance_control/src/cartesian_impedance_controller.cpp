@@ -72,7 +72,7 @@ void CartesianImpedanceController::get_rid_of_friction_force(const Eigen::Matrix
 // should stop the robot from moving when his EE y-position is >0.6 or <-0.6 or he goes higher in z direction than expected and stops robot from crashing into wall with EE
 // Currently it does the crash the controller since the change in requested velocity is often to high and exceeds the limits set to the robot
 void CartesianImpedanceController::checklimits(const Eigen::Vector3d& pos, Eigen::Matrix<double, 7, 1>& tau_d){
-  if(std::abs(pos(1))>0.6 or pos(0)<0 or pos(2)>0.8){
+  /*if(std::abs(pos(1))>0.6 or pos(0)<0 or pos(2)>0.8){
     //std::cout << " std::abs(pos(1))> 0.45 yippie " << std::endl;
     tau_d.setZero();
     //D = lkjllka                                                         //////////add this to make controller more safe
@@ -81,7 +81,7 @@ void CartesianImpedanceController::checklimits(const Eigen::Vector3d& pos, Eigen
   }
   else{
     //std::cout << " std::abs(pos(1))< 0.45 " << std::endl;
-  }
+  }*/
 }
 
 

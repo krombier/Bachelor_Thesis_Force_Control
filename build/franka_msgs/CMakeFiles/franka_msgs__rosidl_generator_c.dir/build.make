@@ -156,6 +156,7 @@ rosidl_generator_c/franka_msgs/action/grasp.h: /opt/ros/humble/share/geometry_ms
 rosidl_generator_c/franka_msgs/action/grasp.h: /opt/ros/humble/share/geometry_msgs/msg/TwistWithCovarianceStamped.idl
 rosidl_generator_c/franka_msgs/action/grasp.h: /opt/ros/humble/share/geometry_msgs/msg/Vector3.idl
 rosidl_generator_c/franka_msgs/action/grasp.h: /opt/ros/humble/share/geometry_msgs/msg/Vector3Stamped.idl
+rosidl_generator_c/franka_msgs/action/grasp.h: /opt/ros/humble/share/geometry_msgs/msg/VelocityStamped.idl
 rosidl_generator_c/franka_msgs/action/grasp.h: /opt/ros/humble/share/geometry_msgs/msg/Wrench.idl
 rosidl_generator_c/franka_msgs/action/grasp.h: /opt/ros/humble/share/geometry_msgs/msg/WrenchStamped.idl
 rosidl_generator_c/franka_msgs/action/grasp.h: /opt/ros/humble/share/sensor_msgs/msg/BatteryState.idl

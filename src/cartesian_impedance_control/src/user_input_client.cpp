@@ -41,11 +41,11 @@ int main(int argc, char **argv) {
         std:: cin >> task_selection;
         switch (task_selection){
             case 1:{ */
-        std::cout << "Enter new goal position: \n [1] --> 0.5, -0.4, 0.5 \n [2] --> DO NOT USE \n [3] --> 0.5, 0.4, 0.5\n [4] --> 0.5, 0.52, 0.5 \n [5] --> 0.5, -0.6, 0.5 \n ";
+        std::cout << "Enter new goal position: \n [1] --> 0.5, -0.4, 0.5 \n [2] --> DO NOT USE \n [3] --> 0.5, 0.4, 0.5\n [4] --> 0.3, 0.7, 0.1 \n [5] --> 0.6, 0.0, 0.1 \n ";
         std::cout << "[6] --> 0.5, 0.0, 0.04 \n [7] --> 0.5, 0.0, 0.4 \n [j] --> Reduce current z-Position by 1 cm \n [u] --> Increase current z-Position by 1 cm \n [w] --> Reduce current x-Position by 5 cm \n";
         std::cout << "[a] --> Reduce current y-Position by 5 cm \n [s] --> Increase current x-Position by 5 cm \n [d] --> Increase current y-Position by 5 cm \n";
-        std::cout << "[4] and [5] currently reach the boundaries, so the arm will get stuck if you command this\n";
-        std::cout << "FIRST SEND THE ROBOT TO A DEFINED POSITION, OTHERWISE THE PROGRAM FAILS\n";
+        std::cout << "[l] --> Reduce current z-Position by 5 cm \n [o] --> Increase current z-Position by 5 cm \n";
+        std::cout << "[4] and [5] currently reach the boundaries if checklimits is fully activated, so the arm will get stuck if you command this\n";
         std::cin >> pose_selection_str;
         
         if (pose_selection_str.length() != 1) {
@@ -61,7 +61,7 @@ int main(int argc, char **argv) {
                 pose_request->z = 0.5;
                 pose_request->roll = M_PI;
                 pose_request->pitch = 0.0;
-                pose_request->yaw = M_PI_2;
+                pose_request->yaw = -M_PI_2;
                 break;
             }
             case '2':{
@@ -84,25 +84,25 @@ int main(int argc, char **argv) {
                 pose_request->z = 0.5;
                 pose_request->roll = M_PI;
                 pose_request->pitch = 0.0;
-                pose_request->yaw = M_PI_2;
+                pose_request->yaw = -M_PI_2;
                 break;
             }
             case '4':{
-                pose_request->x = 0.5;
-                pose_request->y = 0.52;
-                pose_request->z = 0.5;
+                pose_request->x = 0.3;
+                pose_request->y = 0.7;
+                pose_request->z = 0.1;
                 pose_request->roll = M_PI;
                 pose_request->pitch = 0.0;
-                pose_request->yaw = M_PI_2;
+                pose_request->yaw = -M_PI_2;
                 break;
             }
             case '5':{
-                pose_request->x = 0.5;
-                pose_request->y = -0.6;
-                pose_request->z = 0.5;
+                pose_request->x = 0.6;
+                pose_request->y = 0.0;
+                pose_request->z = 0.1;
                 pose_request->roll = M_PI;
                 pose_request->pitch = 0.0;
-                pose_request->yaw = M_PI_2;
+                pose_request->yaw = 0;
                 break;
             }
             case '6':{
@@ -111,7 +111,7 @@ int main(int argc, char **argv) {
                 pose_request->z = 0.04;
                 pose_request->roll = M_PI;
                 pose_request->pitch = 0.0;
-                pose_request->yaw = M_PI_2;
+                pose_request->yaw = -M_PI_2;
                 break;
             }
             case '7':{
@@ -120,7 +120,7 @@ int main(int argc, char **argv) {
                 pose_request->z = 0.4;
                 pose_request->roll = M_PI;
                 pose_request->pitch = 0.0;
-                pose_request->yaw = M_PI_2;
+                pose_request->yaw = -M_PI_2;
                 break;
             }
             case 'j':{
@@ -151,6 +151,15 @@ int main(int argc, char **argv) {
             case 'd':{
                 store = pose_request->y;
                 pose_request->y = store + 0.05;
+                break;
+            }
+            case 'l':{
+                store = pose_request->z;
+                pose_request->z = store - 0.05;
+                break;
+            }case 'o':{
+                store = pose_request->x;
+                pose_request->x = store + 0.05;
                 break;
             }
             default:{
