@@ -66,6 +66,7 @@ CMAKE_BINARY_DIR = /home/simi/franka_ros2_ws/build/cartesian_impedance_control
 all: CMakeFiles/cartesian_impedance_control.dir/all
 all: CMakeFiles/user_input_client.dir/all
 all: CMakeFiles/force_control_client.dir/all
+all: CMakeFiles/gripper.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -78,6 +79,7 @@ clean: CMakeFiles/cartesian_impedance_control_uninstall.dir/clean
 clean: CMakeFiles/cartesian_impedance_control.dir/clean
 clean: CMakeFiles/user_input_client.dir/clean
 clean: CMakeFiles/force_control_client.dir/clean
+clean: CMakeFiles/gripper.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -165,7 +167,7 @@ CMakeFiles/cartesian_impedance_control.dir/clean:
 CMakeFiles/user_input_client.dir/all: CMakeFiles/cartesian_impedance_control.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/user_input_client.dir/build.make CMakeFiles/user_input_client.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/user_input_client.dir/build.make CMakeFiles/user_input_client.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/simi/franka_ros2_ws/build/cartesian_impedance_control/CMakeFiles --progress-num=7,8 "Built target user_input_client"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/simi/franka_ros2_ws/build/cartesian_impedance_control/CMakeFiles --progress-num=9,10 "Built target user_input_client"
 .PHONY : CMakeFiles/user_input_client.dir/all
 
 # Build rule for subdir invocation for target.
@@ -209,6 +211,32 @@ force_control_client: CMakeFiles/force_control_client.dir/rule
 CMakeFiles/force_control_client.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/force_control_client.dir/build.make CMakeFiles/force_control_client.dir/clean
 .PHONY : CMakeFiles/force_control_client.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/gripper.dir
+
+# All Build rule for target.
+CMakeFiles/gripper.dir/all: CMakeFiles/cartesian_impedance_control.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gripper.dir/build.make CMakeFiles/gripper.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gripper.dir/build.make CMakeFiles/gripper.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/simi/franka_ros2_ws/build/cartesian_impedance_control/CMakeFiles --progress-num=7,8 "Built target gripper"
+.PHONY : CMakeFiles/gripper.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/gripper.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/simi/franka_ros2_ws/build/cartesian_impedance_control/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/gripper.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/simi/franka_ros2_ws/build/cartesian_impedance_control/CMakeFiles 0
+.PHONY : CMakeFiles/gripper.dir/rule
+
+# Convenience name for target.
+gripper: CMakeFiles/gripper.dir/rule
+.PHONY : gripper
+
+# clean rule for target.
+CMakeFiles/gripper.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gripper.dir/build.make CMakeFiles/gripper.dir/clean
+.PHONY : CMakeFiles/gripper.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

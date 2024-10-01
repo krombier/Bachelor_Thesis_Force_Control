@@ -236,6 +236,19 @@ force_control_client/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/force_control_client.dir/build.make CMakeFiles/force_control_client.dir/build
 .PHONY : force_control_client/fast
 
+#=============================================================================
+# Target rules for targets named gripper
+
+# Build rule for target.
+gripper: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gripper
+.PHONY : gripper
+
+# fast build rule for target.
+gripper/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gripper.dir/build.make CMakeFiles/gripper.dir/build
+.PHONY : gripper/fast
+
 src/cartesian_impedance_controller.o: src/cartesian_impedance_controller.cpp.o
 .PHONY : src/cartesian_impedance_controller.o
 
@@ -308,6 +321,30 @@ src/force_control_server.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cartesian_impedance_control.dir/build.make CMakeFiles/cartesian_impedance_control.dir/src/force_control_server.cpp.s
 .PHONY : src/force_control_server.cpp.s
 
+src/gripper.o: src/gripper.cpp.o
+.PHONY : src/gripper.o
+
+# target to build an object file
+src/gripper.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gripper.dir/build.make CMakeFiles/gripper.dir/src/gripper.cpp.o
+.PHONY : src/gripper.cpp.o
+
+src/gripper.i: src/gripper.cpp.i
+.PHONY : src/gripper.i
+
+# target to preprocess a source file
+src/gripper.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gripper.dir/build.make CMakeFiles/gripper.dir/src/gripper.cpp.i
+.PHONY : src/gripper.cpp.i
+
+src/gripper.s: src/gripper.cpp.s
+.PHONY : src/gripper.s
+
+# target to generate assembly for a file
+src/gripper.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gripper.dir/build.make CMakeFiles/gripper.dir/src/gripper.cpp.s
+.PHONY : src/gripper.cpp.s
+
 src/user_input_client.o: src/user_input_client.cpp.o
 .PHONY : src/user_input_client.o
 
@@ -373,6 +410,7 @@ help:
 	@echo "... uninstall"
 	@echo "... cartesian_impedance_control"
 	@echo "... force_control_client"
+	@echo "... gripper"
 	@echo "... user_input_client"
 	@echo "... src/cartesian_impedance_controller.o"
 	@echo "... src/cartesian_impedance_controller.i"
@@ -383,6 +421,9 @@ help:
 	@echo "... src/force_control_server.o"
 	@echo "... src/force_control_server.i"
 	@echo "... src/force_control_server.s"
+	@echo "... src/gripper.o"
+	@echo "... src/gripper.i"
+	@echo "... src/gripper.s"
 	@echo "... src/user_input_client.o"
 	@echo "... src/user_input_client.i"
 	@echo "... src/user_input_client.s"

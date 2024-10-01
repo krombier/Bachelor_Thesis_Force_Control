@@ -63,6 +63,7 @@ class SetForce_Request(metaclass=Metaclass_SetForce_Request):
         '_x_torque',
         '_y_torque',
         '_z_torque',
+        '_frame',
     ]
 
     _fields_and_field_types = {
@@ -72,6 +73,7 @@ class SetForce_Request(metaclass=Metaclass_SetForce_Request):
         'x_torque': 'double',
         'y_torque': 'double',
         'z_torque': 'double',
+        'frame': 'int8',
     }
 
     SLOT_TYPES = (
@@ -81,6 +83,7 @@ class SetForce_Request(metaclass=Metaclass_SetForce_Request):
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
+        rosidl_parser.definition.BasicType('int8'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -93,6 +96,7 @@ class SetForce_Request(metaclass=Metaclass_SetForce_Request):
         self.x_torque = kwargs.get('x_torque', float())
         self.y_torque = kwargs.get('y_torque', float())
         self.z_torque = kwargs.get('z_torque', float())
+        self.frame = kwargs.get('frame', int())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -134,6 +138,8 @@ class SetForce_Request(metaclass=Metaclass_SetForce_Request):
         if self.y_torque != other.y_torque:
             return False
         if self.z_torque != other.z_torque:
+            return False
+        if self.frame != other.frame:
             return False
         return True
 
@@ -231,6 +237,21 @@ class SetForce_Request(metaclass=Metaclass_SetForce_Request):
             assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
                 "The 'z_torque' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
         self._z_torque = value
+
+    @builtins.property
+    def frame(self):
+        """Message field 'frame'."""
+        return self._frame
+
+    @frame.setter
+    def frame(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, int), \
+                "The 'frame' field must be of type 'int'"
+            assert value >= -128 and value < 128, \
+                "The 'frame' field must be an integer in [-128, 127]"
+        self._frame = value
 
 
 # Import statements for member types

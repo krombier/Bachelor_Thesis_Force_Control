@@ -1,0 +1,16 @@
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/gripper.cpp:[m[K In constructor ‘[01m[KGripperControlNode::GripperControlNode()[m[K’:
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/gripper.cpp:9:55:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kfranka::Gripper::Gripper()[m[K’
+    9 |     GripperControlNode() : Node("gripper_control_node"[01;31m[K)[m[K {
+      |                                                       [01;31m[K^[m[K
+In file included from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/gripper.cpp:4[m[K:
+[01m[K/usr/include/franka/gripper.h:49:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kfranka::Gripper::Gripper(franka::Gripper&&)[m[K’
+   49 |   [01;36m[KGripper[m[K(Gripper&& gripper) noexcept;
+      |   [01;36m[K^~~~~~~[m[K
+[01m[K/usr/include/franka/gripper.h:49:3:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[01m[K/usr/include/franka/gripper.h:42:12:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kfranka::Gripper::Gripper(const string&)[m[K’
+   42 |   explicit [01;36m[KGripper[m[K(const std::string& franka_address);
+      |            [01;36m[K^~~~~~~[m[K
+[01m[K/usr/include/franka/gripper.h:42:12:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+gmake[2]: *** [CMakeFiles/gripper.dir/build.make:76: CMakeFiles/gripper.dir/src/gripper.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/gripper.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

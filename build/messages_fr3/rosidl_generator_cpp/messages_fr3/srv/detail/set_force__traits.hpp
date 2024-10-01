@@ -64,6 +64,13 @@ inline void to_flow_style_yaml(
   {
     out << "z_torque: ";
     rosidl_generator_traits::value_to_yaml(msg.z_torque, out);
+    out << ", ";
+  }
+
+  // member: frame
+  {
+    out << "frame: ";
+    rosidl_generator_traits::value_to_yaml(msg.frame, out);
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -129,6 +136,16 @@ inline void to_block_style_yaml(
     }
     out << "z_torque: ";
     rosidl_generator_traits::value_to_yaml(msg.z_torque, out);
+    out << "\n";
+  }
+
+  // member: frame
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "frame: ";
+    rosidl_generator_traits::value_to_yaml(msg.frame, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)

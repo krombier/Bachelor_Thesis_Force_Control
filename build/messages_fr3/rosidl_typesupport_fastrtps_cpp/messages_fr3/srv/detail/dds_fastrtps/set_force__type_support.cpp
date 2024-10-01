@@ -44,6 +44,8 @@ cdr_serialize(
   cdr << ros_message.y_torque;
   // Member: z_torque
   cdr << ros_message.z_torque;
+  // Member: frame
+  cdr << ros_message.frame;
   return true;
 }
 
@@ -70,6 +72,9 @@ cdr_deserialize(
 
   // Member: z_torque
   cdr >> ros_message.z_torque;
+
+  // Member: frame
+  cdr >> ros_message.frame;
 
   return true;
 }
@@ -120,6 +125,12 @@ get_serialized_size(
   // Member: z_torque
   {
     size_t item_size = sizeof(ros_message.z_torque);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: frame
+  {
+    size_t item_size = sizeof(ros_message.frame);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -201,6 +212,14 @@ max_serialized_size_SetForce_Request(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
+  // Member: frame
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
     // All members are plain, and type is not empty.
@@ -209,7 +228,7 @@ max_serialized_size_SetForce_Request(
     using DataType = messages_fr3::srv::SetForce_Request;
     is_plain =
       (
-      offsetof(DataType, z_torque) +
+      offsetof(DataType, frame) +
       last_member_size
       ) == ret_val;
   }

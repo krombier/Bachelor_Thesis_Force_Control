@@ -21,16 +21,32 @@ namespace srv
 namespace builder
 {
 
+class Init_SetForce_Request_frame
+{
+public:
+  explicit Init_SetForce_Request_frame(::messages_fr3::srv::SetForce_Request & msg)
+  : msg_(msg)
+  {}
+  ::messages_fr3::srv::SetForce_Request frame(::messages_fr3::srv::SetForce_Request::_frame_type arg)
+  {
+    msg_.frame = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::messages_fr3::srv::SetForce_Request msg_;
+};
+
 class Init_SetForce_Request_z_torque
 {
 public:
   explicit Init_SetForce_Request_z_torque(::messages_fr3::srv::SetForce_Request & msg)
   : msg_(msg)
   {}
-  ::messages_fr3::srv::SetForce_Request z_torque(::messages_fr3::srv::SetForce_Request::_z_torque_type arg)
+  Init_SetForce_Request_frame z_torque(::messages_fr3::srv::SetForce_Request::_z_torque_type arg)
   {
     msg_.z_torque = std::move(arg);
-    return std::move(msg_);
+    return Init_SetForce_Request_frame(msg_);
   }
 
 private:

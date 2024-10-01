@@ -26,6 +26,7 @@ find_package(franka_semantic_components REQUIRED)
 find_package(generate_parameter_library)
 find_package(std_msgs REQUIRED)
 find_package(messages_fr3 REQUIRED)
+#find_package(franka REQUIRED)                           #added by Simon on 19.09.2024
 
 
 add_library(
@@ -61,6 +62,9 @@ add_executable(user_input_client src/user_input_client.cpp)
 target_link_libraries(user_input_client ${PROJECT_NAME})
 add_executable(force_control_client src/force_control_client.cpp)                    #added by Simon on 06.05.24
 target_link_libraries(force_control_client ${PROJECT_NAME})                    #added by Simon on 06.05.24
+add_executable(gripper src/gripper.cpp)                    #added by Simon on 19.09.24
+target_link_libraries(gripper ${PROJECT_NAME})                    #added by Simon on 19.09.24
+
 
 
 
@@ -71,6 +75,10 @@ install(TARGETS
 
 install(TARGETS
         force_control_client
+        DESTINATION lib/${PROJECT_NAME})                                     #added by Simon on 06.05.24
+
+install(TARGETS
+        gripper
         DESTINATION lib/${PROJECT_NAME})                                     #added by Simon on 06.05.24
 
 install(

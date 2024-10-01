@@ -1,0 +1,5 @@
+[ 40%] Built target cartesian_impedance_control
+[35m[1mConsolidate compiler generated dependencies of target gripper[0m
+[ 80%] Built target user_input_client
+[ 80%] Built target force_control_client
+[ 90%] [32mBuilding CXX object CMakeFiles/gripper.dir/src/gripper.cpp.o[0m

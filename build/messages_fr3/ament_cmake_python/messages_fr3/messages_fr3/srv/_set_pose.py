@@ -63,6 +63,7 @@ class SetPose_Request(metaclass=Metaclass_SetPose_Request):
         '_roll',
         '_pitch',
         '_yaw',
+        '_gripper_state',
     ]
 
     _fields_and_field_types = {
@@ -72,6 +73,7 @@ class SetPose_Request(metaclass=Metaclass_SetPose_Request):
         'roll': 'double',
         'pitch': 'double',
         'yaw': 'double',
+        'gripper_state': 'int8',
     }
 
     SLOT_TYPES = (
@@ -81,6 +83,7 @@ class SetPose_Request(metaclass=Metaclass_SetPose_Request):
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
+        rosidl_parser.definition.BasicType('int8'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -93,6 +96,7 @@ class SetPose_Request(metaclass=Metaclass_SetPose_Request):
         self.roll = kwargs.get('roll', float())
         self.pitch = kwargs.get('pitch', float())
         self.yaw = kwargs.get('yaw', float())
+        self.gripper_state = kwargs.get('gripper_state', int())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -134,6 +138,8 @@ class SetPose_Request(metaclass=Metaclass_SetPose_Request):
         if self.pitch != other.pitch:
             return False
         if self.yaw != other.yaw:
+            return False
+        if self.gripper_state != other.gripper_state:
             return False
         return True
 
@@ -231,6 +237,21 @@ class SetPose_Request(metaclass=Metaclass_SetPose_Request):
             assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
                 "The 'yaw' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
         self._yaw = value
+
+    @builtins.property
+    def gripper_state(self):
+        """Message field 'gripper_state'."""
+        return self._gripper_state
+
+    @gripper_state.setter
+    def gripper_state(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, int), \
+                "The 'gripper_state' field must be of type 'int'"
+            assert value >= -128 and value < 128, \
+                "The 'gripper_state' field must be an integer in [-128, 127]"
+        self._gripper_state = value
 
 
 # Import statements for member types

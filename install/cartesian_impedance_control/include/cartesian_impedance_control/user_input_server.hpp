@@ -14,12 +14,14 @@ namespace cartesian_impedance_control {
 class UserInputServer {
 public:
   UserInputServer (Eigen::Vector3d* position, 
-                   Eigen::Vector3d* rotation, 
+                   Eigen::Vector3d* rotation,
+                   //int* gripper, 
                    Eigen::Matrix<double, 6, 6>* stiffness, 
                    Eigen::Matrix<double, 6, 6>* damping, 
                    Eigen::Matrix<double, 6, 6>* inertia) :
   position_d_target_(position),
   rotation_d_target_(rotation),
+  //gripper_(gripper),
   K_(stiffness),
   D_(damping),
   T_(inertia){}
@@ -28,6 +30,7 @@ public:
 private:
   Eigen::Vector3d* position_d_target_;
   Eigen::Vector3d* rotation_d_target_;
+  //int* gripper_;
   Eigen::Matrix<double, 6, 6>* K_;
   Eigen::Matrix<double, 6, 6>* D_;
   Eigen::Matrix<double, 6, 6>* T_;

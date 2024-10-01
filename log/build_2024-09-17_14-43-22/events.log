@@ -1,0 +1,522 @@
+[0.000000] (-) TimerEvent: {}
+[0.000278] (-) JobUnselected: {'identifier': 'franka_bringup'}
+[0.000375] (-) JobUnselected: {'identifier': 'franka_description'}
+[0.000420] (-) JobUnselected: {'identifier': 'franka_example_controllers'}
+[0.000488] (-) JobUnselected: {'identifier': 'franka_gripper'}
+[0.000528] (-) JobUnselected: {'identifier': 'franka_hardware'}
+[0.000628] (-) JobUnselected: {'identifier': 'franka_moveit_config'}
+[0.000687] (-) JobUnselected: {'identifier': 'franka_msgs'}
+[0.000783] (-) JobUnselected: {'identifier': 'franka_robot_state_broadcaster'}
+[0.000805] (-) JobUnselected: {'identifier': 'franka_semantic_components'}
+[0.000824] (-) JobUnselected: {'identifier': 'integration_launch_testing'}
+[0.000843] (-) JobUnselected: {'identifier': 'joint_trajectory_controller'}
+[0.000862] (-) JobUnselected: {'identifier': 'messages_fr3'}
+[0.000881] (-) JobUnselected: {'identifier': 'realtime_plot_of_data'}
+[0.000902] (cartesian_impedance_control) JobQueued: {'identifier': 'cartesian_impedance_control', 'dependencies': OrderedDict([('franka_description', '/home/simi/franka_ros2_ws/install/franka_description'), ('franka_msgs', '/home/simi/franka_ros2_ws/install/franka_msgs'), ('messages_fr3', '/home/simi/franka_ros2_ws/install/messages_fr3'), ('franka_hardware', '/home/simi/franka_ros2_ws/install/franka_hardware'), ('franka_semantic_components', '/home/simi/franka_ros2_ws/install/franka_semantic_components'), ('franka_robot_state_broadcaster', '/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster')])}
+[0.000938] (cartesian_impedance_control) JobStarted: {'identifier': 'cartesian_impedance_control'}
+[0.031917] (cartesian_impedance_control) JobProgress: {'identifier': 'cartesian_impedance_control', 'progress': 'cmake'}
+[0.033102] (cartesian_impedance_control) JobProgress: {'identifier': 'cartesian_impedance_control', 'progress': 'build'}
+[0.033814] (cartesian_impedance_control) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/simi/franka_ros2_ws/build/cartesian_impedance_control', '--', '-j16', '-l16'], 'cwd': '/home/simi/franka_ros2_ws/build/cartesian_impedance_control', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'simi'), ('LC_TIME', 'de_CH.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster/lib:/home/simi/franka_ros2_ws/install/franka_semantic_components/lib:/home/simi/franka_ros2_ws/install/franka_hardware/lib:/home/simi/franka_ros2_ws/install/messages_fr3/lib:/home/simi/franka_ros2_ws/install/franka_msgs/lib:/home/simi/franka_ros2_ws/install/cartesian_impedance_control/lib:/home/simi/franka_ros2_ws/install/joint_trajectory_controller/lib:/home/simi/franka_ros2_ws/install/integration_launch_testing/lib:/home/simi/franka_ros2_ws/install/franka_example_controllers/lib:/home/simi/franka_ros2_ws/install/franka_gripper/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/simi'), ('OLDPWD', '/home/simi'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'de_CH.UTF-8'), ('SYSTEMD_EXEC_PID', '1762'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/simi/franka_ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'simi'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'simi'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/simi-IdeaPad-Flex-5-14ALC05:@/tmp/.ICE-unix/1738,unix/simi-IdeaPad-Flex-5-14ALC05:/tmp/.ICE-unix/1738'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'de_CH.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/5a30748b_e854_43fd_a78d_57e274a2e1dd'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'de_CH.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.XLRGU2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.322'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/simi/franka_ros2_ws/install/realtime_plot_of_data:/home/simi/franka_ros2_ws/install/cartesian_impedance_control:/home/simi/franka_ros2_ws/install/messages_fr3:/home/simi/franka_ros2_ws/install/joint_trajectory_controller:/home/simi/franka_ros2_ws/install/integration_launch_testing:/home/simi/franka_ros2_ws/install/franka_bringup:/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster:/home/simi/franka_ros2_ws/install/franka_example_controllers:/home/simi/franka_ros2_ws/install/franka_semantic_components:/home/simi/franka_ros2_ws/install/franka_moveit_config:/home/simi/franka_ros2_ws/install/franka_hardware:/home/simi/franka_ros2_ws/install/franka_gripper:/home/simi/franka_ros2_ws/install/franka_msgs:/home/simi/franka_ros2_ws/install/franka_description:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'de_CH.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'de_CH.UTF-8'), ('LC_IDENTIFICATION', 'de_CH.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/simi/franka_ros2_ws/build/cartesian_impedance_control'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/simi/franka_ros2_ws/install/realtime_plot_of_data/lib/python3.10/site-packages:/home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages:/home/simi/franka_ros2_ws/install/franka_gripper/local/lib/python3.10/dist-packages:/home/simi/franka_ros2_ws/install/franka_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'de_CH.UTF-8'), ('LC_PAPER', 'de_CH.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster:/home/simi/franka_ros2_ws/install/franka_semantic_components:/home/simi/franka_ros2_ws/install/franka_hardware:/home/simi/franka_ros2_ws/install/messages_fr3:/home/simi/franka_ros2_ws/install/franka_msgs:/home/simi/franka_ros2_ws/install/franka_description:/home/simi/franka_ros2_ws/install/cartesian_impedance_control:/home/simi/franka_ros2_ws/install/joint_trajectory_controller:/home/simi/franka_ros2_ws/install/integration_launch_testing:/home/simi/franka_ros2_ws/install/franka_bringup:/home/simi/franka_ros2_ws/install/franka_example_controllers:/home/simi/franka_ros2_ws/install/franka_moveit_config:/home/simi/franka_ros2_ws/install/franka_gripper:/home/simi/franka_ros2_ws/install/realtime_plot_of_data:/opt/ros/humble')]), 'shell': False}
+[0.099213] (-) TimerEvent: {}
+[0.105505] (cartesian_impedance_control) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target cartesian_impedance_control\x1b[0m\n'}
+[0.154086] (cartesian_impedance_control) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/cartesian_impedance_control.dir/src/user_input_server.cpp.o\x1b[0m\n'}
+[0.154365] (cartesian_impedance_control) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/cartesian_impedance_control.dir/src/cartesian_impedance_controller.cpp.o\x1b[0m\n'}
+[0.154800] (cartesian_impedance_control) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding CXX object CMakeFiles/cartesian_impedance_control.dir/src/force_control_server.cpp.o\x1b[0m\n'}
+[0.199385] (-) TimerEvent: {}
+[0.300047] (-) TimerEvent: {}
+[0.400464] (-) TimerEvent: {}
+[0.500921] (-) TimerEvent: {}
+[0.601339] (-) TimerEvent: {}
+[0.701815] (-) TimerEvent: {}
+[0.802240] (-) TimerEvent: {}
+[0.902672] (-) TimerEvent: {}
+[1.003129] (-) TimerEvent: {}
+[1.103628] (-) TimerEvent: {}
+[1.204065] (-) TimerEvent: {}
+[1.304521] (-) TimerEvent: {}
+[1.405037] (-) TimerEvent: {}
+[1.505507] (-) TimerEvent: {}
+[1.606003] (-) TimerEvent: {}
+[1.706502] (-) TimerEvent: {}
+[1.806989] (-) TimerEvent: {}
+[1.907493] (-) TimerEvent: {}
+[2.008008] (-) TimerEvent: {}
+[2.108501] (-) TimerEvent: {}
+[2.208997] (-) TimerEvent: {}
+[2.309475] (-) TimerEvent: {}
+[2.409912] (-) TimerEvent: {}
+[2.510335] (-) TimerEvent: {}
+[2.610812] (-) TimerEvent: {}
+[2.711319] (-) TimerEvent: {}
+[2.811858] (-) TimerEvent: {}
+[2.912321] (-) TimerEvent: {}
+[3.012800] (-) TimerEvent: {}
+[3.113260] (-) TimerEvent: {}
+[3.213690] (-) TimerEvent: {}
+[3.314154] (-) TimerEvent: {}
+[3.414632] (-) TimerEvent: {}
+[3.515141] (-) TimerEvent: {}
+[3.615641] (-) TimerEvent: {}
+[3.716180] (-) TimerEvent: {}
+[3.816638] (-) TimerEvent: {}
+[3.917106] (-) TimerEvent: {}
+[4.017585] (-) TimerEvent: {}
+[4.118075] (-) TimerEvent: {}
+[4.218538] (-) TimerEvent: {}
+[4.319029] (-) TimerEvent: {}
+[4.419507] (-) TimerEvent: {}
+[4.520023] (-) TimerEvent: {}
+[4.620483] (-) TimerEvent: {}
+[4.655284] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/cartesian_impedance_controller.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid cartesian_impedance_control::CartesianImpedanceController::update_forces(Eigen::Matrix<double, 6, 1>&, Eigen::Matrix<double, 7, 1>&, Eigen::Matrix<double, 7, 1>&, Eigen::Matrix<double, 7, 1>&, const Eigen::Matrix<double, 7, 7>&, const Eigen::Matrix<double, 7, 1>&, const Eigen::Matrix<double, 7, 7>&, const Eigen::Matrix<double, 7, 1>&, const Eigen::Matrix<double, 7, 1>&, const double&, const Eigen::Matrix<double, 7, 7>&, const MatrixXd&, const Eigen::Matrix<double, 6, 1>&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.666564] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/cartesian_impedance_controller.cpp:113:84:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[KF_cmd\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.666782] (cartesian_impedance_control) StderrLine: {'line': b'  113 |                             \x1b[01;35m\x1b[Kconst Eigen::Matrix<double, 6, 1>& F_cmd\x1b[m\x1b[K) {\n'}
+[4.666914] (cartesian_impedance_control) StderrLine: {'line': b'      |                             \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~\x1b[m\x1b[K\n'}
+[4.667064] (cartesian_impedance_control) StderrLine: {'line': b'\n'}
+[4.720668] (-) TimerEvent: {}
+[4.795207] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/cartesian_impedance_controller.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid cartesian_impedance_control::CartesianImpedanceController::checklimits(const Vector3d&, Eigen::Matrix<double, 7, 1>&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.795511] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/cartesian_impedance_controller.cpp:195:71:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kpos\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.795650] (cartesian_impedance_control) StderrLine: {'line': b'  195 | sianImpedanceController::checklimits(\x1b[01;35m\x1b[Kconst Eigen::Vector3d& pos\x1b[m\x1b[K, Eigen::Matrix<double, 7, 1>& tau_d){\n'}
+[4.795890] (cartesian_impedance_control) StderrLine: {'line': b'      |                                      \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~^~~\x1b[m\x1b[K\n'}
+[4.796039] (cartesian_impedance_control) StderrLine: {'line': b'\n'}
+[4.796150] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/cartesian_impedance_controller.cpp:195:105:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Ktau_d\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.796216] (cartesian_impedance_control) StderrLine: {'line': b'  195 | limits(const Eigen::Vector3d& pos, \x1b[01;35m\x1b[KEigen::Matrix<double, 7, 1>& tau_d\x1b[m\x1b[K){\n'}
+[4.796281] (cartesian_impedance_control) StderrLine: {'line': b'      |                                    \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~\x1b[m\x1b[K\n'}
+[4.796344] (cartesian_impedance_control) StderrLine: {'line': b'\n'}
+[4.820871] (-) TimerEvent: {}
+[4.921311] (-) TimerEvent: {}
+[5.021765] (-) TimerEvent: {}
+[5.122239] (-) TimerEvent: {}
+[5.222723] (-) TimerEvent: {}
+[5.323197] (-) TimerEvent: {}
+[5.423684] (-) TimerEvent: {}
+[5.524161] (-) TimerEvent: {}
+[5.624598] (-) TimerEvent: {}
+[5.725102] (-) TimerEvent: {}
+[5.825532] (-) TimerEvent: {}
+[5.926047] (-) TimerEvent: {}
+[6.026502] (-) TimerEvent: {}
+[6.126980] (-) TimerEvent: {}
+[6.227422] (-) TimerEvent: {}
+[6.327914] (-) TimerEvent: {}
+[6.428386] (-) TimerEvent: {}
+[6.528909] (-) TimerEvent: {}
+[6.629370] (-) TimerEvent: {}
+[6.730229] (-) TimerEvent: {}
+[6.830632] (-) TimerEvent: {}
+[6.931254] (-) TimerEvent: {}
+[7.031940] (-) TimerEvent: {}
+[7.132401] (-) TimerEvent: {}
+[7.232804] (-) TimerEvent: {}
+[7.333276] (-) TimerEvent: {}
+[7.433695] (-) TimerEvent: {}
+[7.534369] (-) TimerEvent: {}
+[7.634766] (-) TimerEvent: {}
+[7.735439] (-) TimerEvent: {}
+[7.835890] (-) TimerEvent: {}
+[7.936356] (-) TimerEvent: {}
+[8.036776] (-) TimerEvent: {}
+[8.137209] (-) TimerEvent: {}
+[8.237634] (-) TimerEvent: {}
+[8.338038] (-) TimerEvent: {}
+[8.438464] (-) TimerEvent: {}
+[8.538839] (-) TimerEvent: {}
+[8.639206] (-) TimerEvent: {}
+[8.739889] (-) TimerEvent: {}
+[8.840346] (-) TimerEvent: {}
+[8.940842] (-) TimerEvent: {}
+[9.041702] (-) TimerEvent: {}
+[9.142491] (-) TimerEvent: {}
+[9.243164] (-) TimerEvent: {}
+[9.343912] (-) TimerEvent: {}
+[9.444328] (-) TimerEvent: {}
+[9.544782] (-) TimerEvent: {}
+[9.645137] (-) TimerEvent: {}
+[9.745630] (-) TimerEvent: {}
+[9.846059] (-) TimerEvent: {}
+[9.946511] (-) TimerEvent: {}
+[10.046931] (-) TimerEvent: {}
+[10.147296] (-) TimerEvent: {}
+[10.247647] (-) TimerEvent: {}
+[10.348044] (-) TimerEvent: {}
+[10.448454] (-) TimerEvent: {}
+[10.548835] (-) TimerEvent: {}
+[10.649873] (-) TimerEvent: {}
+[10.750266] (-) TimerEvent: {}
+[10.850740] (-) TimerEvent: {}
+[10.951208] (-) TimerEvent: {}
+[11.051668] (-) TimerEvent: {}
+[11.152154] (-) TimerEvent: {}
+[11.252583] (-) TimerEvent: {}
+[11.353033] (-) TimerEvent: {}
+[11.453474] (-) TimerEvent: {}
+[11.553917] (-) TimerEvent: {}
+[11.654346] (-) TimerEvent: {}
+[11.754775] (-) TimerEvent: {}
+[11.855175] (-) TimerEvent: {}
+[11.955623] (-) TimerEvent: {}
+[12.056148] (-) TimerEvent: {}
+[12.156574] (-) TimerEvent: {}
+[12.257006] (-) TimerEvent: {}
+[12.357453] (-) TimerEvent: {}
+[12.457899] (-) TimerEvent: {}
+[12.558788] (-) TimerEvent: {}
+[12.659935] (-) TimerEvent: {}
+[12.760374] (-) TimerEvent: {}
+[12.860804] (-) TimerEvent: {}
+[12.961229] (-) TimerEvent: {}
+[13.061701] (-) TimerEvent: {}
+[13.162430] (-) TimerEvent: {}
+[13.263298] (-) TimerEvent: {}
+[13.363839] (-) TimerEvent: {}
+[13.464338] (-) TimerEvent: {}
+[13.564760] (-) TimerEvent: {}
+[13.665200] (-) TimerEvent: {}
+[13.765653] (-) TimerEvent: {}
+[13.866328] (-) TimerEvent: {}
+[13.967128] (-) TimerEvent: {}
+[14.067581] (-) TimerEvent: {}
+[14.168289] (-) TimerEvent: {}
+[14.268717] (-) TimerEvent: {}
+[14.369151] (-) TimerEvent: {}
+[14.469532] (-) TimerEvent: {}
+[14.570424] (-) TimerEvent: {}
+[14.670868] (-) TimerEvent: {}
+[14.771321] (-) TimerEvent: {}
+[14.871750] (-) TimerEvent: {}
+[14.972217] (-) TimerEvent: {}
+[15.072654] (-) TimerEvent: {}
+[15.173083] (-) TimerEvent: {}
+[15.273895] (-) TimerEvent: {}
+[15.374848] (-) TimerEvent: {}
+[15.475752] (-) TimerEvent: {}
+[15.576476] (-) TimerEvent: {}
+[15.676890] (-) TimerEvent: {}
+[15.777766] (-) TimerEvent: {}
+[15.878142] (-) TimerEvent: {}
+[15.979059] (-) TimerEvent: {}
+[16.080081] (-) TimerEvent: {}
+[16.180509] (-) TimerEvent: {}
+[16.280944] (-) TimerEvent: {}
+[16.381399] (-) TimerEvent: {}
+[16.481869] (-) TimerEvent: {}
+[16.582252] (-) TimerEvent: {}
+[16.682749] (-) TimerEvent: {}
+[16.783192] (-) TimerEvent: {}
+[16.883649] (-) TimerEvent: {}
+[16.984138] (-) TimerEvent: {}
+[17.084587] (-) TimerEvent: {}
+[17.185015] (-) TimerEvent: {}
+[17.285485] (-) TimerEvent: {}
+[17.386121] (-) TimerEvent: {}
+[17.486869] (-) TimerEvent: {}
+[17.587313] (-) TimerEvent: {}
+[17.687844] (-) TimerEvent: {}
+[17.788277] (-) TimerEvent: {}
+[17.888739] (-) TimerEvent: {}
+[17.989186] (-) TimerEvent: {}
+[18.090098] (-) TimerEvent: {}
+[18.190847] (-) TimerEvent: {}
+[18.291543] (-) TimerEvent: {}
+[18.392176] (-) TimerEvent: {}
+[18.492660] (-) TimerEvent: {}
+[18.593107] (-) TimerEvent: {}
+[18.693603] (-) TimerEvent: {}
+[18.794475] (-) TimerEvent: {}
+[18.895199] (-) TimerEvent: {}
+[18.995624] (-) TimerEvent: {}
+[19.096154] (-) TimerEvent: {}
+[19.196600] (-) TimerEvent: {}
+[19.297076] (-) TimerEvent: {}
+[19.397507] (-) TimerEvent: {}
+[19.498189] (-) TimerEvent: {}
+[19.598880] (-) TimerEvent: {}
+[19.699586] (-) TimerEvent: {}
+[19.800372] (-) TimerEvent: {}
+[19.900825] (-) TimerEvent: {}
+[20.001315] (-) TimerEvent: {}
+[20.101797] (-) TimerEvent: {}
+[20.202248] (-) TimerEvent: {}
+[20.302677] (-) TimerEvent: {}
+[20.403108] (-) TimerEvent: {}
+[20.503634] (-) TimerEvent: {}
+[20.604092] (-) TimerEvent: {}
+[20.704566] (-) TimerEvent: {}
+[20.804998] (-) TimerEvent: {}
+[20.905383] (-) TimerEvent: {}
+[21.005843] (-) TimerEvent: {}
+[21.106308] (-) TimerEvent: {}
+[21.206772] (-) TimerEvent: {}
+[21.307487] (-) TimerEvent: {}
+[21.408211] (-) TimerEvent: {}
+[21.508658] (-) TimerEvent: {}
+[21.609125] (-) TimerEvent: {}
+[21.710139] (-) TimerEvent: {}
+[21.810619] (-) TimerEvent: {}
+[21.911835] (-) TimerEvent: {}
+[22.012294] (-) TimerEvent: {}
+[22.112766] (-) TimerEvent: {}
+[22.213241] (-) TimerEvent: {}
+[22.313684] (-) TimerEvent: {}
+[22.414166] (-) TimerEvent: {}
+[22.514661] (-) TimerEvent: {}
+[22.615691] (-) TimerEvent: {}
+[22.716787] (-) TimerEvent: {}
+[22.817265] (-) TimerEvent: {}
+[22.917705] (-) TimerEvent: {}
+[23.018197] (-) TimerEvent: {}
+[23.118635] (-) TimerEvent: {}
+[23.219077] (-) TimerEvent: {}
+[23.319462] (-) TimerEvent: {}
+[23.419931] (-) TimerEvent: {}
+[23.520370] (-) TimerEvent: {}
+[23.620822] (-) TimerEvent: {}
+[23.721230] (-) TimerEvent: {}
+[23.821683] (-) TimerEvent: {}
+[23.922134] (-) TimerEvent: {}
+[24.022593] (-) TimerEvent: {}
+[24.123056] (-) TimerEvent: {}
+[24.223950] (-) TimerEvent: {}
+[24.324393] (-) TimerEvent: {}
+[24.424848] (-) TimerEvent: {}
+[24.525306] (-) TimerEvent: {}
+[24.626212] (-) TimerEvent: {}
+[24.727161] (-) TimerEvent: {}
+[24.828353] (-) TimerEvent: {}
+[24.928822] (-) TimerEvent: {}
+[25.029299] (-) TimerEvent: {}
+[25.129767] (-) TimerEvent: {}
+[25.230260] (-) TimerEvent: {}
+[25.330742] (-) TimerEvent: {}
+[25.431222] (-) TimerEvent: {}
+[25.531702] (-) TimerEvent: {}
+[25.632203] (-) TimerEvent: {}
+[25.732645] (-) TimerEvent: {}
+[25.833113] (-) TimerEvent: {}
+[25.933593] (-) TimerEvent: {}
+[26.034525] (-) TimerEvent: {}
+[26.135374] (-) TimerEvent: {}
+[26.236235] (-) TimerEvent: {}
+[26.336694] (-) TimerEvent: {}
+[26.437137] (-) TimerEvent: {}
+[26.537598] (-) TimerEvent: {}
+[26.638052] (-) TimerEvent: {}
+[26.738499] (-) TimerEvent: {}
+[26.838957] (-) TimerEvent: {}
+[26.939359] (-) TimerEvent: {}
+[27.039849] (-) TimerEvent: {}
+[27.140291] (-) TimerEvent: {}
+[27.205368] (cartesian_impedance_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Core:341\x1b[m\x1b[K,\n'}
+[27.205672] (cartesian_impedance_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Dense:1\x1b[m\x1b[K,\n'}
+[27.205803] (cartesian_impedance_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Eigen:1\x1b[m\x1b[K,\n'}
+[27.205930] (cartesian_impedance_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/include/cartesian_impedance_control/user_input_server.hpp:3\x1b[m\x1b[K,\n'}
+[27.206057] (cartesian_impedance_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/include/cartesian_impedance_control/cartesian_impedance_controller.hpp:29\x1b[m\x1b[K,\n'}
+[27.206183] (cartesian_impedance_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/cartesian_impedance_controller.cpp:15\x1b[m\x1b[K:\n'}
+[27.206310] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kstatic void Eigen::internal::trmv_selector<Mode, 1>::run(const Lhs&, const Rhs&, Dest&, const typename Dest::Scalar&) [with Lhs = Eigen::Transpose<const Eigen::Block<const Eigen::Block<Eigen::Matrix<double, -1, -1>, -1, -1, false>, -1, -1, false> >; Rhs = Eigen::Transpose<const Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<double, double>, const Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, const Eigen::Matrix<double, 1, -1> >, const Eigen::Transpose<const Eigen::Block<const Eigen::Block<const Eigen::Block<Eigen::Matrix<double, -1, -1>, -1, -1, false>, -1, 1, true>, -1, 1, false> > > >; Dest = Eigen::Transpose<Eigen::Block<Eigen::Block<Eigen::Matrix<double, -1, -1, 1, -1, -1>, 1, -1, true>, 1, -1, false> >; int Mode = 6]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[27.206490] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h:332:12:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kresult\x1b[m\x1b[K\xe2\x80\x99 may be used uninitialized [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wmaybe-uninitialized\x07-Wmaybe-uninitialized\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[27.206650] (cartesian_impedance_control) StderrLine: {'line': b'  327 |     \x1b[01;35m\x1b[Kinternal::triangular_matrix_vector_product\x1b[m\x1b[K\n'}
+[27.206776] (cartesian_impedance_control) StderrLine: {'line': b'      |     \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[27.206899] (cartesian_impedance_control) StderrLine: {'line': b'  328 | \x1b[01;35m\x1b[K      <Index,Mode,\x1b[m\x1b[K\n'}
+[27.207050] (cartesian_impedance_control) StderrLine: {'line': b'      |       \x1b[01;35m\x1b[K~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[27.207174] (cartesian_impedance_control) StderrLine: {'line': b'  329 | \x1b[01;35m\x1b[K       LhsScalar, LhsBlasTraits::NeedToConjugate,\x1b[m\x1b[K\n'}
+[27.207298] (cartesian_impedance_control) StderrLine: {'line': b'      |        \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[27.207422] (cartesian_impedance_control) StderrLine: {'line': b'  330 | \x1b[01;35m\x1b[K       RhsScalar, RhsBlasTraits::NeedToConjugate,\x1b[m\x1b[K\n'}
+[27.207542] (cartesian_impedance_control) StderrLine: {'line': b'      |        \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[27.207657] (cartesian_impedance_control) StderrLine: {'line': b'  331 | \x1b[01;35m\x1b[K       RowMajor>\x1b[m\x1b[K\n'}
+[27.207819] (cartesian_impedance_control) StderrLine: {'line': b'      |        \x1b[01;35m\x1b[K~~~~~~~~~\x1b[m\x1b[K\n'}
+[27.207956] (cartesian_impedance_control) StderrLine: {'line': b'  332 | \x1b[01;35m\x1b[K      ::run(actualLhs.rows(),actualLhs.cols(),\x1b[m\x1b[K\n'}
+[27.208074] (cartesian_impedance_control) StderrLine: {'line': b'      |       \x1b[01;35m\x1b[K~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[27.208190] (cartesian_impedance_control) StderrLine: {'line': b'  333 | \x1b[01;35m\x1b[K            actualLhs.data(),actualLhs.outerStride(),\x1b[m\x1b[K\n'}
+[27.208280] (cartesian_impedance_control) StderrLine: {'line': b'      |             \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[27.208336] (cartesian_impedance_control) StderrLine: {'line': b'  334 | \x1b[01;35m\x1b[K            actualRhsPtr,1,\x1b[m\x1b[K\n'}
+[27.208392] (cartesian_impedance_control) StderrLine: {'line': b'      |             \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[27.208447] (cartesian_impedance_control) StderrLine: {'line': b'  335 | \x1b[01;35m\x1b[K            dest.data(),dest.innerStride(),\x1b[m\x1b[K\n'}
+[27.208502] (cartesian_impedance_control) StderrLine: {'line': b'      |             \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[27.208558] (cartesian_impedance_control) StderrLine: {'line': b'  336 | \x1b[01;35m\x1b[K            actualAlpha)\x1b[m\x1b[K;\n'}
+[27.208613] (cartesian_impedance_control) StderrLine: {'line': b'      |             \x1b[01;35m\x1b[K~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[27.208669] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h:105:24:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kby argument 5 of type \xe2\x80\x98\x1b[01m\x1b[Kconst double*\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kstatic void Eigen::internal::triangular_matrix_vector_product<Index, Mode, LhsScalar, ConjLhs, RhsScalar, ConjRhs, 1, Version>::run(Index, Index, const LhsScalar*, Index, const RhsScalar*, Index, Eigen::internal::triangular_matrix_vector_product<Index, Mode, LhsScalar, ConjLhs, RhsScalar, ConjRhs, 1, Version>::ResScalar*, Index, const ResScalar&) [with Index = long int; int Mode = 6; LhsScalar = double; bool ConjLhs = false; RhsScalar = double; bool ConjRhs = false; int Version = 0]\x1b[m\x1b[K\xe2\x80\x99 declared here\n'}
+[27.208747] (cartesian_impedance_control) StderrLine: {'line': b'  105 | EIGEN_DONT_INLINE void \x1b[01;36m\x1b[Ktriangular_matrix_vector_product<Index,Mode,LhsScalar,ConjLhs,RhsScalar,ConjRhs,RowMajor,Version>\x1b[m\x1b[K\n'}
+[27.208805] (cartesian_impedance_control) StderrLine: {'line': b'      |                        \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[27.240483] (-) TimerEvent: {}
+[27.340927] (-) TimerEvent: {}
+[27.441380] (-) TimerEvent: {}
+[27.542422] (-) TimerEvent: {}
+[27.643297] (-) TimerEvent: {}
+[27.744138] (-) TimerEvent: {}
+[27.844553] (-) TimerEvent: {}
+[27.944991] (-) TimerEvent: {}
+[28.045406] (-) TimerEvent: {}
+[28.145826] (-) TimerEvent: {}
+[28.246294] (-) TimerEvent: {}
+[28.347088] (-) TimerEvent: {}
+[28.448163] (-) TimerEvent: {}
+[28.548599] (-) TimerEvent: {}
+[28.649057] (-) TimerEvent: {}
+[28.749496] (-) TimerEvent: {}
+[28.849948] (-) TimerEvent: {}
+[28.950751] (-) TimerEvent: {}
+[29.051552] (-) TimerEvent: {}
+[29.152677] (-) TimerEvent: {}
+[29.253093] (-) TimerEvent: {}
+[29.353528] (-) TimerEvent: {}
+[29.453954] (-) TimerEvent: {}
+[29.554369] (-) TimerEvent: {}
+[29.654712] (-) TimerEvent: {}
+[29.755054] (-) TimerEvent: {}
+[29.855497] (-) TimerEvent: {}
+[29.955921] (-) TimerEvent: {}
+[30.056346] (-) TimerEvent: {}
+[30.156805] (-) TimerEvent: {}
+[30.257277] (-) TimerEvent: {}
+[30.357739] (-) TimerEvent: {}
+[30.458157] (-) TimerEvent: {}
+[30.558582] (-) TimerEvent: {}
+[30.658981] (-) TimerEvent: {}
+[30.759359] (-) TimerEvent: {}
+[30.859839] (-) TimerEvent: {}
+[30.960234] (-) TimerEvent: {}
+[31.060603] (-) TimerEvent: {}
+[31.161037] (-) TimerEvent: {}
+[31.261466] (-) TimerEvent: {}
+[31.361915] (-) TimerEvent: {}
+[31.463145] (-) TimerEvent: {}
+[31.564231] (-) TimerEvent: {}
+[31.664655] (-) TimerEvent: {}
+[31.765082] (-) TimerEvent: {}
+[31.865503] (-) TimerEvent: {}
+[31.965949] (-) TimerEvent: {}
+[32.066384] (-) TimerEvent: {}
+[32.166862] (-) TimerEvent: {}
+[32.267311] (-) TimerEvent: {}
+[32.367760] (-) TimerEvent: {}
+[32.468238] (-) TimerEvent: {}
+[32.568661] (-) TimerEvent: {}
+[32.669117] (-) TimerEvent: {}
+[32.769554] (-) TimerEvent: {}
+[32.869992] (-) TimerEvent: {}
+[32.970432] (-) TimerEvent: {}
+[33.070859] (-) TimerEvent: {}
+[33.171287] (-) TimerEvent: {}
+[33.271705] (-) TimerEvent: {}
+[33.372182] (-) TimerEvent: {}
+[33.472617] (-) TimerEvent: {}
+[33.573064] (-) TimerEvent: {}
+[33.673513] (-) TimerEvent: {}
+[33.774211] (-) TimerEvent: {}
+[33.874665] (-) TimerEvent: {}
+[33.975324] (-) TimerEvent: {}
+[34.075789] (-) TimerEvent: {}
+[34.176230] (-) TimerEvent: {}
+[34.276648] (-) TimerEvent: {}
+[34.377080] (-) TimerEvent: {}
+[34.477510] (-) TimerEvent: {}
+[34.577900] (-) TimerEvent: {}
+[34.678235] (-) TimerEvent: {}
+[34.778551] (-) TimerEvent: {}
+[34.796713] (cartesian_impedance_control) StdoutLine: {'line': b'[ 50%] \x1b[32m\x1b[1mLinking CXX shared library libcartesian_impedance_control.so\x1b[0m\n'}
+[34.879162] (-) TimerEvent: {}
+[34.979612] (-) TimerEvent: {}
+[35.080343] (-) TimerEvent: {}
+[35.131711] (cartesian_impedance_control) StdoutLine: {'line': b'[ 50%] Built target cartesian_impedance_control\n'}
+[35.175620] (cartesian_impedance_control) StdoutLine: {'line': b'[ 62%] \x1b[32mBuilding CXX object CMakeFiles/user_input_client.dir/src/user_input_client.cpp.o\x1b[0m\n'}
+[35.177919] (cartesian_impedance_control) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/force_control_client.dir/src/force_control_client.cpp.o\x1b[0m\n'}
+[35.180460] (-) TimerEvent: {}
+[35.280835] (-) TimerEvent: {}
+[35.381249] (-) TimerEvent: {}
+[35.481681] (-) TimerEvent: {}
+[35.582112] (-) TimerEvent: {}
+[35.682583] (-) TimerEvent: {}
+[35.783070] (-) TimerEvent: {}
+[35.883559] (-) TimerEvent: {}
+[35.984074] (-) TimerEvent: {}
+[36.084545] (-) TimerEvent: {}
+[36.185007] (-) TimerEvent: {}
+[36.285474] (-) TimerEvent: {}
+[36.385937] (-) TimerEvent: {}
+[36.486421] (-) TimerEvent: {}
+[36.586893] (-) TimerEvent: {}
+[36.687345] (-) TimerEvent: {}
+[36.787898] (-) TimerEvent: {}
+[36.888366] (-) TimerEvent: {}
+[36.988798] (-) TimerEvent: {}
+[37.089261] (-) TimerEvent: {}
+[37.189742] (-) TimerEvent: {}
+[37.290226] (-) TimerEvent: {}
+[37.390706] (-) TimerEvent: {}
+[37.403929] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kint main(int, char**)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[37.404230] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:34:9:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Ktask_selection\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[37.404405] (cartesian_impedance_control) StderrLine: {'line': b'   34 |     int \x1b[01;35m\x1b[Ktask_selection\x1b[m\x1b[K, param_selection;\n'}
+[37.404534] (cartesian_impedance_control) StderrLine: {'line': b'      |         \x1b[01;35m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[37.404659] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:34:25:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kparam_selection\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[37.404831] (cartesian_impedance_control) StderrLine: {'line': b'   34 |     int task_selection, \x1b[01;35m\x1b[Kparam_selection\x1b[m\x1b[K;\n'}
+[37.404957] (cartesian_impedance_control) StderrLine: {'line': b'      |                         \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[37.490902] (-) TimerEvent: {}
+[37.591376] (-) TimerEvent: {}
+[37.691882] (-) TimerEvent: {}
+[37.792331] (-) TimerEvent: {}
+[37.892973] (-) TimerEvent: {}
+[37.993447] (-) TimerEvent: {}
+[38.093963] (-) TimerEvent: {}
+[38.194483] (-) TimerEvent: {}
+[38.294991] (-) TimerEvent: {}
+[38.395460] (-) TimerEvent: {}
+[38.495950] (-) TimerEvent: {}
+[38.596404] (-) TimerEvent: {}
+[38.696890] (-) TimerEvent: {}
+[38.750794] (cartesian_impedance_control) StdoutLine: {'line': b'[ 87%] \x1b[32m\x1b[1mLinking CXX executable force_control_client\x1b[0m\n'}
+[38.797089] (-) TimerEvent: {}
+[38.897530] (-) TimerEvent: {}
+[38.969944] (cartesian_impedance_control) StdoutLine: {'line': b'[ 87%] Built target force_control_client\n'}
+[38.997742] (-) TimerEvent: {}
+[39.098185] (-) TimerEvent: {}
+[39.198642] (-) TimerEvent: {}
+[39.227345] (cartesian_impedance_control) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable user_input_client\x1b[0m\n'}
+[39.298811] (-) TimerEvent: {}
+[39.399709] (-) TimerEvent: {}
+[39.441272] (cartesian_impedance_control) StdoutLine: {'line': b'[100%] Built target user_input_client\n'}
+[39.460304] (cartesian_impedance_control) CommandEnded: {'returncode': 0}
+[39.499893] (-) TimerEvent: {}
+[39.541555] (cartesian_impedance_control) JobProgress: {'identifier': 'cartesian_impedance_control', 'progress': 'install'}
+[39.554384] (cartesian_impedance_control) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/simi/franka_ros2_ws/build/cartesian_impedance_control'], 'cwd': '/home/simi/franka_ros2_ws/build/cartesian_impedance_control', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'simi'), ('LC_TIME', 'de_CH.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster/lib:/home/simi/franka_ros2_ws/install/franka_semantic_components/lib:/home/simi/franka_ros2_ws/install/franka_hardware/lib:/home/simi/franka_ros2_ws/install/messages_fr3/lib:/home/simi/franka_ros2_ws/install/franka_msgs/lib:/home/simi/franka_ros2_ws/install/cartesian_impedance_control/lib:/home/simi/franka_ros2_ws/install/joint_trajectory_controller/lib:/home/simi/franka_ros2_ws/install/integration_launch_testing/lib:/home/simi/franka_ros2_ws/install/franka_example_controllers/lib:/home/simi/franka_ros2_ws/install/franka_gripper/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/simi'), ('OLDPWD', '/home/simi'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'de_CH.UTF-8'), ('SYSTEMD_EXEC_PID', '1762'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/simi/franka_ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'simi'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'simi'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/simi-IdeaPad-Flex-5-14ALC05:@/tmp/.ICE-unix/1738,unix/simi-IdeaPad-Flex-5-14ALC05:/tmp/.ICE-unix/1738'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'de_CH.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/5a30748b_e854_43fd_a78d_57e274a2e1dd'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'de_CH.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.XLRGU2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.322'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/simi/franka_ros2_ws/install/realtime_plot_of_data:/home/simi/franka_ros2_ws/install/cartesian_impedance_control:/home/simi/franka_ros2_ws/install/messages_fr3:/home/simi/franka_ros2_ws/install/joint_trajectory_controller:/home/simi/franka_ros2_ws/install/integration_launch_testing:/home/simi/franka_ros2_ws/install/franka_bringup:/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster:/home/simi/franka_ros2_ws/install/franka_example_controllers:/home/simi/franka_ros2_ws/install/franka_semantic_components:/home/simi/franka_ros2_ws/install/franka_moveit_config:/home/simi/franka_ros2_ws/install/franka_hardware:/home/simi/franka_ros2_ws/install/franka_gripper:/home/simi/franka_ros2_ws/install/franka_msgs:/home/simi/franka_ros2_ws/install/franka_description:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'de_CH.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'de_CH.UTF-8'), ('LC_IDENTIFICATION', 'de_CH.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/simi/franka_ros2_ws/build/cartesian_impedance_control'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/simi/franka_ros2_ws/install/realtime_plot_of_data/lib/python3.10/site-packages:/home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages:/home/simi/franka_ros2_ws/install/franka_gripper/local/lib/python3.10/dist-packages:/home/simi/franka_ros2_ws/install/franka_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'de_CH.UTF-8'), ('LC_PAPER', 'de_CH.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster:/home/simi/franka_ros2_ws/install/franka_semantic_components:/home/simi/franka_ros2_ws/install/franka_hardware:/home/simi/franka_ros2_ws/install/messages_fr3:/home/simi/franka_ros2_ws/install/franka_msgs:/home/simi/franka_ros2_ws/install/franka_description:/home/simi/franka_ros2_ws/install/cartesian_impedance_control:/home/simi/franka_ros2_ws/install/joint_trajectory_controller:/home/simi/franka_ros2_ws/install/integration_launch_testing:/home/simi/franka_ros2_ws/install/franka_bringup:/home/simi/franka_ros2_ws/install/franka_example_controllers:/home/simi/franka_ros2_ws/install/franka_moveit_config:/home/simi/franka_ros2_ws/install/franka_gripper:/home/simi/franka_ros2_ws/install/realtime_plot_of_data:/opt/ros/humble')]), 'shell': False}
+[39.565766] (cartesian_impedance_control) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[39.566030] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/cartesian_impedance_control.xml\n'}
+[39.566555] (cartesian_impedance_control) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/lib/cartesian_impedance_control/user_input_client\n'}
+[39.567629] (cartesian_impedance_control) StdoutLine: {'line': b'-- Set runtime path of "/home/simi/franka_ros2_ws/install/cartesian_impedance_control/lib/cartesian_impedance_control/user_input_client" to ""\n'}
+[39.568384] (cartesian_impedance_control) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/lib/cartesian_impedance_control/force_control_client\n'}
+[39.569116] (cartesian_impedance_control) StdoutLine: {'line': b'-- Set runtime path of "/home/simi/franka_ros2_ws/install/cartesian_impedance_control/lib/cartesian_impedance_control/force_control_client" to ""\n'}
+[39.569491] (cartesian_impedance_control) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/lib/libcartesian_impedance_control.so\n'}
+[39.574239] (cartesian_impedance_control) StdoutLine: {'line': b'-- Set runtime path of "/home/simi/franka_ros2_ws/install/cartesian_impedance_control/lib/libcartesian_impedance_control.so" to ""\n'}
+[39.574604] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/include\n'}
+[39.574736] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/include/cartesian_impedance_control\n'}
+[39.574962] (cartesian_impedance_control) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/include/cartesian_impedance_control/user_input_server.hpp\n'}
+[39.575088] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/include/cartesian_impedance_control/force_control_server.hpp\n'}
+[39.575389] (cartesian_impedance_control) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/include/cartesian_impedance_control/cartesian_impedance_controller.hpp\n'}
+[39.575570] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/launch\n'}
+[39.575703] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/launch/controllers.yaml\n'}
+[39.575900] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/launch/__pycache__\n'}
+[39.576064] (cartesian_impedance_control) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/launch/__pycache__/cartesian_impedance_controller.launch.cpython-310.pyc\n'}
+[39.576209] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/launch/cartesian_impedance_controller.launch.py\n'}
+[39.576301] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/environment/library_path.sh\n'}
+[39.576363] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/environment/library_path.dsv\n'}
+[39.576422] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/ament_index/resource_index/package_run_dependencies/cartesian_impedance_control\n'}
+[39.576482] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/ament_index/resource_index/parent_prefix_path/cartesian_impedance_control\n'}
+[39.576541] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/environment/ament_prefix_path.sh\n'}
+[39.576600] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/environment/ament_prefix_path.dsv\n'}
+[39.576673] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/environment/path.sh\n'}
+[39.576733] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/environment/path.dsv\n'}
+[39.576792] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/local_setup.bash\n'}
+[39.576851] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/local_setup.sh\n'}
+[39.576911] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/local_setup.zsh\n'}
+[39.576978] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/local_setup.dsv\n'}
+[39.577037] (cartesian_impedance_control) StdoutLine: {'line': b'-- Installing: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/package.dsv\n'}
+[39.577094] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/ament_index/resource_index/packages/cartesian_impedance_control\n'}
+[39.577152] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/ament_index/resource_index/controller_interface__pluginlib__plugin/cartesian_impedance_control\n'}
+[39.577210] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[39.577267] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[39.577334] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[39.577391] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/cmake/cartesian_impedance_controlConfig.cmake\n'}
+[39.577455] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/cmake/cartesian_impedance_controlConfig-version.cmake\n'}
+[39.577510] (cartesian_impedance_control) StdoutLine: {'line': b'-- Up-to-date: /home/simi/franka_ros2_ws/install/cartesian_impedance_control/share/cartesian_impedance_control/package.xml\n'}
+[39.578608] (cartesian_impedance_control) CommandEnded: {'returncode': 0}
+[39.600688] (-) TimerEvent: {}
+[39.674394] (cartesian_impedance_control) JobEnded: {'identifier': 'cartesian_impedance_control', 'rc': 0}
+[39.675414] (-) EventReactorShutdown: {}

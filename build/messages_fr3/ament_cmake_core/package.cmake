@@ -1,6 +1,6 @@
 set(_AMENT_PACKAGE_NAME "messages_fr3")
-set(messages_fr3_VERSION "0.0.0")
-set(messages_fr3_MAINTAINER "curdin <cdeplazes@ethz.ch>")
+set(messages_fr3_VERSION "1.0.0")
+set(messages_fr3_MAINTAINER "Simon <simburri@ethz.ch>")
 set(messages_fr3_BUILD_DEPENDS "rosidl_default_generators" "builtin_interfaces" "std_msgs" "action_msgs")
 set(messages_fr3_BUILDTOOL_DEPENDS "ament_cmake")
 set(messages_fr3_BUILD_EXPORT_DEPENDS "builtin_interfaces" "std_msgs" "action_msgs")

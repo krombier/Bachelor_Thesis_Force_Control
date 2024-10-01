@@ -45,8 +45,40 @@ namespace cartesian_impedance_control {
 
 CartesianImpedanceController::CartesianImpedanceController() {}
 
+void CartesianImpedanceController::update_forces(Eigen::Matrix<double, 6, 1>& F_observed, 
+                                                Eigen::Matrix<double, 7, 1>& beta_observer, 
+                                                Eigen::Matrix<double, 7, 1>& gamma_observer,
+                                                Eigen::Matrix<double, 7, 1>& r_observer,
+                                                const Eigen::Matrix<double, 7, 7>& K_observer,
+                                                const Eigen::Matrix<double, 7, 1>& coriolis,
+                                                const Eigen::Matrix<double, 7, 7>& M_dot,
+                                                const Eigen::Matrix<double, 7, 1>& dq_,
+                                                const Eigen::Matrix<double, 7, 1>& tau_d,
+                                                const double& dt,
+                                                const Eigen::Matrix<double, 7, 7>& M,
+                                                const Eigen::MatrixXd& jacobian_transpose_pinv,
+                                                const Eigen::Matrix<double, 6, 1>& F_cmd) {
+  //observed force
+  beta_observer = coriolis - M_dot * dq_;
+  gamma_observer += (tau_d - beta_observer + r_observer) * dt;
+  r_observer = K_observer * (M * dq_ - gamma_observer);   // torque observed
+  F_observed = jacobian_transpose_pinv * r_observer /*+ F_cmd*/;   // adds requested force, no clue why seems sus
+}
+/*
+void cartesian_impedance_control::update_observer() {
+  F_ext = Eigen::Map<Eigen::Matrix<double, 6, 1>>(robot_state_.O_F_ext_hat_K.data()) * 0.01 + 0.99 * F_last;
+  F_last = F_ext;
+  delta_F =  (F_contact_des + F_ext); //F_ext shows in the negative direction of F_contact desired
+  error_F += dt * delta_F;
+  Eigen::Matrix<double, 6, 1> dF_error = (delta_F - delta_F_last) / dt * 0.1 + dF_last * 0.9; //filtered Force error derivative estimate
+  dF_last = dF_error;
+  delta_F_last = delta_F;
+}
+*/
 // add Sm and Sf by pass by reference
-void CartesianImpedanceController::adapt_Sm_and_Sf(const Eigen::Matrix<double,6,1>& F_request, Eigen::Matrix<double, 6, 6>& Sm, Eigen::Matrix<double, 6, 6>& Sf){    //update the Sm and Sf matrix
+//
+void CartesianImpedanceController::adapt_Sm_and_Sf(const int& frame, const Eigen::Matrix<double, 6, 1>& F_request, const Eigen::Matrix<double,3,3>& rot_matrix, 
+                        Eigen::Matrix<double, 6, 6>& Sm, Eigen::Matrix<double, 6, 6>& Sf){    //update the Sm and Sf matrix
   Sm = Eigen::MatrixXd::Zero(6, 6);
   for (int i =0; i<6; ++i){
     if (F_request(i)==0){
@@ -55,7 +87,43 @@ void CartesianImpedanceController::adapt_Sm_and_Sf(const Eigen::Matrix<double,6,
       Sm(i,i) = 1;
     }
   }
+  
   Sf = IDENTITY - Sm;
+
+  if (frame == 2){
+    Eigen::Matrix<double, 3, 3> Sm_top_left = Sm.topLeftCorner(3,3);
+    Eigen::Matrix<double, 3, 3> Sm_bottom_right = Sm.bottomRightCorner(3,3);
+    Eigen::Matrix<double, 3, 3> Identity_3x3 = Eigen::MatrixXd::Identity(3, 3);
+    
+    // Calculations according to robot dynamics script chapter 3.9.4 Operational Space Control. The matrices had to to be inverted (= transposed to get it running).
+    Sm.topLeftCorner(3,3) = rot_matrix * Sm_top_left * rot_matrix.transpose();
+    Sm.bottomRightCorner(3,3) = rot_matrix * Sm_bottom_right * rot_matrix.transpose();
+    Sf.topLeftCorner(3,3) = rot_matrix * (Identity_3x3 - Sm_top_left) * rot_matrix.transpose();  
+    Sf.bottomRightCorner(3,3) = rot_matrix * (Identity_3x3 - Sm_bottom_right) * rot_matrix.transpose();
+  }
+
+  
+}
+
+//make current position desired position if the requested force is changed
+void CartesianImpedanceController::change_desired_position_if_force_changes(const Eigen::Quaterniond orientation, const Eigen::Vector3d position, const Eigen::Matrix<double, 6, 1>& F_request, 
+                        Eigen::Matrix<double, 6, 1>& F_request_old, Eigen::Vector3d& position_d_, Eigen::Quaterniond& orientation_d_, 
+                        Eigen::Vector3d& position_d_target_, Eigen::Vector3d& rotation_d_target_/*, bool& keepprinting*/){
+  for (int i =0; i<6; ++i){
+    if (F_request(i)!= F_request_old(i)){
+      position_d_ = position;
+      position_d_target_ = position;
+      orientation_d_ = orientation;
+      Eigen::Matrix3d rot_Matrix_to_transform_to_euler_angles = orientation.toRotationMatrix();
+      rotation_d_target_ = rot_Matrix_to_transform_to_euler_angles.eulerAngles(0,1,2);
+      /*
+      if(F_request_old.norm()!=0){    //was used for debugging
+        keepprinting = false;
+      }*/
+      F_request_old = F_request;
+      break;
+    }
+  }
 }
 
 
@@ -147,9 +215,9 @@ Eigen::Matrix<double, 7, 1> CartesianImpedanceController::saturateTorqueRate(   
   const Eigen::Matrix<double, 7, 1>& tau_J_d_M) {  
   Eigen::Matrix<double, 7, 1> tau_d_saturated{};
   for (size_t i = 0; i < 7; i++) {
-  double difference = tau_d_calculated[i] - tau_J_d_M[i];
-  tau_d_saturated[i] =
-         tau_J_d_M[i] + std::max(std::min(difference, delta_tau_max_), -delta_tau_max_);        // the max(min() ) makes sure that absolute value
+    double difference = tau_d_calculated[i] - tau_J_d_M[i];
+    tau_d_saturated[i] =
+    tau_J_d_M[i] + std::max(std::min(difference, delta_tau_max_), -delta_tau_max_);        // the max(min() ) makes sure that absolute value
   }                                                                                             // of difference is bellow delta_tau_max
   return tau_d_saturated;
 }
@@ -202,11 +270,11 @@ controller_interface::InterfaceConfiguration CartesianImpedanceController::state
 
 
 CallbackReturn CartesianImpedanceController::on_init() {
-   UserInputServer input_server_obj(&position_d_target_,& rotation_d_target_,& K,& D,& T);                // creates or starts the server aka calls constructor of Input server
+   UserInputServer input_server_obj(&position_d_target_,& rotation_d_target_, /*&gripper_command,*/ & K,& D,& T);                // creates or starts the server aka calls constructor of Input server
    std::thread input_thread(&UserInputServer::main, input_server_obj, 0, nullptr);
    input_thread.detach();                                                                                 // disconnect thread so other thread mustn't wait for 
-   // the 3 lines below should start my force_control_server.cpp
-   UserInputForceServer input_server_obj2(&F_contact_target);                
+   // the 3 lines below should start force_control_server.cpp
+   UserInputForceServer input_server_obj2(&F_contact_target, &frame);                
    std::thread input_thread2(&UserInputForceServer::main, input_server_obj2, 0, nullptr);
    input_thread2.detach();
 
@@ -244,8 +312,32 @@ CallbackReturn CartesianImpedanceController::on_configure(const rclcpp_lifecycle
     fprintf(stderr,  "Exception thrown during publisher for F_ext creation at configure stage with message : %s \n",e.what());
     return CallbackReturn::ERROR;
     }
-  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////here listens to a topic (initialized publisher)
+  /*        //commented because I will try to remove that part from the controller
+  try {                                                           //if try has an error it does catch instead
+    rclcpp::QoS qos_profile3(1); // Depth of the message queue aka does only keep one message all older ones get deleted
+    qos_profile3.reliability(RMW_QOS_POLICY_RELIABILITY_RELIABLE);
+    gripper_command_publisher_ = get_node()->create_publisher<std_msgs::msg::String>("gripper_command", qos_profile3);
+    std::cout << "Succesfully publishing gripper commands" << std::endl;
+  }
 
+  catch (const std::exception& e) {
+    fprintf(stderr,  "Exception thrown during publisher for gripper command creation at configure stage with message : %s \n",e.what());
+    return CallbackReturn::ERROR;
+    }
+  */
+   /* ////////////////////////////////////////////////////////////////////////////////////// 
+  try {                                                           //set up for gripper must be executed when the gripper gets exchanged
+    gripper_.homing();
+    //gripper_.move(0.04, gripper_speed);
+    
+    std::cout<< "this has worked, we should see me once only"<< std::endl;
+  }
+
+  catch (const std::exception& e) {
+    fprintf(stderr,  "Exception thrown during homing of the gripper in on_configure with message : %s \n",e.what());
+    return CallbackReturn::ERROR;
+    } */
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////here listens to a topic (initialized publisher)
   RCLCPP_DEBUG(get_node()->get_logger(), "configured successfully");
   return CallbackReturn::SUCCESS;
 }
@@ -260,6 +352,14 @@ CallbackReturn CartesianImpedanceController::on_activate(                       
   position_d_ = initial_transform.translation();
   orientation_d_ = Eigen::Quaterniond(initial_transform.rotation());
   std::cout << "Completed Activation process" << std::endl;
+  /*      // basic version of this is done in .hpp file
+  try {                                                                     // should initialize gripper
+    gripper_ = std::make_unique<franka::Gripper>("192.168.1.200");
+  } catch (const franka::Exception& ex) {
+    RCLCPP_ERROR(get_node()->get_logger(), "Failed to initialize gripper: %s", ex.what());
+    return controller_interface::CallbackReturn::ERROR;
+  } */
+  
   return CallbackReturn::SUCCESS;
 }
 
@@ -281,7 +381,7 @@ std::array<double, 6> CartesianImpedanceController::convertToStdArray(const geom
     return result;
 }
 
-void CartesianImpedanceController::topic_callback(const std::shared_ptr<franka_msgs::msg::FrankaRobotState> msg) {      // measures the external force and corrects directly for friction
+void CartesianImpedanceController::topic_callback(const std::shared_ptr<franka_msgs::msg::FrankaRobotState> msg) {      // measures the external force 
   O_F_ext_hat_K = convertToStdArray(msg->o_f_ext_hat_k);
   arrayToMatrix(O_F_ext_hat_K, O_F_ext_hat_K_M);
 }
@@ -298,8 +398,7 @@ void CartesianImpedanceController::updateJointStates() {                        
 }
 
 controller_interface::return_type CartesianImpedanceController::update(const rclcpp::Time& /*time*/, const rclcpp::Duration& /*period*/) {          // 7 DOF robot  
-
-  std::array<double, 49> mass = franka_robot_model_->getMassMatrix();                                                                      // 7x7 mass matrix
+    std::array<double, 49> mass = franka_robot_model_->getMassMatrix();                                                                      // 7x7 mass matrix
   std::array<double, 7> coriolis_array = franka_robot_model_->getCoriolisForceVector();
   std::array<double, 42> jacobian_array =  franka_robot_model_->getZeroJacobian(franka::Frame::kEndEffector);  // zero frame = base frame  // 6x7 Jacobian (6 coordinates, 7 DOFs)
   std::array<double, 16> pose = franka_robot_model_->getPoseMatrix(franka::Frame::kEndEffector);                                           // T-Matrix (4x4)
@@ -309,23 +408,56 @@ controller_interface::return_type CartesianImpedanceController::update(const rcl
   Eigen::Affine3d transform(Eigen::Matrix4d::Map(pose.data()));
   Eigen::Vector3d position(transform.translation());                                                              // creates fancier T-Matrix
   Eigen::Quaterniond orientation(transform.rotation());
+  M_dot = (M - M_old) * dt;
+  M_old = M;
+
+  geometry_msgs::msg::Wrench wrench_msg;
+  Eigen::Matrix<double,3,3> rotation_matrix = transform.rotation();                                    
+  
+  updateJointStates();
+  adapt_Sm_and_Sf(frame, F_contact_target,rotation_matrix, Sm, Sf);
+  change_desired_position_if_force_changes(orientation, position, F_contact_target, F_request_old, position_d_, orientation_d_, position_d_target_, rotation_d_target_ /*, keepprinting*/);
   orientation_d_target_ = Eigen::AngleAxisd(rotation_d_target_[0], Eigen::Vector3d::UnitX())
                         * Eigen::AngleAxisd(rotation_d_target_[1], Eigen::Vector3d::UnitY())
                         * Eigen::AngleAxisd(rotation_d_target_[2], Eigen::Vector3d::UnitZ());                     // mimics a quaternion according to documentation in Eigen
-  geometry_msgs::msg::Wrench wrench_msg;
-   
-  // Eigen::Matrix<double,3,3> rotation_matrix = transform.rotation();                                        //currently not needed
   
-  updateJointStates();
-  adapt_Sm_and_Sf(F_contact_target, Sm, Sf);
-  if (outcounter % (1000/update_frequency) == 0){
-    std::cout << "Sm calculated"<< std::endl;
-    std::cout << Sm << std::endl;
-    std::cout << "--------" << std::endl;
-    std::cout << "Sf calculated"<< std::endl;
-    std::cout << Sf << std::endl;
-    std::cout << "--------" << std::endl;
+  //////////////////////////////////////////// multiple /* */ present here
+  /*
+  if (outcounter % (1000/update_frequency) == 0 *//*and run*//*){
+  //   std::cout << "Sm calculated"<< std::endl;
+  //   std::cout << Sm << std::endl;
+  //   std::cout << "--------" << std::endl;
+  //   std::cout << "Sf calculated"<< std::endl;
+  //   std::cout << Sf << std::endl;
+  // std::cout << "--------" << std::endl;
+  // std::cout << "I_error at start of loop" << std::endl;
+  // std::cout << I_error << std::endl;
+  std::cout << "--------" << std::endl;
+  std::cout << "position_d_" << std::endl;
+  std::cout << position_d_ << std::endl;
+  std::cout << "--------" << std::endl;
+  std::cout << "position_d_target_" << std::endl;
+  std::cout << position_d_target_ << std::endl;
+  std::cout << "--------" << std::endl;
+  std::cout << "orientation_d_" << std::endl;
+  std::cout << orientation_d_ << std::endl;
+  std::cout << "--------" << std::endl;
+  std::cout << "orientation_d_target_" << std::endl;
+  std::cout << orientation_d_target_ << std::endl;
+  std::cout << "--------" << std::endl;
+  std::cout << "rotation_d_target_" << std::endl;
+  std::cout << rotation_d_target_ << std::endl;
+  std::cout << "--------" << std::endl;
   }
+  */
+  /*  //was only used for debugging
+  if (!keepprinting and out_store){
+    outcounter_store = outcounter;
+    out_store = false;
+  }
+  if (!keepprinting and !out_store and (outcounter-outcounter_store)>1000){
+    run = false;
+  }*/
 
   
 
@@ -370,35 +502,34 @@ controller_interface::return_type CartesianImpedanceController::update(const rcl
   calculate_tau_friction(dq_, tau_impedance, jacobian, Sm, error, jacobian_pinv); 
 
   get_rid_of_friction_force(jacobian_transpose_pinv, tau_friction, O_F_ext_hat_K_M, O_F_ext_hat_K_M_no_friction);
-  F_ext = 0.99 * F_ext + 0.01 * /*O_F_ext_hat_K_M*/  O_F_ext_hat_K_M_no_friction; //Filtering       //the second part is the measured external force                                               // exponential filtering with smoothing factor = 0.1
+  F_ext = /*0.999 * F_ext + 0.001 */ /*O_F_ext_hat_K_M*/  O_F_ext_hat_K_M_no_friction; //Filtering       //the second part is the measured external force                                               // exponential filtering with smoothing factor = 0.1
   I_F_error += dt * Sf *(F_contact_des - F_ext);
   F_cmd = Sf *0.4 *(F_contact_des - F_ext) + 0.9 * I_F_error + 0.9 * F_contact_des;     //////////////////////////////                      // P + I + feedforward term for faster convergence
 
   tau_nullspace << (Eigen::MatrixXd::Identity(7, 7) -
                     jacobian.transpose() * jacobian_transpose_pinv) *                                           /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////here nullspace matrix gets calculated
                     (nullspace_stiffness_ * config_control * (q_d_nullspace_ - q_) - //if config_control = true we control the whole robot configuration
-                    (2.0 * sqrt(nullspace_stiffness_)) * dq_);  // if config control ) false we don't care about the joint position
+                    (2.0 * sqrt(nullspace_stiffness_)) * dq_);  // if config_control ) false we don't care about the joint position, currently set to false.
 
   tau_impedance = jacobian.transpose() * Sm * (F_impedance /*+ F_repulsion + F_potential*/) + jacobian.transpose() * Sf * F_cmd;    // combine force control and impedance control (this is where the magic happens)
-  auto tau_d_placeholder = tau_impedance + tau_nullspace + coriolis + tau_friction; //add nullspace and coriolis components to desired torque gets rid of part of tau_impedance that is only there because of friction
+  auto tau_d_placeholder = tau_impedance + tau_nullspace + coriolis + tau_friction; //add nullspace and coriolis components to desired torque. Gets rid of part of tau_impedance that is only there because of friction
   tau_d << tau_d_placeholder;
   tau_d << saturateTorqueRate(tau_d, tau_J_d_M);  // Saturate torque rate to avoid discontinuities
   tau_J_d_M = tau_d;                                                                                            // store this value for saturateTorqueRate function in 
                                                                                                                 // next iteration
   
-  if (outcounter % (1000/update_frequency) == 0){
-    std::cout << "F_contact_des [N]" << std::endl;
-    std::cout << F_contact_des << std::endl;
-    std::cout << "--------" << std::endl;
-    std::cout << "F_ext [N]" << std::endl;
-    std::cout << F_ext << std::endl;
-    std::cout << "--------" << std::endl;
-    std::cout << "I_F_error [N]" << std::endl;
-    std::cout << I_F_error << std::endl;
-    std::cout << "--------" << std::endl;
-    std::cout << "F_cmd [N]" << std::endl;
-    std::cout << F_cmd << std::endl;
-    std::cout << "--------" << std::endl;
+  if (outcounter % (1000/update_frequency) == 0 /*and run*/){
+    // std::cout << "F_contact_des [N]" << std::endl;
+    // std::cout << F_contact_des << std::endl;
+    // std::cout << "--------" << std::endl;
+    // std::cout << "F_ext [N]" << std::endl;
+    // std::cout << F_ext << std::endl;
+    // std::cout << "--------" << std::endl;
+    // F:cout << error << std::endl;
+    // std::cout << "--------" << std::endl;
+    // std::cout << "F_cmd [N]" << std::endl;
+    // std::cout << F_cmd << std::endl;
+    // std::cout << "--------" << std::endl;
     // std::cout << "O_F_ext_hat_K [N]" << std::endl;
     // std::cout << O_F_ext_hat_K << std::endl;
     // std::cout << "O_F_ext_hat_K_M [N]" << std::endl;
@@ -443,8 +574,8 @@ controller_interface::return_type CartesianImpedanceController::update(const rcl
     // std::cout << coriolis << std::endl;
     // std::cout << "Inertia scaling [m]: " << std::endl;
     // std::cout << T << std::endl;
-    // std::cout << "Position [m]: " << std::endl;
-    // std::cout << position << std::endl;
+    std::cout << "Position [m]: " << std::endl;
+    std::cout << position << std::endl;
     // std::cout << "Tau_d [m]: " << std::endl;
     // std::cout << tau_d << std::endl;
   }
@@ -456,18 +587,23 @@ controller_interface::return_type CartesianImpedanceController::update(const rcl
     command_interfaces_[i].set_value(tau_d(i));                                                                 // give computed values to the robot or the controller  
   }
 
-  // publish measured external force to topic
-  wrench_msg.force.x = F_ext[0];
-  wrench_msg.force.y = F_ext[1];
-  wrench_msg.force.z = F_ext[2];
-  wrench_msg.torque.x = F_ext[3];
-  wrench_msg.torque.y = F_ext[4];
-  wrench_msg.torque.z = F_ext[5];
+  // publishes observed external force to topic
+  wrench_msg.force.x = F_observed[0];
+  wrench_msg.force.y = F_observed[1];
+  wrench_msg.force.z = F_observed[2];
+  wrench_msg.torque.x = F_observed[3];
+  wrench_msg.torque.y = F_observed[4];
+  wrench_msg.torque.z = F_observed[5];
   wrench_publisher_->publish(wrench_msg);
   
 
   outcounter++;
   update_stiffness_and_references(F_contact_des);                                                                            // update target position and resistances against movement
+  update_forces(F_observed, beta_observer, gamma_observer, r_observer, K_observer, coriolis, M_dot, dq_,
+                tau_d, dt, M, jacobian_transpose_pinv, F_cmd);
+  //move_gripper(gripper_, gripper_command, gripper_speed);
+  //gripper_.move(0.04, gripper_speed);          //just here for testing
+  //gripper_.grasp(0.06, gripper_speed,50);       //distance for sanding block
   return controller_interface::return_type::OK;
 }
 }

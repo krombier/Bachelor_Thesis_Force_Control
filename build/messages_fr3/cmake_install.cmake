@@ -248,7 +248,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/messages_fr3-0.0.0-py3.10.egg-info" TYPE DIRECTORY FILES "/home/simi/franka_ros2_ws/build/messages_fr3/ament_cmake_python/messages_fr3/messages_fr3.egg-info/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/messages_fr3-1.0.0-py3.10.egg-info" TYPE DIRECTORY FILES "/home/simi/franka_ros2_ws/build/messages_fr3/ament_cmake_python/messages_fr3/messages_fr3.egg-info/")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

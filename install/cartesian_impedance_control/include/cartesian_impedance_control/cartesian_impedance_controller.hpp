@@ -29,7 +29,8 @@
 #include "cartesian_impedance_control/user_input_server.hpp"
 #include "cartesian_impedance_control/force_control_server.hpp"
 
-#include "geometry_msgs/msg/wrench.hpp"           // added by SImon 13.06.24 to get Force publisher running if it doesn't work out remove it
+#include "geometry_msgs/msg/wrench.hpp"           // added by Simon 13.06.24 to get Force publisher running if it doesn't work out remove it
+//#include "std_msgs/msg/string.hpp"              // added on 18.09. for gripper
 
 #include <rclcpp/rclcpp.hpp>
 #include "rclcpp/subscription.hpp"
@@ -42,6 +43,9 @@
 #include <franka/model.h>
 #include <franka/robot.h>
 #include <franka/robot_state.h>
+//#include <franka/gripper.h>                     // added by Simon 15.08.24 to stear the gripper
+
+
 
 #include "franka_hardware/franka_hardware_interface.hpp"
 #include <franka_hardware/model.hpp>
@@ -94,7 +98,8 @@ public:
     rclcpp::Subscription<franka_msgs::msg::FrankaRobotState>::SharedPtr franka_state_subscriber = nullptr;
     rclcpp::Service<messages_fr3::srv::SetPose>::SharedPtr pose_srv_;
     rclcpp::Service<messages_fr3::srv::SetForce>::SharedPtr force_srv_;
-    rclcpp::Publisher<geometry_msgs::msg::Wrench>::SharedPtr wrench_publisher_; 
+    rclcpp::Publisher<geometry_msgs::msg::Wrench>::SharedPtr wrench_publisher_;
+    //rclcpp::Publisher<std_msgs::msg::String>::SharedPtr gripper_command_publisher_;                  // currently commented out because I'll try to pass the gripper command directly to the robot 
   
 
     //Functions
@@ -104,7 +109,11 @@ public:
     void update_stiffness_and_references(Eigen::Matrix<double, 6, 1>& F_contact_des);
     void arrayToMatrix(const std::array<double, 6>& inputArray, Eigen::Matrix<double, 6, 1>& resultMatrix);
     void arrayToMatrix(const std::array<double, 7>& inputArray, Eigen::Matrix<double, 7, 1>& resultMatrix);
-    void adapt_Sm_and_Sf(const Eigen::Matrix<double, 6, 1>& F_request, Eigen::Matrix<double, 6, 6>& Sm, Eigen::Matrix<double, 6, 6>& Sf);
+    void adapt_Sm_and_Sf(const int& frame, const Eigen::Matrix<double, 6, 1>& F_request, const Eigen::Matrix<double,3,3>& rot_matrix, 
+                        Eigen::Matrix<double, 6, 6>& Sm, Eigen::Matrix<double, 6, 6>& Sf);
+    void change_desired_position_if_force_changes(const Eigen::Quaterniond orientation, const Eigen::Vector3d position, const Eigen::Matrix<double, 6, 1>& F_request, 
+                        Eigen::Matrix<double, 6, 1>& F_request_old, Eigen::Vector3d& position_d_, Eigen::Quaterniond& orientation_d_,
+                        Eigen::Vector3d& position_d_target_, Eigen::Vector3d& rotation_d_target_/*, bool& keepprinting*/);
     void calculate_tau_friction(const Eigen::Matrix<double, 7, 1>& dq_, const Eigen::Matrix<double, 7, 1>& tau_impedance,
                                                           const Eigen::Matrix<double, 6, 7>& jacobian, const Eigen::Matrix<double, 6, 6>& Sm,
                                                           const Eigen::Matrix<double, 6, 1>& error, const Eigen::MatrixXd& jacobian_pinv);
@@ -112,6 +121,20 @@ public:
                                                             const Eigen::Matrix<double, 7, 1>& tau_friction, 
                                                             const Eigen::Matrix<double, 6, 1>& O_F_ext_hat_K_M,
                                                             Eigen::Matrix<double, 6, 1>& O_F_ext_hat_K_M_no_friction);
+    void update_forces(Eigen::Matrix<double, 6, 1>& F_observed, 
+                                                Eigen::Matrix<double, 7, 1>& beta_observer, 
+                                                Eigen::Matrix<double, 7, 1>& gamma_observer,
+                                                Eigen::Matrix<double, 7, 1>& r_observer,
+                                                const Eigen::Matrix<double, 7, 7>& K_observer,
+                                                const Eigen::Matrix<double, 7, 1>& coriolis,
+                                                const Eigen::Matrix<double, 7, 7>& M_dot,
+                                                const Eigen::Matrix<double, 7, 1>& dq_,
+                                                const Eigen::Matrix<double, 7, 1>& tau_d,
+                                                const double& dt,
+                                                const Eigen::Matrix<double, 7, 7>& M,
+                                                const Eigen::MatrixXd& jacobian_transpose_pinv,
+                                                const Eigen::Matrix<double, 6, 1>& F_cmd);
+    //void move_gripper(const franka::Gripper& gripper, const int& gripper_command, const double& gripper_speed);
     Eigen::Matrix<double, 7, 1> saturateTorqueRate(const Eigen::Matrix<double, 7, 1>& tau_d_calculated, const Eigen::Matrix<double, 7, 1>& tau_J_d);  
     std::array<double, 6> convertToStdArray(const geometry_msgs::msg::WrenchStamped& wrench);
     
@@ -125,7 +148,10 @@ public:
     Eigen::Matrix<double, 7, 1> q_;
     Eigen::Matrix<double, 7, 1> dq_;
     Eigen::MatrixXd jacobian_transpose_pinv; 
-    Eigen::MatrixXd jacobian_pinv;          
+    Eigen::MatrixXd jacobian_pinv;
+    Eigen::Matrix<double, 7, 7> M_dot = Eigen::MatrixXd::Zero(7, 7);      
+    Eigen::Matrix<double, 7, 7> M_old = Eigen::MatrixXd::Zero(7, 7);          
+    
 
     //Robot parameters
     const int num_joints = 7;
@@ -143,16 +169,16 @@ public:
     Eigen::Matrix<double, 6, 6> Lambda = IDENTITY;                                           // operational space mass matrix
     Eigen::Matrix<double, 6, 6> Sm = IDENTITY;                                               // task space selection matrix for positions and rotation
     Eigen::Matrix<double, 6, 6> Sf = Eigen::MatrixXd::Zero(6, 6);                            // task space selection matrix for forces
-    Eigen::Matrix<double, 6, 6> K =  (Eigen::MatrixXd(6,6) << 250,   0,   0,   0,   0,   0,
-                                                                0, 250,   0,   0,   0,   0,
-                                                                0,   0, 250,   0,   0,   0,  // impedance stiffness term
+    Eigen::Matrix<double, 6, 6> K =  (Eigen::MatrixXd(6,6) << 4000,   0,   0,   0,   0,   0,
+                                                                0, 2000,   0,   0,   0,   0,
+                                                                0,   0, 2000,   0,   0,   0,  // impedance stiffness term
                                                                 0,   0,   0, 130,   0,   0,
                                                                 0,   0,   0,   0, 130,   0,
                                                                 0,   0,   0,   0,   0,  10).finished();
 
-    Eigen::Matrix<double, 6, 6> D =  (Eigen::MatrixXd(6,6) <<  35,   0,   0,   0,   0,   0,
-                                                                0,  35,   0,   0,   0,   0,
-                                                                0,   0,  35,   0,   0,   0,  // impedance damping term
+    Eigen::Matrix<double, 6, 6> D =  (Eigen::MatrixXd(6,6) <<  127,   0,   0,   0,   0,   0,
+                                                                0,  89,   0,   0,   0,   0,
+                                                                0,   0,  89,   0,   0,   0,  // impedance damping term
                                                                 0,   0,   0,   25,   0,   0,
                                                                 0,   0,   0,   0,   25,   0,
                                                                 0,   0,   0,   0,   0,   6).finished();
@@ -198,11 +224,16 @@ public:
     double nullspace_stiffness_target_{0.001};
 
     // Force control variables
-    Eigen::Matrix<double, 6, 1> force_and_moment_target = (Eigen::Matrix<double, 6, 1>()  << 0.0, 0.0, 0.0, 0.0, 0.0, 0.0).finished();
+    int frame = 1;  //frame in which F_contact_target is. 1 = base frame; 2 = endeffector frame
+    Eigen::Matrix<double, 6, 1> F_request_old = Eigen::MatrixXd::Zero(6, 1);
 
     //Logging
     int outcounter = 0;
     const int update_frequency = 10; //frequency for outputs in update function
+    /*int outcounter_store;     ///were used for debugging
+    bool out_store = true;
+    bool keepprinting = true;
+    bool run = true;*/
 
     //Integrator
     Eigen::Matrix<double, 6, 1> I_error = Eigen::MatrixXd::Zero(6, 1);                      // pose error (6d)
@@ -252,6 +283,16 @@ public:
     Eigen::Matrix<double, 7, 1> tau_impedance = Eigen::MatrixXd::Zero(7,1);
     // Friction compensated force
     Eigen::Matrix<double, 6, 1> O_F_ext_hat_K_M_no_friction = Eigen::MatrixXd::Zero(6,1);
+
+
+//observer parameters for force observer, taken from Bachelor Thesis of Viktor Luba: https://polybox.ethz.ch/index.php/s/iYj8ALPijKTAC2z?path=%2FFriction%20compensation
+    Eigen::Matrix<double, 6, 1> F_observed = Eigen::MatrixXd::Zero(7,1);
+    Eigen::Matrix<double, 7, 1> beta_observer = Eigen::MatrixXd::Zero(7,1);
+    Eigen::Matrix<double, 7, 1> gamma_observer = Eigen::MatrixXd::Zero(7,1);
+    Eigen::Matrix<double, 7, 7> K_observer = Eigen::MatrixXd::Identity(7,7) * 300;
+    Eigen::Matrix<double, 7, 1> r_observer = Eigen::MatrixXd::Zero(7,1);
+    //
   };
+  
 
 }  // namespace cartesian_impedance_control

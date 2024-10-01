@@ -31,7 +31,7 @@ void messages_fr3__srv__SetForce_Request__rosidl_typesupport_introspection_c__Se
   messages_fr3__srv__SetForce_Request__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember messages_fr3__srv__SetForce_Request__rosidl_typesupport_introspection_c__SetForce_Request_message_member_array[6] = {
+static rosidl_typesupport_introspection_c__MessageMember messages_fr3__srv__SetForce_Request__rosidl_typesupport_introspection_c__SetForce_Request_message_member_array[7] = {
   {
     "x_force",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
@@ -133,13 +133,30 @@ static rosidl_typesupport_introspection_c__MessageMember messages_fr3__srv__SetF
     NULL,  // fetch(index, &value) function pointer
     NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
+  },
+  {
+    "frame",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_INT8,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(messages_fr3__srv__SetForce_Request, frame),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
   }
 };
 
 static const rosidl_typesupport_introspection_c__MessageMembers messages_fr3__srv__SetForce_Request__rosidl_typesupport_introspection_c__SetForce_Request_message_members = {
   "messages_fr3__srv",  // message namespace
   "SetForce_Request",  // message name
-  6,  // number of fields
+  7,  // number of fields
   sizeof(messages_fr3__srv__SetForce_Request),
   messages_fr3__srv__SetForce_Request__rosidl_typesupport_introspection_c__SetForce_Request_message_member_array,  // message members
   messages_fr3__srv__SetForce_Request__rosidl_typesupport_introspection_c__SetForce_Request_init_function,  // function to initialize message memory (memory has to be allocated)

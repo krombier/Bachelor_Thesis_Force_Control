@@ -17,6 +17,8 @@ module messages_fr3 {
       double y_torque;
 
       double z_torque;
+
+      int8 frame;
     };
     struct SetForce_Response {
       boolean success;

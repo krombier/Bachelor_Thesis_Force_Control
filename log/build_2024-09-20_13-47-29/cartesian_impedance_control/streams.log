@@ -1,0 +1,32 @@
+[0.037s] Invoking command in '/home/simi/franka_ros2_ws/build/cartesian_impedance_control': CMAKE_PREFIX_PATH=/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster:/home/simi/franka_ros2_ws/install/franka_semantic_components:/home/simi/franka_ros2_ws/install/franka_hardware:/home/simi/franka_ros2_ws/install/messages_fr3:/home/simi/franka_ros2_ws/install/franka_msgs:/home/simi/franka_ros2_ws/install/franka_description:/home/simi/franka_ros2_ws/install/cartesian_impedance_control:/home/simi/franka_ros2_ws/install/joint_trajectory_controller:/home/simi/franka_ros2_ws/install/integration_launch_testing:/home/simi/franka_ros2_ws/install/franka_bringup:/home/simi/franka_ros2_ws/install/franka_example_controllers:/home/simi/franka_ros2_ws/install/franka_moveit_config:/home/simi/franka_ros2_ws/install/franka_gripper:/home/simi/franka_ros2_ws/install/realtime_plot_of_data:/opt/ros/humble LD_LIBRARY_PATH=/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster/lib:/home/simi/franka_ros2_ws/install/franka_semantic_components/lib:/home/simi/franka_ros2_ws/install/franka_hardware/lib:/home/simi/franka_ros2_ws/install/messages_fr3/lib:/home/simi/franka_ros2_ws/install/franka_msgs/lib:/home/simi/franka_ros2_ws/install/cartesian_impedance_control/lib:/home/simi/franka_ros2_ws/install/joint_trajectory_controller/lib:/home/simi/franka_ros2_ws/install/integration_launch_testing/lib:/home/simi/franka_ros2_ws/install/franka_example_controllers/lib:/home/simi/franka_ros2_ws/install/franka_gripper/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/simi/franka_ros2_ws/build/cartesian_impedance_control -- -j16 -l16
+[0.135s] [ 40%] Built target cartesian_impedance_control
+[0.157s] [35m[1mConsolidate compiler generated dependencies of target gripper[0m
+[0.177s] [ 80%] Built target user_input_client
+[0.177s] [ 80%] Built target force_control_client
+[0.190s] [ 90%] [32mBuilding CXX object CMakeFiles/gripper.dir/src/gripper.cpp.o[0m
+[2.850s] [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/gripper.cpp:90:10:[m[K [01;31m[Kerror: [m[K‘[01m[Kcout[m[K’ in namespace ‘[01m[Kstd[m[K’ does not name a type
+[2.850s]    90 |     std::[01;31m[Kcout[m[K << "Maximal width of the gripper is: " << gripper_state.max_width << std::endl;
+[2.850s]       |          [01;31m[K^~~~[m[K
+[2.851s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:22[m[K,
+[2.851s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[2.851s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[2.851s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[2.851s]                  from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/gripper.cpp:1[m[K:
+[2.851s] [01m[K/usr/include/c++/11/iostream:61:18:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::cout[m[K’ declared here
+[2.851s]    61 |   extern ostream [01;36m[Kcout[m[K;          /// Linked to standard output
+[2.851s]       |                  [01;36m[K^~~~[m[K
+[2.852s] [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/gripper.cpp:91:10:[m[K [01;31m[Kerror: [m[K‘[01m[Kcout[m[K’ in namespace ‘[01m[Kstd[m[K’ does not name a type
+[2.852s]    91 |     std::[01;31m[Kcout[m[K << "Current gripper temperature is: " << gripper_state.temperature << std::endl;
+[2.852s]       |          [01;31m[K^~~~[m[K
+[2.852s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:22[m[K,
+[2.852s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[2.852s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[2.852s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[2.852s]                  from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/gripper.cpp:1[m[K:
+[2.852s] [01m[K/usr/include/c++/11/iostream:61:18:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::cout[m[K’ declared here
+[2.852s]    61 |   extern ostream [01;36m[Kcout[m[K;          /// Linked to standard output
+[2.852s]       |                  [01;36m[K^~~~[m[K
+[4.813s] gmake[2]: *** [CMakeFiles/gripper.dir/build.make:76: CMakeFiles/gripper.dir/src/gripper.cpp.o] Error 1
+[4.814s] gmake[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/gripper.dir/all] Error 2
+[4.814s] gmake: *** [Makefile:146: all] Error 2
+[4.819s] Invoked command in '/home/simi/franka_ros2_ws/build/cartesian_impedance_control' returned '2': CMAKE_PREFIX_PATH=/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster:/home/simi/franka_ros2_ws/install/franka_semantic_components:/home/simi/franka_ros2_ws/install/franka_hardware:/home/simi/franka_ros2_ws/install/messages_fr3:/home/simi/franka_ros2_ws/install/franka_msgs:/home/simi/franka_ros2_ws/install/franka_description:/home/simi/franka_ros2_ws/install/cartesian_impedance_control:/home/simi/franka_ros2_ws/install/joint_trajectory_controller:/home/simi/franka_ros2_ws/install/integration_launch_testing:/home/simi/franka_ros2_ws/install/franka_bringup:/home/simi/franka_ros2_ws/install/franka_example_controllers:/home/simi/franka_ros2_ws/install/franka_moveit_config:/home/simi/franka_ros2_ws/install/franka_gripper:/home/simi/franka_ros2_ws/install/realtime_plot_of_data:/opt/ros/humble LD_LIBRARY_PATH=/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster/lib:/home/simi/franka_ros2_ws/install/franka_semantic_components/lib:/home/simi/franka_ros2_ws/install/franka_hardware/lib:/home/simi/franka_ros2_ws/install/messages_fr3/lib:/home/simi/franka_ros2_ws/install/franka_msgs/lib:/home/simi/franka_ros2_ws/install/cartesian_impedance_control/lib:/home/simi/franka_ros2_ws/install/joint_trajectory_controller/lib:/home/simi/franka_ros2_ws/install/integration_launch_testing/lib:/home/simi/franka_ros2_ws/install/franka_example_controllers/lib:/home/simi/franka_ros2_ws/install/franka_gripper/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/simi/franka_ros2_ws/build/cartesian_impedance_control -- -j16 -l16

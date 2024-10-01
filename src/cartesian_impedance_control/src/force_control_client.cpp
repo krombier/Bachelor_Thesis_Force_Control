@@ -8,6 +8,8 @@
 #include <cmath>                    //currently (06.05.2024) not needed
 
 
+void printframe(const int& frame);
+
 int main(int argc, char **argv) {
     rclcpp::init(argc, argv);
     std::shared_ptr<rclcpp::Node> node = rclcpp::Node::make_shared("force_control_client");
@@ -16,8 +18,24 @@ int main(int argc, char **argv) {
         node->create_client<messages_fr3::srv::SetForce>("set_force");
     auto force_request = std::make_shared<messages_fr3::srv::SetForce::Request>();
 
-    int force_direction_selection, y_axis_check, code_saftey_feature, version;
+    int force_direction_selection, y_axis_check, code_saftey_feature, version, inputframe;
     double wrench_input[6];
+    
+    std::cout << "In which frame do you want to input the forces? \n [1] --> Base frame \n [2] --> Endeffector frame."<< std::endl;
+    std::cin >> inputframe;
+    while ((inputframe!=1) and (inputframe!=2) ){
+        std::cout << "Invalid option please choose option 1 or 2"<< std::endl;
+        std::cin >> inputframe;
+        if (std::cin.fail()) {
+            // Clear the error flag
+            std::cin.clear();
+            // Ignore the rest of the input up to the newline character
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        }
+    }
+    force_request->frame = inputframe;
+    
+    
     std::cout << "Choose the version you would like to use:\n [1] --> Old version with a few hardcoded commands.\n [2] --> Your own input (6d) for forces and torques."<< std::endl;
     std::cin >> version;
     while ((version!=1) and (version!=2) ){
@@ -42,7 +60,7 @@ int main(int argc, char **argv) {
                 if (y_axis_check!=2 or code_saftey_feature!=2){
                     break;
                 }        
-                
+                printframe(inputframe);
                                                                             // right now we only move in y direction to ensure we don't damage anything
                 std::cout << "Choose an option \n [1] -->  -1 N in z-direction \n [2] -->  -1.0 N in y-direction ONLY IF EMERGENCY STOP IS READY \n [182] -->  -6.0 N in z-direction\n [302] -->  -10.0 N in z-direction \n [492] increase force in negative z-direction by 1 N \n [everything else] --> no force \n"<< std::endl;
                 // [2] -->  -0.1 N in y-direction \n
@@ -122,6 +140,7 @@ int main(int argc, char **argv) {
         }
         case 2:{
             while (rclcpp::ok()){
+                printframe(inputframe);
                 std::cout << "Enter your desired forces (x,y,z) and torques (x,y,z) of type double"<<std::endl;
                 for (int i = 0; i < 6; ++i) {
                     std::cin >> wrench_input[i];
@@ -150,3 +169,13 @@ int main(int argc, char **argv) {
     rclcpp::shutdown();
     return 0;
 }
+
+void printframe(const int& frame){
+    if (frame ==1){
+        std::cout << "You are operating in the base frame\n";
+    }
+    else{
+        std::cout << "You are operating in the endeffector frame\n";
+    }
+}
+

@@ -1,0 +1,633 @@
+[ 40%] Built target cartesian_impedance_control
+[35m[1mConsolidate compiler generated dependencies of target user_input_client[0m
+[ 60%] Built target gripper
+[ 80%] Built target force_control_client
+[ 90%] [32mBuilding CXX object CMakeFiles/user_input_client.dir/src/user_input_client.cpp.o[0m
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:1[m[K:
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:[m[K In function ‘[01m[Kvoid publish_force(rclcpp::Client<messages_fr3::srv::SetForce>::SharedPtr, std::shared_ptr<messages_fr3::srv::SetForce_Request_<std::allocator<void> > >, std::shared_ptr<rclcpp::Node>)[m[K’:
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:28:69:[m[K [01;31m[Kerror: [m[K‘[01m[Kpose_result[m[K’ was not declared in this scope; did you mean ‘[01m[Kforce_result[m[K’?
+   28 |     RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Worked: %d", [01;31m[Kpose_result[m[K.get()->success);
+      |                                                             [01;31m[K^~~~~~~~~~~[m[K
+
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:325:44:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator<[m[K’ (operand types are ‘[01m[Kstd::common_type<std::chrono::duration<long int, std::ratio<1, 1000000000> >, std::chrono::duration<long int, std::ratio<1, 1000000000> > >::type[m[K’ {aka ‘[01m[Kstd::chrono::duration<long int, std::ratio<1, 1000000000> >[m[K’} and ‘[01m[Kdouble[m[K’)
+  325 |                 while([32m[K(time_now-start_time)[m[K[01;31m[K<[m[K[34m[K5.0[m[K){
+      |                       [32m[K~~~~~~~~~~~~~~~~~~~~~[m[K[01;31m[K^[m[K[34m[K~~~[m[K
+      |                                [32m[K|[m[K            [34m[K|[m[K
+      |                                [32m[K|[m[K            [34m[Kdouble[m[K
+      |                                [32m[Kstd::common_type<std::chrono::duration<long int, std::ratio<1, 1000000000> >, std::chrono::duration<long int, std::ratio<1, 1000000000> > >::type {aka std::chrono::duration<long int, std::ratio<1, 1000000000> >}[m[K
+In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+                 from [01m[K/usr/include/c++/11/memory:63[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:1[m[K:
+[01m[K/usr/include/c++/11/bits/stl_pair.h:489:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _T1, class _T2> constexpr bool std::operator<(const std::pair<_T1, _T2>&, const std::pair<_T1, _T2>&)[m[K’
+  489 |     [01;36m[Koperator[m[K<(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/stl_pair.h:489:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:325:45:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::common_type<std::chrono::duration<long int, std::ratio<1, 1000000000> >, std::chrono::duration<long int, std::ratio<1, 1000000000> > >::type[m[K’ {aka ‘[01m[Kstd::chrono::duration<long int, std::ratio<1, 1000000000> >[m[K’} is not derived from ‘[01m[Kconst std::pair<_T1, _T2>[m[K’
+  325 |                 while((time_now-start_time)<[01;36m[K5.0[m[K){
+      |                                             [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:67[m[K,
+                 from [01m[K/usr/include/c++/11/memory:63[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:1[m[K:
+[01m[K/usr/include/c++/11/bits/stl_iterator.h:426:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Iterator> constexpr bool std::operator<(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_Iterator>&)[m[K’
+  426 |     [01;36m[Koperator[m[K<(const reverse_iterator<_Iterator>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/stl_iterator.h:426:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:325:45:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::common_type<std::chrono::duration<long int, std::ratio<1, 1000000000> >, std::chrono::duration<long int, std::ratio<1, 1000000000> > >::type[m[K’ {aka ‘[01m[Kstd::chrono::duration<long int, std::ratio<1, 1000000000> >[m[K’} is not derived from ‘[01m[Kconst std::reverse_iterator<_Iterator>[m[K’
+  325 |                 while((time_now-start_time)<[01;36m[K5.0[m[K){
+      |                                             [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:67[m[K,
+                 from [01m[K/usr/include/c++/11/memory:63[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:1[m[K:
+[01m[K/usr/include/c++/11/bits/stl_iterator.h:465:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _IteratorL, class _IteratorR> constexpr bool std::operator<(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)[m[K’
+  465 |     [01;36m[Koperator[m[K<(const reverse_iterator<_IteratorL>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/stl_iterator.h:465:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:325:45:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::common_type<std::chrono::duration<long int, std::ratio<1, 1000000000> >, std::chrono::duration<long int, std::ratio<1, 1000000000> > >::type[m[K’ {aka ‘[01m[Kstd::chrono::duration<long int, std::ratio<1, 1000000000> >[m[K’} is not derived from ‘[01m[Kconst std::reverse_iterator<_Iterator>[m[K’
+  325 |                 while((time_now-start_time)<[01;36m[K5.0[m[K){
+      |                                             [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:67[m[K,
+                 from [01m[K/usr/include/c++/11/memory:63[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:1[m[K:
+[01m[K/usr/include/c++/11/bits/stl_iterator.h:1609:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _IteratorL, class _IteratorR> constexpr bool std::operator<(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorR>&)[m[K’
+ 1609 |     [01;36m[Koperator[m[K<(const move_iterator<_IteratorL>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/stl_iterator.h:1609:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:325:45:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::common_type<std::chrono::duration<long int, std::ratio<1, 1000000000> >, std::chrono::duration<long int, std::ratio<1, 1000000000> > >::type[m[K’ {aka ‘[01m[Kstd::chrono::duration<long int, std::ratio<1, 1000000000> >[m[K’} is not derived from ‘[01m[Kconst std::move_iterator<_IteratorL>[m[K’
+  325 |                 while((time_now-start_time)<[01;36m[K5.0[m[K){
+      |                                             [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:67[m[K,
+                 from [01m[K/usr/include/c++/11/memory:63[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:1[m[K:
+[01m[K/usr/include/c++/11/bits/stl_iterator.h:1667:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Iterator> constexpr bool std::operator<(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorL>&)[m[K’
+ 1667 |     [01;36m[Koperator[m[K<(const move_iterator<_Iterator>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/stl_iterator.h:1667:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:325:45:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::common_type<std::chrono::duration<long int, std::ratio<1, 1000000000> >, std::chrono::duration<long int, std::ratio<1, 1000000000> > >::type[m[K’ {aka ‘[01m[Kstd::chrono::duration<long int, std::ratio<1, 1000000000> >[m[K’} is not derived from ‘[01m[Kconst std::move_iterator<_IteratorL>[m[K’
+  325 |                 while((time_now-start_time)<[01;36m[K5.0[m[K){
+      |                                             [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/11/tuple:39[m[K,
+                 from [01m[K/usr/include/c++/11/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:1[m[K:
+[01m[K/usr/include/c++/11/array:311:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, long unsigned int _Nm> bool std::operator<(const std::array<_Tp, _Nm>&, const std::array<_Tp, _Nm>&)[m[K’
+  311 |     [01;36m[Koperator[m[K<(const array<_Tp, _Nm>& __a, const array<_Tp, _Nm>& __b)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/array:311:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:325:45:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::common_type<std::chrono::duration<long int, std::ratio<1, 1000000000> >, std::chrono::duration<long int, std::ratio<1, 1000000000> > >::type[m[K’ {aka ‘[01m[Kstd::chrono::duration<long int, std::ratio<1, 1000000000> >[m[K’} is not derived from ‘[01m[Kconst std::array<_Tp, _Nm>[m[K’
+  325 |                 while((time_now-start_time)<[01;36m[K5.0[m[K){
+      |                                             [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:1[m[K:
+[01m[K/usr/include/c++/11/tuple:1566:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class ... _TElements, class ... _UElements> constexpr bool std::operator<(const std::tuple<_Tps ...>&, const std::tuple<_UTypes ...>&)[m[K’
+ 1566 |     [01;36m[Koperator[m[K<(const tuple<_TElements...>& __t,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/tuple:1566:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:325:45:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::common_type<std::chrono::duration<long int, std::ratio<1, 1000000000> >, std::chrono::duration<long int, std::ratio<1, 1000000000> > >::type[m[K’ {aka ‘[01m[Kstd::chrono::duration<long int, std::ratio<1, 1000000000> >[m[K’} is not derived from ‘[01m[Kconst std::tuple<_Tps ...>[m[K’
+  325 |                 while((time_now-start_time)<[01;36m[K5.0[m[K){
+      |                                             [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:1[m[K:
+[01m[K/usr/include/c++/11/bits/unique_ptr.h:795:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Dp, class _Up, class _Ep> bool std::operator<(const std::unique_ptr<_Tp, _Dp>&, const std::unique_ptr<_Up, _Ep>&)[m[K’
+  795 |     [01;36m[Koperator[m[K<(const unique_ptr<_Tp, _Dp>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/unique_ptr.h:795:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:325:45:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::common_type<std::chrono::duration<long int, std::ratio<1, 1000000000> >, std::chrono::duration<long int, std::ratio<1, 1000000000> > >::type[m[K’ {aka ‘[01m[Kstd::chrono::duration<long int, std::ratio<1, 1000000000> >[m[K’} is not derived from ‘[01m[Kconst std::unique_ptr<_Tp, _Dp>[m[K’
+  325 |                 while((time_now-start_time)<[01;36m[K5.0[m[K){
+      |                                             [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:1[m[K:
+[01m[K/usr/include/c++/11/bits/unique_ptr.h:807:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Dp> bool std::operator<(const std::unique_ptr<_Tp, _Dp>&, std::nullptr_t)[m[K’
+  807 |     [01;36m[Koperator[m[K<(const unique_ptr<_Tp, _Dp>& __x, nullptr_t)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/unique_ptr.h:807:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:325:45:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::common_type<std::chrono::duration<long int, std::ratio<1, 1000000000> >, std::chrono::duration<long int, std::ratio<1, 1000000000> > >::type[m[K’ {aka ‘[01m[Kstd::chrono::duration<long int, std::ratio<1, 1000000000> >[m[K’} is not derived from ‘[01m[Kconst std::unique_ptr<_Tp, _Dp>[m[K’
+  325 |                 while((time_now-start_time)<[01;36m[K5.0[m[K){
+      |                                             [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:1[m[K:
+[01m[K/usr/include/c++/11/bits/unique_ptr.h:816:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Dp> bool std::operator<(std::nullptr_t, const std::unique_ptr<_Tp, _Dp>&)[m[K’
+  816 |     [01;36m[Koperator[m[K<(nullptr_t, const unique_ptr<_Tp, _Dp>& __x)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/unique_ptr.h:816:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:325:45:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::unique_ptr<_Tp, _Dp>[m[K’ and ‘[01m[Kdouble[m[K’
+  325 |                 while((time_now-start_time)<[01;36m[K5.0[m[K){
+      |                                             [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/11/bits/shared_ptr.h:53[m[K,
+                 from [01m[K/usr/include/c++/11/memory:77[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:1[m[K:
+[01m[K/usr/include/c++/11/bits/shared_ptr_base.h:1457:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Up, __gnu_cxx::_Lock_policy _Lp> bool std::operator<(const std::__shared_ptr<_Tp1, _Lp>&, const std::__shared_ptr<_Tp2, _Lp>&)[m[K’
+ 1457 |     [01;36m[Koperator[m[K<(const __shared_ptr<_Tp, _Lp>& __a,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/shared_ptr_base.h:1457:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:325:45:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::common_type<std::chrono::duration<long int, std::ratio<1, 1000000000> >, std::chrono::duration<long int, std::ratio<1, 1000000000> > >::type[m[K’ {aka ‘[01m[Kstd::chrono::duration<long int, std::ratio<1, 1000000000> >[m[K’} is not derived from ‘[01m[Kconst std::__shared_ptr<_Tp1, _Lp>[m[K’
+  325 |                 while((time_now-start_time)<[01;36m[K5.0[m[K){
+      |                                             [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/11/bits/shared_ptr.h:53[m[K,
+                 from [01m[K/usr/include/c++/11/memory:77[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:1[m[K:
+[01m[K/usr/include/c++/11/bits/shared_ptr_base.h:1468:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, __gnu_cxx::_Lock_policy _Lp> bool std::operator<(const std::__shared_ptr<_Tp, _Lp>&, std::nullptr_t)[m[K’
+ 1468 |     [01;36m[Koperator[m[K<(const __shared_ptr<_Tp, _Lp>& __a, nullptr_t) noexcept
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/shared_ptr_base.h:1468:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:325:45:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::common_type<std::chrono::duration<long int, std::ratio<1, 1000000000> >, std::chrono::duration<long int, std::ratio<1, 1000000000> > >::type[m[K’ {aka ‘[01m[Kstd::chrono::duration<long int, std::ratio<1, 1000000000> >[m[K’} is not derived from ‘[01m[Kconst std::__shared_ptr<_Tp, _Lp>[m[K’
+  325 |                 while((time_now-start_time)<[01;36m[K5.0[m[K){
+      |                                             [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/11/bits/shared_ptr.h:53[m[K,
+                 from [01m[K/usr/include/c++/11/memory:77[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:1[m[K:
+[01m[K/usr/include/c++/11/bits/shared_ptr_base.h:1476:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, __gnu_cxx::_Lock_policy _Lp> bool std::operator<(std::nullptr_t, const std::__shared_ptr<_Tp, _Lp>&)[m[K’
+ 1476 |     [01;36m[Koperator[m[K<(nullptr_t, const __shared_ptr<_Tp, _Lp>& __a) noexcept
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/shared_ptr_base.h:1476:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:325:45:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::__shared_ptr<_Tp, _Lp>[m[K’ and ‘[01m[Kdouble[m[K’
+  325 |                 while((time_now-start_time)<[01;36m[K5.0[m[K){
+      |                                             [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/11/memory:77[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:1[m[K:
+[01m[K/usr/include/c++/11/bits/shared_ptr.h:488:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Up> bool std::operator<(const std::shared_ptr<_Tp>&, const std::shared_ptr<_Tp>&)[m[K’
+  488 |     [01;36m[Koperator[m[K<(const shared_ptr<_Tp>& __a, const shared_ptr<_Up>& __b) noexcept
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/shared_ptr.h:488:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:325:45:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::common_type<std::chrono::duration<long int, std::ratio<1, 1000000000> >, std::chrono::duration<long int, std::ratio<1, 1000000000> > >::type[m[K’ {aka ‘[01m[Kstd::chrono::duration<long int, std::ratio<1, 1000000000> >[m[K’} is not derived from ‘[01m[Kconst std::shared_ptr<_Tp>[m[K’
+  325 |                 while((time_now-start_time)<[01;36m[K5.0[m[K){
+      |                                             [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/11/memory:77[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:1[m[K:
+[01m[K/usr/include/c++/11/bits/shared_ptr.h:499:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> bool std::operator<(const std::shared_ptr<_Tp>&, std::nullptr_t)[m[K’
+  499 |     [01;36m[Koperator[m[K<(const shared_ptr<_Tp>& __a, nullptr_t) noexcept
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/shared_ptr.h:499:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:325:45:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::common_type<std::chrono::duration<long int, std::ratio<1, 1000000000> >, std::chrono::duration<long int, std::ratio<1, 1000000000> > >::type[m[K’ {aka ‘[01m[Kstd::chrono::duration<long int, std::ratio<1, 1000000000> >[m[K’} is not derived from ‘[01m[Kconst std::shared_ptr<_Tp>[m[K’
+  325 |                 while((time_now-start_time)<[01;36m[K5.0[m[K){
+      |                                             [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/11/memory:77[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:1[m[K:
+[01m[K/usr/include/c++/11/bits/shared_ptr.h:508:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> bool std::operator<(std::nullptr_t, const std::shared_ptr<_Tp>&)[m[K’
+  508 |     [01;36m[Koperator[m[K<(nullptr_t, const shared_ptr<_Tp>& __a) noexcept
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/shared_ptr.h:508:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:325:45:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::shared_ptr<_Tp>[m[K’ and ‘[01m[Kdouble[m[K’
+  325 |                 while((time_now-start_time)<[01;36m[K5.0[m[K){
+      |                                             [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/11/bits/basic_string.h:48[m[K,
+                 from [01m[K/usr/include/c++/11/string:55[m[K,
+                 from [01m[K/usr/include/c++/11/stdexcept:39[m[K,
+                 from [01m[K/usr/include/c++/11/system_error:41[m[K,
+                 from [01m[K/usr/include/c++/11/mutex:42[m[K,
+                 from [01m[K/usr/include/c++/11/future:38[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:1[m[K:
+[01m[K/usr/include/c++/11/string_view:589:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> constexpr bool std::operator<(std::basic_string_view<_CharT, _Traits>, std::basic_string_view<_CharT, _Traits>)[m[K’
+  589 |     [01;36m[Koperator[m[K< (basic_string_view<_CharT, _Traits> __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/string_view:589:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:325:45:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::chrono::duration<long int, std::ratio<1, 1000000000> >[m[K’ is not derived from ‘[01m[Kstd::basic_string_view<_CharT, _Traits>[m[K’
+  325 |                 while((time_now-start_time)<[01;36m[K5.0[m[K){
+      |                                             [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/11/bits/basic_string.h:48[m[K,
+                 from [01m[K/usr/include/c++/11/string:55[m[K,
+                 from [01m[K/usr/include/c++/11/stdexcept:39[m[K,
+                 from [01m[K/usr/include/c++/11/system_error:41[m[K,
+                 from [01m[K/usr/include/c++/11/mutex:42[m[K,
+                 from [01m[K/usr/include/c++/11/future:38[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:1[m[K:
+[01m[K/usr/include/c++/11/string_view:595:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> constexpr bool std::operator<(std::basic_string_view<_CharT, _Traits>, std::__type_identity_t<std::basic_string_view<_CharT, _Traits> >)[m[K’
+  595 |     [01;36m[Koperator[m[K< (basic_string_view<_CharT, _Traits> __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/string_view:595:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:325:45:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::chrono::duration<long int, std::ratio<1, 1000000000> >[m[K’ is not derived from ‘[01m[Kstd::basic_string_view<_CharT, _Traits>[m[K’
+  325 |                 while((time_now-start_time)<[01;36m[K5.0[m[K){
+      |                                             [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/11/bits/basic_string.h:48[m[K,
+                 from [01m[K/usr/include/c++/11/string:55[m[K,
+                 from [01m[K/usr/include/c++/11/stdexcept:39[m[K,
+                 from [01m[K/usr/include/c++/11/system_error:41[m[K,
+                 from [01m[K/usr/include/c++/11/mutex:42[m[K,
+                 from [01m[K/usr/include/c++/11/future:38[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:1[m[K:
+[01m[K/usr/include/c++/11/string_view:602:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> constexpr bool std::operator<(std::__type_identity_t<std::basic_string_view<_CharT, _Traits> >, std::basic_string_view<_CharT, _Traits>)[m[K’
+  602 |     [01;36m[Koperator[m[K< (__type_identity_t<basic_string_view<_CharT, _Traits>> __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/string_view:602:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:325:45:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kstd::basic_string_view<_CharT, _Traits>[m[K’ and ‘[01m[Kdouble[m[K’
+  325 |                 while((time_now-start_time)<[01;36m[K5.0[m[K){
+      |                                             [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/11/string:55[m[K,
+                 from [01m[K/usr/include/c++/11/stdexcept:39[m[K,
+                 from [01m[K/usr/include/c++/11/system_error:41[m[K,
+                 from [01m[K/usr/include/c++/11/mutex:42[m[K,
+                 from [01m[K/usr/include/c++/11/future:38[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:1[m[K:
+[01m[K/usr/include/c++/11/bits/basic_string.h:6340:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits, class _Alloc> bool std::operator<(const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&, const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&)[m[K’
+ 6340 |     [01;36m[Koperator[m[K<(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/basic_string.h:6340:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:325:45:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::common_type<std::chrono::duration<long int, std::ratio<1, 1000000000> >, std::chrono::duration<long int, std::ratio<1, 1000000000> > >::type[m[K’ {aka ‘[01m[Kstd::chrono::duration<long int, std::ratio<1, 1000000000> >[m[K’} is not derived from ‘[01m[Kconst std::__cxx11::basic_string<_CharT, _Traits, _Allocator>[m[K’
+  325 |                 while((time_now-start_time)<[01;36m[K5.0[m[K){
+      |                                             [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/11/string:55[m[K,
+                 from [01m[K/usr/include/c++/11/stdexcept:39[m[K,
+                 from [01m[K/usr/include/c++/11/system_error:41[m[K,
+                 from [01m[K/usr/include/c++/11/mutex:42[m[K,
+                 from [01m[K/usr/include/c++/11/future:38[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:1[m[K:
+[01m[K/usr/include/c++/11/bits/basic_string.h:6353:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits, class _Alloc> bool std::operator<(const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&, const _CharT*)[m[K’
+ 6353 |     [01;36m[Koperator[m[K<(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/basic_string.h:6353:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:325:45:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::common_type<std::chrono::duration<long int, std::ratio<1, 1000000000> >, std::chrono::duration<long int, std::ratio<1, 1000000000> > >::type[m[K’ {aka ‘[01m[Kstd::chrono::duration<long int, std::ratio<1, 1000000000> >[m[K’} is not derived from ‘[01m[Kconst std::__cxx11::basic_string<_CharT, _Traits, _Allocator>[m[K’
+  325 |                 while((time_now-start_time)<[01;36m[K5.0[m[K){
+      |                                             [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/11/string:55[m[K,
+                 from [01m[K/usr/include/c++/11/stdexcept:39[m[K,
+                 from [01m[K/usr/include/c++/11/system_error:41[m[K,
+                 from [01m[K/usr/include/c++/11/mutex:42[m[K,
+                 from [01m[K/usr/include/c++/11/future:38[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:1[m[K:
+[01m[K/usr/include/c++/11/bits/basic_string.h:6365:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits, class _Alloc> bool std::operator<(const _CharT*, const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&)[m[K’
+ 6365 |     [01;36m[Koperator[m[K<(const _CharT* __lhs,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/basic_string.h:6365:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:325:45:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst _CharT*[m[K’ and ‘[01m[Kstd::chrono::duration<long int, std::ratio<1, 1000000000> >[m[K’
+  325 |                 while((time_now-start_time)<[01;36m[K5.0[m[K){
+      |                                             [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/11/set:61[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:1[m[K:
+[01m[K/usr/include/c++/11/bits/stl_set.h:1023:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Key, class _Compare, class _Alloc> bool std::operator<(const std::set<_Key, _Compare, _Allocator>&, const std::set<_Key, _Compare, _Allocator>&)[m[K’
+ 1023 |     [01;36m[Koperator[m[K<(const set<_Key, _Compare, _Alloc>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/stl_set.h:1023:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:325:45:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::common_type<std::chrono::duration<long int, std::ratio<1, 1000000000> >, std::chrono::duration<long int, std::ratio<1, 1000000000> > >::type[m[K’ {aka ‘[01m[Kstd::chrono::duration<long int, std::ratio<1, 1000000000> >[m[K’} is not derived from ‘[01m[Kconst std::set<_Key, _Compare, _Allocator>[m[K’
+  325 |                 while((time_now-start_time)<[01;36m[K5.0[m[K){
+      |                                             [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/11/set:62[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:1[m[K:
+[01m[K/usr/include/c++/11/bits/stl_multiset.h:1009:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Key, class _Compare, class _Alloc> bool std::operator<(const std::multiset<_Key, _Compare, _Allocator>&, const std::multiset<_Key, _Compare, _Allocator>&)[m[K’
+ 1009 |     [01;36m[Koperator[m[K<(const multiset<_Key, _Compare, _Alloc>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/stl_multiset.h:1009:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:325:45:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::common_type<std::chrono::duration<long int, std::ratio<1, 1000000000> >, std::chrono::duration<long int, std::ratio<1, 1000000000> > >::type[m[K’ {aka ‘[01m[Kstd::chrono::duration<long int, std::ratio<1, 1000000000> >[m[K’} is not derived from ‘[01m[Kconst std::multiset<_Key, _Compare, _Allocator>[m[K’
+  325 |                 while((time_now-start_time)<[01;36m[K5.0[m[K){
+      |                                             [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/11/vector:67[m[K,
+                 from [01m[K/usr/include/c++/11/functional:62[m[K,
+                 from [01m[K/usr/include/c++/11/pstl/glue_algorithm_defs.h:13[m[K,
+                 from [01m[K/usr/include/c++/11/algorithm:74[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:1[m[K:
+[01m[K/usr/include/c++/11/bits/stl_vector.h:1930:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Alloc> bool std::operator<(const std::vector<_Tp, _Alloc>&, const std::vector<_Tp, _Alloc>&)[m[K’
+ 1930 |     [01;36m[Koperator[m[K<(const vector<_Tp, _Alloc>& __x, const vector<_Tp, _Alloc>& __y)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/stl_vector.h:1930:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:325:45:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::common_type<std::chrono::duration<long int, std::ratio<1, 1000000000> >, std::chrono::duration<long int, std::ratio<1, 1000000000> > >::type[m[K’ {aka ‘[01m[Kstd::chrono::duration<long int, std::ratio<1, 1000000000> >[m[K’} is not derived from ‘[01m[Kconst std::vector<_Tp, _Alloc>[m[K’
+  325 |                 while((time_now-start_time)<[01;36m[K5.0[m[K){
+      |                                             [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/11/list:63[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:23[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:1[m[K:
+[01m[K/usr/include/c++/11/bits/stl_list.h:2085:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Alloc> bool std::operator<(const std::__cxx11::list<_Tp, _Alloc>&, const std::__cxx11::list<_Tp, _Alloc>&)[m[K’
+ 2085 |     [01;36m[Koperator[m[K<(const list<_Tp, _Alloc>& __x, const list<_Tp, _Alloc>& __y)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/stl_list.h:2085:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:325:45:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::common_type<std::chrono::duration<long int, std::ratio<1, 1000000000> >, std::chrono::duration<long int, std::ratio<1, 1000000000> > >::type[m[K’ {aka ‘[01m[Kstd::chrono::duration<long int, std::ratio<1, 1000000000> >[m[K’} is not derived from ‘[01m[Kconst std::__cxx11::list<_Tp, _Alloc>[m[K’
+  325 |                 while((time_now-start_time)<[01;36m[K5.0[m[K){
+      |                                             [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/11/map:61[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:1[m[K:
+[01m[K/usr/include/c++/11/bits/stl_map.h:1501:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Key, class _Tp, class _Compare, class _Alloc> bool std::operator<(const std::map<_Key, _Tp, _Compare, _Allocator>&, const std::map<_Key, _Tp, _Compare, _Allocator>&)[m[K’
+ 1501 |     [01;36m[Koperator[m[K<(const map<_Key, _Tp, _Compare, _Alloc>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/stl_map.h:1501:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:325:45:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::common_type<std::chrono::duration<long int, std::ratio<1, 1000000000> >, std::chrono::duration<long int, std::ratio<1, 1000000000> > >::type[m[K’ {aka ‘[01m[Kstd::chrono::duration<long int, std::ratio<1, 1000000000> >[m[K’} is not derived from ‘[01m[Kconst std::map<_Key, _Tp, _Compare, _Allocator>[m[K’
+  325 |                 while((time_now-start_time)<[01;36m[K5.0[m[K){
+      |                                             [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/11/map:62[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:1[m[K:
+[01m[K/usr/include/c++/11/bits/stl_multimap.h:1166:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Key, class _Tp, class _Compare, class _Alloc> bool std::operator<(const std::multimap<_Key, _Tp, _Compare, _Allocator>&, const std::multimap<_Key, _Tp, _Compare, _Allocator>&)[m[K’
+ 1166 |     [01;36m[Koperator[m[K<(const multimap<_Key, _Tp, _Compare, _Alloc>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/stl_multimap.h:1166:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:325:45:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::common_type<std::chrono::duration<long int, std::ratio<1, 1000000000> >, std::chrono::duration<long int, std::ratio<1, 1000000000> > >::type[m[K’ {aka ‘[01m[Kstd::chrono::duration<long int, std::ratio<1, 1000000000> >[m[K’} is not derived from ‘[01m[Kconst std::multimap<_Key, _Tp, _Compare, _Allocator>[m[K’
+  325 |                 while((time_now-start_time)<[01;36m[K5.0[m[K){
+      |                                             [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:23[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:1[m[K:
+[01m[K/usr/include/c++/11/optional:1063:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Up> constexpr std::__optional_lt_t<_Tp, _Up> std::operator<(const std::optional<_Tp>&, const std::optional<_Up>&)[m[K’
+ 1063 |     [01;36m[Koperator[m[K<(const optional<_Tp>& __lhs, const optional<_Up>& __rhs)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/optional:1063:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:325:45:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::common_type<std::chrono::duration<long int, std::ratio<1, 1000000000> >, std::chrono::duration<long int, std::ratio<1, 1000000000> > >::type[m[K’ {aka ‘[01m[Kstd::chrono::duration<long int, std::ratio<1, 1000000000> >[m[K’} is not derived from ‘[01m[Kconst std::optional<_Tp>[m[K’
+  325 |                 while((time_now-start_time)<[01;36m[K5.0[m[K){
+      |                                             [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:23[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:1[m[K:
+[01m[K/usr/include/c++/11/optional:1131:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> constexpr bool std::operator<(const std::optional<_Tp>&, std::nullopt_t)[m[K’
+ 1131 |     [01;36m[Koperator[m[K<(const optional<_Tp>& /* __lhs */, nullopt_t) noexcept
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/optional:1131:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:325:45:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::common_type<std::chrono::duration<long int, std::ratio<1, 1000000000> >, std::chrono::duration<long int, std::ratio<1, 1000000000> > >::type[m[K’ {aka ‘[01m[Kstd::chrono::duration<long int, std::ratio<1, 1000000000> >[m[K’} is not derived from ‘[01m[Kconst std::optional<_Tp>[m[K’
+  325 |                 while((time_now-start_time)<[01;36m[K5.0[m[K){
+      |                                             [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:23[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:1[m[K:
+[01m[K/usr/include/c++/11/optional:1136:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> constexpr bool std::operator<(std::nullopt_t, const std::optional<_Tp>&)[m[K’
+ 1136 |     [01;36m[Koperator[m[K<(nullopt_t, const optional<_Tp>& __rhs) noexcept
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/optional:1136:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:325:45:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::optional<_Tp>[m[K’ and ‘[01m[Kdouble[m[K’
+  325 |                 while((time_now-start_time)<[01;36m[K5.0[m[K){
+      |                                             [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:23[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:1[m[K:
+[01m[K/usr/include/c++/11/optional:1197:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Up> constexpr std::__optional_lt_t<_Tp, _Up> std::operator<(const std::optional<_Tp>&, const _Up&)[m[K’
+ 1197 |     [01;36m[Koperator[m[K<(const optional<_Tp>& __lhs, const _Up& __rhs)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/optional:1197:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:325:45:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::common_type<std::chrono::duration<long int, std::ratio<1, 1000000000> >, std::chrono::duration<long int, std::ratio<1, 1000000000> > >::type[m[K’ {aka ‘[01m[Kstd::chrono::duration<long int, std::ratio<1, 1000000000> >[m[K’} is not derived from ‘[01m[Kconst std::optional<_Tp>[m[K’
+  325 |                 while((time_now-start_time)<[01;36m[K5.0[m[K){
+      |                                             [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:23[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:1[m[K:
+[01m[K/usr/include/c++/11/optional:1203:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Up> constexpr std::__optional_lt_t<_Up, _Tp> std::operator<(const _Up&, const std::optional<_Tp>&)[m[K’
+ 1203 |     [01;36m[Koperator[m[K<(const _Up& __lhs, const optional<_Tp>& __rhs)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/optional:1203:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:325:45:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::optional<_Tp>[m[K’ and ‘[01m[Kdouble[m[K’
+  325 |                 while((time_now-start_time)<[01;36m[K5.0[m[K){
+      |                                             [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:28[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:1[m[K:
+[01m[K/usr/include/c++/11/variant:1230:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class ... _Types> constexpr bool std::operator<(const std::variant<_Types ...>&, const std::variant<_Types ...>&)[m[K’
+ 1230 |   [01;36m[K_VARIANT_RELATION_FUNCTION_TEMPLATE[m[K(<, less)
+      |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/11/variant:1230:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:325:45:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::common_type<std::chrono::duration<long int, std::ratio<1, 1000000000> >, std::chrono::duration<long int, std::ratio<1, 1000000000> > >::type[m[K’ {aka ‘[01m[Kstd::chrono::duration<long int, std::ratio<1, 1000000000> >[m[K’} is not derived from ‘[01m[Kconst std::variant<_Types ...>[m[K’
+  325 |                 while((time_now-start_time)<[01;36m[K5.0[m[K){
+      |                                             [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/11/mutex:39[m[K,
+                 from [01m[K/usr/include/c++/11/future:38[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:1[m[K:
+[01m[K/usr/include/c++/11/chrono:772:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Rep1, class _Period1, class _Rep2, class _Period2> constexpr bool std::chrono::operator<(const std::chrono::duration<_Rep1, _Period1>&, const std::chrono::duration<_Rep2, _Period2>&)[m[K’
+  772 |       [01;36m[Koperator[m[K<(const duration<_Rep1, _Period1>& __lhs,
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/chrono:772:7:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:325:45:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::chrono::duration<_Rep2, _Period2>[m[K’ and ‘[01m[Kdouble[m[K’
+  325 |                 while((time_now-start_time)<[01;36m[K5.0[m[K){
+      |                                             [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/11/mutex:39[m[K,
+                 from [01m[K/usr/include/c++/11/future:38[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:1[m[K:
+[01m[K/usr/include/c++/11/chrono:1075:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Clock, class _Dur1, class _Dur2> constexpr bool std::chrono::operator<(const std::chrono::time_point<_Clock, _Duration1>&, const std::chrono::time_point<_Clock, _Duration2>&)[m[K’
+ 1075 |       [01;36m[Koperator[m[K<(const time_point<_Clock, _Dur1>& __lhs,
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/chrono:1075:7:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:325:45:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::common_type<std::chrono::duration<long int, std::ratio<1, 1000000000> >, std::chrono::duration<long int, std::ratio<1, 1000000000> > >::type[m[K’ {aka ‘[01m[Kstd::chrono::duration<long int, std::ratio<1, 1000000000> >[m[K’} is not derived from ‘[01m[Kconst std::chrono::time_point<_Clock, _Duration1>[m[K’
+  325 |                 while((time_now-start_time)<[01;36m[K5.0[m[K){
+      |                                             [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/11/mutex:42[m[K,
+                 from [01m[K/usr/include/c++/11/future:38[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:1[m[K:
+[01m[K/usr/include/c++/11/system_error:269:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kbool std::operator<(const std::error_code&, const std::error_code&)[m[K’
+  269 |   [01;36m[Koperator[m[K<(const error_code& __lhs, const error_code& __rhs) noexcept
+      |   [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/system_error:269:31:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::common_type<std::chrono::duration<long int, std::ratio<1, 1000000000> >, std::chrono::duration<long int, std::ratio<1, 1000000000> > >::type[m[K’ {aka ‘[01m[Kstd::chrono::duration<long int, std::ratio<1, 1000000000> >[m[K’} to ‘[01m[Kconst std::error_code&[m[K’
+  269 |   operator<([01;36m[Kconst error_code& __lhs[m[K, const error_code& __rhs) noexcept
+      |             [01;36m[K~~~~~~~~~~~~~~~~~~^~~~~[m[K
+[01m[K/usr/include/c++/11/system_error:398:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kbool std::operator<(const std::error_condition&, const std::error_condition&)[m[K’
+  398 |   [01;36m[Koperator[m[K<(const error_condition& __lhs,
+      |   [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/system_error:398:36:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::common_type<std::chrono::duration<long int, std::ratio<1, 1000000000> >, std::chrono::duration<long int, std::ratio<1, 1000000000> > >::type[m[K’ {aka ‘[01m[Kstd::chrono::duration<long int, std::ratio<1, 1000000000> >[m[K’} to ‘[01m[Kconst std::error_condition&[m[K’
+  398 |   operator<([01;36m[Kconst error_condition& __lhs[m[K,
+      |             [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:22[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:1[m[K:
+[01m[K/usr/include/c++/11/thread:70:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kbool std::operator<(std::thread::id, std::thread::id)[m[K’
+   70 |   [01;36m[Koperator[m[K<(thread::id __x, thread::id __y) noexcept
+      |   [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/thread:70:24:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::common_type<std::chrono::duration<long int, std::ratio<1, 1000000000> >, std::chrono::duration<long int, std::ratio<1, 1000000000> > >::type[m[K’ {aka ‘[01m[Kstd::chrono::duration<long int, std::ratio<1, 1000000000> >[m[K’} to ‘[01m[Kstd::thread::id[m[K’
+   70 |   operator<([01;36m[Kthread::id __x[m[K, thread::id __y) noexcept
+      |             [01;36m[K~~~~~~~~~~~^~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:28[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:1[m[K:
+[01m[K/usr/include/c++/11/variant:1272:18:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr bool std::operator<(std::monostate, std::monostate)[m[K’
+ 1272 |   constexpr bool [01;36m[Koperator[m[K<(monostate, monostate) noexcept { return false; }
+      |                  [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/variant:1272:28:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::common_type<std::chrono::duration<long int, std::ratio<1, 1000000000> >, std::chrono::duration<long int, std::ratio<1, 1000000000> > >::type[m[K’ {aka ‘[01m[Kstd::chrono::duration<long int, std::ratio<1, 1000000000> >[m[K’} to ‘[01m[Kstd::monostate[m[K’
+ 1272 |   constexpr bool operator<([01;36m[Kmonostate[m[K, monostate) noexcept { return false; }
+      |                            [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:337:71:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kduration_cast<std::chrono::seconds>(std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >&)[m[K’
+  337 |       while([01;31m[Kstd::chrono::duration_cast<std::chrono::seconds>(elapsedTime)[m[K.count() < 5.0){
+      |             [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+
+In file included from [01m[K/usr/include/c++/11/mutex:39[m[K,
+                 from [01m[K/usr/include/c++/11/future:38[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:1[m[K:
+[01m[K/usr/include/c++/11/chrono:267:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _ToDur, class _Rep, class _Period> constexpr std::chrono::__enable_if_is_duration<_ToDur> std::chrono::duration_cast(const std::chrono::duration<_Rep, _Period>&)[m[K’
+  267 |       [01;36m[Kduration_cast[m[K(const duration<_Rep, _Period>& __d)
+      |       [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/11/chrono:267:7:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:337:71:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >[m[K’ is not derived from ‘[01m[Kconst std::chrono::duration<_Rep, _Period>[m[K’
+  337 |       while([01;36m[Kstd::chrono::duration_cast<std::chrono::seconds>(elapsedTime)[m[K.count() < 5.0){
+      |             [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:349:71:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kduration_cast<std::chrono::seconds>(std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >&)[m[K’
+  349 |       while([01;31m[Kstd::chrono::duration_cast<std::chrono::seconds>(elapsedTime)[m[K.count() < 2.0){
+      |             [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+
+In file included from [01m[K/usr/include/c++/11/mutex:39[m[K,
+                 from [01m[K/usr/include/c++/11/future:38[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:1[m[K:
+[01m[K/usr/include/c++/11/chrono:267:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _ToDur, class _Rep, class _Period> constexpr std::chrono::__enable_if_is_duration<_ToDur> std::chrono::duration_cast(const std::chrono::duration<_Rep, _Period>&)[m[K’
+  267 |       [01;36m[Kduration_cast[m[K(const duration<_Rep, _Period>& __d)
+      |       [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/11/chrono:267:7:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:349:71:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >[m[K’ is not derived from ‘[01m[Kconst std::chrono::duration<_Rep, _Period>[m[K’
+  349 |       while([01;36m[Kstd::chrono::duration_cast<std::chrono::seconds>(elapsedTime)[m[K.count() < 2.0){
+      |             [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:362:71:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kduration_cast<std::chrono::seconds>(std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >&)[m[K’
+  362 |       while([01;31m[Kstd::chrono::duration_cast<std::chrono::seconds>(elapsedTime)[m[K.count() < 10.0){   //run for 10 seconds
+      |             [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+
+In file included from [01m[K/usr/include/c++/11/mutex:39[m[K,
+                 from [01m[K/usr/include/c++/11/future:38[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:1[m[K:
+[01m[K/usr/include/c++/11/chrono:267:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _ToDur, class _Rep, class _Period> constexpr std::chrono::__enable_if_is_duration<_ToDur> std::chrono::duration_cast(const std::chrono::duration<_Rep, _Period>&)[m[K’
+  267 |       [01;36m[Kduration_cast[m[K(const duration<_Rep, _Period>& __d)
+      |       [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/11/chrono:267:7:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:362:71:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >[m[K’ is not derived from ‘[01m[Kconst std::chrono::duration<_Rep, _Period>[m[K’
+  362 |       while([01;36m[Kstd::chrono::duration_cast<std::chrono::seconds>(elapsedTime)[m[K.count() < 10.0){   //run for 10 seconds
+      |             [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:363:109:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >[m[K’ has no member named ‘[01m[Kcount[m[K’
+  363 | s_x + amplitude * std::sin(2 * M_PI * frequency * elapsedTime.[01;31m[Kcount[m[K());
+      |                                                               [01;31m[K^~~~~[m[K
+
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:373:46:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >[m[K’ has no member named ‘[01m[Kcount[m[K’
+  373 |                     std::cout << elapsedTime.[01;31m[Kcount[m[K() << std::endl;
+      |                                              [01;31m[K^~~~~[m[K
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:374:70:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[Kstd::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >[m[K’ and ‘[01m[Kstd::common_type<std::chrono::duration<long int, std::ratio<1, 1000000000> >, std::chrono::duration<long int, std::ratio<1, 1000000000> > >::type[m[K’ {aka ‘[01m[Kstd::chrono::duration<long int, std::ratio<1, 1000000000> >[m[K’})
+  374 |            elapsedTime = std::chrono::steady_clock::now() - [01;31m[Kstart_time[m[K;
+      |                                                             [01;31m[K^~~~~~~~~~[m[K
+
+In file included from [01m[K/usr/include/c++/11/mutex:39[m[K,
+                 from [01m[K/usr/include/c++/11/future:38[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:1[m[K:
+[01m[K/usr/include/c++/11/chrono:872:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >& std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >::operator=(const std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >&)[m[K’
+  872 |       struct [01;36m[Ktime_point[m[K
+      |              [01;36m[K^~~~~~~~~~[m[K
+[01m[K/usr/include/c++/11/chrono:872:14:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::common_type<std::chrono::duration<long int, std::ratio<1, 1000000000> >, std::chrono::duration<long int, std::ratio<1, 1000000000> > >::type[m[K’ {aka ‘[01m[Kstd::chrono::duration<long int, std::ratio<1, 1000000000> >[m[K’} to ‘[01m[Kconst std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >&[m[K’
+[01m[K/usr/include/c++/11/chrono:872:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >& std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >::operator=(std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >&&)[m[K’
+[01m[K/usr/include/c++/11/chrono:872:14:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::common_type<std::chrono::duration<long int, std::ratio<1, 1000000000> >, std::chrono::duration<long int, std::ratio<1, 1000000000> > >::type[m[K’ {aka ‘[01m[Kstd::chrono::duration<long int, std::ratio<1, 1000000000> >[m[K’} to ‘[01m[Kstd::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >&&[m[K’
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:322:22:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Krun[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  322 |                 bool [01;35m[Krun[m[K = false;
+      |                      [01;35m[K^~~[m[K
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:79:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Ktask_selection[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+   79 |     int [01;35m[Ktask_selection[m[K, param_selection;
+      |         [01;35m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:79:25:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kparam_selection[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+   79 |     int task_selection, [01;35m[Kparam_selection[m[K;
+      |                         [01;35m[K^~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/user_input_client.dir/build.make:76: CMakeFiles/user_input_client.dir/src/user_input_client.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:169: CMakeFiles/user_input_client.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

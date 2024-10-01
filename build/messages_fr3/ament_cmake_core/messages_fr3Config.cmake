@@ -16,7 +16,7 @@ set(_messages_fr3_CONFIG_INCLUDED TRUE)
 
 # output package information
 if(NOT messages_fr3_FIND_QUIETLY)
-  message(STATUS "Found messages_fr3: 0.0.0 (${messages_fr3_DIR})")
+  message(STATUS "Found messages_fr3: 1.0.0 (${messages_fr3_DIR})")
 endif()
 
 # warn when using a deprecated package

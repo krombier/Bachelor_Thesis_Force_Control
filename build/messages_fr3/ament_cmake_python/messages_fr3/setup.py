@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='messages_fr3',
-    version='0.0.0',
+    version='1.0.0',
     packages=find_packages(
         include=('messages_fr3', 'messages_fr3.*')),
 )

@@ -1,0 +1,110 @@
+[0.042s] Invoking command in '/home/simi/franka_ros2_ws/build/cartesian_impedance_control': CMAKE_PREFIX_PATH=/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster:/home/simi/franka_ros2_ws/install/franka_semantic_components:/home/simi/franka_ros2_ws/install/franka_hardware:/home/simi/franka_ros2_ws/install/messages_fr3:/home/simi/franka_ros2_ws/install/franka_msgs:/home/simi/franka_ros2_ws/install/franka_description:/home/simi/franka_ros2_ws/install/cartesian_impedance_control:/home/simi/franka_ros2_ws/install/joint_trajectory_controller:/home/simi/franka_ros2_ws/install/integration_launch_testing:/home/simi/franka_ros2_ws/install/franka_bringup:/home/simi/franka_ros2_ws/install/franka_example_controllers:/home/simi/franka_ros2_ws/install/franka_moveit_config:/home/simi/franka_ros2_ws/install/franka_gripper:/home/simi/franka_ros2_ws/install/realtime_plot_of_data:/opt/ros/humble LD_LIBRARY_PATH=/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster/lib:/home/simi/franka_ros2_ws/install/franka_semantic_components/lib:/home/simi/franka_ros2_ws/install/franka_hardware/lib:/home/simi/franka_ros2_ws/install/messages_fr3/lib:/home/simi/franka_ros2_ws/install/franka_msgs/lib:/home/simi/franka_ros2_ws/install/cartesian_impedance_control/lib:/home/simi/franka_ros2_ws/install/joint_trajectory_controller/lib:/home/simi/franka_ros2_ws/install/integration_launch_testing/lib:/home/simi/franka_ros2_ws/install/franka_example_controllers/lib:/home/simi/franka_ros2_ws/install/franka_gripper/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/simi/franka_ros2_ws/build/cartesian_impedance_control -- -j16 -l16
+[0.145s] [ 40%] Built target cartesian_impedance_control
+[0.165s] [35m[1mConsolidate compiler generated dependencies of target user_input_client[0m
+[0.191s] [ 60%] Built target gripper
+[0.193s] [ 80%] Built target force_control_client
+[0.201s] [ 90%] [32mBuilding CXX object CMakeFiles/user_input_client.dir/src/user_input_client.cpp.o[0m
+[2.632s] [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[2.632s] [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:325:71:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kduration_cast<std::chrono::seconds>(std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >&)[m[K’
+[2.633s]   325 |       while([01;31m[Kstd::chrono::duration_cast<std::chrono::seconds>(elapsedTime)[m[K.count() < 5.0){
+[2.633s]       |             [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[2.633s] 
+[2.633s] In file included from [01m[K/usr/include/c++/11/mutex:39[m[K,
+[2.633s]                  from [01m[K/usr/include/c++/11/future:38[m[K,
+[2.633s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:18[m[K,
+[2.633s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[2.633s]                  from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:1[m[K:
+[2.633s] [01m[K/usr/include/c++/11/chrono:267:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _ToDur, class _Rep, class _Period> constexpr std::chrono::__enable_if_is_duration<_ToDur> std::chrono::duration_cast(const std::chrono::duration<_Rep, _Period>&)[m[K’
+[2.634s]   267 |       [01;36m[Kduration_cast[m[K(const duration<_Rep, _Period>& __d)
+[2.634s]       |       [01;36m[K^~~~~~~~~~~~~[m[K
+[2.634s] [01m[K/usr/include/c++/11/chrono:267:7:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.634s] [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:325:71:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >[m[K’ is not derived from ‘[01m[Kconst std::chrono::duration<_Rep, _Period>[m[K’
+[2.634s]   325 |       while([01;36m[Kstd::chrono::duration_cast<std::chrono::seconds>(elapsedTime)[m[K.count() < 5.0){
+[2.634s]       |             [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[2.635s] 
+[2.635s] [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:337:71:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kduration_cast<std::chrono::seconds>(std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >&)[m[K’
+[2.635s]   337 |       while([01;31m[Kstd::chrono::duration_cast<std::chrono::seconds>(elapsedTime)[m[K.count() < 5.0){
+[2.635s]       |             [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[2.635s] 
+[2.635s] In file included from [01m[K/usr/include/c++/11/mutex:39[m[K,
+[2.635s]                  from [01m[K/usr/include/c++/11/future:38[m[K,
+[2.635s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:18[m[K,
+[2.635s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[2.635s]                  from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:1[m[K:
+[2.636s] [01m[K/usr/include/c++/11/chrono:267:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _ToDur, class _Rep, class _Period> constexpr std::chrono::__enable_if_is_duration<_ToDur> std::chrono::duration_cast(const std::chrono::duration<_Rep, _Period>&)[m[K’
+[2.636s]   267 |       [01;36m[Kduration_cast[m[K(const duration<_Rep, _Period>& __d)
+[2.636s]       |       [01;36m[K^~~~~~~~~~~~~[m[K
+[2.636s] [01m[K/usr/include/c++/11/chrono:267:7:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.636s] [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:337:71:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >[m[K’ is not derived from ‘[01m[Kconst std::chrono::duration<_Rep, _Period>[m[K’
+[2.636s]   337 |       while([01;36m[Kstd::chrono::duration_cast<std::chrono::seconds>(elapsedTime)[m[K.count() < 5.0){
+[2.636s]       |             [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[2.636s] 
+[2.636s] [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:349:71:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kduration_cast<std::chrono::seconds>(std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >&)[m[K’
+[2.636s]   349 |       while([01;31m[Kstd::chrono::duration_cast<std::chrono::seconds>(elapsedTime)[m[K.count() < 2.0){
+[2.636s]       |             [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[2.637s] 
+[2.637s] In file included from [01m[K/usr/include/c++/11/mutex:39[m[K,
+[2.637s]                  from [01m[K/usr/include/c++/11/future:38[m[K,
+[2.637s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:18[m[K,
+[2.637s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[2.637s]                  from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:1[m[K:
+[2.637s] [01m[K/usr/include/c++/11/chrono:267:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _ToDur, class _Rep, class _Period> constexpr std::chrono::__enable_if_is_duration<_ToDur> std::chrono::duration_cast(const std::chrono::duration<_Rep, _Period>&)[m[K’
+[2.637s]   267 |       [01;36m[Kduration_cast[m[K(const duration<_Rep, _Period>& __d)
+[2.637s]       |       [01;36m[K^~~~~~~~~~~~~[m[K
+[2.637s] [01m[K/usr/include/c++/11/chrono:267:7:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.637s] [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:349:71:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >[m[K’ is not derived from ‘[01m[Kconst std::chrono::duration<_Rep, _Period>[m[K’
+[2.637s]   349 |       while([01;36m[Kstd::chrono::duration_cast<std::chrono::seconds>(elapsedTime)[m[K.count() < 2.0){
+[2.637s]       |             [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[2.637s] 
+[2.638s] [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:362:71:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kduration_cast<std::chrono::seconds>(std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >&)[m[K’
+[2.638s]   362 |       while([01;31m[Kstd::chrono::duration_cast<std::chrono::seconds>(elapsedTime)[m[K.count() < 10.0){   //run for 10 seconds
+[2.638s]       |             [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[2.638s] 
+[2.638s] In file included from [01m[K/usr/include/c++/11/mutex:39[m[K,
+[2.638s]                  from [01m[K/usr/include/c++/11/future:38[m[K,
+[2.638s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:18[m[K,
+[2.638s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[2.638s]                  from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:1[m[K:
+[2.638s] [01m[K/usr/include/c++/11/chrono:267:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _ToDur, class _Rep, class _Period> constexpr std::chrono::__enable_if_is_duration<_ToDur> std::chrono::duration_cast(const std::chrono::duration<_Rep, _Period>&)[m[K’
+[2.638s]   267 |       [01;36m[Kduration_cast[m[K(const duration<_Rep, _Period>& __d)
+[2.638s]       |       [01;36m[K^~~~~~~~~~~~~[m[K
+[2.638s] [01m[K/usr/include/c++/11/chrono:267:7:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.638s] [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:362:71:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >[m[K’ is not derived from ‘[01m[Kconst std::chrono::duration<_Rep, _Period>[m[K’
+[2.638s]   362 |       while([01;36m[Kstd::chrono::duration_cast<std::chrono::seconds>(elapsedTime)[m[K.count() < 10.0){   //run for 10 seconds
+[2.638s]       |             [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[2.638s] 
+[2.638s] [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:363:109:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >[m[K’ has no member named ‘[01m[Kcount[m[K’
+[2.638s]   363 | s_x + amplitude * std::sin(2 * M_PI * frequency * elapsedTime.[01;31m[Kcount[m[K());
+[2.638s]       |                                                               [01;31m[K^~~~~[m[K
+[2.639s] 
+[2.639s] [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:373:46:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >[m[K’ has no member named ‘[01m[Kcount[m[K’
+[2.639s]   373 |                     std::cout << elapsedTime.[01;31m[Kcount[m[K() << std::endl;
+[2.639s]       |                                              [01;31m[K^~~~~[m[K
+[2.639s] [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:374:70:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[Kstd::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >[m[K’ and ‘[01m[Kstd::common_type<std::chrono::duration<long int, std::ratio<1, 1000000000> >, std::chrono::duration<long int, std::ratio<1, 1000000000> > >::type[m[K’ {aka ‘[01m[Kstd::chrono::duration<long int, std::ratio<1, 1000000000> >[m[K’})
+[2.639s]   374 |            elapsedTime = std::chrono::steady_clock::now() - [01;31m[Kstart_time[m[K;
+[2.639s]       |                                                             [01;31m[K^~~~~~~~~~[m[K
+[2.639s] 
+[2.639s] In file included from [01m[K/usr/include/c++/11/mutex:39[m[K,
+[2.639s]                  from [01m[K/usr/include/c++/11/future:38[m[K,
+[2.639s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:18[m[K,
+[2.639s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[2.639s]                  from [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:1[m[K:
+[2.639s] [01m[K/usr/include/c++/11/chrono:872:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >& std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >::operator=(const std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >&)[m[K’
+[2.639s]   872 |       struct [01;36m[Ktime_point[m[K
+[2.639s]       |              [01;36m[K^~~~~~~~~~[m[K
+[2.639s] [01m[K/usr/include/c++/11/chrono:872:14:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::common_type<std::chrono::duration<long int, std::ratio<1, 1000000000> >, std::chrono::duration<long int, std::ratio<1, 1000000000> > >::type[m[K’ {aka ‘[01m[Kstd::chrono::duration<long int, std::ratio<1, 1000000000> >[m[K’} to ‘[01m[Kconst std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >&[m[K’
+[2.639s] [01m[K/usr/include/c++/11/chrono:872:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >& std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >::operator=(std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >&&)[m[K’
+[2.640s] [01m[K/usr/include/c++/11/chrono:872:14:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::common_type<std::chrono::duration<long int, std::ratio<1, 1000000000> >, std::chrono::duration<long int, std::ratio<1, 1000000000> > >::type[m[K’ {aka ‘[01m[Kstd::chrono::duration<long int, std::ratio<1, 1000000000> >[m[K’} to ‘[01m[Kstd::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >&&[m[K’
+[2.640s] [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:322:22:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Krun[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[2.640s]   322 |                 bool [01;35m[Krun[m[K = false;
+[2.640s]       |                      [01;35m[K^~~[m[K
+[2.640s] [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:79:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Ktask_selection[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[2.640s]    79 |     int [01;35m[Ktask_selection[m[K, param_selection;
+[2.640s]       |         [01;35m[K^~~~~~~~~~~~~~[m[K
+[2.640s] [01m[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/user_input_client.cpp:79:25:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kparam_selection[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[2.640s]    79 |     int task_selection, [01;35m[Kparam_selection[m[K;
+[2.640s]       |                         [01;35m[K^~~~~~~~~~~~~~~[m[K
+[4.040s] gmake[2]: *** [CMakeFiles/user_input_client.dir/build.make:76: CMakeFiles/user_input_client.dir/src/user_input_client.cpp.o] Error 1
+[4.041s] gmake[1]: *** [CMakeFiles/Makefile2:169: CMakeFiles/user_input_client.dir/all] Error 2
+[4.041s] gmake: *** [Makefile:146: all] Error 2
+[4.046s] Invoked command in '/home/simi/franka_ros2_ws/build/cartesian_impedance_control' returned '2': CMAKE_PREFIX_PATH=/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster:/home/simi/franka_ros2_ws/install/franka_semantic_components:/home/simi/franka_ros2_ws/install/franka_hardware:/home/simi/franka_ros2_ws/install/messages_fr3:/home/simi/franka_ros2_ws/install/franka_msgs:/home/simi/franka_ros2_ws/install/franka_description:/home/simi/franka_ros2_ws/install/cartesian_impedance_control:/home/simi/franka_ros2_ws/install/joint_trajectory_controller:/home/simi/franka_ros2_ws/install/integration_launch_testing:/home/simi/franka_ros2_ws/install/franka_bringup:/home/simi/franka_ros2_ws/install/franka_example_controllers:/home/simi/franka_ros2_ws/install/franka_moveit_config:/home/simi/franka_ros2_ws/install/franka_gripper:/home/simi/franka_ros2_ws/install/realtime_plot_of_data:/opt/ros/humble LD_LIBRARY_PATH=/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster/lib:/home/simi/franka_ros2_ws/install/franka_semantic_components/lib:/home/simi/franka_ros2_ws/install/franka_hardware/lib:/home/simi/franka_ros2_ws/install/messages_fr3/lib:/home/simi/franka_ros2_ws/install/franka_msgs/lib:/home/simi/franka_ros2_ws/install/cartesian_impedance_control/lib:/home/simi/franka_ros2_ws/install/joint_trajectory_controller/lib:/home/simi/franka_ros2_ws/install/integration_launch_testing/lib:/home/simi/franka_ros2_ws/install/franka_example_controllers/lib:/home/simi/franka_ros2_ws/install/franka_gripper/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/simi/franka_ros2_ws/build/cartesian_impedance_control -- -j16 -l16

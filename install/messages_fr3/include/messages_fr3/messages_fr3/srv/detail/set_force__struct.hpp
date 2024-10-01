@@ -44,6 +44,7 @@ struct SetForce_Request_
       this->x_torque = 0.0;
       this->y_torque = 0.0;
       this->z_torque = 0.0;
+      this->frame = 0;
     }
   }
 
@@ -59,6 +60,7 @@ struct SetForce_Request_
       this->x_torque = 0.0;
       this->y_torque = 0.0;
       this->z_torque = 0.0;
+      this->frame = 0;
     }
   }
 
@@ -81,6 +83,9 @@ struct SetForce_Request_
   using _z_torque_type =
     double;
   _z_torque_type z_torque;
+  using _frame_type =
+    int8_t;
+  _frame_type frame;
 
   // setters for named parameter idiom
   Type & set__x_force(
@@ -117,6 +122,12 @@ struct SetForce_Request_
     const double & _arg)
   {
     this->z_torque = _arg;
+    return *this;
+  }
+  Type & set__frame(
+    const int8_t & _arg)
+  {
+    this->frame = _arg;
     return *this;
   }
 
@@ -178,6 +189,9 @@ struct SetForce_Request_
       return false;
     }
     if (this->z_torque != other.z_torque) {
+      return false;
+    }
+    if (this->frame != other.frame) {
       return false;
     }
     return true;

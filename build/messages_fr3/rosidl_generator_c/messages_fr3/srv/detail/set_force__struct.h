@@ -26,6 +26,7 @@ typedef struct messages_fr3__srv__SetForce_Request
   double x_torque;
   double y_torque;
   double z_torque;
+  int8_t frame;
 } messages_fr3__srv__SetForce_Request;
 
 // Struct for a sequence of messages_fr3__srv__SetForce_Request.

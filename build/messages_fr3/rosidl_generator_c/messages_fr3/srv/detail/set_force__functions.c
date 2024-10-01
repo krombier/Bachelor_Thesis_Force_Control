@@ -22,6 +22,7 @@ messages_fr3__srv__SetForce_Request__init(messages_fr3__srv__SetForce_Request * 
   // x_torque
   // y_torque
   // z_torque
+  // frame
   return true;
 }
 
@@ -37,6 +38,7 @@ messages_fr3__srv__SetForce_Request__fini(messages_fr3__srv__SetForce_Request * 
   // x_torque
   // y_torque
   // z_torque
+  // frame
 }
 
 bool
@@ -69,6 +71,10 @@ messages_fr3__srv__SetForce_Request__are_equal(const messages_fr3__srv__SetForce
   if (lhs->z_torque != rhs->z_torque) {
     return false;
   }
+  // frame
+  if (lhs->frame != rhs->frame) {
+    return false;
+  }
   return true;
 }
 
@@ -92,6 +98,8 @@ messages_fr3__srv__SetForce_Request__copy(
   output->y_torque = input->y_torque;
   // z_torque
   output->z_torque = input->z_torque;
+  // frame
+  output->frame = input->frame;
   return true;
 }
 

@@ -21,6 +21,7 @@ void UserInputForceServer::setForce(const std::shared_ptr<messages_fr3::srv::Set
     (*F_contact_target)[3] = request->x_torque;
     (*F_contact_target)[4] = request->y_torque;
     (*F_contact_target)[5] = request->z_torque;
+    (*frame) = request->frame;
 
 }
 

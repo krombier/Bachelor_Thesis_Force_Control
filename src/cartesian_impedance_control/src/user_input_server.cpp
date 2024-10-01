@@ -5,7 +5,7 @@
 #include <array>
 
 #include <rclcpp/rclcpp.hpp>
-#include "messages_fr3/srv/set_pose.hpp"                                                                            // this file doesn't even exist... remove?
+#include "messages_fr3/srv/set_pose.hpp"
 #include "cartesian_impedance_control/user_input_server.hpp"
 #include "cartesian_impedance_control/cartesian_impedance_controller.hpp"
 
@@ -19,7 +19,8 @@ void UserInputServer::setPose(const std::shared_ptr<messages_fr3::srv::SetPose::
     (*position_d_target_)[2] = request->z;
     (*rotation_d_target_)[0] = request->roll;
     (*rotation_d_target_)[1] = request->pitch;
-    (*rotation_d_target_)[2] = request->yaw;                                                                                               // here was a mistake (was as in has been, ignore this comment now everything works)
+    (*rotation_d_target_)[2] = request->yaw;
+   // (*gripper_) = request->gripper_state;                                                                                               // here was a mistake (was as in has been, ignore this comment now everything works)
 }
 
 void UserInputServer::setParam(const std::shared_ptr<messages_fr3::srv::SetParam::Request> request, 

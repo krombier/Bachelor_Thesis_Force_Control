@@ -104,6 +104,15 @@ bool messages_fr3__srv__set_force__request__convert_from_py(PyObject * _pymsg, v
     ros_message->z_torque = PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
+  {  // frame
+    PyObject * field = PyObject_GetAttrString(_pymsg, "frame");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->frame = (int8_t)PyLong_AsLong(field);
+    Py_DECREF(field);
+  }
 
   return true;
 }
@@ -186,6 +195,17 @@ PyObject * messages_fr3__srv__set_force__request__convert_to_py(void * raw_ros_m
     field = PyFloat_FromDouble(ros_message->z_torque);
     {
       int rc = PyObject_SetAttrString(_pymessage, "z_torque", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // frame
+    PyObject * field = NULL;
+    field = PyLong_FromLong(ros_message->frame);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "frame", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

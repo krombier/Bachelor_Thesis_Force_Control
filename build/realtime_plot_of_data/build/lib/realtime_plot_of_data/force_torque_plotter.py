@@ -31,8 +31,8 @@ class ForceTorquePlotter(Node):
         torque_labels = ['Torque x', 'Torque y', 'Torque z']
         self.force_lines = [self.ax1.plot([], [], label=force_labels[i])[0] for i in range(3)]
         self.torque_lines = [self.ax2.plot([], [], label=torque_labels[i])[0] for i in range(3)]
-        self.ax1.set_title('Force vs Time')
-        self.ax2.set_title('Torque vs Time')
+        self.ax1.set_title('Observed force vs Time')
+        self.ax2.set_title('Observed torque vs Time')
         self.ax1.set_xlabel('Time (s)')
         self.ax2.set_xlabel('Time (s)')
         self.ax1.set_ylabel('Force (N)')

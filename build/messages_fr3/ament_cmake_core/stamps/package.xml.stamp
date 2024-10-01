@@ -2,9 +2,10 @@
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
   <name>messages_fr3</name>
-  <version>0.0.0</version>
-  <description>TODO: Package description</description>
-  <maintainer email="cdeplazes@ethz.ch">curdin</maintainer>
+  <version>1.0.0</version>
+  <description>Upgraded version of Curdins [cdeplazes@ethz.ch] package with messages for the Franka Emika robot. 
+              In this version one can additionally stear the gripper.</description>
+  <maintainer email="simburri@ethz.ch">Simon</maintainer>
   <license>TODO: License declaration</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
