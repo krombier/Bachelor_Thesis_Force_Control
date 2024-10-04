@@ -116,6 +116,7 @@ void CartesianImpedanceController::adapt_Sm_and_Sf(const int& frame, const Eigen
 }
 
 //make current position desired position if the requested force is changed
+///////////////////////////////////////////////////////////////////////////////////////////////This function can be optimised --> get rid of loop
 void CartesianImpedanceController::change_desired_position_if_force_changes(const Eigen::Quaterniond orientation, const Eigen::Vector3d position, const Eigen::Matrix<double, 6, 1>& F_contact_target, 
                         Eigen::Matrix<double, 6, 1>& F_request_old, Eigen::Vector3d& position_d_, Eigen::Quaterniond& orientation_d_, 
                         Eigen::Vector3d& position_d_target_, Eigen::Vector3d& rotation_d_target_/*, bool& keepprinting*/){
