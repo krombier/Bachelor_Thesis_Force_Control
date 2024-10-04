@@ -113,8 +113,8 @@ int main(int argc, char **argv) {
         switch (task_selection){
             case 1:{ */
         //publish_pose(pose_client,pose_request,node); // here it doesn't work wtf
-        std::cout << "Enter new goal position: \n [1] --> 0.5, -0.4, 0.5 \n [2] --> DO NOT USE \n [3] --> 0.5, 0.0, 0.5 with a wired orientation\n [4] --> 0.298, 0.7, 0.1 \n [5] --> 0.6, 0.0, 0.07 \n ";
-        std::cout << "[6] --> 0.5, 0.0, 0.04 \n [7] --> START POS FOR SCREW \n [j] --> Reduce current z-Position by 1 cm \n [u] --> Increase current z-Position by 1 cm \n [w] --> Reduce current x-Position by 0.1 cm \n ";
+        std::cout << "Enter new goal position: \n [1] --> 0.5, -0.4, 0.5 \n [2] --> DO NOT USE \n [3] --> starting pose of colaboration routine\n [4] --> 0.298, 0.7, 0.1 \n [5] --> 0.6, 0.0, 0.07 \n ";
+        std::cout << "[6] --> Do the collaboration routine \n [7] --> START POS FOR SCREW \n [j] --> Reduce current z-Position by 1 cm \n [u] --> Increase current z-Position by 1 cm \n [w] --> Reduce current x-Position by 0.1 cm \n ";
         std::cout << "[a] --> Reduce current y-Position by 0.1 cm \n [s] --> Increase current x-Position by 0.1 cm \n [d] --> Increase current y-Position by 0.1 cm \n";
         std::cout << "[l] --> Reduce current z-Position by 0.1 cm \n [o] --> Increase current z-Position by 0.1 cm \n ";
         std::cout << "All turning commands bellow are in the robots base frame marked on the robot. Positve and negative are according to right hand rule.\n ";
@@ -163,12 +163,12 @@ int main(int argc, char **argv) {
                 break;
             }
             case '3':{
-                pose_request->x = 0.5;
+                pose_request->x = 0.6;
                 pose_request->y = 0.0;
-                pose_request->z = 0.5;
-                pose_request->roll = 3.5;
-                pose_request->pitch = 0.4;
-                pose_request->yaw = 1;
+                pose_request->z = 0.13;
+                pose_request->roll = M_PI-0.5;
+                pose_request->pitch = 0.0;
+                pose_request->yaw = -M_PI_2;
                 //pose_request-> gripper_state = 2; //open
                 break;
             }
@@ -193,13 +193,89 @@ int main(int argc, char **argv) {
                 break;
             }
             case '6':{
-                pose_request->x = 0.5;
-                pose_request->y = 0.0;
-                pose_request->z = 0.04;
+                std::cout << "Collaboration routine started. The robot will wait for 5 seconds.\n";
+                auto start_time = std::chrono::steady_clock::now();
+                auto elapsedTime = std::chrono::steady_clock::now();
+                while(std::chrono::duration_cast<std::chrono::seconds>(std::chrono::steady_clock::now() - start_time).count() < 10){
+                }       //wait 5 seconds
+                pose_request->x = 0.6;
+                pose_request->y = 0.2;
+                pose_request->z = 0.11;
+                pose_request->roll = M_PI-0.4;
+                pose_request->pitch = 0.0;
+                pose_request->yaw = -M_PI_2;
+                std::cout << "The robot will now move near the target object. He has currently 5 seconds to do so.\n";
+                publish_pose(pose_client,pose_request,node);
+                start_time = std::chrono::steady_clock::now();
+                elapsedTime = std::chrono::steady_clock::now();
+                while(std::chrono::duration_cast<std::chrono::seconds>(std::chrono::steady_clock::now() - start_time).count()  < 7.0){
+                }
+
+                //do force shit 
+                force_request->x_force = 0.0;
+                force_request->y_force = 0.0;
+                force_request->z_force = -3.0;
+                force_request->x_torque = 0.0;
+                force_request->y_torque = 0.0;
+                force_request->z_torque = 0.0;
+                force_request->frame = 2;
+                std::cout << "We exert a force of -3N in z-direction to create a contact.\n";
+                publish_force(force_client, force_request, node);
+                start_time = std::chrono::steady_clock::now();
+                while(std::chrono::duration_cast<std::chrono::seconds>(std::chrono::steady_clock::now() - start_time).count() < 3.0){
+                }
+                force_request->x_force = 0.0;
+                force_request->y_force = 0.0;
+                force_request->z_force = -7.0;
+                force_request->x_torque = 0.0;
+                force_request->y_torque = 0.0;
+                force_request->z_torque = 0.0;
+                force_request->frame = 2;
+                std::cout << "We should now be in contact. The force gets increased to 7N.\n";
+                publish_force(force_client, force_request, node);
+                double start_pos_x = pose_request->x;
+                elapsedTime = std::chrono::steady_clock::now();
+                start_time = std::chrono::steady_clock::now();
+                std::cout << "The robot starts the 10 seconds of cleaning.\n";
+                while (std::chrono::duration_cast<std::chrono::seconds>(std::chrono::steady_clock::now() - start_time).count() < 10) {
+                    // Calculate elapsed time in seconds
+                    auto elapsedTime = std::chrono::steady_clock::now() - start_time;
+                    double elapsedSeconds = std::chrono::duration_cast<std::chrono::duration<double>>(elapsedTime).count();
+
+                    // Update pose_request using the elapsed time
+                    pose_request->x = start_pos_x - 0.15/10*elapsedSeconds;
+                    pose_request->y = pose_request->y;
+                    pose_request->z = pose_request->z;
+                    pose_request->roll = pose_request->roll;
+                    pose_request->pitch = pose_request->pitch;
+                    pose_request->yaw = pose_request->yaw;
+
+                    // Publish the pose
+                    publish_pose(pose_client, pose_request, node);
+
+                    // Print the Y value and the elapsed time
+                    //std::cout << "pose_request-->y: " << pose_request->y << std::endl;
+                    std::cout << "Elapsed time (seconds): " << elapsedSeconds << std::endl;
+                }
+                force_request->x_force = 0.0;
+                force_request->y_force = 0.0;
+                force_request->z_force = 0.0;
+                force_request->x_torque = 0.0;
+                force_request->y_torque = 0.0;
+                force_request->z_torque = 0.0;
+                publish_force(force_client, force_request, node);
+                std::cout << "Force control deactivated, only impedance control now.\n";
+                pose_request->x = 0.45;
+                pose_request->y = 0.2;
+                pose_request->z = 0.3;
                 pose_request->roll = M_PI;
                 pose_request->pitch = 0.0;
                 pose_request->yaw = -M_PI_2;
-                //pose_request-> gripper_state = 2; //open
+                std::cout << "The robot will now move near the target object. He has currently 5 seconds to do so.\n";
+                publish_pose(pose_client,pose_request,node);
+                start_time = std::chrono::steady_clock::now();
+                while(std::chrono::duration_cast<std::chrono::seconds>(std::chrono::steady_clock::now() - start_time).count() < 3.0){
+                }
                 break;
             }
             case '7':{
@@ -224,32 +300,32 @@ int main(int argc, char **argv) {
             }
             case 'w':{
                 store = pose_request->x;
-                pose_request->x = store - 0.001;
+                pose_request->x = store - 0.05;
                 break;
             }
             case 'a':{
                 store = pose_request->y;
-                pose_request->y = store - 0.001;
+                pose_request->y = store - 0.05;
                 break;
             }
             case 's':{
                 store = pose_request->x;
-                pose_request->x = store + 0.001;
+                pose_request->x = store + 0.05;
                 break;
             }
             case 'd':{
                 store = pose_request->y;
-                pose_request->y = store + 0.001;
+                pose_request->y = store + 0.05;
                 break;
             }
             case 'l':{
                 store = pose_request->z;
-                pose_request->z = store - 0.001;
+                pose_request->z = store - 0.05;
                 break;
             }
             case 'o':{
                 store = pose_request->z;
-                pose_request->z = store + 0.01;
+                pose_request->z = store + 0.05;
                 break;
             }
             case 'x':{

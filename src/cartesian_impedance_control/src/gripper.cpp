@@ -46,6 +46,8 @@ private:
                     std::cout << "Error, current gripper command has no defined action" << std::endl;
                     
                 }
+                // If one wants to grasp something else, feel free to refer to the documentation from Franka Emika
+                // https://frankaemika.github.io/libfranka/0.14.1/classfranka_1_1Gripper.html 
             }
                 /*
                 switch (gripper_command_) {

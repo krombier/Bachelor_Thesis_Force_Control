@@ -45,6 +45,16 @@ namespace cartesian_impedance_control {
 
 CartesianImpedanceController::CartesianImpedanceController() {}
 
+void CartesianImpedanceController::change_wrench_to_base_frame(Eigen::Matrix<double, 6, 1>& F_cmd, const Eigen::Matrix<double,3,3>& rot_matrix,
+                                                               const Eigen::Matrix<double,3,1>& position /*the position is the translation between the 2 frames*/){
+  Eigen::Vector3d force_eff = F_cmd.head<3>();    // First 3 elements: [f_x, f_y, f_z]
+  Eigen::Vector3d moment_eff = F_cmd.tail<3>();   // Last 3 elements: [m_x, m_y, m_z]
+  Eigen::Vector3d force_base_frame = rot_matrix * force_eff;
+  Eigen::Vector3d moment_base_frame = rot_matrix * moment_eff + position.cross(force_base_frame);
+  F_cmd.head<3>() = force_base_frame;
+  F_cmd.tail<3>() = moment_base_frame;
+                                                               }
+
 void CartesianImpedanceController::update_forces(Eigen::Matrix<double, 6, 1>& F_observed, 
                                                 Eigen::Matrix<double, 7, 1>& beta_observer, 
                                                 Eigen::Matrix<double, 7, 1>& gamma_observer,
@@ -77,11 +87,11 @@ void cartesian_impedance_control::update_observer() {
 */
 // add Sm and Sf by pass by reference
 //
-void CartesianImpedanceController::adapt_Sm_and_Sf(const int& frame, const Eigen::Matrix<double, 6, 1>& F_request, const Eigen::Matrix<double,3,3>& rot_matrix, 
+void CartesianImpedanceController::adapt_Sm_and_Sf(const int& frame, const Eigen::Matrix<double, 6, 1>& F_contact_target, const Eigen::Matrix<double,3,3>& rot_matrix, 
                         Eigen::Matrix<double, 6, 6>& Sm, Eigen::Matrix<double, 6, 6>& Sf){    //update the Sm and Sf matrix
   Sm = Eigen::MatrixXd::Zero(6, 6);
   for (int i =0; i<6; ++i){
-    if (F_request(i)==0){
+    if (F_contact_target(i)==0){
       //Eigen::Matrix<double, 6, 6> test;
       //test.topLeftCorner(3,3) = Eigen::Matrixd::Identity(3,3);
       Sm(i,i) = 1;
@@ -96,21 +106,21 @@ void CartesianImpedanceController::adapt_Sm_and_Sf(const int& frame, const Eigen
     Eigen::Matrix<double, 3, 3> Identity_3x3 = Eigen::MatrixXd::Identity(3, 3);
     
     // Calculations according to robot dynamics script chapter 3.9.4 Operational Space Control. The matrices had to to be inverted (= transposed to get it running).
-    Sm.topLeftCorner(3,3) = rot_matrix * Sm_top_left * rot_matrix.transpose();
-    Sm.bottomRightCorner(3,3) = rot_matrix * Sm_bottom_right * rot_matrix.transpose();
-    Sf.topLeftCorner(3,3) = rot_matrix * (Identity_3x3 - Sm_top_left) * rot_matrix.transpose();  
-    Sf.bottomRightCorner(3,3) = rot_matrix * (Identity_3x3 - Sm_bottom_right) * rot_matrix.transpose();
+    Sm.topLeftCorner(3,3) = rot_matrix.transpose() * Sm_top_left * rot_matrix;
+    Sm.bottomRightCorner(3,3) = rot_matrix.transpose() * Sm_bottom_right * rot_matrix;
+    Sf.topLeftCorner(3,3) = rot_matrix.transpose() * (Identity_3x3 - Sm_top_left) * rot_matrix;  
+    Sf.bottomRightCorner(3,3) = rot_matrix.transpose() * (Identity_3x3 - Sm_bottom_right) * rot_matrix;
   }
 
   
 }
 
 //make current position desired position if the requested force is changed
-void CartesianImpedanceController::change_desired_position_if_force_changes(const Eigen::Quaterniond orientation, const Eigen::Vector3d position, const Eigen::Matrix<double, 6, 1>& F_request, 
+void CartesianImpedanceController::change_desired_position_if_force_changes(const Eigen::Quaterniond orientation, const Eigen::Vector3d position, const Eigen::Matrix<double, 6, 1>& F_contact_target, 
                         Eigen::Matrix<double, 6, 1>& F_request_old, Eigen::Vector3d& position_d_, Eigen::Quaterniond& orientation_d_, 
                         Eigen::Vector3d& position_d_target_, Eigen::Vector3d& rotation_d_target_/*, bool& keepprinting*/){
   for (int i =0; i<6; ++i){
-    if (F_request(i)!= F_request_old(i)){
+    if (F_contact_target(i)!= F_request_old(i)){
       position_d_ = position;
       position_d_target_ = position;
       orientation_d_ = orientation;
@@ -120,7 +130,7 @@ void CartesianImpedanceController::change_desired_position_if_force_changes(cons
       if(F_request_old.norm()!=0){    //was used for debugging
         keepprinting = false;
       }*/
-      F_request_old = F_request;
+      F_request_old = F_contact_target;
       break;
     }
   }
@@ -503,9 +513,35 @@ controller_interface::return_type CartesianImpedanceController::update(const rcl
 
   get_rid_of_friction_force(jacobian_transpose_pinv, tau_friction, O_F_ext_hat_K_M, O_F_ext_hat_K_M_no_friction);
   F_ext = /*0.999 * F_ext + 0.001 */ /*O_F_ext_hat_K_M*/  O_F_ext_hat_K_M_no_friction; //Filtering       //the second part is the measured external force                                               // exponential filtering with smoothing factor = 0.1
-  I_F_error += dt * Sf *(F_contact_des - F_ext);
-  F_cmd = Sf *0.4 *(F_contact_des - F_ext) + 0.9 * I_F_error + 0.9 * F_contact_des;     //////////////////////////////                      // P + I + feedforward term for faster convergence
-
+  
+  if(frame != frame_before){    //reset Integrator if frame gets changed while the controller is running
+    I_F_error = 0;
+    frame_before = frame;
+  }
+  
+  switch (frame){
+    case 1:  
+      I_F_error += dt * Sf *(F_contact_des - F_ext);
+      F_cmd = Sf *0.4 *(F_contact_des - F_ext) + 0.9 * I_F_error + 0.9 * F_contact_des;     //////////////////////////////                      // P + I + feedforward term for faster convergence
+      break;
+    case 2:
+      F_ext_EE = rotation_matrix * F_ext;
+      Sf_EE = IDENTITY;
+      for (int j =0; j<6; ++j){
+        if (F_contact_target(j)==0){
+          Sf_EE(j,j) = 0;
+        }
+      }
+      I_F_error += dt * Sf_EE *(F_contact_des - F_ext_EE);
+      F_cmd = Sf_EE *0.4 *(F_contact_des - F_ext_EE) + 0.9 * I_F_error + 0.9 * F_contact_des;
+      
+      break;
+    default:
+      std::cout<< "Unknown frame \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n";
+      break;
+  }
+  //Ist das in welchem frame oben dran.
+  //change_wrench_to_base_frame(F_cmd, rotation_matrix, position);
   tau_nullspace << (Eigen::MatrixXd::Identity(7, 7) -
                     jacobian.transpose() * jacobian_transpose_pinv) *                                           /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////here nullspace matrix gets calculated
                     (nullspace_stiffness_ * config_control * (q_d_nullspace_ - q_) - //if config_control = true we control the whole robot configuration

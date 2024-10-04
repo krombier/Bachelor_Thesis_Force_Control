@@ -171,14 +171,14 @@ public:
     Eigen::Matrix<double, 6, 6> Sf = Eigen::MatrixXd::Zero(6, 6);                            // task space selection matrix for forces
     Eigen::Matrix<double, 6, 6> K =  (Eigen::MatrixXd(6,6) << 4000,   0,   0,   0,   0,   0,
                                                                 0, 2000,   0,   0,   0,   0,
-                                                                0,   0, 2000,   0,   0,   0,  // impedance stiffness term
+                                                                0,   0, 200,   0,   0,   0,  // impedance stiffness term
                                                                 0,   0,   0, 130,   0,   0,
                                                                 0,   0,   0,   0, 130,   0,
                                                                 0,   0,   0,   0,   0,  10).finished();
 
     Eigen::Matrix<double, 6, 6> D =  (Eigen::MatrixXd(6,6) <<  127,   0,   0,   0,   0,   0,
                                                                 0,  89,   0,   0,   0,   0,
-                                                                0,   0,  89,   0,   0,   0,  // impedance damping term
+                                                                0,   0,  28.3,   0,   0,   0,  // impedance damping term
                                                                 0,   0,   0,   25,   0,   0,
                                                                 0,   0,   0,   0,   25,   0,
                                                                 0,   0,   0,   0,   0,   6).finished();
