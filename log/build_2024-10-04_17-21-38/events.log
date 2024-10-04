@@ -1,0 +1,523 @@
+[0.000000] (-) TimerEvent: {}
+[0.000280] (-) JobUnselected: {'identifier': 'franka_bringup'}
+[0.000422] (-) JobUnselected: {'identifier': 'franka_description'}
+[0.000463] (-) JobUnselected: {'identifier': 'franka_example_controllers'}
+[0.000498] (-) JobUnselected: {'identifier': 'franka_gripper'}
+[0.000526] (-) JobUnselected: {'identifier': 'franka_hardware'}
+[0.000555] (-) JobUnselected: {'identifier': 'franka_moveit_config'}
+[0.000582] (-) JobUnselected: {'identifier': 'franka_msgs'}
+[0.000611] (-) JobUnselected: {'identifier': 'franka_robot_state_broadcaster'}
+[0.000638] (-) JobUnselected: {'identifier': 'franka_semantic_components'}
+[0.000849] (-) JobUnselected: {'identifier': 'integration_launch_testing'}
+[0.000885] (-) JobUnselected: {'identifier': 'joint_trajectory_controller'}
+[0.000913] (-) JobUnselected: {'identifier': 'messages_fr3'}
+[0.000940] (-) JobUnselected: {'identifier': 'realtime_plot_of_data'}
+[0.000973] (cartesian_impedance_control) JobQueued: {'identifier': 'cartesian_impedance_control', 'dependencies': OrderedDict([('franka_description', '/home/simi/franka_ros2_ws/install/franka_description'), ('franka_msgs', '/home/simi/franka_ros2_ws/install/franka_msgs'), ('messages_fr3', '/home/simi/franka_ros2_ws/install/messages_fr3'), ('franka_hardware', '/home/simi/franka_ros2_ws/install/franka_hardware'), ('franka_semantic_components', '/home/simi/franka_ros2_ws/install/franka_semantic_components'), ('franka_robot_state_broadcaster', '/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster')])}
+[0.001033] (cartesian_impedance_control) JobStarted: {'identifier': 'cartesian_impedance_control'}
+[0.041122] (cartesian_impedance_control) JobProgress: {'identifier': 'cartesian_impedance_control', 'progress': 'cmake'}
+[0.042059] (cartesian_impedance_control) JobProgress: {'identifier': 'cartesian_impedance_control', 'progress': 'build'}
+[0.042744] (cartesian_impedance_control) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/simi/franka_ros2_ws/build/cartesian_impedance_control', '--', '-j16', '-l16'], 'cwd': '/home/simi/franka_ros2_ws/build/cartesian_impedance_control', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'simi'), ('LC_TIME', 'de_CH.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster/lib:/home/simi/franka_ros2_ws/install/franka_semantic_components/lib:/home/simi/franka_ros2_ws/install/franka_hardware/lib:/home/simi/franka_ros2_ws/install/messages_fr3/lib:/home/simi/franka_ros2_ws/install/franka_msgs/lib:/home/simi/franka_ros2_ws/install/cartesian_impedance_control/lib:/home/simi/franka_ros2_ws/install/joint_trajectory_controller/lib:/home/simi/franka_ros2_ws/install/integration_launch_testing/lib:/home/simi/franka_ros2_ws/install/franka_example_controllers/lib:/home/simi/franka_ros2_ws/install/franka_gripper/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/simi'), ('OLDPWD', '/home/simi/franka_ros2_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'de_CH.UTF-8'), ('SYSTEMD_EXEC_PID', '2002'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/simi/franka_ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'simi'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'simi'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/simi-IdeaPad-Flex-5-14ALC05:@/tmp/.ICE-unix/1979,unix/simi-IdeaPad-Flex-5-14ALC05:/tmp/.ICE-unix/1979'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'de_CH.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/8c4792f3_7390_4e8a_8c1e_8f0947d1369c'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'de_CH.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.86E3U2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.311'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/simi/franka_ros2_ws/install/realtime_plot_of_data:/home/simi/franka_ros2_ws/install/cartesian_impedance_control:/home/simi/franka_ros2_ws/install/messages_fr3:/home/simi/franka_ros2_ws/install/joint_trajectory_controller:/home/simi/franka_ros2_ws/install/integration_launch_testing:/home/simi/franka_ros2_ws/install/franka_bringup:/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster:/home/simi/franka_ros2_ws/install/franka_example_controllers:/home/simi/franka_ros2_ws/install/franka_semantic_components:/home/simi/franka_ros2_ws/install/franka_moveit_config:/home/simi/franka_ros2_ws/install/franka_hardware:/home/simi/franka_ros2_ws/install/franka_gripper:/home/simi/franka_ros2_ws/install/franka_msgs:/home/simi/franka_ros2_ws/install/franka_description:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'de_CH.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'de_CH.UTF-8'), ('LC_IDENTIFICATION', 'de_CH.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/simi/franka_ros2_ws/build/cartesian_impedance_control'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/simi/franka_ros2_ws/install/realtime_plot_of_data/lib/python3.10/site-packages:/home/simi/franka_ros2_ws/install/messages_fr3/local/lib/python3.10/dist-packages:/home/simi/franka_ros2_ws/install/franka_gripper/local/lib/python3.10/dist-packages:/home/simi/franka_ros2_ws/install/franka_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'de_CH.UTF-8'), ('LC_PAPER', 'de_CH.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/simi/franka_ros2_ws/install/franka_robot_state_broadcaster:/home/simi/franka_ros2_ws/install/franka_semantic_components:/home/simi/franka_ros2_ws/install/franka_hardware:/home/simi/franka_ros2_ws/install/messages_fr3:/home/simi/franka_ros2_ws/install/franka_msgs:/home/simi/franka_ros2_ws/install/franka_description:/home/simi/franka_ros2_ws/install/cartesian_impedance_control:/home/simi/franka_ros2_ws/install/joint_trajectory_controller:/home/simi/franka_ros2_ws/install/integration_launch_testing:/home/simi/franka_ros2_ws/install/franka_bringup:/home/simi/franka_ros2_ws/install/franka_example_controllers:/home/simi/franka_ros2_ws/install/franka_moveit_config:/home/simi/franka_ros2_ws/install/franka_gripper:/home/simi/franka_ros2_ws/install/realtime_plot_of_data:/opt/ros/humble')]), 'shell': False}
+[0.099433] (-) TimerEvent: {}
+[0.171519] (cartesian_impedance_control) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding CXX object CMakeFiles/cartesian_impedance_control.dir/src/cartesian_impedance_controller.cpp.o\x1b[0m\n'}
+[0.173628] (cartesian_impedance_control) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding CXX object CMakeFiles/cartesian_impedance_control.dir/src/user_input_server.cpp.o\x1b[0m\n'}
+[0.174565] (cartesian_impedance_control) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/cartesian_impedance_control.dir/src/force_control_server.cpp.o\x1b[0m\n'}
+[0.199582] (-) TimerEvent: {}
+[0.299956] (-) TimerEvent: {}
+[0.400434] (-) TimerEvent: {}
+[0.500908] (-) TimerEvent: {}
+[0.601352] (-) TimerEvent: {}
+[0.701810] (-) TimerEvent: {}
+[0.802313] (-) TimerEvent: {}
+[0.902676] (-) TimerEvent: {}
+[1.003131] (-) TimerEvent: {}
+[1.103590] (-) TimerEvent: {}
+[1.204072] (-) TimerEvent: {}
+[1.304540] (-) TimerEvent: {}
+[1.405004] (-) TimerEvent: {}
+[1.505456] (-) TimerEvent: {}
+[1.605999] (-) TimerEvent: {}
+[1.706545] (-) TimerEvent: {}
+[1.806994] (-) TimerEvent: {}
+[1.907378] (-) TimerEvent: {}
+[2.007863] (-) TimerEvent: {}
+[2.108246] (-) TimerEvent: {}
+[2.208710] (-) TimerEvent: {}
+[2.309107] (-) TimerEvent: {}
+[2.409528] (-) TimerEvent: {}
+[2.509970] (-) TimerEvent: {}
+[2.610411] (-) TimerEvent: {}
+[2.710800] (-) TimerEvent: {}
+[2.811249] (-) TimerEvent: {}
+[2.911646] (-) TimerEvent: {}
+[3.012062] (-) TimerEvent: {}
+[3.112492] (-) TimerEvent: {}
+[3.212914] (-) TimerEvent: {}
+[3.313338] (-) TimerEvent: {}
+[3.413821] (-) TimerEvent: {}
+[3.514391] (-) TimerEvent: {}
+[3.614924] (-) TimerEvent: {}
+[3.715361] (-) TimerEvent: {}
+[3.815738] (-) TimerEvent: {}
+[3.916140] (-) TimerEvent: {}
+[4.016581] (-) TimerEvent: {}
+[4.117035] (-) TimerEvent: {}
+[4.217421] (-) TimerEvent: {}
+[4.317790] (-) TimerEvent: {}
+[4.418209] (-) TimerEvent: {}
+[4.518639] (-) TimerEvent: {}
+[4.601452] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/cartesian_impedance_controller.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid cartesian_impedance_control::CartesianImpedanceController::update_forces(Eigen::Matrix<double, 6, 1>&, Eigen::Matrix<double, 7, 1>&, Eigen::Matrix<double, 7, 1>&, Eigen::Matrix<double, 7, 1>&, const Eigen::Matrix<double, 7, 7>&, const Eigen::Matrix<double, 7, 1>&, const Eigen::Matrix<double, 7, 7>&, const Eigen::Matrix<double, 7, 1>&, const Eigen::Matrix<double, 7, 1>&, const double&, const Eigen::Matrix<double, 7, 7>&, const MatrixXd&, const Eigen::Matrix<double, 6, 1>&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.601784] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/cartesian_impedance_controller.cpp:70:84:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[KF_cmd\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.601973] (cartesian_impedance_control) StderrLine: {'line': b'   70 |                             \x1b[01;35m\x1b[Kconst Eigen::Matrix<double, 6, 1>& F_cmd\x1b[m\x1b[K) {\n'}
+[4.602109] (cartesian_impedance_control) StderrLine: {'line': b'      |                             \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~\x1b[m\x1b[K\n'}
+[4.602221] (cartesian_impedance_control) StderrLine: {'line': b'\n'}
+[4.618794] (-) TimerEvent: {}
+[4.688333] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/cartesian_impedance_controller.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid cartesian_impedance_control::CartesianImpedanceController::checklimits(const Vector3d&, Eigen::Matrix<double, 7, 1>&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.688620] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/cartesian_impedance_controller.cpp:153:71:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kpos\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.688750] (cartesian_impedance_control) StderrLine: {'line': b'  153 | sianImpedanceController::checklimits(\x1b[01;35m\x1b[Kconst Eigen::Vector3d& pos\x1b[m\x1b[K, Eigen::Matrix<double, 7, 1>& tau_d){\n'}
+[4.688864] (cartesian_impedance_control) StderrLine: {'line': b'      |                                      \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~^~~\x1b[m\x1b[K\n'}
+[4.689012] (cartesian_impedance_control) StderrLine: {'line': b'\n'}
+[4.689126] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/cartesian_impedance_controller.cpp:153:105:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Ktau_d\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.689245] (cartesian_impedance_control) StderrLine: {'line': b'  153 | limits(const Eigen::Vector3d& pos, \x1b[01;35m\x1b[KEigen::Matrix<double, 7, 1>& tau_d\x1b[m\x1b[K){\n'}
+[4.689358] (cartesian_impedance_control) StderrLine: {'line': b'      |                                    \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~\x1b[m\x1b[K\n'}
+[4.689467] (cartesian_impedance_control) StderrLine: {'line': b'\n'}
+[4.718961] (-) TimerEvent: {}
+[4.819416] (-) TimerEvent: {}
+[4.919849] (-) TimerEvent: {}
+[5.020325] (-) TimerEvent: {}
+[5.120818] (-) TimerEvent: {}
+[5.221250] (-) TimerEvent: {}
+[5.321707] (-) TimerEvent: {}
+[5.422182] (-) TimerEvent: {}
+[5.522626] (-) TimerEvent: {}
+[5.596568] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/cartesian_impedance_controller.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvirtual controller_interface::return_type cartesian_impedance_control::CartesianImpedanceController::update(const rclcpp::Time&, const rclcpp::Duration&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[5.597154] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/cartesian_impedance_controller.cpp:519:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno match for \xe2\x80\x98\x1b[01m\x1b[Koperator=\x1b[m\x1b[K\xe2\x80\x99 (operand types are \xe2\x80\x98\x1b[01m\x1b[KEigen::Matrix<double, 6, 1>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99)\n'}
+[5.597225] (cartesian_impedance_control) StderrLine: {'line': b'  519 |     I_F_error = \x1b[01;31m\x1b[K0\x1b[m\x1b[K;\n'}
+[5.597277] (cartesian_impedance_control) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[5.597328] (cartesian_impedance_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Core:295\x1b[m\x1b[K,\n'}
+[5.597379] (cartesian_impedance_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Dense:1\x1b[m\x1b[K,\n'}
+[5.597429] (cartesian_impedance_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Eigen:1\x1b[m\x1b[K,\n'}
+[5.597500] (cartesian_impedance_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/include/cartesian_impedance_control/user_input_server.hpp:3\x1b[m\x1b[K,\n'}
+[5.597553] (cartesian_impedance_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/include/cartesian_impedance_control/cartesian_impedance_controller.hpp:29\x1b[m\x1b[K,\n'}
+[5.597605] (cartesian_impedance_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/cartesian_impedance_controller.cpp:15\x1b[m\x1b[K:\n'}
+[5.597668] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:223:33:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = OtherDerived; _Scalar = double; int _Rows = 6; int _Cols = 1; int _Options = 0; int _MaxRows = 6; int _MaxCols = 1]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.597739] (cartesian_impedance_control) StderrLine: {'line': b'  223 |     EIGEN_STRONG_INLINE Matrix& \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K=(const DenseBase<OtherDerived>& other)\n'}
+[5.597790] (cartesian_impedance_control) StderrLine: {'line': b'      |                                 \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[5.597840] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:223:33:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[5.597920] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/cartesian_impedance_controller.cpp:519:17:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kconst Eigen::DenseBase<Derived>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.597981] (cartesian_impedance_control) StderrLine: {'line': b'  519 |     I_F_error = \x1b[01;36m\x1b[K0\x1b[m\x1b[K;\n'}
+[5.598030] (cartesian_impedance_control) StderrLine: {'line': b'      |                 \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[5.598082] (cartesian_impedance_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Core:295\x1b[m\x1b[K,\n'}
+[5.598133] (cartesian_impedance_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Dense:1\x1b[m\x1b[K,\n'}
+[5.598183] (cartesian_impedance_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Eigen:1\x1b[m\x1b[K,\n'}
+[5.598233] (cartesian_impedance_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/include/cartesian_impedance_control/user_input_server.hpp:3\x1b[m\x1b[K,\n'}
+[5.598283] (cartesian_impedance_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/include/cartesian_impedance_control/cartesian_impedance_controller.hpp:29\x1b[m\x1b[K,\n'}
+[5.598333] (cartesian_impedance_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/cartesian_impedance_controller.cpp:15\x1b[m\x1b[K:\n'}
+[5.598490] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:236:33:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::EigenBase<OtherDerived>&) [with OtherDerived = OtherDerived; _Scalar = double; int _Rows = 6; int _Cols = 1; int _Options = 0; int _MaxRows = 6; int _MaxCols = 1]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.598574] (cartesian_impedance_control) StderrLine: {'line': b'  236 |     EIGEN_STRONG_INLINE Matrix& \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K=(const EigenBase<OtherDerived> &other)\n'}
+[5.598626] (cartesian_impedance_control) StderrLine: {'line': b'      |                                 \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[5.598676] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:236:33:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[5.598727] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/cartesian_impedance_controller.cpp:519:17:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kconst Eigen::EigenBase<Derived>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.598779] (cartesian_impedance_control) StderrLine: {'line': b'  519 |     I_F_error = \x1b[01;36m\x1b[K0\x1b[m\x1b[K;\n'}
+[5.598830] (cartesian_impedance_control) StderrLine: {'line': b'      |                 \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[5.598880] (cartesian_impedance_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Core:295\x1b[m\x1b[K,\n'}
+[5.598930] (cartesian_impedance_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Dense:1\x1b[m\x1b[K,\n'}
+[5.598980] (cartesian_impedance_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Eigen:1\x1b[m\x1b[K,\n'}
+[5.599029] (cartesian_impedance_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/include/cartesian_impedance_control/user_input_server.hpp:3\x1b[m\x1b[K,\n'}
+[5.599080] (cartesian_impedance_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/include/cartesian_impedance_control/cartesian_impedance_controller.hpp:29\x1b[m\x1b[K,\n'}
+[5.599130] (cartesian_impedance_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/cartesian_impedance_controller.cpp:15\x1b[m\x1b[K:\n'}
+[5.599181] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:243:33:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::ReturnByValue<OtherDerived>&) [with OtherDerived = OtherDerived; _Scalar = double; int _Rows = 6; int _Cols = 1; int _Options = 0; int _MaxRows = 6; int _MaxCols = 1]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.599234] (cartesian_impedance_control) StderrLine: {'line': b'  243 |     EIGEN_STRONG_INLINE Matrix& \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K=(const ReturnByValue<OtherDerived>& func)\n'}
+[5.599298] (cartesian_impedance_control) StderrLine: {'line': b'      |                                 \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[5.599349] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:243:33:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[5.599399] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/cartesian_impedance_controller.cpp:519:17:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kconst Eigen::ReturnByValue<Derived>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.599466] (cartesian_impedance_control) StderrLine: {'line': b'  519 |     I_F_error = \x1b[01;36m\x1b[K0\x1b[m\x1b[K;\n'}
+[5.599525] (cartesian_impedance_control) StderrLine: {'line': b'      |                 \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[5.599575] (cartesian_impedance_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Core:295\x1b[m\x1b[K,\n'}
+[5.599625] (cartesian_impedance_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Dense:1\x1b[m\x1b[K,\n'}
+[5.599675] (cartesian_impedance_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Eigen:1\x1b[m\x1b[K,\n'}
+[5.599725] (cartesian_impedance_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/include/cartesian_impedance_control/user_input_server.hpp:3\x1b[m\x1b[K,\n'}
+[5.599776] (cartesian_impedance_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/include/cartesian_impedance_control/cartesian_impedance_controller.hpp:29\x1b[m\x1b[K,\n'}
+[5.599828] (cartesian_impedance_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/cartesian_impedance_controller.cpp:15\x1b[m\x1b[K:\n'}
+[5.599878] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:438:13:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::RotationBase<OtherDerived, Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::ColsAtCompileTime>&) [with OtherDerived = OtherDerived; _Scalar = double; int _Rows = 6; int _Cols = 1; int _Options = 0; int _MaxRows = 6; int _MaxCols = 1]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.599942] (cartesian_impedance_control) StderrLine: {'line': b'  438 |     Matrix& \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K=(const RotationBase<OtherDerived,ColsAtCompileTime>& r);\n'}
+[5.599993] (cartesian_impedance_control) StderrLine: {'line': b'      |             \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[5.600044] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:438:13:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[5.600095] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/cartesian_impedance_controller.cpp:519:17:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kconst Eigen::RotationBase<OtherDerived, 1>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.600154] (cartesian_impedance_control) StderrLine: {'line': b'  519 |     I_F_error = \x1b[01;36m\x1b[K0\x1b[m\x1b[K;\n'}
+[5.600204] (cartesian_impedance_control) StderrLine: {'line': b'      |                 \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[5.600255] (cartesian_impedance_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Core:295\x1b[m\x1b[K,\n'}
+[5.600306] (cartesian_impedance_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Dense:1\x1b[m\x1b[K,\n'}
+[5.600356] (cartesian_impedance_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Eigen:1\x1b[m\x1b[K,\n'}
+[5.600505] (cartesian_impedance_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/include/cartesian_impedance_control/user_input_server.hpp:3\x1b[m\x1b[K,\n'}
+[5.600570] (cartesian_impedance_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/include/cartesian_impedance_control/cartesian_impedance_controller.hpp:29\x1b[m\x1b[K,\n'}
+[5.600635] (cartesian_impedance_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/cartesian_impedance_controller.cpp:15\x1b[m\x1b[K:\n'}
+[5.600686] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:206:33:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&) [with _Scalar = double; int _Rows = 6; int _Cols = 1; int _Options = 0; int _MaxRows = 6; int _MaxCols = 1]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.600740] (cartesian_impedance_control) StderrLine: {'line': b'  206 |     EIGEN_STRONG_INLINE Matrix& \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K=(const Matrix& other)\n'}
+[5.600790] (cartesian_impedance_control) StderrLine: {'line': b'      |                                 \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[5.600841] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:206:57:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kconst Eigen::Matrix<double, 6, 1>&\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.600892] (cartesian_impedance_control) StderrLine: {'line': b'  206 |     EIGEN_STRONG_INLINE Matrix& operator=(\x1b[01;36m\x1b[Kconst Matrix& other\x1b[m\x1b[K)\n'}
+[5.600942] (cartesian_impedance_control) StderrLine: {'line': b'      |                                           \x1b[01;36m\x1b[K~~~~~~~~~~~~~~^~~~~\x1b[m\x1b[K\n'}
+[5.601008] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:279:13:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&&) [with _Scalar = double; int _Rows = 6; int _Cols = 1; int _Options = 0; int _MaxRows = 6; int _MaxCols = 1]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.601069] (cartesian_impedance_control) StderrLine: {'line': b'  279 |     Matrix& \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K=(Matrix&& other) EIGEN_NOEXCEPT_IF(std::is_nothrow_move_assignable<Scalar>::value)\n'}
+[5.601121] (cartesian_impedance_control) StderrLine: {'line': b'      |             \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[5.601170] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:279:32:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[KEigen::Matrix<double, 6, 1>&&\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.601222] (cartesian_impedance_control) StderrLine: {'line': b'  279 |     Matrix& operator=(\x1b[01;36m\x1b[KMatrix&& other\x1b[m\x1b[K) EIGEN_NOEXCEPT_IF(std::is_nothrow_move_assignable<Scalar>::value)\n'}
+[5.601272] (cartesian_impedance_control) StderrLine: {'line': b'      |                       \x1b[01;36m\x1b[K~~~~~~~~~^~~~~\x1b[m\x1b[K\n'}
+[5.622791] (-) TimerEvent: {}
+[5.723358] (-) TimerEvent: {}
+[5.823823] (-) TimerEvent: {}
+[5.924185] (-) TimerEvent: {}
+[6.024533] (-) TimerEvent: {}
+[6.122343] (cartesian_impedance_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Core:164\x1b[m\x1b[K,\n'}
+[6.122642] (cartesian_impedance_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Dense:1\x1b[m\x1b[K,\n'}
+[6.122811] (cartesian_impedance_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Eigen:1\x1b[m\x1b[K,\n'}
+[6.122961] (cartesian_impedance_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/include/cartesian_impedance_control/user_input_server.hpp:3\x1b[m\x1b[K,\n'}
+[6.123076] (cartesian_impedance_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/include/cartesian_impedance_control/cartesian_impedance_controller.hpp:29\x1b[m\x1b[K,\n'}
+[6.123220] (cartesian_impedance_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/cartesian_impedance_controller.cpp:15\x1b[m\x1b[K:\n'}
+[6.123334] (cartesian_impedance_control) StderrLine: {'line': b'/usr/include/eigen3/Eigen/src/Core/GeneralProduct.h: In instantiation of \xe2\x80\x98\x1b[01m\x1b[Kconst Eigen::Product<Derived, OtherDerived> Eigen::MatrixBase<Derived>::operator*(const Eigen::MatrixBase<OtherDerived>&) const [with OtherDerived = Eigen::Matrix<double, 6, 1>; Derived = Eigen::Matrix<double, 3, 3>]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.123465] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/cartesian_impedance_controller.cpp:529:36:\x1b[m\x1b[K   required from here\n'}
+[6.123577] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/GeneralProduct.h:419:38:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kstatic assertion failed: INVALID_MATRIX_PRODUCT\n'}
+[6.123691] (cartesian_impedance_control) StderrLine: {'line': b'  419 |   EIGEN_STATIC_ASSERT(\x1b[01;31m\x1b[KProductIsValid || SameSizes\x1b[m\x1b[K, INVALID_MATRIX_PRODUCT)\n'}
+[6.123801] (cartesian_impedance_control) StderrLine: {'line': b'      |                       \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.123911] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:33:54:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin definition of macro \xe2\x80\x98\x1b[01m\x1b[KEIGEN_STATIC_ASSERT\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.124025] (cartesian_impedance_control) StderrLine: {'line': b'   33 |     #define EIGEN_STATIC_ASSERT(X,MSG) static_assert(\x1b[01;36m\x1b[KX\x1b[m\x1b[K,#MSG);\n'}
+[6.124084] (cartesian_impedance_control) StderrLine: {'line': b'      |                                                      \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[6.124139] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/GeneralProduct.h:419:38:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[K(false || false)\x1b[m\x1b[K\xe2\x80\x99 evaluates to false\n'}
+[6.124195] (cartesian_impedance_control) StderrLine: {'line': b'  419 |   EIGEN_STATIC_ASSERT(\x1b[01;36m\x1b[KProductIsValid || SameSizes\x1b[m\x1b[K, INVALID_MATRIX_PRODUCT)\n'}
+[6.124250] (cartesian_impedance_control) StderrLine: {'line': b'      |                       \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.124304] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:33:54:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin definition of macro \xe2\x80\x98\x1b[01m\x1b[KEIGEN_STATIC_ASSERT\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.124360] (cartesian_impedance_control) StderrLine: {'line': b'   33 |     #define EIGEN_STATIC_ASSERT(X,MSG) static_assert(\x1b[01;36m\x1b[KX\x1b[m\x1b[K,#MSG);\n'}
+[6.124415] (cartesian_impedance_control) StderrLine: {'line': b'      |                                                      \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[6.124631] (-) TimerEvent: {}
+[6.225020] (-) TimerEvent: {}
+[6.325341] (-) TimerEvent: {}
+[6.425741] (-) TimerEvent: {}
+[6.526109] (-) TimerEvent: {}
+[6.626465] (-) TimerEvent: {}
+[6.726792] (-) TimerEvent: {}
+[6.827188] (-) TimerEvent: {}
+[6.927608] (-) TimerEvent: {}
+[7.027945] (-) TimerEvent: {}
+[7.128469] (-) TimerEvent: {}
+[7.228894] (-) TimerEvent: {}
+[7.329294] (-) TimerEvent: {}
+[7.429683] (-) TimerEvent: {}
+[7.530095] (-) TimerEvent: {}
+[7.630475] (-) TimerEvent: {}
+[7.730810] (-) TimerEvent: {}
+[7.831177] (-) TimerEvent: {}
+[7.931534] (-) TimerEvent: {}
+[8.032208] (-) TimerEvent: {}
+[8.132616] (-) TimerEvent: {}
+[8.233105] (-) TimerEvent: {}
+[8.333549] (-) TimerEvent: {}
+[8.405860] (cartesian_impedance_control) StderrLine: {'line': b'/usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h: In instantiation of \xe2\x80\x98\x1b[01m\x1b[Kvoid Eigen::internal::call_assignment_no_alias(Dst&, const Src&, const Func&) [with Dst = Eigen::Matrix<double, 6, 1>; Src = Eigen::Matrix<double, 3, 1>; Func = Eigen::internal::assign_op<double, double>]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[8.406178] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h:851:27:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[Kvoid Eigen::internal::call_assignment(Dst&, const Src&, const Func&, typename Eigen::internal::enable_if<Eigen::internal::evaluator_assume_aliasing<Src>::value, void*>::type) [with Dst = Eigen::Matrix<double, 6, 1>; Src = Eigen::Product<Eigen::Matrix<double, 3, 3>, Eigen::Matrix<double, 6, 1>, 0>; Func = Eigen::internal::assign_op<double, double>; typename Eigen::internal::enable_if<Eigen::internal::evaluator_assume_aliasing<Src>::value, void*>::type = void*; typename Eigen::internal::evaluator_traits<SrcXprType>::Shape = Eigen::DenseShape]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[8.406369] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h:836:18:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[Kvoid Eigen::internal::call_assignment(Dst&, const Src&) [with Dst = Eigen::Matrix<double, 6, 1>; Src = Eigen::Product<Eigen::Matrix<double, 3, 3>, Eigen::Matrix<double, 6, 1>, 0>]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[8.406486] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/PlainObjectBase.h:779:32:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[KDerived& Eigen::PlainObjectBase<Derived>::_set(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = Eigen::Product<Eigen::Matrix<double, 3, 3>, Eigen::Matrix<double, 6, 1>, 0>; Derived = Eigen::Matrix<double, 6, 1>]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[8.406598] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:225:24:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = Eigen::Product<Eigen::Matrix<double, 3, 3>, Eigen::Matrix<double, 6, 1>, 0>; _Scalar = double; int _Rows = 6; int _Cols = 1; int _Options = 0; int _MaxRows = 6; int _MaxCols = 1]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[8.406729] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/cartesian_impedance_controller.cpp:529:36:\x1b[m\x1b[K   required from here\n'}
+[8.406842] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:177:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kstatic assertion failed: YOU_MIXED_MATRICES_OF_DIFFERENT_SIZES\n'}
+[8.406953] (cartesian_impedance_control) StderrLine: {'line': b'  175 |      \x1b[01;31m\x1b[K( \\\x1b[m\x1b[K\n'}
+[8.407061] (cartesian_impedance_control) StderrLine: {'line': b'      |      \x1b[01;31m\x1b[K~~~\x1b[m\x1b[K\n'}
+[8.407169] (cartesian_impedance_control) StderrLine: {'line': b'  176 | \x1b[01;31m\x1b[K        (int(Eigen::internal::size_of_xpr_at_compile_time<TYPE0>::ret)==0 && int(Eigen::internal::size_of_xpr_at_compile_time<TYPE1>::ret)==0) \\\x1b[m\x1b[K\n'}
+[8.407277] (cartesian_impedance_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.407384] (cartesian_impedance_control) StderrLine: {'line': b'  177 | \x1b[01;31m\x1b[K    || (\\\x1b[m\x1b[K\n'}
+[8.407435] (cartesian_impedance_control) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[8.407484] (cartesian_impedance_control) StderrLine: {'line': b'  178 | \x1b[01;31m\x1b[K          (int(TYPE0::RowsAtCompileTime)==Eigen::Dynamic \\\x1b[m\x1b[K\n'}
+[8.407534] (cartesian_impedance_control) StderrLine: {'line': b'      |           \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.407583] (cartesian_impedance_control) StderrLine: {'line': b'  179 | \x1b[01;31m\x1b[K        || int(TYPE1::RowsAtCompileTime)==Eigen::Dynamic \\\x1b[m\x1b[K\n'}
+[8.407633] (cartesian_impedance_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.407682] (cartesian_impedance_control) StderrLine: {'line': b'  180 | \x1b[01;31m\x1b[K        || int(TYPE0::RowsAtCompileTime)==int(TYPE1::RowsAtCompileTime)) \\\x1b[m\x1b[K\n'}
+[8.407732] (cartesian_impedance_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.407782] (cartesian_impedance_control) StderrLine: {'line': b'  181 | \x1b[01;31m\x1b[K      &&  (int(TYPE0::ColsAtCompileTime)==Eigen::Dynamic \\\x1b[m\x1b[K\n'}
+[8.407832] (cartesian_impedance_control) StderrLine: {'line': b'      |       \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.407882] (cartesian_impedance_control) StderrLine: {'line': b'  182 | \x1b[01;31m\x1b[K        || int(TYPE1::ColsAtCompileTime)==Eigen::Dynamic \\\x1b[m\x1b[K\n'}
+[8.407931] (cartesian_impedance_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.407980] (cartesian_impedance_control) StderrLine: {'line': b'  183 | \x1b[01;31m\x1b[K        || int(TYPE0::ColsAtCompileTime)==int(TYPE1::ColsAtCompileTime))\\\x1b[m\x1b[K\n'}
+[8.408030] (cartesian_impedance_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.408079] (cartesian_impedance_control) StderrLine: {'line': b'  184 | \x1b[01;31m\x1b[K       ) \\\x1b[m\x1b[K\n'}
+[8.408128] (cartesian_impedance_control) StderrLine: {'line': b'      |        \x1b[01;31m\x1b[K~~~\x1b[m\x1b[K\n'}
+[8.408177] (cartesian_impedance_control) StderrLine: {'line': b'  185 | \x1b[01;31m\x1b[K     )\x1b[m\x1b[K\n'}
+[8.408226] (cartesian_impedance_control) StderrLine: {'line': b'      |      \x1b[01;31m\x1b[K~\x1b[m\x1b[K\n'}
+[8.408274] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:33:54:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin definition of macro \xe2\x80\x98\x1b[01m\x1b[KEIGEN_STATIC_ASSERT\x1b[m\x1b[K\xe2\x80\x99\n'}
+[8.408326] (cartesian_impedance_control) StderrLine: {'line': b'   33 |     #define EIGEN_STATIC_ASSERT(X,MSG) static_assert(\x1b[01;36m\x1b[KX\x1b[m\x1b[K,#MSG);\n'}
+[8.408379] (cartesian_impedance_control) StderrLine: {'line': b'      |                                                      \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[8.408428] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:194:6:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin expansion of macro \xe2\x80\x98\x1b[01m\x1b[KEIGEN_PREDICATE_SAME_MATRIX_SIZE\x1b[m\x1b[K\xe2\x80\x99\n'}
+[8.408479] (cartesian_impedance_control) StderrLine: {'line': b'  194 |      \x1b[01;36m\x1b[KEIGEN_PREDICATE_SAME_MATRIX_SIZE\x1b[m\x1b[K(TYPE0,TYPE1),\\\n'}
+[8.408529] (cartesian_impedance_control) StderrLine: {'line': b'      |      \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.408593] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h:887:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin expansion of macro \xe2\x80\x98\x1b[01m\x1b[KEIGEN_STATIC_ASSERT_SAME_MATRIX_SIZE\x1b[m\x1b[K\xe2\x80\x99\n'}
+[8.408652] (cartesian_impedance_control) StderrLine: {'line': b'  887 |   \x1b[01;36m\x1b[KEIGEN_STATIC_ASSERT_SAME_MATRIX_SIZE\x1b[m\x1b[K(ActualDstTypeCleaned,Src)\n'}
+[8.408702] (cartesian_impedance_control) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.408792] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:177:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[K(((((int)Eigen::internal::size_of_xpr_at_compile_time<Eigen::Matrix<double, 6, 1> >::ret) == 0) && (((int)Eigen::internal::size_of_xpr_at_compile_time<Eigen::Matrix<double, 3, 1> >::ret) == 0)) || ((((((int)Eigen::Matrix<double, 6, 1>::RowsAtCompileTime) == ((int)Eigen::Dynamic)) || (((int)Eigen::Matrix<double, 3, 1>::RowsAtCompileTime) == ((int)Eigen::Dynamic))) || (((int)Eigen::Matrix<double, 6, 1>::RowsAtCompileTime) == ((int)Eigen::Matrix<double, 3, 1>::RowsAtCompileTime))) && (((((int)Eigen::Matrix<double, 6, 1>::ColsAtCompileTime) == ((int)Eigen::Dynamic)) || (((int)Eigen::Matrix<double, 3, 1>::ColsAtCompileTime) == ((int)Eigen::Dynamic))) || (((int)Eigen::Matrix<double, 6, 1>::ColsAtCompileTime) == ((int)Eigen::Matrix<double, 3, 1>::ColsAtCompileTime)))))\x1b[m\x1b[K\xe2\x80\x99 evaluates to false\n'}
+[8.408865] (cartesian_impedance_control) StderrLine: {'line': b'  175 |      \x1b[01;36m\x1b[K( \\\x1b[m\x1b[K\n'}
+[8.408942] (cartesian_impedance_control) StderrLine: {'line': b'      |      \x1b[01;36m\x1b[K~~~\x1b[m\x1b[K\n'}
+[8.408993] (cartesian_impedance_control) StderrLine: {'line': b'  176 | \x1b[01;36m\x1b[K        (int(Eigen::internal::size_of_xpr_at_compile_time<TYPE0>::ret)==0 && int(Eigen::internal::size_of_xpr_at_compile_time<TYPE1>::ret)==0) \\\x1b[m\x1b[K\n'}
+[8.409054] (cartesian_impedance_control) StderrLine: {'line': b'      |         \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.409105] (cartesian_impedance_control) StderrLine: {'line': b'  177 | \x1b[01;36m\x1b[K    || (\\\x1b[m\x1b[K\n'}
+[8.409154] (cartesian_impedance_control) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[8.409203] (cartesian_impedance_control) StderrLine: {'line': b'  178 | \x1b[01;36m\x1b[K          (int(TYPE0::RowsAtCompileTime)==Eigen::Dynamic \\\x1b[m\x1b[K\n'}
+[8.409253] (cartesian_impedance_control) StderrLine: {'line': b'      |           \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.409303] (cartesian_impedance_control) StderrLine: {'line': b'  179 | \x1b[01;36m\x1b[K        || int(TYPE1::RowsAtCompileTime)==Eigen::Dynamic \\\x1b[m\x1b[K\n'}
+[8.409356] (cartesian_impedance_control) StderrLine: {'line': b'      |         \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.409406] (cartesian_impedance_control) StderrLine: {'line': b'  180 | \x1b[01;36m\x1b[K        || int(TYPE0::RowsAtCompileTime)==int(TYPE1::RowsAtCompileTime)) \\\x1b[m\x1b[K\n'}
+[8.409455] (cartesian_impedance_control) StderrLine: {'line': b'      |         \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.409504] (cartesian_impedance_control) StderrLine: {'line': b'  181 | \x1b[01;36m\x1b[K      &&  (int(TYPE0::ColsAtCompileTime)==Eigen::Dynamic \\\x1b[m\x1b[K\n'}
+[8.409553] (cartesian_impedance_control) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.409603] (cartesian_impedance_control) StderrLine: {'line': b'  182 | \x1b[01;36m\x1b[K        || int(TYPE1::ColsAtCompileTime)==Eigen::Dynamic \\\x1b[m\x1b[K\n'}
+[8.409652] (cartesian_impedance_control) StderrLine: {'line': b'      |         \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.409717] (cartesian_impedance_control) StderrLine: {'line': b'  183 | \x1b[01;36m\x1b[K        || int(TYPE0::ColsAtCompileTime)==int(TYPE1::ColsAtCompileTime))\\\x1b[m\x1b[K\n'}
+[8.409767] (cartesian_impedance_control) StderrLine: {'line': b'      |         \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.409817] (cartesian_impedance_control) StderrLine: {'line': b'  184 | \x1b[01;36m\x1b[K       ) \\\x1b[m\x1b[K\n'}
+[8.409866] (cartesian_impedance_control) StderrLine: {'line': b'      |        \x1b[01;36m\x1b[K~~~\x1b[m\x1b[K\n'}
+[8.409948] (cartesian_impedance_control) StderrLine: {'line': b'  185 | \x1b[01;36m\x1b[K     )\x1b[m\x1b[K\n'}
+[8.410001] (cartesian_impedance_control) StderrLine: {'line': b'      |      \x1b[01;36m\x1b[K~\x1b[m\x1b[K\n'}
+[8.410051] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:33:54:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin definition of macro \xe2\x80\x98\x1b[01m\x1b[KEIGEN_STATIC_ASSERT\x1b[m\x1b[K\xe2\x80\x99\n'}
+[8.410102] (cartesian_impedance_control) StderrLine: {'line': b'   33 |     #define EIGEN_STATIC_ASSERT(X,MSG) static_assert(\x1b[01;36m\x1b[KX\x1b[m\x1b[K,#MSG);\n'}
+[8.410152] (cartesian_impedance_control) StderrLine: {'line': b'      |                                                      \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[8.410201] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:194:6:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin expansion of macro \xe2\x80\x98\x1b[01m\x1b[KEIGEN_PREDICATE_SAME_MATRIX_SIZE\x1b[m\x1b[K\xe2\x80\x99\n'}
+[8.410252] (cartesian_impedance_control) StderrLine: {'line': b'  194 |      \x1b[01;36m\x1b[KEIGEN_PREDICATE_SAME_MATRIX_SIZE\x1b[m\x1b[K(TYPE0,TYPE1),\\\n'}
+[8.410302] (cartesian_impedance_control) StderrLine: {'line': b'      |      \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.410351] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h:887:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin expansion of macro \xe2\x80\x98\x1b[01m\x1b[KEIGEN_STATIC_ASSERT_SAME_MATRIX_SIZE\x1b[m\x1b[K\xe2\x80\x99\n'}
+[8.410402] (cartesian_impedance_control) StderrLine: {'line': b'  887 |   \x1b[01;36m\x1b[KEIGEN_STATIC_ASSERT_SAME_MATRIX_SIZE\x1b[m\x1b[K(ActualDstTypeCleaned,Src)\n'}
+[8.410451] (cartesian_impedance_control) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.433703] (-) TimerEvent: {}
+[8.534134] (-) TimerEvent: {}
+[8.634523] (-) TimerEvent: {}
+[8.734930] (-) TimerEvent: {}
+[8.835354] (-) TimerEvent: {}
+[8.936477] (-) TimerEvent: {}
+[9.037084] (-) TimerEvent: {}
+[9.137776] (-) TimerEvent: {}
+[9.261743] (-) TimerEvent: {}
+[9.362281] (-) TimerEvent: {}
+[9.462623] (-) TimerEvent: {}
+[9.562996] (-) TimerEvent: {}
+[9.663416] (-) TimerEvent: {}
+[9.763834] (-) TimerEvent: {}
+[9.864250] (-) TimerEvent: {}
+[9.964860] (-) TimerEvent: {}
+[10.065286] (-) TimerEvent: {}
+[10.166150] (-) TimerEvent: {}
+[10.266490] (-) TimerEvent: {}
+[10.366902] (-) TimerEvent: {}
+[10.467271] (-) TimerEvent: {}
+[10.511366] (cartesian_impedance_control) StderrLine: {'line': b'/usr/include/eigen3/Eigen/src/Core/GeneralProduct.h: In instantiation of \xe2\x80\x98\x1b[01m\x1b[Kconst Eigen::Product<Derived, OtherDerived, 1> Eigen::MatrixBase<Derived>::lazyProduct(const Eigen::MatrixBase<OtherDerived>&) const [with OtherDerived = Eigen::Matrix<double, 6, 1>; Derived = Eigen::Matrix<double, 3, 3>]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[10.511757] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/ProductEvaluators.h:402:50:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[Kstatic void Eigen::internal::generic_product_impl<Lhs, Rhs, Eigen::DenseShape, Eigen::DenseShape, 3>::evalTo(Dst&, const Lhs&, const Rhs&) [with Dst = Eigen::Matrix<double, 3, 1>; Lhs = Eigen::Matrix<double, 3, 3>; Rhs = Eigen::Matrix<double, 6, 1>]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[10.511982] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/ProductEvaluators.h:148:43:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[Kstatic void Eigen::internal::Assignment<DstXprType, Eigen::Product<Lhs, Rhs, Options>, Eigen::internal::assign_op<Scalar, Scalar>, Eigen::internal::Dense2Dense, typename Eigen::internal::enable_if<((Options == Eigen::DefaultProduct) || (Options == Eigen::AliasFreeProduct))>::type>::run(DstXprType&, const SrcXprType&, const Eigen::internal::assign_op<Scalar, Scalar>&) [with DstXprType = Eigen::Matrix<double, 3, 1>; Lhs = Eigen::Matrix<double, 3, 3>; Rhs = Eigen::Matrix<double, 6, 1>; int Options = 0; Scalar = double; Eigen::internal::Assignment<DstXprType, Eigen::Product<Lhs, Rhs, Options>, Eigen::internal::assign_op<Scalar, Scalar>, Eigen::internal::Dense2Dense, typename Eigen::internal::enable_if<((Options == Eigen::DefaultProduct) || (Options == Eigen::AliasFreeProduct))>::type>::SrcXprType = Eigen::Product<Eigen::Matrix<double, 3, 3>, Eigen::Matrix<double, 6, 1>, 0>]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[10.512189] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h:890:49:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[Kvoid Eigen::internal::call_assignment_no_alias(Dst&, const Src&, const Func&) [with Dst = Eigen::Matrix<double, 3, 1>; Src = Eigen::Product<Eigen::Matrix<double, 3, 3>, Eigen::Matrix<double, 6, 1>, 0>; Func = Eigen::internal::assign_op<double, double>]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[10.512352] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/PlainObjectBase.h:797:41:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[KDerived& Eigen::PlainObjectBase<Derived>::_set_noalias(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = Eigen::Product<Eigen::Matrix<double, 3, 3>, Eigen::Matrix<double, 6, 1>, 0>; Derived = Eigen::Matrix<double, 3, 1>]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[10.512515] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/PlainObjectBase.h:883:25:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[Kvoid Eigen::PlainObjectBase<Derived>::_init1(const Eigen::DenseBase<ElseDerived>&) [with T = Eigen::Product<Eigen::Matrix<double, 3, 3>, Eigen::Matrix<double, 6, 1>, 0>; OtherDerived = Eigen::Product<Eigen::Matrix<double, 3, 3>, Eigen::Matrix<double, 6, 1>, 0>; Derived = Eigen::Matrix<double, 3, 1>]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[10.512672] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:332:31:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Matrix(const T&) [with T = Eigen::Product<Eigen::Matrix<double, 3, 3>, Eigen::Matrix<double, 6, 1>, 0>; _Scalar = double; int _Rows = 3; int _Cols = 1; int _Options = 0; int _MaxRows = 3; int _MaxCols = 1]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[10.512830] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h:850:41:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[Kvoid Eigen::internal::call_assignment(Dst&, const Src&, const Func&, typename Eigen::internal::enable_if<Eigen::internal::evaluator_assume_aliasing<Src>::value, void*>::type) [with Dst = Eigen::Matrix<double, 6, 1>; Src = Eigen::Product<Eigen::Matrix<double, 3, 3>, Eigen::Matrix<double, 6, 1>, 0>; Func = Eigen::internal::assign_op<double, double>; typename Eigen::internal::enable_if<Eigen::internal::evaluator_assume_aliasing<Src>::value, void*>::type = void*; typename Eigen::internal::evaluator_traits<SrcXprType>::Shape = Eigen::DenseShape]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[10.512991] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h:836:18:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[Kvoid Eigen::internal::call_assignment(Dst&, const Src&) [with Dst = Eigen::Matrix<double, 6, 1>; Src = Eigen::Product<Eigen::Matrix<double, 3, 3>, Eigen::Matrix<double, 6, 1>, 0>]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[10.513183] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/PlainObjectBase.h:779:32:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[KDerived& Eigen::PlainObjectBase<Derived>::_set(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = Eigen::Product<Eigen::Matrix<double, 3, 3>, Eigen::Matrix<double, 6, 1>, 0>; Derived = Eigen::Matrix<double, 6, 1>]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[10.513362] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:225:24:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = Eigen::Product<Eigen::Matrix<double, 3, 3>, Eigen::Matrix<double, 6, 1>, 0>; _Scalar = double; int _Rows = 6; int _Cols = 1; int _Options = 0; int _MaxRows = 6; int _MaxCols = 1]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[10.513462] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/cartesian_impedance_controller.cpp:529:36:\x1b[m\x1b[K   required from here\n'}
+[10.513534] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/GeneralProduct.h:458:38:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kstatic assertion failed: INVALID_MATRIX_PRODUCT\n'}
+[10.513605] (cartesian_impedance_control) StderrLine: {'line': b'  458 |   EIGEN_STATIC_ASSERT(\x1b[01;31m\x1b[KProductIsValid || SameSizes\x1b[m\x1b[K, INVALID_MATRIX_PRODUCT)\n'}
+[10.513675] (cartesian_impedance_control) StderrLine: {'line': b'      |                       \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[10.513744] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:33:54:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin definition of macro \xe2\x80\x98\x1b[01m\x1b[KEIGEN_STATIC_ASSERT\x1b[m\x1b[K\xe2\x80\x99\n'}
+[10.513816] (cartesian_impedance_control) StderrLine: {'line': b'   33 |     #define EIGEN_STATIC_ASSERT(X,MSG) static_assert(\x1b[01;36m\x1b[KX\x1b[m\x1b[K,#MSG);\n'}
+[10.513885] (cartesian_impedance_control) StderrLine: {'line': b'      |                                                      \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[10.514011] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/GeneralProduct.h:458:38:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[K(false || false)\x1b[m\x1b[K\xe2\x80\x99 evaluates to false\n'}
+[10.514084] (cartesian_impedance_control) StderrLine: {'line': b'  458 |   EIGEN_STATIC_ASSERT(\x1b[01;36m\x1b[KProductIsValid || SameSizes\x1b[m\x1b[K, INVALID_MATRIX_PRODUCT)\n'}
+[10.514154] (cartesian_impedance_control) StderrLine: {'line': b'      |                       \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[10.514223] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:33:54:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin definition of macro \xe2\x80\x98\x1b[01m\x1b[KEIGEN_STATIC_ASSERT\x1b[m\x1b[K\xe2\x80\x99\n'}
+[10.514293] (cartesian_impedance_control) StderrLine: {'line': b'   33 |     #define EIGEN_STATIC_ASSERT(X,MSG) static_assert(\x1b[01;36m\x1b[KX\x1b[m\x1b[K,#MSG);\n'}
+[10.514364] (cartesian_impedance_control) StderrLine: {'line': b'      |                                                      \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[10.567418] (-) TimerEvent: {}
+[10.667814] (-) TimerEvent: {}
+[10.768308] (-) TimerEvent: {}
+[10.868731] (-) TimerEvent: {}
+[10.969191] (-) TimerEvent: {}
+[11.069647] (-) TimerEvent: {}
+[11.170160] (-) TimerEvent: {}
+[11.270585] (-) TimerEvent: {}
+[11.371033] (-) TimerEvent: {}
+[11.471455] (-) TimerEvent: {}
+[11.571979] (-) TimerEvent: {}
+[11.672342] (-) TimerEvent: {}
+[11.772800] (-) TimerEvent: {}
+[11.873130] (-) TimerEvent: {}
+[11.973482] (-) TimerEvent: {}
+[12.073811] (-) TimerEvent: {}
+[12.174290] (-) TimerEvent: {}
+[12.274650] (-) TimerEvent: {}
+[12.374999] (-) TimerEvent: {}
+[12.475431] (-) TimerEvent: {}
+[12.575843] (-) TimerEvent: {}
+[12.676238] (-) TimerEvent: {}
+[12.776635] (-) TimerEvent: {}
+[12.877082] (-) TimerEvent: {}
+[12.977700] (-) TimerEvent: {}
+[13.078211] (-) TimerEvent: {}
+[13.178530] (-) TimerEvent: {}
+[13.278879] (-) TimerEvent: {}
+[13.379276] (-) TimerEvent: {}
+[13.479626] (-) TimerEvent: {}
+[13.580256] (-) TimerEvent: {}
+[13.680758] (-) TimerEvent: {}
+[13.781329] (-) TimerEvent: {}
+[13.881775] (-) TimerEvent: {}
+[13.982259] (-) TimerEvent: {}
+[14.082685] (-) TimerEvent: {}
+[14.183074] (-) TimerEvent: {}
+[14.283407] (-) TimerEvent: {}
+[14.384192] (-) TimerEvent: {}
+[14.484664] (-) TimerEvent: {}
+[14.585104] (-) TimerEvent: {}
+[14.685561] (-) TimerEvent: {}
+[14.786205] (-) TimerEvent: {}
+[14.886628] (-) TimerEvent: {}
+[14.987078] (-) TimerEvent: {}
+[15.087536] (-) TimerEvent: {}
+[15.187991] (-) TimerEvent: {}
+[15.288360] (-) TimerEvent: {}
+[15.388691] (-) TimerEvent: {}
+[15.489066] (-) TimerEvent: {}
+[15.589526] (-) TimerEvent: {}
+[15.690225] (-) TimerEvent: {}
+[15.790677] (-) TimerEvent: {}
+[15.813066] (cartesian_impedance_control) StderrLine: {'line': b'/usr/include/eigen3/Eigen/src/Core/CwiseBinaryOp.h: In instantiation of \xe2\x80\x98\x1b[01m\x1b[KEigen::CwiseBinaryOp<BinaryOp, Lhs, Rhs>::CwiseBinaryOp(const Lhs&, const Rhs&, const BinaryOp&) [with BinaryOp = Eigen::internal::scalar_product_op<double, double>; LhsType = const Eigen::Transpose<const Eigen::Block<const Eigen::Matrix<double, 3, 3>, 1, 3, false> >; RhsType = const Eigen::Block<const Eigen::Matrix<double, 6, 1>, 6, 1, true>; Eigen::CwiseBinaryOp<BinaryOp, Lhs, Rhs>::Lhs = Eigen::Transpose<const Eigen::Block<const Eigen::Matrix<double, 3, 3>, 1, 3, false> >; Eigen::CwiseBinaryOp<BinaryOp, Lhs, Rhs>::Rhs = Eigen::Block<const Eigen::Matrix<double, 6, 1>, 6, 1, true>]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[15.813817] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/../plugins/MatrixCwiseBinaryOps.h:25:10:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[Kconst Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<typename Eigen::internal::traits<T>::Scalar, typename Eigen::internal::traits<OtherDerived>::Scalar>, const Derived, const OtherDerived> Eigen::MatrixBase<Derived>::cwiseProduct(const Eigen::MatrixBase<OtherDerived>&) const [with OtherDerived = Eigen::Block<const Eigen::Matrix<double, 6, 1>, 6, 1, true>; Derived = Eigen::Transpose<const Eigen::Block<const Eigen::Matrix<double, 3, 3>, 1, 3, false> >; typename Eigen::internal::traits<OtherDerived>::Scalar = double; typename Eigen::internal::traits<T>::Scalar = double]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[15.814023] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/ProductEvaluators.h:606:52:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[Kconst CoeffReturnType Eigen::internal::product_evaluator<Eigen::Product<Lhs, Rhs, 1>, ProductTag, Eigen::DenseShape, Eigen::DenseShape>::coeff(Eigen::Index, Eigen::Index) const [with Lhs = Eigen::Matrix<double, 3, 3>; Rhs = Eigen::Matrix<double, 6, 1>; int ProductTag = 3; typename Eigen::internal::traits<typename Eigen::Product<Lhs, Rhs, 1>::Rhs>::Scalar = double; typename Eigen::Product<Lhs, Rhs, 1>::Rhs = Eigen::Matrix<double, 6, 1>; typename Eigen::internal::traits<typename Eigen::Product<Lhs, Rhs, 1>::Lhs>::Scalar = double; typename Eigen::Product<Lhs, Rhs, 1>::Lhs = Eigen::Matrix<double, 3, 3>; Eigen::internal::product_evaluator<Eigen::Product<Lhs, Rhs, 1>, ProductTag, Eigen::DenseShape, Eigen::DenseShape>::CoeffReturnType = double; Eigen::Index = long int]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[15.814205] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h:654:63:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[Kvoid Eigen::internal::generic_dense_assignment_kernel<DstEvaluatorTypeT, SrcEvaluatorTypeT, Functor, Version>::assignCoeff(Eigen::Index, Eigen::Index) [with DstEvaluatorTypeT = Eigen::internal::evaluator<Eigen::Matrix<double, 3, 1> >; SrcEvaluatorTypeT = Eigen::internal::evaluator<Eigen::Product<Eigen::Matrix<double, 3, 3>, Eigen::Matrix<double, 6, 1>, 1> >; Functor = Eigen::internal::assign_op<double, double>; int Version = 0; Eigen::Index = long int]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[15.814359] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h:668:16:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[Kvoid Eigen::internal::generic_dense_assignment_kernel<DstEvaluatorTypeT, SrcEvaluatorTypeT, Functor, Version>::assignCoeffByOuterInner(Eigen::Index, Eigen::Index) [with DstEvaluatorTypeT = Eigen::internal::evaluator<Eigen::Matrix<double, 3, 1> >; SrcEvaluatorTypeT = Eigen::internal::evaluator<Eigen::Product<Eigen::Matrix<double, 3, 3>, Eigen::Matrix<double, 6, 1>, 1> >; Functor = Eigen::internal::assign_op<double, double>; int Version = 0; Eigen::Index = long int]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[15.814478] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h:211:35:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[Kstatic void Eigen::internal::copy_using_evaluator_DefaultTraversal_CompleteUnrolling<Kernel, Index, Stop>::run(Kernel&) [with Kernel = Eigen::internal::generic_dense_assignment_kernel<Eigen::internal::evaluator<Eigen::Matrix<double, 3, 1> >, Eigen::internal::evaluator<Eigen::Product<Eigen::Matrix<double, 3, 3>, Eigen::Matrix<double, 6, 1>, 1> >, Eigen::internal::assign_op<double, double>, 0>; int Index = 2; int Stop = 3]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[15.814574] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h:456:92:\x1b[m\x1b[K   [ skipping 9 instantiation contexts, use -ftemplate-backtrace-limit=0 to disable ]\n'}
+[15.814625] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:332:31:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Matrix(const T&) [with T = Eigen::Product<Eigen::Matrix<double, 3, 3>, Eigen::Matrix<double, 6, 1>, 0>; _Scalar = double; int _Rows = 3; int _Cols = 1; int _Options = 0; int _MaxRows = 3; int _MaxCols = 1]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[15.814677] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h:850:41:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[Kvoid Eigen::internal::call_assignment(Dst&, const Src&, const Func&, typename Eigen::internal::enable_if<Eigen::internal::evaluator_assume_aliasing<Src>::value, void*>::type) [with Dst = Eigen::Matrix<double, 6, 1>; Src = Eigen::Product<Eigen::Matrix<double, 3, 3>, Eigen::Matrix<double, 6, 1>, 0>; Func = Eigen::internal::assign_op<double, double>; typename Eigen::internal::enable_if<Eigen::internal::evaluator_assume_aliasing<Src>::value, void*>::type = void*; typename Eigen::internal::evaluator_traits<SrcXprType>::Shape = Eigen::DenseShape]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[15.814729] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h:836:18:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[Kvoid Eigen::internal::call_assignment(Dst&, const Src&) [with Dst = Eigen::Matrix<double, 6, 1>; Src = Eigen::Product<Eigen::Matrix<double, 3, 3>, Eigen::Matrix<double, 6, 1>, 0>]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[15.814779] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/PlainObjectBase.h:779:32:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[KDerived& Eigen::PlainObjectBase<Derived>::_set(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = Eigen::Product<Eigen::Matrix<double, 3, 3>, Eigen::Matrix<double, 6, 1>, 0>; Derived = Eigen::Matrix<double, 6, 1>]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[15.814838] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:225:24:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = Eigen::Product<Eigen::Matrix<double, 3, 3>, Eigen::Matrix<double, 6, 1>, 0>; _Scalar = double; int _Rows = 6; int _Cols = 1; int _Options = 0; int _MaxRows = 6; int _MaxCols = 1]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[15.814897] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/simi/franka_ros2_ws/src/cartesian_impedance_control/src/cartesian_impedance_controller.cpp:529:36:\x1b[m\x1b[K   required from here\n'}
+[15.814955] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:177:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kstatic assertion failed: YOU_MIXED_MATRICES_OF_DIFFERENT_SIZES\n'}
+[15.815013] (cartesian_impedance_control) StderrLine: {'line': b'  175 |      \x1b[01;31m\x1b[K( \\\x1b[m\x1b[K\n'}
+[15.815062] (cartesian_impedance_control) StderrLine: {'line': b'      |      \x1b[01;31m\x1b[K~~~\x1b[m\x1b[K\n'}
+[15.815111] (cartesian_impedance_control) StderrLine: {'line': b'  176 | \x1b[01;31m\x1b[K        (int(Eigen::internal::size_of_xpr_at_compile_time<TYPE0>::ret)==0 && int(Eigen::internal::size_of_xpr_at_compile_time<TYPE1>::ret)==0) \\\x1b[m\x1b[K\n'}
+[15.815160] (cartesian_impedance_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[15.815210] (cartesian_impedance_control) StderrLine: {'line': b'  177 | \x1b[01;31m\x1b[K    || (\\\x1b[m\x1b[K\n'}
+[15.815258] (cartesian_impedance_control) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[15.815307] (cartesian_impedance_control) StderrLine: {'line': b'  178 | \x1b[01;31m\x1b[K          (int(TYPE0::RowsAtCompileTime)==Eigen::Dynamic \\\x1b[m\x1b[K\n'}
+[15.815355] (cartesian_impedance_control) StderrLine: {'line': b'      |           \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[15.815404] (cartesian_impedance_control) StderrLine: {'line': b'  179 | \x1b[01;31m\x1b[K        || int(TYPE1::RowsAtCompileTime)==Eigen::Dynamic \\\x1b[m\x1b[K\n'}
+[15.815456] (cartesian_impedance_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[15.815504] (cartesian_impedance_control) StderrLine: {'line': b'  180 | \x1b[01;31m\x1b[K        || int(TYPE0::RowsAtCompileTime)==int(TYPE1::RowsAtCompileTime)) \\\x1b[m\x1b[K\n'}
+[15.815557] (cartesian_impedance_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[15.815606] (cartesian_impedance_control) StderrLine: {'line': b'  181 | \x1b[01;31m\x1b[K      &&  (int(TYPE0::ColsAtCompileTime)==Eigen::Dynamic \\\x1b[m\x1b[K\n'}
+[15.815654] (cartesian_impedance_control) StderrLine: {'line': b'      |       \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[15.815703] (cartesian_impedance_control) StderrLine: {'line': b'  182 | \x1b[01;31m\x1b[K        || int(TYPE1::ColsAtCompileTime)==Eigen::Dynamic \\\x1b[m\x1b[K\n'}
+[15.815751] (cartesian_impedance_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[15.815800] (cartesian_impedance_control) StderrLine: {'line': b'  183 | \x1b[01;31m\x1b[K        || int(TYPE0::ColsAtCompileTime)==int(TYPE1::ColsAtCompileTime))\\\x1b[m\x1b[K\n'}
+[15.815864] (cartesian_impedance_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[15.815914] (cartesian_impedance_control) StderrLine: {'line': b'  184 | \x1b[01;31m\x1b[K       ) \\\x1b[m\x1b[K\n'}
+[15.815963] (cartesian_impedance_control) StderrLine: {'line': b'      |        \x1b[01;31m\x1b[K~~~\x1b[m\x1b[K\n'}
+[15.816011] (cartesian_impedance_control) StderrLine: {'line': b'  185 | \x1b[01;31m\x1b[K     )\x1b[m\x1b[K\n'}
+[15.816059] (cartesian_impedance_control) StderrLine: {'line': b'      |      \x1b[01;31m\x1b[K~\x1b[m\x1b[K\n'}
+[15.816107] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:33:54:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin definition of macro \xe2\x80\x98\x1b[01m\x1b[KEIGEN_STATIC_ASSERT\x1b[m\x1b[K\xe2\x80\x99\n'}
+[15.816157] (cartesian_impedance_control) StderrLine: {'line': b'   33 |     #define EIGEN_STATIC_ASSERT(X,MSG) static_assert(\x1b[01;36m\x1b[KX\x1b[m\x1b[K,#MSG);\n'}
+[15.816206] (cartesian_impedance_control) StderrLine: {'line': b'      |                                                      \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[15.816255] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:194:6:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin expansion of macro \xe2\x80\x98\x1b[01m\x1b[KEIGEN_PREDICATE_SAME_MATRIX_SIZE\x1b[m\x1b[K\xe2\x80\x99\n'}
+[15.816308] (cartesian_impedance_control) StderrLine: {'line': b'  194 |      \x1b[01;36m\x1b[KEIGEN_PREDICATE_SAME_MATRIX_SIZE\x1b[m\x1b[K(TYPE0,TYPE1),\\\n'}
+[15.816362] (cartesian_impedance_control) StderrLine: {'line': b'      |      \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[15.816413] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/CwiseBinaryOp.h:115:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin expansion of macro \xe2\x80\x98\x1b[01m\x1b[KEIGEN_STATIC_ASSERT_SAME_MATRIX_SIZE\x1b[m\x1b[K\xe2\x80\x99\n'}
+[15.816463] (cartesian_impedance_control) StderrLine: {'line': b'  115 |       \x1b[01;36m\x1b[KEIGEN_STATIC_ASSERT_SAME_MATRIX_SIZE\x1b[m\x1b[K(Lhs, Rhs)\n'}
+[15.816512] (cartesian_impedance_control) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[15.816561] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:177:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[K(((((int)Eigen::internal::size_of_xpr_at_compile_time<Eigen::Transpose<const Eigen::Block<const Eigen::Matrix<double, 3, 3>, 1, 3, false> > >::ret) == 0) && (((int)Eigen::internal::size_of_xpr_at_compile_time<Eigen::Block<const Eigen::Matrix<double, 6, 1>, 6, 1, true> >::ret) == 0)) || ((((((int)Eigen::Transpose<const Eigen::Block<const Eigen::Matrix<double, 3, 3>, 1, 3, false> >::RowsAtCompileTime) == ((int)Eigen::Dynamic)) || (((int)Eigen::Block<const Eigen::Matrix<double, 6, 1>, 6, 1, true>::RowsAtCompileTime) == ((int)Eigen::Dynamic))) || (((int)Eigen::Transpose<const Eigen::Block<const Eigen::Matrix<double, 3, 3>, 1, 3, false> >::RowsAtCompileTime) == ((int)Eigen::Block<const Eigen::Matrix<double, 6, 1>, 6, 1, true>::RowsAtCompileTime))) && (((((int)Eigen::Transpose<const Eigen::Block<const Eigen::Matrix<double, 3, 3>, 1, 3, false> >::ColsAtCompileTime) == ((int)Eigen::Dynamic)) || (((int)Eigen::Block<const Eigen::Matrix<double, 6, 1>, 6, 1, true>::ColsAtCompileTime) == ((int)Eigen::Dynamic))) || (((int)Eigen::Transpose<const Eigen::Block<const Eigen::Matrix<double, 3, 3>, 1, 3, false> >::ColsAtCompileTime) == ((int)Eigen::Block<const Eigen::Matrix<double, 6, 1>, 6, 1, true>::ColsAtCompileTime)))))\x1b[m\x1b[K\xe2\x80\x99 evaluates to false\n'}
+[15.816642] (cartesian_impedance_control) StderrLine: {'line': b'  175 |      \x1b[01;36m\x1b[K( \\\x1b[m\x1b[K\n'}
+[15.816712] (cartesian_impedance_control) StderrLine: {'line': b'      |      \x1b[01;36m\x1b[K~~~\x1b[m\x1b[K\n'}
+[15.816760] (cartesian_impedance_control) StderrLine: {'line': b'  176 | \x1b[01;36m\x1b[K        (int(Eigen::internal::size_of_xpr_at_compile_time<TYPE0>::ret)==0 && int(Eigen::internal::size_of_xpr_at_compile_time<TYPE1>::ret)==0) \\\x1b[m\x1b[K\n'}
+[15.816810] (cartesian_impedance_control) StderrLine: {'line': b'      |         \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[15.816860] (cartesian_impedance_control) StderrLine: {'line': b'  177 | \x1b[01;36m\x1b[K    || (\\\x1b[m\x1b[K\n'}
+[15.816908] (cartesian_impedance_control) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[15.816957] (cartesian_impedance_control) StderrLine: {'line': b'  178 | \x1b[01;36m\x1b[K          (int(TYPE0::RowsAtCompileTime)==Eigen::Dynamic \\\x1b[m\x1b[K\n'}
+[15.817007] (cartesian_impedance_control) StderrLine: {'line': b'      |           \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[15.817055] (cartesian_impedance_control) StderrLine: {'line': b'  179 | \x1b[01;36m\x1b[K        || int(TYPE1::RowsAtCompileTime)==Eigen::Dynamic \\\x1b[m\x1b[K\n'}
+[15.817104] (cartesian_impedance_control) StderrLine: {'line': b'      |         \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[15.817153] (cartesian_impedance_control) StderrLine: {'line': b'  180 | \x1b[01;36m\x1b[K        || int(TYPE0::RowsAtCompileTime)==int(TYPE1::RowsAtCompileTime)) \\\x1b[m\x1b[K\n'}
+[15.817203] (cartesian_impedance_control) StderrLine: {'line': b'      |         \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[15.817255] (cartesian_impedance_control) StderrLine: {'line': b'  181 | \x1b[01;36m\x1b[K      &&  (int(TYPE0::ColsAtCompileTime)==Eigen::Dynamic \\\x1b[m\x1b[K\n'}
+[15.817304] (cartesian_impedance_control) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[15.817352] (cartesian_impedance_control) StderrLine: {'line': b'  182 | \x1b[01;36m\x1b[K        || int(TYPE1::ColsAtCompileTime)==Eigen::Dynamic \\\x1b[m\x1b[K\n'}
+[15.817401] (cartesian_impedance_control) StderrLine: {'line': b'      |         \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[15.817449] (cartesian_impedance_control) StderrLine: {'line': b'  183 | \x1b[01;36m\x1b[K        || int(TYPE0::ColsAtCompileTime)==int(TYPE1::ColsAtCompileTime))\\\x1b[m\x1b[K\n'}
+[15.817498] (cartesian_impedance_control) StderrLine: {'line': b'      |         \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[15.817549] (cartesian_impedance_control) StderrLine: {'line': b'  184 | \x1b[01;36m\x1b[K       ) \\\x1b[m\x1b[K\n'}
+[15.817600] (cartesian_impedance_control) StderrLine: {'line': b'      |        \x1b[01;36m\x1b[K~~~\x1b[m\x1b[K\n'}
+[15.817648] (cartesian_impedance_control) StderrLine: {'line': b'  185 | \x1b[01;36m\x1b[K     )\x1b[m\x1b[K\n'}
+[15.817697] (cartesian_impedance_control) StderrLine: {'line': b'      |      \x1b[01;36m\x1b[K~\x1b[m\x1b[K\n'}
+[15.817745] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:33:54:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin definition of macro \xe2\x80\x98\x1b[01m\x1b[KEIGEN_STATIC_ASSERT\x1b[m\x1b[K\xe2\x80\x99\n'}
+[15.817795] (cartesian_impedance_control) StderrLine: {'line': b'   33 |     #define EIGEN_STATIC_ASSERT(X,MSG) static_assert(\x1b[01;36m\x1b[KX\x1b[m\x1b[K,#MSG);\n'}
+[15.817844] (cartesian_impedance_control) StderrLine: {'line': b'      |                                                      \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[15.817908] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:194:6:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin expansion of macro \xe2\x80\x98\x1b[01m\x1b[KEIGEN_PREDICATE_SAME_MATRIX_SIZE\x1b[m\x1b[K\xe2\x80\x99\n'}
+[15.817974] (cartesian_impedance_control) StderrLine: {'line': b'  194 |      \x1b[01;36m\x1b[KEIGEN_PREDICATE_SAME_MATRIX_SIZE\x1b[m\x1b[K(TYPE0,TYPE1),\\\n'}
+[15.818024] (cartesian_impedance_control) StderrLine: {'line': b'      |      \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[15.818075] (cartesian_impedance_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/CwiseBinaryOp.h:115:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin expansion of macro \xe2\x80\x98\x1b[01m\x1b[KEIGEN_STATIC_ASSERT_SAME_MATRIX_SIZE\x1b[m\x1b[K\xe2\x80\x99\n'}
+[15.818125] (cartesian_impedance_control) StderrLine: {'line': b'  115 |       \x1b[01;36m\x1b[KEIGEN_STATIC_ASSERT_SAME_MATRIX_SIZE\x1b[m\x1b[K(Lhs, Rhs)\n'}
+[15.818174] (cartesian_impedance_control) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[15.890843] (-) TimerEvent: {}
+[15.991324] (-) TimerEvent: {}
+[16.091743] (-) TimerEvent: {}
+[16.192176] (-) TimerEvent: {}
+[16.292638] (-) TimerEvent: {}
+[16.393035] (-) TimerEvent: {}
+[16.493461] (-) TimerEvent: {}
+[16.593947] (-) TimerEvent: {}
+[16.694363] (-) TimerEvent: {}
+[16.794757] (-) TimerEvent: {}
+[16.895091] (-) TimerEvent: {}
+[16.995474] (-) TimerEvent: {}
+[17.095808] (-) TimerEvent: {}
+[17.196254] (-) TimerEvent: {}
+[17.296698] (-) TimerEvent: {}
+[17.397330] (-) TimerEvent: {}
+[17.497841] (-) TimerEvent: {}
+[17.598397] (-) TimerEvent: {}
+[17.698814] (-) TimerEvent: {}
+[17.799192] (-) TimerEvent: {}
+[17.899552] (-) TimerEvent: {}
+[17.999977] (-) TimerEvent: {}
+[18.100377] (-) TimerEvent: {}
+[18.200748] (-) TimerEvent: {}
+[18.301112] (-) TimerEvent: {}
+[18.401420] (-) TimerEvent: {}
+[18.501785] (-) TimerEvent: {}
+[18.602287] (-) TimerEvent: {}
+[18.702698] (-) TimerEvent: {}
+[18.803140] (-) TimerEvent: {}
+[18.903555] (-) TimerEvent: {}
+[19.004014] (-) TimerEvent: {}
+[19.104611] (-) TimerEvent: {}
+[19.205019] (-) TimerEvent: {}
+[19.305396] (-) TimerEvent: {}
+[19.405998] (-) TimerEvent: {}
+[19.506506] (-) TimerEvent: {}
+[19.606960] (-) TimerEvent: {}
+[19.707372] (-) TimerEvent: {}
+[19.807988] (-) TimerEvent: {}
+[19.908436] (-) TimerEvent: {}
+[20.008841] (-) TimerEvent: {}
+[20.109257] (-) TimerEvent: {}
+[20.209696] (-) TimerEvent: {}
+[20.310208] (-) TimerEvent: {}
+[20.410615] (-) TimerEvent: {}
+[20.510989] (-) TimerEvent: {}
+[20.611391] (-) TimerEvent: {}
+[20.711828] (-) TimerEvent: {}
+[20.812275] (-) TimerEvent: {}
+[20.912691] (-) TimerEvent: {}
+[21.013130] (-) TimerEvent: {}
+[21.113569] (-) TimerEvent: {}
+[21.214413] (-) TimerEvent: {}
+[21.314827] (-) TimerEvent: {}
+[21.415213] (-) TimerEvent: {}
+[21.515596] (-) TimerEvent: {}
+[21.616022] (-) TimerEvent: {}
+[21.618100] (cartesian_impedance_control) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/cartesian_impedance_control.dir/build.make:76: CMakeFiles/cartesian_impedance_control.dir/src/cartesian_impedance_controller.cpp.o] Error 1\n'}
+[21.618602] (cartesian_impedance_control) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:143: CMakeFiles/cartesian_impedance_control.dir/all] Error 2\n'}
+[21.618877] (cartesian_impedance_control) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[21.621595] (cartesian_impedance_control) CommandEnded: {'returncode': 2}
+[21.716241] (-) TimerEvent: {}
+[21.718446] (cartesian_impedance_control) JobEnded: {'identifier': 'cartesian_impedance_control', 'rc': 2}
+[21.729242] (-) EventReactorShutdown: {}

@@ -111,7 +111,7 @@ public:
     void arrayToMatrix(const std::array<double, 7>& inputArray, Eigen::Matrix<double, 7, 1>& resultMatrix);
     void adapt_Sm_and_Sf(const int& frame, const Eigen::Matrix<double, 6, 1>& F_request, const Eigen::Matrix<double,3,3>& rot_matrix, 
                         Eigen::Matrix<double, 6, 6>& Sm, Eigen::Matrix<double, 6, 6>& Sf);
-    void change_desired_position_if_force_changes(const Eigen::Quaterniond orientation, const Eigen::Vector3d position, const Eigen::Matrix<double, 6, 1>& F_request, 
+    void change_desired_position_if_force_changes(const Eigen::Quaterniond orientation, const Eigen::Vector3d position, const Eigen::Matrix<double, 6, 1>& F_contact_target, 
                         Eigen::Matrix<double, 6, 1>& F_request_old, Eigen::Vector3d& position_d_, Eigen::Quaterniond& orientation_d_,
                         Eigen::Vector3d& position_d_target_, Eigen::Vector3d& rotation_d_target_/*, bool& keepprinting*/);
     void calculate_tau_friction(const Eigen::Matrix<double, 7, 1>& dq_, const Eigen::Matrix<double, 7, 1>& tau_impedance,
@@ -134,7 +134,11 @@ public:
                                                 const Eigen::Matrix<double, 7, 7>& M,
                                                 const Eigen::MatrixXd& jacobian_transpose_pinv,
                                                 const Eigen::Matrix<double, 6, 1>& F_cmd);
-    //void move_gripper(const franka::Gripper& gripper, const int& gripper_command, const double& gripper_speed);
+    void change_wrench_to_base_frame(Eigen::Matrix<double, 6, 1>& F_cmd, const Eigen::Matrix<double,3,3>& rot_matrix,
+                                    const Eigen::Matrix<double,3,1>& position); //the position is the translation between the 2 frames
+    void change_wrench_to_endeffector_frame(Eigen::Matrix<double, 6, 1>& F_ext, 
+                                       const Eigen::Matrix<double, 3, 3>& rot_matrix, 
+                                       const Eigen::Matrix<double, 3, 1>& position);
     Eigen::Matrix<double, 7, 1> saturateTorqueRate(const Eigen::Matrix<double, 7, 1>& tau_d_calculated, const Eigen::Matrix<double, 7, 1>& tau_J_d);  
     std::array<double, 6> convertToStdArray(const geometry_msgs::msg::WrenchStamped& wrench);
     
@@ -169,6 +173,7 @@ public:
     Eigen::Matrix<double, 6, 6> Lambda = IDENTITY;                                           // operational space mass matrix
     Eigen::Matrix<double, 6, 6> Sm = IDENTITY;                                               // task space selection matrix for positions and rotation
     Eigen::Matrix<double, 6, 6> Sf = Eigen::MatrixXd::Zero(6, 6);                            // task space selection matrix for forces
+    Eigen::Matrix<double, 6, 6> Sf_EE = Eigen::MatrixXd::Zero(6, 6);                         // endeffector space selection matrix for forces, only needed for exerting forces in the endeffector frame
     Eigen::Matrix<double, 6, 6> K =  (Eigen::MatrixXd(6,6) << 4000,   0,   0,   0,   0,   0,
                                                                 0, 2000,   0,   0,   0,   0,
                                                                 0,   0, 200,   0,   0,   0,  // impedance stiffness term
@@ -216,7 +221,8 @@ public:
     Eigen::Matrix<double, 6, 1> F_impedance;  
     Eigen::Matrix<double, 6, 1> F_contact_des = Eigen::MatrixXd::Zero(6, 1);                 // desired contact force
     Eigen::Matrix<double, 6, 1> F_contact_target = Eigen::MatrixXd::Zero(6, 1);              // desired contact force used for filtering
-    Eigen::Matrix<double, 6, 1> F_ext = Eigen::MatrixXd::Zero(6, 1);                         // external forces
+    Eigen::Matrix<double, 6, 1> F_ext = Eigen::MatrixXd::Zero(6, 1);                         // external forces in base frame
+    Eigen::Matrix<double, 6, 1> F_ext_EE = Eigen::MatrixXd::Zero(6, 1);                      // external forces in endeffector frame
     Eigen::Matrix<double, 6, 1> F_cmd = Eigen::MatrixXd::Zero(6, 1);                         // commanded contact force
     Eigen::Matrix<double, 7, 1> q_d_nullspace_;
     Eigen::Matrix<double, 6, 1> error;                                                       // pose error (6d)
@@ -225,6 +231,7 @@ public:
 
     // Force control variables
     int frame = 1;  //frame in which F_contact_target is. 1 = base frame; 2 = endeffector frame
+    int frame_before = 1;       // frame in the last loop iteration
     Eigen::Matrix<double, 6, 1> F_request_old = Eigen::MatrixXd::Zero(6, 1);
 
     //Logging

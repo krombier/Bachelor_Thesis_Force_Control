@@ -113,7 +113,7 @@ int main(int argc, char **argv) {
         switch (task_selection){
             case 1:{ */
         //publish_pose(pose_client,pose_request,node); // here it doesn't work wtf
-        std::cout << "Enter new goal position: \n [1] --> 0.5, -0.4, 0.5 \n [2] --> DO NOT USE \n [3] --> starting pose of colaboration routine\n [4] --> 0.298, 0.7, 0.1 \n [5] --> 0.6, 0.0, 0.07 \n ";
+        std::cout << "Enter new goal position: \n [1] --> 0.5, -0.4, 0.5 \n [2] --> DO NOT USE \n [3] --> starting pose of colaboration routine but random pose\n [4] --> 0.298, 0.7, 0.1 \n [5] --> 0.6, 0.0, 0.07 \n ";
         std::cout << "[6] --> Do the collaboration routine \n [7] --> START POS FOR SCREW \n [j] --> Reduce current z-Position by 1 cm \n [u] --> Increase current z-Position by 1 cm \n [w] --> Reduce current x-Position by 0.1 cm \n ";
         std::cout << "[a] --> Reduce current y-Position by 0.1 cm \n [s] --> Increase current x-Position by 0.1 cm \n [d] --> Increase current y-Position by 0.1 cm \n";
         std::cout << "[l] --> Reduce current z-Position by 0.1 cm \n [o] --> Increase current z-Position by 0.1 cm \n ";
@@ -163,12 +163,12 @@ int main(int argc, char **argv) {
                 break;
             }
             case '3':{
-                pose_request->x = 0.6;
-                pose_request->y = 0.0;
-                pose_request->z = 0.13;
+                pose_request->x = 0.4;
+                pose_request->y = 0.3;
+                pose_request->z = 0.3;
                 pose_request->roll = M_PI-0.5;
-                pose_request->pitch = 0.0;
-                pose_request->yaw = -M_PI_2;
+                pose_request->pitch = 0.3;
+                pose_request->yaw = -M_PI_2-0.2;
                 //pose_request-> gripper_state = 2; //open
                 break;
             }

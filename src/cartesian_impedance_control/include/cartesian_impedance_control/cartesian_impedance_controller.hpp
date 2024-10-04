@@ -136,6 +136,9 @@ public:
                                                 const Eigen::Matrix<double, 6, 1>& F_cmd);
     void change_wrench_to_base_frame(Eigen::Matrix<double, 6, 1>& F_cmd, const Eigen::Matrix<double,3,3>& rot_matrix,
                                     const Eigen::Matrix<double,3,1>& position); //the position is the translation between the 2 frames
+    void change_wrench_to_endeffector_frame(Eigen::Matrix<double, 6, 1>& F_ext, 
+                                       const Eigen::Matrix<double, 3, 3>& rot_matrix, 
+                                       const Eigen::Matrix<double, 3, 1>& position);
     Eigen::Matrix<double, 7, 1> saturateTorqueRate(const Eigen::Matrix<double, 7, 1>& tau_d_calculated, const Eigen::Matrix<double, 7, 1>& tau_J_d);  
     std::array<double, 6> convertToStdArray(const geometry_msgs::msg::WrenchStamped& wrench);
     

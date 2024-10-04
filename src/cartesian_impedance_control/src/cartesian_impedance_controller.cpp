@@ -45,6 +45,18 @@ namespace cartesian_impedance_control {
 
 CartesianImpedanceController::CartesianImpedanceController() {}
 
+void CartesianImpedanceController::change_wrench_to_endeffector_frame(Eigen::Matrix<double, 6, 1>& F_ext, 
+                                       const Eigen::Matrix<double, 3, 3>& rot_matrix, 
+                                       const Eigen::Matrix<double, 3, 1>& position) {
+    Eigen::Vector3d force_base = F_ext.head<3>();    // First 3 elements: [f_x, f_y, f_z]
+    Eigen::Vector3d moment_base = F_ext.tail<3>();   // Last 3 elements: [m_x, m_y, m_z]
+    Eigen::Matrix<double, 3, 3> rot_matrix_inv = rot_matrix.transpose();
+    Eigen::Vector3d force_eff = rot_matrix_inv * force_base;
+    Eigen::Vector3d moment_eff = rot_matrix_inv * (moment_base - position.cross(force_base));
+    F_ext.head<3>() = force_eff;
+    F_ext.tail<3>() = moment_eff;
+}
+
 void CartesianImpedanceController::change_wrench_to_base_frame(Eigen::Matrix<double, 6, 1>& F_cmd, const Eigen::Matrix<double,3,3>& rot_matrix,
                                                                const Eigen::Matrix<double,3,1>& position /*the position is the translation between the 2 frames*/){
   Eigen::Vector3d force_eff = F_cmd.head<3>();    // First 3 elements: [f_x, f_y, f_z]
@@ -516,7 +528,7 @@ controller_interface::return_type CartesianImpedanceController::update(const rcl
   F_ext = /*0.999 * F_ext + 0.001 */ /*O_F_ext_hat_K_M*/  O_F_ext_hat_K_M_no_friction; //Filtering       //the second part is the measured external force                                               // exponential filtering with smoothing factor = 0.1
   
   if(frame != frame_before){    //reset Integrator if frame gets changed while the controller is running
-    I_F_error = 0;
+    I_F_error = Eigen::MatrixXd::Zero(6, 6);;
     frame_before = frame;
   }
   
@@ -526,7 +538,7 @@ controller_interface::return_type CartesianImpedanceController::update(const rcl
       F_cmd = Sf *0.4 *(F_contact_des - F_ext) + 0.9 * I_F_error + 0.9 * F_contact_des;     //////////////////////////////                      // P + I + feedforward term for faster convergence
       break;
     case 2:
-      F_ext_EE = rotation_matrix * F_ext;
+      change_wrench_to_endeffector_frame(F_ext, rotation_matrix, position);
       Sf_EE = IDENTITY;
       for (int j =0; j<6; ++j){
         if (F_contact_target(j)==0){
@@ -535,14 +547,13 @@ controller_interface::return_type CartesianImpedanceController::update(const rcl
       }
       I_F_error += dt * Sf_EE *(F_contact_des - F_ext_EE);
       F_cmd = Sf_EE *0.4 *(F_contact_des - F_ext_EE) + 0.9 * I_F_error + 0.9 * F_contact_des;
-      
+      change_wrench_to_base_frame(F_cmd, rotation_matrix, position);
       break;
     default:
       std::cout<< "Unknown frame \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n";
       break;
   }
-  //Ist das in welchem frame oben dran.
-  //change_wrench_to_base_frame(F_cmd, rotation_matrix, position);
+
   tau_nullspace << (Eigen::MatrixXd::Identity(7, 7) -
                     jacobian.transpose() * jacobian_transpose_pinv) *                                           /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////here nullspace matrix gets calculated
                     (nullspace_stiffness_ * config_control * (q_d_nullspace_ - q_) - //if config_control = true we control the whole robot configuration
