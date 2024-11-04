@@ -1,4 +1,3 @@
-// so far this was just copy pasted and stupidly adapted from user_input_server.hpp
 #pragma once                            //make sure this file is only included once by compiler, if done multiple times this may cause a compiler error
 
 #include <Eigen/Eigen>
@@ -9,7 +8,7 @@ namespace cartesian_impedance_control {
 
 class UserInputForceServer {
 public:
-  UserInputForceServer (Eigen::Matrix<double, 6, 1>* force_and_moment,int* inputframe) :    //constructor??
+  UserInputForceServer (Eigen::Matrix<double, 6, 1>* force_and_moment,int* inputframe) :    //constructor
   F_contact_target(force_and_moment), frame(inputframe){}
     int main(int argc, char **argv);
 

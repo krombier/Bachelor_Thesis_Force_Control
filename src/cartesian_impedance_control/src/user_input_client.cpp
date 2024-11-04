@@ -11,6 +11,7 @@
 #include <array>
 #include <cmath>
 
+//publish the requested pose
 void publish_pose(const rclcpp::Client<messages_fr3::srv::SetPose>::SharedPtr pose_client, const std::shared_ptr<messages_fr3::srv::SetPose::Request> pose_request, const std::shared_ptr<rclcpp::Node> node){
     auto pose_result = pose_client->async_send_request(pose_request);
         if(rclcpp::spin_until_future_complete(node, pose_result) ==  rclcpp::FutureReturnCode::SUCCESS){
@@ -21,6 +22,7 @@ void publish_pose(const rclcpp::Client<messages_fr3::srv::SetPose>::SharedPtr po
         }
 }
 
+//publish the requested force
 void publish_force(const rclcpp::Client<messages_fr3::srv::SetForce>::SharedPtr force_client, const std::shared_ptr<messages_fr3::srv::SetForce::Request> force_request, const std::shared_ptr<rclcpp::Node> node){
     auto force_result = force_client->async_send_request(force_request);
         if(rclcpp::spin_until_future_complete(node, force_result) ==  rclcpp::FutureReturnCode::SUCCESS){
@@ -30,7 +32,7 @@ void publish_force(const rclcpp::Client<messages_fr3::srv::SetForce>::SharedPtr 
             RCLCPP_ERROR(rclcpp::get_logger("rclcpp"), "Failed to call service setForce");
         }
 }
-
+// publish the requested gripper position
 void publish_gripper_task(const rclcpp::Publisher<std_msgs::msg::String>::SharedPtr publisher,
                   const std::string& message_content, 
                   const std::shared_ptr<rclcpp::Node> node){ 
@@ -50,21 +52,26 @@ int main(int argc, char **argv) {
     std::shared_ptr<rclcpp::Node> node = rclcpp::Node::make_shared("user_input_client");
     rclcpp::Publisher<std_msgs::msg::String>::SharedPtr gripper_command_publisher_;
 
+    //Create the client for set_pose
     rclcpp::Client<messages_fr3::srv::SetPose>::SharedPtr pose_client =
         node->create_client<messages_fr3::srv::SetPose>("set_pose");
     auto pose_request = std::make_shared<messages_fr3::srv::SetPose::Request>();
     //std::shared_ptr<messages_fr3::srv::SetPose::Request> pose_request
 
+    //Create the client for set_param
     rclcpp::Client<messages_fr3::srv::SetParam>::SharedPtr param_client =
         node->create_client<messages_fr3::srv::SetParam>("set_param");
     auto param_request = std::make_shared<messages_fr3::srv::SetParam::Request>();
 
-    //for force client node. Only added now for the demonstration.
+    
+    //Create the client for set_force
+    // COMMENT THIS IF YOU USE an extra terminal with:
+    //          ros2 run cartesian_impedance_control force_control_client
     rclcpp::Client<messages_fr3::srv::SetForce>::SharedPtr force_client =
         node->create_client<messages_fr3::srv::SetForce>("set_force");
     auto force_request = std::make_shared<messages_fr3::srv::SetForce::Request>();
     
-    try {                                                           //if try has an error it does catch instead
+    try {
         rclcpp::QoS qos_profile3(1); // Depth of the message queue aka does only keep one message all older ones get deleted
         qos_profile3.reliability(RMW_QOS_POLICY_RELIABILITY_RELIABLE);
         gripper_command_publisher_ = node->create_publisher<std_msgs::msg::String>("gripper_command", qos_profile3);
@@ -75,7 +82,7 @@ int main(int argc, char **argv) {
         fprintf(stderr,  "Exception thrown during publisher for gripper command creation at configure stage with message : %s \n",e.what());
         }
     
-
+    // initialize all the variables
     int task_selection, param_selection;
     std::string pose_selection_str;
     std::string gripper_command;
@@ -83,7 +90,7 @@ int main(int argc, char **argv) {
     double store;
 
     // used for the sanding task
-    double amplitude = 0.07;            //won't reach the maximal amplitude due to full parameter filter_params in cartesian_impedance_controller.cpp
+    double amplitude = 0.07;            //won't reach the maximal amplitude due to filter parameter filter_params in cartesian_impedance_controller.cpp
     double frequency = 1.0;
     
     //initialize variables 
@@ -94,25 +101,16 @@ int main(int argc, char **argv) {
     pose_request->roll = M_PI;
     pose_request->pitch = 0.0;
     pose_request->yaw = M_PI_2;
-    //pose_request-> gripper_state = 2; //open
-    /*
-    auto pose_result = pose_client->async_send_request(pose_request);
-    if(rclcpp::spin_until_future_complete(node, pose_result) ==  rclcpp::FutureReturnCode::SUCCESS){
-        std::cout << "Hot geklappt\n";
-        RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Worked: %d", pose_result.get()->success);
-    } else {
-        RCLCPP_ERROR(rclcpp::get_logger("rclcpp"), "Failed to call service setPose");
-    }*/
 
     while (rclcpp::ok()){
+        // TO GET THE WHOLE THING TO WORK AGAIN ONLY DELETE THE COMMENTS OF STYLE /**/
         /*                 // uncommented because I don't need the free float mode
         // IF THE PART THAT IS COMMENTED IS NEEDED AGAIN MOVE ALL CODE THAT IS CURRENTLY ACTIVE TWO TABS TO THE RIGHT
-
         std::cout << "Enter the next task: \n [1] --> Change position \n [2] --> Change impedance parameters" << std::endl;
         std:: cin >> task_selection;
         switch (task_selection){
             case 1:{ */
-        //publish_pose(pose_client,pose_request,node); // here it doesn't work wtf
+        //publish_pose(pose_client,pose_request,node);
         std::cout << "Enter new goal position: \n [1] --> 0.5, -0.4, 0.5 \n [2] --> DO NOT USE \n [3] --> starting pose of colaboration routine but random pose\n [4] --> 0.298, 0.7, 0.1 \n [5] --> 0.6, 0.0, 0.07 \n ";
         std::cout << "[6] --> Do the collaboration routine \n [7] --> START POS FOR SCREW \n [j] --> Reduce current z-Position by 1 cm \n [u] --> Increase current z-Position by 1 cm \n [w] --> Reduce current x-Position by 0.1 cm \n ";
         std::cout << "[a] --> Reduce current y-Position by 0.1 cm \n [s] --> Increase current x-Position by 0.1 cm \n [d] --> Increase current y-Position by 0.1 cm \n";
@@ -127,9 +125,9 @@ int main(int argc, char **argv) {
         std::cout << "[-] --> Do the screw routine\n";
         std::cout << "[8] --> Grasp sanding block\n";
         std::cout << "[9] --> Grasp hex wrench\n";
-        //std::cout << "[4] and [5] currently reach the boundaries if checklimits is fully activated, so the arm will get stuck if you command this\n ";
         std::cin >> pose_selection_str;
         
+        // make sure you get a one letter input only
         if (pose_selection_str.length() != 1) {
             std::cout << "Invalid input. Please enter a valid input." << std::endl;
             continue;
@@ -144,7 +142,6 @@ int main(int argc, char **argv) {
                 pose_request->roll = M_PI;
                 pose_request->pitch = 0.0;
                 pose_request->yaw = -M_PI_2;
-                //pose_request-> gripper_state = 2; //open
                 break;
             }
             case '2':{
@@ -159,7 +156,6 @@ int main(int argc, char **argv) {
                 pose_request->roll = pose[3];
                 pose_request->pitch = pose[4];
                 pose_request->yaw = pose[5];
-                //pose_request-> gripper_state = 2; //open
                 break;
             }
             case '3':{
@@ -169,7 +165,6 @@ int main(int argc, char **argv) {
                 pose_request->roll = M_PI-0.5;
                 pose_request->pitch = 0.3;
                 pose_request->yaw = -M_PI_2-0.2;
-                //pose_request-> gripper_state = 2; //open
                 break;
             }
             case '4':{
@@ -179,7 +174,6 @@ int main(int argc, char **argv) {
                 pose_request->roll = M_PI;
                 pose_request->pitch = 0.0;
                 pose_request->yaw = -M_PI_2;
-                //pose_request-> gripper_state = 2; //open
                 break;
             }
             case '5':{
@@ -189,7 +183,6 @@ int main(int argc, char **argv) {
                 pose_request->roll = M_PI - 0.3;
                 pose_request->pitch = 0.0;
                 pose_request->yaw = -M_PI_2;
-                //pose_request-> gripper_state = 2; //open
                 break;
             }
             case '6':{
@@ -218,7 +211,7 @@ int main(int argc, char **argv) {
                 force_request->x_torque = 0.0;
                 force_request->y_torque = 0.0;
                 force_request->z_torque = 0.0;
-                force_request->frame = 2;
+                force_request->frame = 1;
                 std::cout << "We exert a force of -3N in z-direction to create a contact.\n";
                 publish_force(force_client, force_request, node);
                 start_time = std::chrono::steady_clock::now();
@@ -230,7 +223,7 @@ int main(int argc, char **argv) {
                 force_request->x_torque = 0.0;
                 force_request->y_torque = 0.0;
                 force_request->z_torque = 0.0;
-                force_request->frame = 2;
+                force_request->frame = 1;
                 std::cout << "We should now be in contact. The force gets increased to 7N.\n";
                 publish_force(force_client, force_request, node);
                 double start_pos_x = pose_request->x;
@@ -285,7 +278,6 @@ int main(int argc, char **argv) {
                 pose_request->roll = M_PI ;
                 pose_request->pitch = 0.0;
                 pose_request->yaw = -M_PI_2;
-                //pose_request-> gripper_state = 2; //open
                 break;
             }
             case 'j':{
@@ -487,7 +479,8 @@ int main(int argc, char **argv) {
                 gripper_command = "open";
                 break;
             }
-            case '-':{                ///////////////////////////////////WIP
+            // Huge part here is currently commented out because the robot struggled with it due to not having accurate enough positional control.
+            case '-':{
                 
                 std::cout << "Screw routine started. The robot will wait for 5 seconds.\n";
                 auto start_time = std::chrono::steady_clock::now();
@@ -687,7 +680,7 @@ int main(int argc, char **argv) {
                 break;
             }
             case '9':{                
-                gripper_command = "hex wrench"; //hand file
+                gripper_command = "hex wrench"; //hex wrench
                 break;
             }
             default:{

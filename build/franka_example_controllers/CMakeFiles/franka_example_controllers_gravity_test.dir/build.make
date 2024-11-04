@@ -125,7 +125,7 @@ franka_example_controllers_gravity_test: /opt/ros/humble/lib/libmoveit_robot_sta
 franka_example_controllers_gravity_test: /opt/ros/humble/lib/libmoveit_robot_model.so.2.5.5
 franka_example_controllers_gravity_test: /opt/ros/humble/lib/libmoveit_exceptions.so.2.5.5
 franka_example_controllers_gravity_test: /opt/ros/humble/lib/libmoveit_kinematics_base.so
-franka_example_controllers_gravity_test: /opt/ros/humble/lib/libsrdfdom.so.2.0.4
+franka_example_controllers_gravity_test: /opt/ros/humble/lib/libsrdfdom.so.2.0.5
 franka_example_controllers_gravity_test: /usr/lib/x86_64-linux-gnu/liborocos-kdl.so
 franka_example_controllers_gravity_test: /opt/ros/humble/lib/liburdf.so
 franka_example_controllers_gravity_test: /opt/ros/humble/lib/x86_64-linux-gnu/libruckig.so

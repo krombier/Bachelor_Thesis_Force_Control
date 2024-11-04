@@ -104,15 +104,6 @@ bool messages_fr3__srv__set_pose__request__convert_from_py(PyObject * _pymsg, vo
     ros_message->yaw = PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
-  {  // gripper_state
-    PyObject * field = PyObject_GetAttrString(_pymsg, "gripper_state");
-    if (!field) {
-      return false;
-    }
-    assert(PyLong_Check(field));
-    ros_message->gripper_state = (int8_t)PyLong_AsLong(field);
-    Py_DECREF(field);
-  }
 
   return true;
 }
@@ -195,17 +186,6 @@ PyObject * messages_fr3__srv__set_pose__request__convert_to_py(void * raw_ros_me
     field = PyFloat_FromDouble(ros_message->yaw);
     {
       int rc = PyObject_SetAttrString(_pymessage, "yaw", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // gripper_state
-    PyObject * field = NULL;
-    field = PyLong_FromLong(ros_message->gripper_state);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "gripper_state", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

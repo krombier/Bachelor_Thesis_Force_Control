@@ -43,10 +43,10 @@ class ForceTorquePlotter(Node):
         plt.show()
 
     def listener_callback(self, msg):
-        print("Print does work")
+        #print("Print does work")
         current_time = time.time() - self.start_time
         self.time_data.append(current_time)
-        print("hello")
+        #print("hello")
         force = msg.force
         torque = msg.torque
         self.force_data.append([force.x, force.y, force.z])

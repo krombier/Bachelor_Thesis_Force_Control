@@ -20,7 +20,6 @@ void UserInputServer::setPose(const std::shared_ptr<messages_fr3::srv::SetPose::
     (*rotation_d_target_)[0] = request->roll;
     (*rotation_d_target_)[1] = request->pitch;
     (*rotation_d_target_)[2] = request->yaw;
-   // (*gripper_) = request->gripper_state;                                                                                               // here was a mistake (was as in has been, ignore this comment now everything works)
 }
 
 void UserInputServer::setParam(const std::shared_ptr<messages_fr3::srv::SetParam::Request> request, 

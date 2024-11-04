@@ -1,15 +1,12 @@
 #include <rclcpp/rclcpp.hpp>
-//#include <std_msgs/msg/float64.hpp>
 #include "std_msgs/msg/string.hpp"
 #include <franka/gripper.h>
-// maybe we have to include gripper_.homing();
+// If the gripper gets disconnected you have to do gripper.homing()
+// Details can be found here: https://frankaemika.github.io/libfranka/0.14.1/classfranka_1_1Gripper.html#aef356f93a4c3b9d6b2532c29126d478c
 //there should be some safety features added
 class GripperControlNode : public rclcpp::Node {
 public:
-    GripperControlNode() : Node("gripper_control_node") {
-        // Initialize the gripper interface
-        // done     gripper_ = YourGripperInterface(); // Replace with your actual gripper interface initialization
-        //franka::Gripper gripper_ = franka::Gripper("192.168.1.200");
+    GripperControlNode() : Node("gripper_control_node") {   // create and name the node.
 
         // Create a subscriber to receive gripper commands
         command_subscription_ = this->create_subscription<std_msgs::msg::String>(
@@ -49,40 +46,13 @@ private:
                 // If one wants to grasp something else, feel free to refer to the documentation from Franka Emika
                 // https://frankaemika.github.io/libfranka/0.14.1/classfranka_1_1Gripper.html 
             }
-                /*
-                switch (gripper_command_) {
-                    case 1:  // "close"
-                        gripper.move(0.005, gripper_speed);
-                        break;
-                    
-                    case 2:  // "open"
-                        gripper.move(0.07, gripper_speed);
-                        break;
-                    
-                    case 3:  // "half open"
-                        gripper.move(0.04, gripper_speed);
-                        break;
 
-                    case 4:  // "sanding block"
-                        gripper.grasp(0.06, gripper_speed, 10, 0.003, 0.002);
-                        break;
-
-                    case 5:  // "hand file"
-                        gripper.grasp(0.015, gripper_speed, 10, 0.003, 0.002);
-                        break;
-                    
-                    default:
-                        std::cout << "Error, current gripper command has no defined action" << std::endl;
-                        break;
-                }
-                gripper_.move(position, 0.1); // Replace with your gripper's move function and parameters
-                */
         } catch (const std::exception &ex) {
             RCLCPP_ERROR(this->get_logger(), "Failed to move gripper: %s", ex.what());
         }
             
     }
-
+    // setup stuff
     rclcpp::Subscription<std_msgs::msg::String>::SharedPtr command_subscription_;
     franka::Gripper gripper_ = franka::Gripper("192.168.1.200");
     double gripper_speed = 0.02; // [m/s]
@@ -90,10 +60,6 @@ private:
     std::string gripper_command_ = "open";
     
     franka::GripperState gripper_state = gripper_.readOnce();
-   /* if (gripper_state.max_width < grasping_width) {
-      std::cout << "Object is too large for the current fingers on the gripper." << std::endl;
-      return -1;
-    }*/
 };
 
 int main(int argc, char *argv[]) {

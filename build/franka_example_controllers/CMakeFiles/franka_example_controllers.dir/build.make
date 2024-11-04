@@ -521,7 +521,7 @@ libfranka_example_controllers.so: /opt/ros/humble/lib/libgeometry_msgs__rosidl_t
 libfranka_example_controllers.so: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_cpp.so
 libfranka_example_controllers.so: /opt/ros/humble/lib/libgeometry_msgs__rosidl_generator_py.so
 libfranka_example_controllers.so: /opt/ros/humble/lib/libstd_msgs__rosidl_generator_py.so
-libfranka_example_controllers.so: /opt/ros/humble/lib/libsrdfdom.so.2.0.4
+libfranka_example_controllers.so: /opt/ros/humble/lib/libsrdfdom.so.2.0.5
 libfranka_example_controllers.so: /opt/ros/humble/lib/liburdf.so
 libfranka_example_controllers.so: /opt/ros/humble/lib/libclass_loader.so
 libfranka_example_controllers.so: /usr/lib/x86_64-linux-gnu/libtinyxml2.so

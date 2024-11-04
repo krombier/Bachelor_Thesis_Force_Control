@@ -29,8 +29,7 @@
 #include "cartesian_impedance_control/user_input_server.hpp"
 #include "cartesian_impedance_control/force_control_server.hpp"
 
-#include "geometry_msgs/msg/wrench.hpp"           // added by Simon 13.06.24 to get Force publisher running if it doesn't work out remove it
-//#include "std_msgs/msg/string.hpp"              // added on 18.09. for gripper
+#include "geometry_msgs/msg/wrench.hpp"
 
 #include <rclcpp/rclcpp.hpp>
 #include "rclcpp/subscription.hpp"
@@ -43,9 +42,6 @@
 #include <franka/model.h>
 #include <franka/robot.h>
 #include <franka/robot_state.h>
-//#include <franka/gripper.h>                     // added by Simon 15.08.24 to stear the gripper
-
-
 
 #include "franka_hardware/franka_hardware_interface.hpp"
 #include <franka_hardware/model.hpp>
@@ -87,7 +83,7 @@ public:
   controller_interface::CallbackReturn on_deactivate(
       const rclcpp_lifecycle::State& previous_state) override;
 
-  void setPose(const std::shared_ptr<messages_fr3::srv::SetPose::Request> request,                            // maybe this must be added as well for force?
+  void setPose(const std::shared_ptr<messages_fr3::srv::SetPose::Request> request,
       std::shared_ptr<messages_fr3::srv::SetPose::Response> response);
     
 
@@ -95,17 +91,16 @@ public:
 
  private:
     //Nodes
-    rclcpp::Subscription<franka_msgs::msg::FrankaRobotState>::SharedPtr franka_state_subscriber = nullptr;
-    rclcpp::Service<messages_fr3::srv::SetPose>::SharedPtr pose_srv_;
-    rclcpp::Service<messages_fr3::srv::SetForce>::SharedPtr force_srv_;
-    rclcpp::Publisher<geometry_msgs::msg::Wrench>::SharedPtr wrench_publisher_;
-    //rclcpp::Publisher<std_msgs::msg::String>::SharedPtr gripper_command_publisher_;                  // currently commented out because I'll try to pass the gripper command directly to the robot 
-  
+    rclcpp::Subscription<franka_msgs::msg::FrankaRobotState>::SharedPtr franka_state_subscriber = nullptr;      // Subscribes to the states that the robot publishes.
+    rclcpp::Service<messages_fr3::srv::SetPose>::SharedPtr pose_srv_;                                           // Service to control the pose (Position and orientation)
+    rclcpp::Service<messages_fr3::srv::SetForce>::SharedPtr force_srv_;                                         // Service to control the exerted forces.
+    rclcpp::Publisher<geometry_msgs::msg::Wrench>::SharedPtr wrench_publisher_;                                 // Can be used to publish any wrench.
 
     //Functions
+    // A quick explanation of each function can be found in cartesian_impedance_controller.cpp (or if you simply hover over the function)
     void topic_callback(const std::shared_ptr<franka_msgs::msg::FrankaRobotState> msg);
     void updateJointStates();
-    void checklimits(const Eigen::Vector3d& position, Eigen::Matrix<double, 7, 1>& tau_d);
+    //void checklimits(const Eigen::Vector3d& position, Eigen::Matrix<double, 7, 1>& tau_d);
     void update_stiffness_and_references(Eigen::Matrix<double, 6, 1>& F_contact_des);
     void arrayToMatrix(const std::array<double, 6>& inputArray, Eigen::Matrix<double, 6, 1>& resultMatrix);
     void arrayToMatrix(const std::array<double, 7>& inputArray, Eigen::Matrix<double, 7, 1>& resultMatrix);
@@ -113,7 +108,7 @@ public:
                         Eigen::Matrix<double, 6, 6>& Sm, Eigen::Matrix<double, 6, 6>& Sf);
     void change_desired_position_if_force_changes(const Eigen::Quaterniond orientation, const Eigen::Vector3d position, const Eigen::Matrix<double, 6, 1>& F_contact_target, 
                         Eigen::Matrix<double, 6, 1>& F_request_old, Eigen::Vector3d& position_d_, Eigen::Quaterniond& orientation_d_,
-                        Eigen::Vector3d& position_d_target_, Eigen::Vector3d& rotation_d_target_/*, bool& keepprinting*/);
+                        Eigen::Vector3d& position_d_target_, Eigen::Vector3d& rotation_d_target_);
     void calculate_tau_friction(const Eigen::Matrix<double, 7, 1>& dq_, const Eigen::Matrix<double, 7, 1>& tau_impedance,
                                                           const Eigen::Matrix<double, 6, 7>& jacobian, const Eigen::Matrix<double, 6, 6>& Sm,
                                                           const Eigen::Matrix<double, 6, 1>& error, const Eigen::MatrixXd& jacobian_pinv);
@@ -132,10 +127,9 @@ public:
                                                 const Eigen::Matrix<double, 7, 1>& tau_d,
                                                 const double& dt,
                                                 const Eigen::Matrix<double, 7, 7>& M,
-                                                const Eigen::MatrixXd& jacobian_transpose_pinv,
-                                                const Eigen::Matrix<double, 6, 1>& F_cmd);
+                                                const Eigen::MatrixXd& jacobian_transpose_pinv);
     void change_wrench_to_base_frame(Eigen::Matrix<double, 6, 1>& F_cmd, const Eigen::Matrix<double,3,3>& rot_matrix,
-                                    const Eigen::Matrix<double,3,1>& position); //the position is the translation between the 2 frames
+                                    const Eigen::Matrix<double,3,1>& position);
     void change_wrench_to_endeffector_frame(Eigen::Matrix<double, 6, 1>& F_ext, 
                                        const Eigen::Matrix<double, 3, 3>& rot_matrix, 
                                        const Eigen::Matrix<double, 3, 1>& position);
@@ -212,13 +206,13 @@ public:
     Eigen::Matrix<double, 6, 6> cartesian_stiffness_target_;                                 // impedance damping term
     Eigen::Matrix<double, 6, 6> cartesian_damping_target_;                                   // impedance damping term
     Eigen::Matrix<double, 6, 6> cartesian_inertia_target_;                                   // impedance damping term
-    Eigen::Vector3d position_d_target_ = {0.5, 0.0, 0.5};
-    Eigen::Vector3d rotation_d_target_ = {M_PI, 0.0, 0.0};
-    Eigen::Quaterniond orientation_d_target_;
-    Eigen::Vector3d position_d_;
-    Eigen::Vector3d position;
-    Eigen::Quaterniond orientation_d_; 
-    Eigen::Matrix<double, 6, 1> F_impedance;  
+    Eigen::Vector3d position_d_target_ = {0.5, 0.0, 0.5};                                    // desired target position (before filtering)
+    Eigen::Vector3d rotation_d_target_ = {M_PI, 0.0, 0.0};                                   // desired target orientation (before filtering) as roll, pitch, yaw
+    Eigen::Quaterniond orientation_d_target_;                                                // desired target orientation (before filtering) as Quaternion
+    Eigen::Vector3d position_d_;                                                             // desired position after filtering
+    Eigen::Vector3d position;                                                                // actual poistion
+    Eigen::Quaterniond orientation_d_;                                                       // desired orientation after filtering
+    Eigen::Matrix<double, 6, 1> F_impedance;                                                 // impedance force that bring the end effector to the desired position
     Eigen::Matrix<double, 6, 1> F_contact_des = Eigen::MatrixXd::Zero(6, 1);                 // desired contact force
     Eigen::Matrix<double, 6, 1> F_contact_target = Eigen::MatrixXd::Zero(6, 1);              // desired contact force used for filtering
     Eigen::Matrix<double, 6, 1> F_ext = Eigen::MatrixXd::Zero(6, 1);                         // external forces in base frame
@@ -230,17 +224,13 @@ public:
     double nullspace_stiffness_target_{0.001};
 
     // Force control variables
-    int frame = 1;  //frame in which F_contact_target is. 1 = base frame; 2 = endeffector frame
+    int frame = 1;  //frame in which F_contact_target is. 1 = base frame; 2 = endeffector frame  FRAME 2 IS CURRENTLY NOT WORKING
     int frame_before = 1;       // frame in the last loop iteration
-    Eigen::Matrix<double, 6, 1> F_request_old = Eigen::MatrixXd::Zero(6, 1);
+    Eigen::Matrix<double, 6, 1> F_request_old = Eigen::MatrixXd::Zero(6, 1);                 // requested force in the last iteration of the loop
 
     //Logging
-    int outcounter = 0;
-    const int update_frequency = 10; //frequency for outputs in update function
-    /*int outcounter_store;     ///were used for debugging
-    bool out_store = true;
-    bool keepprinting = true;
-    bool run = true;*/
+    int outcounter = 0;                                                                     // counts the iteration of the update function
+    const int update_frequency = 10;                                                        //frequency for outputs printed in update function
 
     //Integrator
     Eigen::Matrix<double, 6, 1> I_error = Eigen::MatrixXd::Zero(6, 1);                      // pose error (6d)
@@ -283,11 +273,13 @@ public:
     Eigen::Matrix<double, 7, 1> static_friction = (Eigen::VectorXd(7) << 1.025412896, 1.259913793, 0.8380147058, 1.005214968, 1.2928, 0.41525, 0.5341655).finished();
     Eigen::Matrix<double, 7, 1> coulomb_friction = (Eigen::VectorXd(7) << 1.025412896, 1.259913793, 0.8380147058, 0.96, 1.2928, 0.41525, 0.5341655).finished();
     Eigen::Matrix<double, 7, 1> dq_s = (Eigen::VectorXd(7) << 0, 0, 0, 0.0001, 0, 0, 0.05).finished();
+    
     //torque variables
     Eigen::Matrix<double, 7, 1> tau_task = Eigen::MatrixXd::Zero(7,1);
     Eigen::Matrix<double, 7, 1> tau_nullspace = Eigen::MatrixXd::Zero(7,1);
     Eigen::Matrix<double, 7, 1> tau_d = Eigen::MatrixXd::Zero(7,1);
     Eigen::Matrix<double, 7, 1> tau_impedance = Eigen::MatrixXd::Zero(7,1);
+    
     // Friction compensated force
     Eigen::Matrix<double, 6, 1> O_F_ext_hat_K_M_no_friction = Eigen::MatrixXd::Zero(6,1);
 

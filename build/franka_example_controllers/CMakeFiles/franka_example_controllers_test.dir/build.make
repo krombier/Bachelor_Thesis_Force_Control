@@ -199,12 +199,12 @@ franka_example_controllers_test: /opt/ros/humble/lib/liblifecycle_msgs__rosidl_t
 franka_example_controllers_test: /opt/ros/humble/lib/liblifecycle_msgs__rosidl_typesupport_introspection_cpp.so
 franka_example_controllers_test: /opt/ros/humble/lib/liblifecycle_msgs__rosidl_typesupport_cpp.so
 franka_example_controllers_test: /opt/ros/humble/lib/liblifecycle_msgs__rosidl_generator_py.so
-franka_example_controllers_test: /opt/ros/humble/lib/librcpputils.so
 franka_example_controllers_test: /opt/ros/humble/lib/librcutils.so
 franka_example_controllers_test: /opt/ros/humble/lib/libclass_loader.so
 franka_example_controllers_test: /usr/lib/x86_64-linux-gnu/libtinyxml2.so
 franka_example_controllers_test: /opt/ros/humble/lib/librclcpp.so
 franka_example_controllers_test: /opt/ros/humble/lib/librclcpp_action.so
+franka_example_controllers_test: /opt/ros/humble/lib/librcpputils.so
 franka_example_controllers_test: /opt/ros/humble/lib/librealtime_tools.so
 franka_example_controllers_test: /opt/ros/humble/lib/libthread_priority.so
 franka_example_controllers_test: /opt/ros/humble/lib/librclcpp_action.so
@@ -308,9 +308,9 @@ franka_example_controllers_test: /opt/ros/humble/lib/librosidl_typesupport_cpp.s
 franka_example_controllers_test: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_generator_py.so
 franka_example_controllers_test: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_c.so
 franka_example_controllers_test: /opt/ros/humble/lib/librosidl_typesupport_c.so
-franka_example_controllers_test: /opt/ros/humble/lib/librcpputils.so
 franka_example_controllers_test: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_generator_c.so
 franka_example_controllers_test: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+franka_example_controllers_test: /opt/ros/humble/lib/librcpputils.so
 franka_example_controllers_test: /opt/ros/humble/lib/librosidl_runtime_c.so
 franka_example_controllers_test: /opt/ros/humble/lib/librcutils.so
 franka_example_controllers_test: CMakeFiles/franka_example_controllers_test.dir/link.txt
