@@ -1,11 +1,5 @@
 # Hybrid force/impedance control
 ### Detailed documentation can be found in the code. 
-The impedance control part was made by Curdin Deplazes. Check out his [GitHub repo](https://github.com/CurdinDeplazes/cartesian_impedance_control) for further details about the impedance control or the following start up functions:
-- on_init()
-- on_configure()
-- on_activate()
-- on_deactivate()
-
 
 Launch the controller: <br />
 ```bash
@@ -29,8 +23,14 @@ ros2 run cartesian_impedance_control gripper
 ```
 (To steer the gripper you need to use the user_input_client file, this one just takes care of the commands sent out)
 
-## Cartesian_Impedance_Controller, the Update() function
-This is the function that gets executed with a frequency of 1000 Hz within the cartesian_impedance_controller. All other functions are either used somewhere in the setup or called at some point in the update() function.
+## Cartesian_Impedance_Controller
+The impedance control part was made by Curdin Deplazes. Check out his [GitHub repo](https://github.com/CurdinDeplazes/cartesian_impedance_control) for further details about the impedance control or the following start up functions:
+- on_init()
+- on_configure()
+- on_activate()
+- on_deactivate()
+### The Update() function
+This is the function that gets executed with a frequency of 1000 Hz within the cartesian_impedance_controller. All other functions defined in that file are either used somewhere in the setup or called at some point in the update() function.
 
 ## Input service
 
