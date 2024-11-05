@@ -77,7 +77,8 @@ source /home/<user>/franka_ros2_ws/install/setup.sh
 3. **Libfranka Documentation**  
    For comprehensive information, including examples and details about the classes and files, visit:  
    [Libfranka documentation](https://frankaemika.github.io/libfranka/0.14.1/index.html)
-4. **ROS2 Humble documentaion**
+
+4. **ROS2 Humble documentation**
    Generall information about ROS2 some tutorials to learn the basics:
    [Official ROS2 Tutorials](https://docs.ros.org/en/humble/Tutorials.html)
 
