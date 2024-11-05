@@ -1,5 +1,5 @@
 # messages_fr3
-### Custom messages used for cartesian_impedance_control
+### Custom messages used for package cartesian_impedance_control
 
 Refer to this [link](https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Custom-ROS2-Interfaces.html) to learn how to create additional custom messages.
 
