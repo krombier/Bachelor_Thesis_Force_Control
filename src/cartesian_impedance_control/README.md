@@ -1,5 +1,6 @@
 # Hybrid force/impedance control
 ### Detailed documentation can be found in the code. 
+The impedance control part was made by Curdin Deplazes. Check out his [GitHub repo](https://github.com/CurdinDeplazes/cartesian_impedance_control) for further details. 
 
 
 Launch the controller: <br />
