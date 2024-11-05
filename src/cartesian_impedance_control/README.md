@@ -1,5 +1,4 @@
 # Hybrid force/impedance control
-### ROS2 catestian_impedance_controller from Pd|Z
 
 
 
