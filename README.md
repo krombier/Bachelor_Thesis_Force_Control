@@ -50,14 +50,14 @@ cartesian_impedance_controller:
 ```
 
 
-Build the packages or whole workspace: <br />
+## Build the packages or whole workspace: <br />
 ```bash
 colcon build --packages-select cartesian_impedance_control messages_fr3 realtime_plot_of_data --cmake-args -DCMAKE_BUILD_TYPE=Release
 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release #Builds all the packages in your src folder
 ```
 
 
-Update your .bashrc file
+## Update your .bashrc file
 If not yet done, ensure your setup is always sourced by adding the following line to the end of your .bashrc file (to get access to it, you need to execute `nano .bashrc` in your home directory). : <br />
 ```bash
 source /home/<user>/franka_ros2_ws/install/setup.sh 
