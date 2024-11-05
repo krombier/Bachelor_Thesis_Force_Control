@@ -1,5 +1,5 @@
 # Hybrid force/impedance control
-
+### Detailed documentation can be found in the code. 
 
 
 Launch the controller: <br />
