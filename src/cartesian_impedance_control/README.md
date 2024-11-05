@@ -11,6 +11,7 @@ Launch the controller: <br />
 ```bash
 ros2 launch cartesian_impedance_control cartesian_impedance_controller.launch.py
 ```
+**Without a running controller the robot can't do anything** 
 
 Launch the impedance client if you want to change the position or adjust the impedance parameters (this part is currently commented out): <br />
 ``` bash
@@ -43,9 +44,13 @@ The input server consists of a main function and one callback function per clien
 The three functions publish_pose(), publish_force() and publish_gripper_task() can be used to send the commands to the different servers or to publish them to the corresponding topics.  
 Essentially they let you publish the desired task in a single line of code.
 At first rclcpp::init(argc,argv) is called to initialize communication. Then, the node on which all different clients/publishers are created on. After that, all needed variables are initialzed. Finally a loop gets started where the user can choose from a bunch of prepared options.  
-**If you want to be able to control the impedance parameters as well, you have to uncomment the marked part in the user_input_client.cpp file.** Details about this can be found in the code.
+**If you want to be able to control the impedance parameters as well, you have to uncomment the marked part in the user_input_client.cpp file.** Details about this can be found in the code.  
+If you want to use a command that uses the gripper, you have to run the following command in a seperate terminal:
+``` bash
+ros2 run cartesian_impedance_control gripper 
+```
 
-## set_force service
+## Force service
 Eventhough the program asks you to choose the frame in which you would like to exert forces, only the base frame ( frame =1 ) does work.  
 The client has to be called in a second terminal, while the server is automatically launched when launching the controller.  
 The client to set forces gets created either when running the user_input_client or when running the force_control_client. If you want to use the force_control_client to exert forces and the user_input_client to control the position at the same time make sure to comment the part in the user_input_client that creates the client. (Not sure if it will cause problems, but better be safe)
