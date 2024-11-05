@@ -12,7 +12,7 @@ Launch the controller: <br />
 ros2 launch cartesian_impedance_control cartesian_impedance_controller.launch.py
 ```
 
-Launch the impedance client if you want to change the position or adjust the impedance parameters: <br />
+Launch the impedance client if you want to change the position or adjust the impedance parameters (this part is currently commented out): <br />
 ``` bash
 ros2 run cartesian_impedance_control user_input_client 
 ```
