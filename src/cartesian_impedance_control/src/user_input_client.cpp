@@ -71,6 +71,7 @@ int main(int argc, char **argv) {
         node->create_client<messages_fr3::srv::SetForce>("set_force");
     auto force_request = std::make_shared<messages_fr3::srv::SetForce::Request>();
     
+    //establish contact with the topic gripper_command
     try {
         rclcpp::QoS qos_profile3(1); // Depth of the message queue aka does only keep one message all older ones get deleted
         qos_profile3.reliability(RMW_QOS_POLICY_RELIABILITY_RELIABLE);
@@ -89,11 +90,11 @@ int main(int argc, char **argv) {
     char pose_selection_char;
     double store;
 
-    // used for the sanding task
+    // initialize variables for the sanding task
     double amplitude = 0.07;            //won't reach the maximal amplitude due to filter parameter filter_params in cartesian_impedance_controller.cpp
     double frequency = 1.0;
     
-    //initialize variables 
+    //initialize variables to allow relative steering from the start on
     // This could be made better by getting the current position of the robot.
     pose_request->x = 0.5;
     pose_request->y = 0.0;
@@ -103,7 +104,7 @@ int main(int argc, char **argv) {
     pose_request->yaw = M_PI_2;
 
     while (rclcpp::ok()){
-        // TO GET THE WHOLE THING TO WORK AGAIN ONLY DELETE THE COMMENTS OF STYLE /**/
+        // TO BE ABLE TO CHANGE THE IMPEDANCE PARAMETERS ONLY DELETE THE COMMENTS OF STYLE /**/
         /*                 // uncommented because I don't need the free float mode
         // IF THE PART THAT IS COMMENTED IS NEEDED AGAIN MOVE ALL CODE THAT IS CURRENTLY ACTIVE TWO TABS TO THE RIGHT
         std::cout << "Enter the next task: \n [1] --> Change position \n [2] --> Change impedance parameters" << std::endl;

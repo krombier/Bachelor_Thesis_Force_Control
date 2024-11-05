@@ -8,13 +8,14 @@ import time
 # Name of Node ForceTorquePlotter
 # topic subscribed to: /franka_robot_state_broadcaster/external_wrench_in_base_frame
 
-# This Node takes the external forces and torques measured by the robot and plots them
+# This Node takes a wrench sent out by another program and plots them.
+# Currently it gets its data from the cartesian_impedance_controller.cpp file.
 class ForceTorquePlotter(Node):
     def __init__(self):
         super().__init__('force_torque_plotter')
         self.subscription = self.create_subscription(
             Wrench,                                                          # here we subscribe to the corresponding node
-            'wrench_topic',        # here as well
+            'wrench_topic',        
             self.listener_callback,
             10)
         self.subscription  # prevent unused variable warning
@@ -43,10 +44,8 @@ class ForceTorquePlotter(Node):
         plt.show()
 
     def listener_callback(self, msg):
-        #print("Print does work")
         current_time = time.time() - self.start_time
         self.time_data.append(current_time)
-        #print("hello")
         force = msg.force
         torque = msg.torque
         self.force_data.append([force.x, force.y, force.z])
