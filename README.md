@@ -42,11 +42,13 @@ For more information, refer to the [Franka ROS2 FCI documentation](https://suppo
 
 2. **If you already have a src folder**, ensure all files are consolidated into a single src directory and delete any duplicate folders.
 
-3. Add the following lines of code, to your **controllers.yaml** file inside franka_ros2/franka_bringup/config/:
+3. **Update controllers.yaml**
+Add the following lines of code, to your controllers.yaml file inside franka_ros2/franka_bringup/config/:
 ```bash
 cartesian_impedance_controller:
       type: cartesian_impedance_control/CartesianImpedanceController
 ```
+
 
 Build the packages or whole workspace: <br />
 ```bash
@@ -54,22 +56,25 @@ colcon build --packages-select cartesian_impedance_control messages_fr3 realtime
 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release #Builds all the packages in your src folder
 ```
 
+
+Update your .bashrc file
 If not yet done, ensure your setup is always sourced by adding the following line to the end of your .bashrc file (to get access to it, you need to execute `nano .bashrc` in your home directory). : <br />
 ```bash
 source /home/<user>/franka_ros2_ws/install/setup.sh 
 ```
 
-Launch the controller: <br />
-```bash
-ros2 launch cartesian_impedance_control cartesian_impedance_controller.launch.py
-```
 
-Launch the client if you want to adjust parameters: <br />
-``` bash
-ros2 run cartesian_impedance_control user_input_client 
-```
+## Useful Links
 
-Usefull links:
-https://frankaemika.github.io/libfranka/0.14.1/structfranka_1_1Errors.html Name: Explaination of the errors returned by the controller.
-https://frankaemika.github.io/libfranka/0.14.1/structfranka_1_1RobotState.html Name: List of all states of the robot that can be accessed.
-https://frankaemika.github.io/libfranka/0.14.1/index.html Name: Libfranka documentation (the sections classes and files contain tons of examples and information)
+1. **Explanation of Errors**  
+   For details on the errors returned by the controller, refer to the following link:  
+   [Explanation of the errors returned by the controller](https://frankaemika.github.io/libfranka/0.14.1/structfranka_1_1Errors.html)
+
+2. **Robot States**  
+   To view a list of all states of the robot that can be accessed, check the link below:  
+   [List of all states of the robot](https://frankaemika.github.io/libfranka/0.14.1/structfranka_1_1RobotState.html)
+
+3. **Libfranka Documentation**  
+   For comprehensive information, including examples and details about the classes and files, visit:  
+   [Libfranka documentation](https://frankaemika.github.io/libfranka/0.14.1/index.html)
+
