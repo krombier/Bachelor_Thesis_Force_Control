@@ -18,9 +18,8 @@ Launch the force client if you want to exert forces : <br />
 ros2 run cartesian_impedance_control force_control_client 
 ```
 
-Launch the gripper control node if you want to steer the gripper with : <br />
+Launch the gripper control node if you want to steer the gripper with the user_input_client: <br />
 ``` bash
 ros2 run cartesian_impedance_control gripper 
 ```
-
-     
+(To steer the gripper you need to use the user_input_client file, this one just takes care of the commands sent out)
