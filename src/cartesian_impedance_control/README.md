@@ -29,6 +29,9 @@ ros2 run cartesian_impedance_control gripper
 ```
 (To steer the gripper you need to use the user_input_client file, this one just takes care of the commands sent out)
 
+## Cartesian_Impedance_Controller, the Update() function
+This is the function that gets executed with a frequency of 1000 Hz within the cartesian_impedance_controller. All other functions are either used somewhere in the setup or called at some point in the update() function.
+
 ## Input service
 
 The service consists of a server and a client. The following files are part of the service: user_input_client.cpp, user_input_server.cpp and user_input_client.hpp. The client has to be called in a second terminal, while the server is automatically launched when launching the controller. The client can be started with:
