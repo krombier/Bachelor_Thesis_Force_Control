@@ -35,17 +35,20 @@ The service consists of a server and a client. The following files are part of t
 ros2 run cartesian_impedance_control force_control_client 
 ```
 
-### Input server
+### Input server (description copied from Curdin Deplazes)
 
 The input server consists of a main function and one callback function per client. At first, the node is created, and then one server per changeable parameter. As of now, the pose, impedance parameter and mode have an own server. As soon as a client with the same service name is called, a callback function is executed, where the sent request is assigned to the parameter running on the controller.
 
-### Input client
-The input client consists of one main function only. At first rclcpp::init(argc,argv) is called to initialize communication. Then, the node on which all different clients are created on. After that, a request for all the different parameters one wants to change. Next, using a std::cin statement, the desired parameters to change are read in by the program, assigned to the respective parts of the request, the request is sent and the node spined until a successful response is received. When the server is stopped, the node is shut down. If it is desired to change a new parameter, this first needs to be given into the constructor of the UserInputServer so that the correct parameter can be changed during runtime. Then a client and a server have to be implemented in the same way as already inside the respective files. In addition to that, if required new messages have to be defined.
+### Input client (description partially copied from Curdin Deplazes and updated)
+The three functions publish_pose(), publish_force() and publish_gripper_task() can be used to send the commands to the different servers or to publish them to the corresponding topics.  
+Essentially they let you publish the desired task in a single line of code.
+At first rclcpp::init(argc,argv) is called to initialize communication. Then, the node on which all different clients/publishers are created on. After that, all needed variables are initialzed. Finally a loop gets started where the user can choose from a bunch of prepared options.
+**If you want to be able to control the impedance parameters as well, you have to uncomment the marked part in the user_input_client.cpp file** Details about this can be found in the code.
 
-## Force service
+## set_force service
 Eventhough the program asks you to choose the frame in which you would like to exert forces, only the base frame ( frame =1 ) does work.  
 The client has to be called in a second terminal, while the server is automatically launched when launching the controller.  
-The client to set forces gets created either when running the user_input_client or when running the force_control_client. If you want to use the force_control_client make sure to comment the corresponding part in the user_input_client. (Not sure if it will cause problems, but better be safe)
+The client to set forces gets created either when running the user_input_client or when running the force_control_client. If you want to use the force_control_client to exert forces and the user_input_client to control the position at the same time make sure to comment the part in the user_input_client that creates the client. (Not sure if it will cause problems, but better be safe)
 To start the client use the following command:
 ``` bash
 ros2 run cartesian_impedance_control force_control_client 
