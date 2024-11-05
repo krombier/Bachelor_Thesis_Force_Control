@@ -21,27 +21,22 @@ Prerequisites:
 
 For further information, please refer to the [Franka ROS2 FCI documentation](https://support.franka.de/docs/franka_ros2.html)
 
-Once you have everything set up, follow the steps below to get the controller running.
-
-Clone this repository in the src directory of your franka_ros2_ws: <br />
+Clone this repository in the src directory of your ROS 2 workspace (in this example we call it franka_ros2_ws): <br />
 ```bash
-cd franka_ros2_ws/src 
+cd franka_ros2_ws/src             #go to the root of your workspace
 git clone https://github.com/CurdinDeplazes/cartesian_impedance_control.git
 ```
+If you already have a src folder, make sure to move all files/folders into 1 src folder and delete the other one.
+
 For the moment, you need to add the following lines of code, to your controllers.yaml file inside franka_ros2/franka_bringup/config/:
 ```bash
 cartesian_impedance_controller:
       type: cartesian_impedance_control/CartesianImpedanceController
 ```
 
-Clone the messages package in the src directory: <br />
+Build the packages or whole workspace: <br />
 ```bash
-git clone https://github.com/CurdinDeplazes/messages_fr3.git
-```
-
-Build the package or whole workspace: <br />
-```bash
-colcon build --packages-select cartesian_impedance_control --cmake-args -DCMAKE_BUILD_TYPE=Release
+colcon build --packages-select cartesian_impedance_control messages_fr3 realtime_plot_of_data --cmake-args -DCMAKE_BUILD_TYPE=Release
 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release #Builds all the packages in your src folder
 ```
 
@@ -59,3 +54,6 @@ Launch the client if you want to adjust parameters: <br />
 ``` bash
 ros2 run cartesian_impedance_control user_input_client 
 ```
+
+Common problems:
+
