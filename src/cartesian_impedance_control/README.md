@@ -30,7 +30,10 @@ ros2 run cartesian_impedance_control gripper
 
 ## Input service
 
-The service consists of a server and a client. Each of those subsystems has its own .cpp and .hpp file, called user_input_client.cpp, user_input_client.hpp, user_input_server.cpp and user_input_client.hpp respectively. The client has to be called in a second terminal, while the server is automatically launched when launching the controller.
+The service consists of a server and a client. Consists of the following files: user_input_client.cpp, user_input_server.cpp and user_input_client.hpp respectively. The client has to be called in a second terminal, while the server is automatically launched when launching the controller. The client can be launched with:
+``` bash
+ros2 run cartesian_impedance_control force_control_client 
+```
 
 ### Input server
 
@@ -42,7 +45,11 @@ The input client consists of one main function only. At first rclcpp::init(argc,
 ## Force service
 Eventhough the program asks you to choose the frame in which you would like to exert forces, only the base frame ( frame =1 ) does work.  
 The client has to be called in a second terminal, while the server is automatically launched when launching the controller.  
-The client to set forces gets created either when running the user_input_client or when running the force_control_client. If you want to use the force_control_client make sure to comment the corresponding part in the user_input_client. (Not sure if it will cause problems, but better be safe) 
+The client to set forces gets created either when running the user_input_client or when running the force_control_client. If you want to use the force_control_client make sure to comment the corresponding part in the user_input_client. (Not sure if it will cause problems, but better be safe)
+To launch the client use the following command:
+``` bash
+ros2 run cartesian_impedance_control force_control_client 
+```
 
 ### Force server
 Consists of a force_control_server.cpp and a force_control_server.hpp file.
