@@ -43,7 +43,7 @@ The input server consists of a main function and one callback function per clien
 The three functions publish_pose(), publish_force() and publish_gripper_task() can be used to send the commands to the different servers or to publish them to the corresponding topics.  
 Essentially they let you publish the desired task in a single line of code.
 At first rclcpp::init(argc,argv) is called to initialize communication. Then, the node on which all different clients/publishers are created on. After that, all needed variables are initialzed. Finally a loop gets started where the user can choose from a bunch of prepared options.  
-**If you want to be able to control the impedance parameters as well, you have to uncomment the marked part in the user_input_client.cpp file** Details about this can be found in the code.
+**If you want to be able to control the impedance parameters as well, you have to uncomment the marked part in the user_input_client.cpp file.** Details about this can be found in the code.
 
 ## set_force service
 Eventhough the program asks you to choose the frame in which you would like to exert forces, only the base frame ( frame =1 ) does work.  
