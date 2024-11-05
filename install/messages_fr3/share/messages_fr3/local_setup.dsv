@@ -1,4 +1,0 @@
-source;share/messages_fr3/environment/ament_prefix_path.sh
-source;share/messages_fr3/environment/library_path.sh
-source;share/messages_fr3/environment/path.sh
-source;share/messages_fr3/environment/pythonpath.sh

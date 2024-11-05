@@ -1,4 +1,0 @@
-[ 50%] Built target cartesian_impedance_control
-[35m[1mConsolidate compiler generated dependencies of target user_input_client[0m
-[ 62%] [32mBuilding CXX object CMakeFiles/force_control_client.dir/src/force_control_client.cpp.o[0m
-[ 87%] Built target user_input_client

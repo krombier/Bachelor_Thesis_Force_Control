@@ -1,4 +1,0 @@
-[35m[1mConsolidate compiler generated dependencies of target cartesian_impedance_control[0m
-[ 37%] [32mBuilding CXX object CMakeFiles/cartesian_impedance_control.dir/src/user_input_server.cpp.o[0m
-[ 37%] [32mBuilding CXX object CMakeFiles/cartesian_impedance_control.dir/src/force_control_server.cpp.o[0m
-[ 37%] [32mBuilding CXX object CMakeFiles/cartesian_impedance_control.dir/src/cartesian_impedance_controller.cpp.o[0m

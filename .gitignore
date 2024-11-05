@@ -1,0 +1,7 @@
+#Github specific file. Ensures that only the relevant files are on my
+#GitHub repo
+# Ignore build artifacts
+/build/
+/install/
+/log/
+

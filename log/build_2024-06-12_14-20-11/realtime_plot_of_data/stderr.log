@@ -1,5 +1,0 @@
-  File "/home/simi/franka_ros2_ws/install/realtime_plot_of_data/lib/python3.10/site-packages/realtime_plot_of_data/force_torque_plotter.py", line 31
-    self.torque_lines = [self.ax2.plot([], []label=f'Torque {i+1}')[0] for _ in range(3)]
-                                           ^^^^^^^
-SyntaxError: invalid syntax. Perhaps you forgot a comma?
-

@@ -1,5 +1,0 @@
-[ 40%] Built target cartesian_impedance_control
-[35m[1mConsolidate compiler generated dependencies of target user_input_client[0m
-[ 80%] Built target gripper
-[ 80%] Built target force_control_client
-[ 90%] [32mBuilding CXX object CMakeFiles/user_input_client.dir/src/user_input_client.cpp.o[0m

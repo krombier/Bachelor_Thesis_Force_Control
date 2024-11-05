@@ -1,5 +1,0 @@
-gmake[2]: *** [CMakeFiles/cartesian_impedance_control.dir/build.make:76: CMakeFiles/cartesian_impedance_control.dir/src/cartesian_impedance_controller.cpp.o] Interrupt
-gmake[2]: *** [CMakeFiles/cartesian_impedance_control.dir/build.make:90: CMakeFiles/cartesian_impedance_control.dir/src/user_input_server.cpp.o] Interrupt
-gmake[2]: *** [CMakeFiles/cartesian_impedance_control.dir/build.make:104: CMakeFiles/cartesian_impedance_control.dir/src/force_control_server.cpp.o] Interrupt
-gmake[1]: *** [CMakeFiles/Makefile2:143: CMakeFiles/cartesian_impedance_control.dir/all] Interrupt
-gmake: *** [Makefile:146: all] Interrupt
